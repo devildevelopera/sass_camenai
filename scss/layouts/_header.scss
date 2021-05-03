@@ -4,7 +4,7 @@ header {
     padding-left: $padding *2;
     @include displayFlexRow;
     justify-content: space-between;
-    @media only screen and (max-width: $smallBreakpoint) {
+    @include mobileContentDisplay {
         height: inherit;
         padding-left: 0;
         display: block;
@@ -21,20 +21,20 @@ header {
     .hdr-right {
         @include displayFlexRow;
         justify-content: space-between;
-        @media only screen and (max-width: $smallBreakpoint) {
+        @include mobileContentDisplay {
             display: block;
             text-align: center;
         }
         .hdr-user {
             padding: $padding;
-            @media only screen and (max-width: $smallBreakpoint) {
+            @include mobileContentDisplay {
                 display: none;
             }
         }
         .hdr-search {
             .search {
                 position: relative;
-                @media only screen and (max-width: $smallBreakpoint) {
+                @include mobileContentDisplay {
                     margin: 0 $padding;
                 }
                 .fa-search {
@@ -52,7 +52,7 @@ header {
                     -webkit-border-radius: 4px;
                     text-indent: 32px;
                     outline: none;
-                    @media only screen and (max-width: $smallBreakpoint) {
+                    @include mobileContentDisplay {
                         width: 100%;
                     }
                 }
@@ -61,7 +61,7 @@ header {
         .hdr-menu {
             @include displayFlexRow;
             justify-content: space-around;
-            @media only screen and (min-width: $smallBreakpoint) {
+            @include desktopContentDisplay {
                 .loginname {
                     display: none;
                 }

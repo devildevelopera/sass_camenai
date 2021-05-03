@@ -4,3 +4,15 @@
     flex-direction: row;
     align-items: center;
 }
+
+@mixin mobileContentDisplay {
+    @media only screen and (max-width: $smallBreakpoint) {
+        @content;
+    }
+}
+
+@mixin desktopContentDisplay {
+    @media only screen and (min-width: $smallBreakpoint) {
+        @content;
+    }
+}
