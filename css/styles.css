@@ -37,16 +37,6 @@
 /*
 This file is used to contain all vendor imports.
 */
-html {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-*, *::after, *::before {
-  -webkit-box-sizing: inherit;
-          box-sizing: inherit;
-}
-
 /*!
  *  Font Awesome 4.6.3 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
@@ -2917,20 +2907,6 @@ This file is used to contain all abstracts imports.
 Files inside this folder can contain abstract settings,
 helpers or functions. They have no direct output.
 */
-@font-face {
-  font-family: "Open Sans";
-  font-style: normal;
-  font-weight: normal;
-  src: url("../fonts/open-sans/OpenSans-Regular.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "Open Sans";
-  font-style: italic;
-  font-weight: normal;
-  src: url("../fonts/open-sans/OpenSans-Regular.ttf") format("truetype");
-}
-
 /*
 This file is used to contain all base imports.
 Files inside this folder can contain global styles used in
