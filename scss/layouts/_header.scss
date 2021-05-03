@@ -1,0 +1,9 @@
+// Header Styles
+header {
+    background: $purple-rain;
+    color: white;
+    padding: $pad * 2;
+    div {
+        @extend .container
+    }
+}

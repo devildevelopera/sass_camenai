@@ -2973,14 +2973,24 @@ html {
   }
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: bold;
   margin: 0;
   margin-bottom: 1em;
   line-height: 1.2;
 }
 
-h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
   font-weight: inherit;
 }
 
@@ -3005,7 +3015,7 @@ This file is used to contain all component imports.
 Files inside this folder should contain all styles relating
 to a reusable component.
 */
-.container, footer div {
+.container, header div {
   display: block;
   margin: 0 auto;
   padding: 0 1em;
@@ -3017,8 +3027,8 @@ This file is used to contain all layout imports.
 Files inside this folder should contain all styles relating
 to layouts.
 */
-footer {
-  background: #00a1de;
+header {
+  background: #7641B2;
   color: white;
   padding: 2em;
 }
