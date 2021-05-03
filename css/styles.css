@@ -2956,7 +2956,7 @@ body * {
 html {
   font-family: "Open Sans", sans-serif;
   font-weight: normal;
-  color: #333333;
+  color: #000;
   line-height: 1.5;
   font-size: 14px;
 }
@@ -3015,11 +3015,8 @@ This file is used to contain all component imports.
 Files inside this folder should contain all styles relating
 to a reusable component.
 */
-.container, header div {
-  display: block;
-  margin: 0 auto;
-  padding: 0 1em;
-  max-width: 1080px;
+.container {
+  padding: 1em;
 }
 
 /*
@@ -3028,8 +3025,147 @@ Files inside this folder should contain all styles relating
 to layouts.
 */
 header {
+  height: 100px;
+  padding-left: 2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   background: #7641B2;
-  color: white;
-  padding: 2em;
+  color: #fff;
+}
+
+@media only screen and (max-width: 600px) {
+  header {
+    height: inherit;
+    padding-left: 0;
+    display: block;
+    text-align: center;
+  }
+}
+
+header .hdr-left img {
+  height: 70px;
+  vertical-align: middle;
+}
+
+header .hdr-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media only screen and (max-width: 600px) {
+  header .hdr-right {
+    display: block;
+    text-align: center;
+  }
+}
+
+header .hdr-right .hdr-user {
+  padding: 1em;
+}
+
+@media only screen and (max-width: 600px) {
+  header .hdr-right .hdr-user {
+    display: none;
+  }
+}
+
+header .hdr-right .hdr-search .search {
+  position: relative;
+}
+
+@media only screen and (max-width: 600px) {
+  header .hdr-right .hdr-search .search {
+    margin: 0 1em;
+  }
+}
+
+header .hdr-right .hdr-search .search .fa-search {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: #666666;
+}
+
+header .hdr-right .hdr-search .search input {
+  width: 220px;
+  height: 36px;
+  border: 1px solid #fff;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  text-indent: 32px;
+  outline: none;
+}
+
+@media only screen and (max-width: 600px) {
+  header .hdr-right .hdr-search .search input {
+    width: 100%;
+  }
+}
+
+header .hdr-right .hdr-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+@media only screen and (min-width: 600px) {
+  header .hdr-right .hdr-menu .loginname {
+    display: none;
+  }
+}
+
+header .hdr-right .hdr-menu ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 0;
+}
+
+header .hdr-right .hdr-menu ul li {
+  display: inline-block;
+  padding: 8px 14px;
+}
+
+header .hdr-right .hdr-menu ul .gear {
+  border-right: 1px solid #f1f1f1;
 }
 /*# sourceMappingURL=styles.css.map */

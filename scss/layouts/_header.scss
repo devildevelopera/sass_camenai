@@ -1,9 +1,82 @@
 // Header Styles
 header {
+    height: 100px;
+    padding-left: $padding *2;
+    @include displayFlexRow;
+    justify-content: space-between;
+    @media only screen and (max-width: $smallBreakpoint) {
+        height: inherit;
+        padding-left: 0;
+        display: block;
+        text-align: center;
+    }
     background: $purple-rain;
-    color: white;
-    padding: $pad * 2;
-    div {
-        @extend .container
+    color: $white;
+    .hdr-left {
+        img {
+            height: 70px;
+            vertical-align: middle;
+        }
+    }
+    .hdr-right {
+        @include displayFlexRow;
+        justify-content: space-between;
+        @media only screen and (max-width: $smallBreakpoint) {
+            display: block;
+            text-align: center;
+        }
+        .hdr-user {
+            padding: $padding;
+            @media only screen and (max-width: $smallBreakpoint) {
+                display: none;
+            }
+        }
+        .hdr-search {
+            .search {
+                position: relative;
+                @media only screen and (max-width: $smallBreakpoint) {
+                    margin: 0 $padding;
+                }
+                .fa-search {
+                    position: absolute;
+                    top: 10px;
+                    left: 10px;
+                    color: lighten($black, 40%);
+                }
+                input {
+                    width: 220px;
+                    height: 36px;
+                    border: 1px solid $white;
+                    border-radius: 4px;
+                    -moz-border-radius: 4px;
+                    -webkit-border-radius: 4px;
+                    text-indent: 32px;
+                    outline: none;
+                    @media only screen and (max-width: $smallBreakpoint) {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+        .hdr-menu {
+            @include displayFlexRow;
+            justify-content: space-around;
+            @media only screen and (min-width: $smallBreakpoint) {
+                .loginname {
+                    display: none;
+                }
+            }
+            ul {
+                @include displayFlexRow;
+                padding-left: 0;
+                li {
+                    display: inline-block;
+                    padding: 8px 14px;
+                }
+                .gear {
+                    border-right: 1px solid #f1f1f1;
+                }
+            }
+        }
     }
 }
