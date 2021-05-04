@@ -1,5 +1,5 @@
 // Header Styles
-header {
+.hdr {
     height: 100px;
     padding-left: $padding *2;
     @include displayFlexRow;
@@ -35,7 +35,7 @@ header {
             .search {
                 position: relative;
                 @include mobileContentDisplay {
-                    margin: 0 $padding;
+                    margin: $padding/2;
                 }
                 .fa-search {
                     position: absolute;
@@ -61,6 +61,7 @@ header {
         .hdr-menu {
             @include displayFlexRow;
             justify-content: space-around;
+            padding: $padding/2;
             @include desktopContentDisplay {
                 .loginname {
                     display: none;

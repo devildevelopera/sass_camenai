@@ -3098,6 +3098,7 @@ ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
+  margin-bottom: 0 !important;
 }
 
 html,
@@ -3192,7 +3193,7 @@ to a reusable component.
     -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
-    height: calc(100vh - 175px);
+    height: calc(100vh - 172.5px);
   }
 }
 
@@ -3207,14 +3208,24 @@ to a reusable component.
 @media only screen and (max-width: 600px) {
   .cnt .cnt-settings {
     width: 100%;
-    height: 300px;
+    height: 200px;
   }
+}
+
+.cnt .cnt-settings .close-menu {
+  text-align: end;
+  border-bottom: 1px solid #cccccc;
+  padding-bottom: 0.5em;
 }
 
 .cnt .cnt-settings ul li {
   border-bottom: 1px solid #cccccc;
   font-size: 14px;
   line-height: 30px;
+}
+
+.cnt .cnt-settings ul li i {
+  padding: 0.66667em;
 }
 
 .cnt .cnt-map {
@@ -3229,7 +3240,7 @@ This file is used to contain all layout imports.
 Files inside this folder should contain all styles relating
 to layouts.
 */
-header {
+.hdr {
   height: 100px;
   padding-left: 2em;
   display: -webkit-box;
@@ -3250,7 +3261,7 @@ header {
 }
 
 @media only screen and (max-width: 600px) {
-  header {
+  .hdr {
     height: inherit;
     padding-left: 0;
     display: block;
@@ -3258,12 +3269,12 @@ header {
   }
 }
 
-header .hdr-left img {
+.hdr .hdr-left img {
   height: 70px;
   vertical-align: middle;
 }
 
-header .hdr-right {
+.hdr .hdr-right {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3280,40 +3291,40 @@ header .hdr-right {
 }
 
 @media only screen and (max-width: 600px) {
-  header .hdr-right {
+  .hdr .hdr-right {
     display: block;
     text-align: center;
   }
 }
 
-header .hdr-right .hdr-user {
+.hdr .hdr-right .hdr-user {
   padding: 1em;
 }
 
 @media only screen and (max-width: 600px) {
-  header .hdr-right .hdr-user {
+  .hdr .hdr-right .hdr-user {
     display: none;
   }
 }
 
-header .hdr-right .hdr-search .search {
+.hdr .hdr-right .hdr-search .search {
   position: relative;
 }
 
 @media only screen and (max-width: 600px) {
-  header .hdr-right .hdr-search .search {
-    margin: 0 1em;
+  .hdr .hdr-right .hdr-search .search {
+    margin: 0.5em;
   }
 }
 
-header .hdr-right .hdr-search .search .fa-search {
+.hdr .hdr-right .hdr-search .search .fa-search {
   position: absolute;
   top: 10px;
   left: 10px;
   color: #666666;
 }
 
-header .hdr-right .hdr-search .search input {
+.hdr .hdr-right .hdr-search .search input {
   width: 220px;
   height: 36px;
   border: 1px solid #fff;
@@ -3325,12 +3336,12 @@ header .hdr-right .hdr-search .search input {
 }
 
 @media only screen and (max-width: 600px) {
-  header .hdr-right .hdr-search .search input {
+  .hdr .hdr-right .hdr-search .search input {
     width: 100%;
   }
 }
 
-header .hdr-right .hdr-menu {
+.hdr .hdr-right .hdr-menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3343,15 +3354,16 @@ header .hdr-right .hdr-menu {
           align-items: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  padding: 0.5em;
 }
 
 @media only screen and (min-width: 600px) {
-  header .hdr-right .hdr-menu .loginname {
+  .hdr .hdr-right .hdr-menu .loginname {
     display: none;
   }
 }
 
-header .hdr-right .hdr-menu ul {
+.hdr .hdr-right .hdr-menu ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3365,12 +3377,12 @@ header .hdr-right .hdr-menu ul {
   padding-left: 0;
 }
 
-header .hdr-right .hdr-menu ul li {
+.hdr .hdr-right .hdr-menu ul li {
   display: inline-block;
   padding: 8px 14px;
 }
 
-header .hdr-right .hdr-menu ul .gear {
+.hdr .hdr-right .hdr-menu ul .gear {
   border-right: 1px solid #f1f1f1;
 }
 
