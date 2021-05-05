@@ -1,13 +1,10 @@
 html {
-    font-family: $sansSerif, sans-serif;
-    font-weight: normal;
     color: $black;
-    line-height: $baseLineHeight;
     font-size: 14px;
+    line-height: 1.5;
+    font-weight: normal;
+    font-family: $sansSerif, sans-serif;
     @media only screen and (min-width: $smallBreakpoint) {
-        font-size: 15px;
-    }
-    @media only screen and (min-width: $largeBreakpoint) {
         font-size: $baseFontSize;
     }
 }
@@ -19,10 +16,10 @@ h3,
 h4,
 h5,
 h6 {
-    font-weight: bold;
     margin: 0;
+    line-height: 1.2;
+    font-weight: bold;
     margin-bottom: $padding;
-    line-height: $headingLineHeight;
     a {
         font-weight: inherit;
     }
