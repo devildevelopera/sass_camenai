@@ -3115,6 +3115,10 @@ ul {
   margin-bottom: 0 !important;
 }
 
+label {
+  margin-bottom: 0 !important;
+}
+
 html {
   color: #000;
   font-size: 14px;
@@ -3415,12 +3419,11 @@ to layouts.
 .cnt .cnt-settings .close-menu img {
   width: 20px;
   height: 20px;
-  color: #000;
 }
 
 .cnt .cnt-settings ul li {
-  line-height: 30px;
   font-size: 14px;
+  line-height: 30px;
   border-bottom: 1px solid #cccccc;
 }
 
@@ -3441,6 +3444,88 @@ to layouts.
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  background-color: #cccccc;
+  position: relative;
+}
+
+.cnt .cnt-map #map {
+  height: 100%;
+}
+
+.cnt .cnt-map .view-type-control {
+  z-index: 1;
+  left: 20px;
+  bottom: 30px;
+  width: 170px;
+  height: 38px;
+  position: absolute;
+  border-radius: 5px;
+  background-color: #fff;
+  border: 1px solid #cccccc;
+  -webkit-box-shadow: 0 0 1px #4d4d4d;
+          box-shadow: 0 0 1px #4d4d4d;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.cnt .cnt-map .view-type-control input {
+  cursor: pointer;
+}
+
+.cnt .cnt-map .location-control {
+  z-index: 1;
+  right: 20px;
+  bottom: 140px;
+  position: absolute;
+  border-radius: 5px;
+  background-color: #fff;
+  border: 1px solid #cccccc;
+  -webkit-box-shadow: 0 0 1px #4d4d4d;
+          box-shadow: 0 0 1px #4d4d4d;
+}
+
+.cnt .cnt-map .location-control i {
+  padding: 8px;
+  cursor: pointer;
+}
+
+.cnt .cnt-map .location-control i:hover {
+  background-color: #f2f2f2;
+}
+
+.cnt .cnt-map .zoom-control {
+  z-index: 1;
+  right: 20px;
+  bottom: 30px;
+  position: absolute;
+  border-radius: 5px;
+  background-color: #fff;
+  border: 1px solid #cccccc;
+  -webkit-box-shadow: 0 0 1px #4d4d4d;
+          box-shadow: 0 0 1px #4d4d4d;
+}
+
+.cnt .cnt-map .zoom-control i {
+  padding: 8px;
+  display: block;
+  cursor: pointer;
+  border-bottom: 1px solid #cccccc;
+}
+
+.cnt .cnt-map .zoom-control i:hover {
+  background-color: #f2f2f2;
+}
+
+.cnt .cnt-map .zoom-control i:last-child {
+  border-bottom: none;
 }
 /*# sourceMappingURL=styles.css.map */

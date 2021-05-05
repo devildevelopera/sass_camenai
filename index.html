@@ -67,6 +67,7 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
                 </li>
                 <li><i class="fa fa-bookmark-o"></i>Bookmarks</li>
                 <li><i class="fa fa-eye"></i>Detections <img class="detections-img" src="https://cdn2.iconfinder.com/data/icons/250-perfect-vector-pictograms/48/9.6-128.png" />
@@ -93,27 +94,41 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
                 </li>
                 <li><i class="fa fa-area-chart"></i>Area Selection</li>
                 <li><i class="fa fa-save"></i>Save Point of Interest</li>
                 <li><i class="fa fa-file-o"></i>Analytics</li>
-
             </ul>
-            </div>
-            <div class="cnt-map">
-                <iframe width="100%" height="100%" id="gmap_canvas" src="https://maps.google.com/maps?q=2880%20Broadway,%20New%20York&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
-            </div>
-            </div>
         </div>
+        <div class="cnt-map">
+            <div class="view-type-control">
+                <div>
+                    <input type="radio" name="view-type" id="view-type-light" checked="checked" />
+                    <label for="view-type-light">light</label>
+                </div>
+                <div>
+                    <input type="radio" name="view-type" id="view-type-satellite" />
+                    <label for="view-type-satellite">satellite</label>
+                </div>
+            </div>
+            <div class="location-control">
+                <i class="fa fa-dot-circle-o"></i>
+            </div>
+            <div class="zoom-control">
+                <i class="fa fa-plus"></i>
+                <i class="fa fa-minus"></i>
+                <i class="fa fa-compass"></i>
+            </div>
+            <div id="map"></div>
+        </div>
+    </div>
 
-        <!-- jQuery library -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-        <!-- Popper JS -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-
-        <!-- Latest compiled JavaScript -->
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="js/map.js "></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBIwzALxUPNbatRBj3Xi1Uhp0fFzwWNBkE&callback=initMap&libraries=&v=weekly" type=" text/javascript " async></script>
 </body>
 
 </html>
