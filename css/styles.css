@@ -3218,7 +3218,13 @@ to a reusable component.
   padding: 0;
 }
 
-.accordion .card-body li {
+.accordion .card-body ul {
+  margin-left: 13px;
+  padding-left: 1.5em;
+  border-left: 1px solid #cccccc;
+}
+
+.accordion .card-body ul li {
   border-bottom: none !important;
 }
 
