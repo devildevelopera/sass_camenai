@@ -3127,7 +3127,7 @@ html {
   font-family: "Open Sans", sans-serif;
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 768px) {
   html {
     font-size: 16px;
   }
@@ -3218,14 +3218,16 @@ to a reusable component.
   padding: 0;
 }
 
-.accordion .card-body ul {
-  margin-left: 13px;
-  padding-left: 1.5em;
-  border-left: 1px solid #cccccc;
+.accordion .card-body ul li {
+  font-size: 14px;
+  cursor: pointer;
+  padding-left: 5px;
+  line-height: 30px;
+  border-bottom: none !important;
 }
 
-.accordion .card-body ul li {
-  border-bottom: none !important;
+.accordion .card-body ul li:hover {
+  background-color: #f2f2f2;
 }
 
 /*
@@ -3253,7 +3255,7 @@ to layouts.
           justify-content: space-between;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
   .hdr {
     display: block;
     padding-left: 0;
@@ -3283,7 +3285,7 @@ to layouts.
           justify-content: space-between;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
   .hdr .hdr-right {
     display: block;
     text-align: center;
@@ -3294,7 +3296,7 @@ to layouts.
   padding: 1em;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
   .hdr .hdr-right .hdr-user {
     display: none;
   }
@@ -3304,7 +3306,7 @@ to layouts.
   position: relative;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
   .hdr .hdr-right .hdr-search .search {
     margin: 0.5em;
   }
@@ -3328,7 +3330,7 @@ to layouts.
   -webkit-border-radius: 4px;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
   .hdr .hdr-right .hdr-search .search input {
     width: 100%;
   }
@@ -3350,7 +3352,7 @@ to layouts.
       justify-content: space-around;
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 768px) {
   .hdr .hdr-right .hdr-menu .loginname {
     display: none;
   }
@@ -3389,7 +3391,7 @@ to layouts.
           flex-direction: row;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
   .cnt {
     height: calc(100vh - 172.5px);
     -webkit-box-orient: vertical;
@@ -3407,7 +3409,7 @@ to layouts.
   height: calc(100vh - 100px);
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
   .cnt .cnt-settings {
     width: 100%;
     height: 200px;
@@ -3429,27 +3431,38 @@ to layouts.
 
 .cnt .cnt-settings ul li {
   font-size: 14px;
-  line-height: 30px;
   border-bottom: 1px solid #cccccc;
 }
 
-.cnt .cnt-settings ul li i {
-  padding: 0.66667em;
+.cnt .cnt-settings ul li:hover {
+  background-color: #f2f2f2;
 }
 
-.cnt .cnt-settings ul li .search-POI {
+.cnt .cnt-settings ul li #accordionPOI .card #collapsePOI .card-body ul {
+  margin-left: 13px;
+  padding-left: 1.5em;
+  border-left: 1px solid #cccccc;
+}
+
+.cnt .cnt-settings ul li #accordionPOI .card #collapsePOI .card-body ul li:first-child {
+  background-color: transparent;
+}
+
+.cnt .cnt-settings ul li #accordionPOI .card #collapsePOI .card-body ul li .search-POI {
   position: relative;
   margin-right: 2em;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
 }
 
-.cnt .cnt-settings ul li .search-POI .fa-search {
+.cnt .cnt-settings ul li #accordionPOI .card #collapsePOI .card-body ul li .search-POI .fa-search {
   position: absolute;
   top: 7px;
   right: 10px;
   color: #666666;
 }
 
-.cnt .cnt-settings ul li .search-POI input {
+.cnt .cnt-settings ul li #accordionPOI .card #collapsePOI .card-body ul li .search-POI input {
   width: 100%;
   height: 30px;
   outline: none;
@@ -3458,6 +3471,10 @@ to layouts.
   -moz-border-radius: 4px;
   border: 1px solid #cccccc;
   -webkit-border-radius: 4px;
+}
+
+.cnt .cnt-settings ul li i {
+  padding: 0.66667em;
 }
 
 .cnt .cnt-settings ul li .detections-img {
@@ -3469,6 +3486,11 @@ to layouts.
   margin-right: 0.5em;
 }
 
+.cnt .cnt-settings ul li #accordionImgRecording .card #collapseImgRecording .card-body ul {
+  margin-left: 13px;
+  border-left: 1px solid #cccccc;
+}
+
 .cnt .cnt-map {
   -webkit-box-flex: 1;
       -ms-flex: 1;
@@ -3478,6 +3500,42 @@ to layouts.
 
 .cnt .cnt-map #map {
   height: 100%;
+}
+
+.cnt .cnt-map #draggable {
+  top: 20px;
+  left: 20px;
+  z-index: 2;
+  cursor: move;
+  width: 160px;
+  height: 70px;
+  padding: 1px 3px;
+  position: absolute;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.cnt .cnt-map #draggable .card {
+  text-align: left;
+}
+
+.cnt .cnt-map #draggable .card-header {
+  padding: 0;
+  color: #fff;
+  padding-left: 10px;
+  background-color: gray;
+}
+
+.cnt .cnt-map #draggable .card-body {
+  padding: 0;
+}
+
+.cnt .cnt-map #draggable .card-body .card-head h2 {
+  padding-left: 10px;
+}
+
+.cnt .cnt-map #draggable .card-body #collapsePOIOptions .card-body ul li {
+  padding-left: 10px;
 }
 
 .cnt .cnt-map .view-type-control {

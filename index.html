@@ -109,6 +109,31 @@
             </ul>
         </div>
         <div class="cnt-map">
+            <div id="draggable" class="ui-widget-content">
+                <div class="card">
+                    <div class="card-header">Utrecht</div>
+                    <div class="card-body">
+                        <div class="accordion" id="accordionPOIOptions">
+                            <div class="card">
+                                <div class="card-head" id="headingPOIOptions">
+                                    <h2 class="mb-0 collapsed" data-toggle="collapse" data-target="#collapsePOIOptions" aria-expanded="false" aria-controls="collapsePOIOptions">
+                                        P.O.I Options
+                                    </h2>
+                                </div>
+                                <div id="collapsePOIOptions" class="collapse" aria-labelledby="headingPOIOptions" data-parent="#accordionPOIOptions">
+                                    <div class="card-body">
+                                        <ul>
+                                            <li><i class="fa fa-pencil"></i> Edit Present</li>
+                                            <li><i class="fa fa-file-o"></i> Analytics</li>
+                                            <li><i class="fa fa-trash"></i> Delete</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="view-type-control">
                 <div>
                     <input type="radio" name="view-type" id="view-type-light" checked="checked" />
@@ -132,9 +157,11 @@
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js" type="text/javascript"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="js/map.js "></script>
+    <script src="js/poi.js "></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBIwzALxUPNbatRBj3Xi1Uhp0fFzwWNBkE&callback=initMap&libraries=&v=weekly" type=" text/javascript " async></script>
 </body>
 
