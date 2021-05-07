@@ -3752,8 +3752,6 @@ to layouts.
   z-index: 2;
   cursor: move;
   width: 220px;
-  height: 147px;
-  display: none;
   position: absolute;
   text-align: center;
   border-radius: 5px;
@@ -3793,27 +3791,24 @@ to layouts.
 
 .cnt .cnt-map #report-issue-draggable .card-body {
   padding: 10px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  font-size: 14px;
+}
+
+.cnt .cnt-map #report-issue-draggable .card-body textarea,
+.cnt .cnt-map #report-issue-draggable .card-body input {
+  width: 100%;
 }
 
 .cnt .cnt-map #report-issue-draggable .card-body button {
   width: 100%;
+  color: #fff;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  background-color: gray;
 }
 
 .cnt .cnt-map #report-issue-draggable .card-body button:focus {
   outline: none;
-}
-
-.cnt .cnt-map #report-issue-draggable .card-body button:first-child {
-  color: #fff;
-  background-color: gray;
 }
 
 .cnt .cnt-map #view-type-control {
