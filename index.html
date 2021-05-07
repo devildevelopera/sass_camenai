@@ -109,7 +109,9 @@
             </ul>
         </div>
         <div class="cnt-map">
-            <img id="menu-btn" src="https://cdn0.iconfinder.com/data/icons/internet-activity-3-1/32/double_arrow_right-128.png" />
+            <div id="menu-btn">
+                <i class="fa fa-arrow-right"></i>
+            </div>
             <div id="poi-draggable" class="ui-widget-content">
                 <div class="card">
                     <div class="card-header"><span id="poi-draggable-header">Utrecht</span><i class="fa fa-times"></i>
@@ -172,7 +174,20 @@
                     </div>
                 </div>
             </div>
-            <div class="view-type-control">
+            <div id="report-issue-btn">
+                <i class="fa fa-info-circle"></i>
+            </div>
+            <div id="report-issue-draggable">
+                <div class="card">
+                    <div class="card-header">
+                        <i class="fa fa-info-circle"></i> Report Issue <i class="fa fa-times"></i>
+                    </div>
+                    <div class="card-body">
+                        <button>Sumbit Feedback</button>
+                    </div>
+                </div>
+            </div>
+            <div id="view-type-control">
                 <div>
                     <input type="radio" name="view-type" id="view-type-light" checked="checked" />
                     <label for="view-type-light">light</label>
@@ -203,6 +218,7 @@
     <script src="js/sidebar.js "></script>
     <script src="js/bookmarks.js "></script>
     <script src="js/poi-delete.js "></script>
+    <script src="js/report-issue.js "></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBIwzALxUPNbatRBj3Xi1Uhp0fFzwWNBkE&callback=initMap&libraries=&v=weekly" type=" text/javascript " async></script>
 </body>
 

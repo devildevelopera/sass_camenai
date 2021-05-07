@@ -91,14 +91,23 @@
             height: 100%;
         }
         #menu-btn {
+            left: 0;
+            top: 10px;
             z-index: 2;
-            top: 20px;
-            left: 20px;
-            width: 40px;
-            height: 40px;
+            padding: 5px;
             display: none;
+            color: $white;
             cursor: pointer;
+            transition: 0.35s;
             position: absolute;
+            border-radius: 0 5px 5px 0;
+            background-color: lighten($blue, 10%);
+            &:hover {
+                background-color: $blue;
+            }
+            i {
+                font-size: 36px;
+            }
         }
         #poi-draggable {
             top: 20px;
@@ -251,8 +260,8 @@
                     }
                     ul {
                         li {
-                            line-height: normal;
                             padding: 5px 10px;
+                            line-height: normal;
                             &:hover {
                                 background-color: lighten($black, 95%);
                             }
@@ -261,7 +270,80 @@
                 }
             }
         }
-        .view-type-control {
+        #report-issue-btn {
+            top: 48px;
+            right: 0;
+            z-index: 2;
+            padding: 5px;
+            color: $white;
+            cursor: pointer;
+            transition: 0.35s;
+            position: absolute;
+            border-radius: 5px 0 0 5px;
+            background-color: lighten($red, 10%);
+            &:hover {
+                background-color: $red;
+            }
+            i {
+                font-size: 36px;
+            }
+        }
+        #report-issue-draggable {
+            top: 48px;
+            right: 80px;
+            z-index: 2;
+            cursor: move;
+            width: 220px;
+            height: 147px;
+            display: none;
+            position: absolute;
+            text-align: center;
+            border-radius: 5px;
+            .card {
+                height: 100%;
+                text-align: left;
+                &-header {
+                    padding: 0px;
+                    color: $white;
+                    line-height: 46px;
+                    text-align: center;
+                    padding-left: 10px;
+                    padding-right: 10px;
+                    background-color: $red;
+                    i {
+                        cursor: pointer;
+                        position: absolute;
+                        &:first-child {
+                            top: 5px;
+                            left: 10px;
+                            font-size: 36px;
+                        }
+                        &:last-child {
+                            top: 13px;
+                            right: 10px;
+                            font-size: 20px;
+                        }
+                    }
+                }
+                &-body {
+                    padding: 10px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-around;
+                    button {
+                        width: 100%;
+                        &:focus {
+                            outline: none;
+                        }
+                        &:first-child {
+                            color: $white;
+                            background-color: lighten($black, 50%);
+                        }
+                    }
+                }
+            }
+        }
+        #view-type-control {
             z-index: 1;
             left: 20px;
             bottom: 30px;

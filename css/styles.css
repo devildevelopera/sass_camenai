@@ -3503,14 +3503,26 @@ to layouts.
 }
 
 .cnt .cnt-map #menu-btn {
+  left: 0;
+  top: 10px;
   z-index: 2;
-  top: 20px;
-  left: 20px;
-  width: 40px;
-  height: 40px;
+  padding: 5px;
   display: none;
+  color: #fff;
   cursor: pointer;
+  -webkit-transition: 0.35s;
+  transition: 0.35s;
   position: absolute;
+  border-radius: 0 5px 5px 0;
+  background-color: #12beff;
+}
+
+.cnt .cnt-map #menu-btn:hover {
+  background-color: #00a1de;
+}
+
+.cnt .cnt-map #menu-btn i {
+  font-size: 36px;
 }
 
 .cnt .cnt-map #poi-draggable {
@@ -3704,15 +3716,107 @@ to layouts.
 }
 
 .cnt .cnt-map #bookmarks-draggable .card-body ul li {
-  line-height: normal;
   padding: 5px 10px;
+  line-height: normal;
 }
 
 .cnt .cnt-map #bookmarks-draggable .card-body ul li:hover {
   background-color: #f2f2f2;
 }
 
-.cnt .cnt-map .view-type-control {
+.cnt .cnt-map #report-issue-btn {
+  top: 48px;
+  right: 0;
+  z-index: 2;
+  padding: 5px;
+  color: #fff;
+  cursor: pointer;
+  -webkit-transition: 0.35s;
+  transition: 0.35s;
+  position: absolute;
+  border-radius: 5px 0 0 5px;
+  background-color: #e44d42;
+}
+
+.cnt .cnt-map #report-issue-btn:hover {
+  background-color: #d52b1e;
+}
+
+.cnt .cnt-map #report-issue-btn i {
+  font-size: 36px;
+}
+
+.cnt .cnt-map #report-issue-draggable {
+  top: 48px;
+  right: 80px;
+  z-index: 2;
+  cursor: move;
+  width: 220px;
+  height: 147px;
+  display: none;
+  position: absolute;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.cnt .cnt-map #report-issue-draggable .card {
+  height: 100%;
+  text-align: left;
+}
+
+.cnt .cnt-map #report-issue-draggable .card-header {
+  padding: 0px;
+  color: #fff;
+  line-height: 46px;
+  text-align: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: #d52b1e;
+}
+
+.cnt .cnt-map #report-issue-draggable .card-header i {
+  cursor: pointer;
+  position: absolute;
+}
+
+.cnt .cnt-map #report-issue-draggable .card-header i:first-child {
+  top: 5px;
+  left: 10px;
+  font-size: 36px;
+}
+
+.cnt .cnt-map #report-issue-draggable .card-header i:last-child {
+  top: 13px;
+  right: 10px;
+  font-size: 20px;
+}
+
+.cnt .cnt-map #report-issue-draggable .card-body {
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.cnt .cnt-map #report-issue-draggable .card-body button {
+  width: 100%;
+}
+
+.cnt .cnt-map #report-issue-draggable .card-body button:focus {
+  outline: none;
+}
+
+.cnt .cnt-map #report-issue-draggable .card-body button:first-child {
+  color: #fff;
+  background-color: gray;
+}
+
+.cnt .cnt-map #view-type-control {
   z-index: 1;
   left: 20px;
   bottom: 30px;
@@ -3738,7 +3842,7 @@ to layouts.
       justify-content: space-around;
 }
 
-.cnt .cnt-map .view-type-control input {
+.cnt .cnt-map #view-type-control input {
   cursor: pointer;
 }
 

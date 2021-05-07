@@ -9,7 +9,6 @@ $(() => {
     $('#bookmarks').click((e) => {
         if ($('#bookmarks-draggable').is(":visible")) {
             $('#bookmarks-draggable').hide();
-
         } else {
             $('#bookmarks-draggable').show();
         }
