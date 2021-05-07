@@ -1,7 +1,7 @@
-$(function() {
-    var div = $("#draggable").draggable({
+$(() => {
+    var div = $("#poi-delete-draggable").draggable({
         containment: "parent",
-        drag: function() {
+        drag: () => {
             $('h3').text('Left: ' + div.offset().left + ' - Top: ' + div.offset().top);
         }
     });

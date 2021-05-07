@@ -22,7 +22,7 @@
             </div>
             <div class="hdr-search">
                 <div class="search">
-                    <span class="fa fa-search"></span>
+                    <i class="fa fa-search"></i>
                     <input placeholder="Search location or lat. l...">
                 </div>
             </div>
@@ -42,7 +42,7 @@
     <div class="cnt">
         <div class="cnt-settings fancyscroll">
             <div class="close-menu">
-                <img src="https://cdn2.iconfinder.com/data/icons/math-numbers-1/24/times-256.png" />
+                <img src="https://cdn4.iconfinder.com/data/icons/math-numbers-solid/24/times-solid-128.png" />
             </div>
             <ul>
                 <li>
@@ -58,7 +58,7 @@
                                     <ul>
                                         <li>
                                             <div class="search-POI">
-                                                <span class="fa fa-search"></span>
+                                                <i class="fa fa-search"></i>
                                                 <input placeholder="Search">
                                             </div>
                                         </li>
@@ -76,7 +76,7 @@
                         </div>
                     </div>
                 </li>
-                <li><i class="fa fa-bookmark-o"></i>Bookmarks</li>
+                <li id="bookmarks"><i class="fa fa-bookmark-o"></i>Bookmarks</li>
                 <li><i class="fa fa-eye"></i>Detections <img class="detections-img" src="https://cdn2.iconfinder.com/data/icons/250-perfect-vector-pictograms/48/9.6-128.png" />
                 </li>
                 <li>
@@ -84,7 +84,7 @@
                         <div class="card">
                             <div class="card-head" id="headingImgRecording">
                                 <h2 class="mb-0 collapsed" data-toggle="collapse" data-target="#collapseImgRecording" aria-expanded="false" aria-controls="collapseImgRecording">
-                                    <i class="fa fa-camera"></i>Image recording
+                                    <i class="fa fa-tripadvisor"></i>Image recording
                                 </h2>
                             </div>
                             <div id="collapseImgRecording" class="collapse" aria-labelledby="headingImgRecording" data-parent="#accordionImgRecording">
@@ -109,9 +109,11 @@
             </ul>
         </div>
         <div class="cnt-map">
-            <div id="draggable" class="ui-widget-content">
+            <img id="menu-btn" src="https://cdn0.iconfinder.com/data/icons/internet-activity-3-1/32/double_arrow_right-128.png" />
+            <div id="poi-draggable" class="ui-widget-content">
                 <div class="card">
-                    <div class="card-header">Utrecht</div>
+                    <div class="card-header"><span id="poi-draggable-header">Utrecht</span><i class="fa fa-times"></i>
+                    </div>
                     <div class="card-body">
                         <div class="accordion" id="accordionPOIOptions">
                             <div class="card">
@@ -131,6 +133,38 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+            <div id="poi-delete-draggable" class="ui-widget-content">
+                <div class="card">
+                    <div class="card-header"><span id="poi-draggable-header">Utrecht</span><i class="fa fa-times"></i>
+                    </div>
+                    <div class="card-body">
+                        <button>OK</button>
+                    </div>
+                </div>
+            </div>
+            <div id="bookmarks-draggable" class="ui-widget-content">
+                <div class="card">
+                    <div class="card-header">Bookmarks<i class="fa fa-times"></i></div>
+                    <div class="card-body">
+                        <div class="edit-bookmarks"><i class="fa fa-pencil"></i> Edit Bookmarks</div>
+                        <div class="search-bookmarks">
+                            <i class="fa fa-search"></i>
+                            <input placeholder="Search">
+                        </div>
+                        <div class="folder-name">
+                            <img src="https://cdn4.iconfinder.com/data/icons/navigation-40/24/chevron-left-128.png" />
+                            <span>Folder 01</span>
+                            <img src="https://cdn4.iconfinder.com/data/icons/navigation-40/24/chevron-right-128.png" />
+                        </div>
+                        <ul>
+                            <li>Littering Street A nr 45 needs cleaning</li>
+                            <li>Littering Street D nr 12 needs cleaning</li>
+                            <li>Broken street furniture Street G nr 45 needs repair</li>
+                            <li>Broken street furniture Street H nr 6 needs repair</li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -162,6 +196,9 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="js/map.js "></script>
     <script src="js/poi.js "></script>
+    <script src="js/sidebar.js "></script>
+    <script src="js/bookmarks.js "></script>
+    <script src="js/poi-delete.js "></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBIwzALxUPNbatRBj3Xi1Uhp0fFzwWNBkE&callback=initMap&libraries=&v=weekly" type=" text/javascript " async></script>
 </body>
 

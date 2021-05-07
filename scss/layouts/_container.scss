@@ -2,6 +2,7 @@
 .cnt {
     display: flex;
     flex-direction: row;
+    height: calc(100vh - 100px);
     @include mobileContentDisplay {
         height: calc(100vh - 172.5px);
         flex-direction: column-reverse;
@@ -48,9 +49,8 @@
                             margin-top: $margin/2;
                             margin-bottom: $margin/2;
                             .fa-search {
-                                position: absolute;
-                                top: 7px;
                                 right: 10px;
+                                position: absolute;
                                 color: lighten($black, 40%);
                             }
                             input {
@@ -90,7 +90,16 @@
         #map {
             height: 100%;
         }
-        #draggable {
+        #menu-btn {
+            z-index: 2;
+            top: 20px;
+            left: 20px;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            position: absolute;
+        }
+        #poi-draggable {
             top: 20px;
             left: 20px;
             z-index: 2;
@@ -106,8 +115,18 @@
                 &-header {
                     padding: 0;
                     color: $white;
+                    overflow: hidden;
                     padding-left: 10px;
+                    padding-right: 25px;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
                     background-color: lighten($black, 50%);
+                    i {
+                        top: 4px;
+                        right: 10px;
+                        cursor: pointer;
+                        position: absolute;
+                    }
                 }
                 &-body {
                     padding: 0;
@@ -118,6 +137,114 @@
                     }
                     #collapsePOIOptions .card-body ul li {
                         padding-left: 10px;
+                    }
+                }
+            }
+        }
+        #poi-delete-draggable {
+            top: 20px;
+            left: 192px;
+            z-index: 2;
+            cursor: move;
+            width: 160px;
+            height: 70px;
+            padding: 1px 3px;
+            position: absolute;
+            text-align: center;
+            border-radius: 5px;
+            .card {
+                text-align: left;
+                &-header {
+                    padding: 0;
+                    color: $white;
+                    overflow: hidden;
+                    padding-left: 10px;
+                    padding-right: 25px;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    background-color: lighten($black, 50%);
+                    i {
+                        top: 4px;
+                        right: 10px;
+                        cursor: pointer;
+                        position: absolute;
+                    }
+                }
+                &-body {
+                    padding: 0;
+                }
+            }
+        }
+        #bookmarks-draggable {
+            top: 190px;
+            left: 20px;
+            z-index: 2;
+            cursor: move;
+            width: 160px;
+            height: 70px;
+            padding: 1px 3px;
+            position: absolute;
+            text-align: center;
+            border-radius: 5px;
+            .card {
+                text-align: left;
+                &-header {
+                    padding: 0;
+                    color: $white;
+                    padding-left: 10px;
+                    padding-right: 25px;
+                    background-color: lighten($black, 50%);
+                    i {
+                        top: 4px;
+                        right: 10px;
+                        cursor: pointer;
+                        position: absolute;
+                    }
+                }
+                &-body {
+                    padding: 0;
+                    font-size: 14px;
+                    line-height: 25px;
+                    .edit-bookmarks {
+                        padding-left: 10px;
+                        border-bottom: 1px solid lighten($black, 80%);
+                    }
+                    .search-bookmarks {
+                        padding: 0 10px;
+                        position: relative;
+                        .fa-search {
+                            top: 7px;
+                            left: 10px;
+                            position: absolute;
+                            color: lighten($black, 40%);
+                        }
+                        input {
+                            width: 100%;
+                            border: none;
+                            outline: none;
+                            text-indent: 17px;
+                        }
+                    }
+                    .folder-name {
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        justify-content: space-between;
+                        background-color: lighten($black, 50%);
+                        img {
+                            width: 20px;
+                            height: 20px;
+                            cursor: pointer;
+                        }
+                    }
+                    ul {
+                        li {
+                            line-height: normal;
+                            padding: 5px 10px;
+                            &:hover {
+                                background-color: lighten($black, 95%);
+                            }
+                        }
                     }
                 }
             }
