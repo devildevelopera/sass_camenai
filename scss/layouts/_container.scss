@@ -96,6 +96,7 @@
             left: 20px;
             width: 40px;
             height: 40px;
+            display: none;
             cursor: pointer;
             position: absolute;
         }
@@ -106,7 +107,6 @@
             cursor: move;
             width: 160px;
             height: 70px;
-            padding: 1px 3px;
             position: absolute;
             text-align: center;
             border-radius: 5px;
@@ -146,22 +146,21 @@
             left: 192px;
             z-index: 2;
             cursor: move;
-            width: 160px;
-            height: 70px;
-            padding: 1px 3px;
+            width: 220px;
+            height: 147px;
+            display: none;
             position: absolute;
             text-align: center;
             border-radius: 5px;
             .card {
+                height: 100%;
                 text-align: left;
                 &-header {
                     padding: 0;
                     color: $white;
-                    overflow: hidden;
+                    text-align: center;
                     padding-left: 10px;
-                    padding-right: 25px;
-                    white-space: nowrap;
-                    text-overflow: ellipsis;
+                    padding-right: 10px;
                     background-color: lighten($black, 50%);
                     i {
                         top: 4px;
@@ -172,6 +171,19 @@
                 }
                 &-body {
                     padding: 0;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-around;
+                    button {
+                        width: 75px;
+                        &:focus {
+                            outline: none;
+                        }
+                        &:first-child {
+                            color: $white;
+                            background-color: lighten($black, 30%);
+                        }
+                    }
                 }
             }
         }

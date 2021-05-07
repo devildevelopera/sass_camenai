@@ -6,13 +6,7 @@ $(() => {
         }
     });
 
-    $('#collapsePOI li').click((event) => {
-        var text = $(event.target).text();
-        $('#poi-draggable-header').text(text);
-        $('#poi-draggable').show();
-    });
-
-    $('#poi-draggable .card-header i').click((e) => {
-        $('#poi-draggable').hide();
+    $('#poi-delete-draggable .card .card-body button').click((e) => {
+        $('#poi-delete-draggable').hide();
     })
 });
