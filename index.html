@@ -183,15 +183,48 @@
                         <i class="fa fa-info-circle"></i> Report Issue <i class="fa fa-times"></i>
                     </div>
                     <div class="card-body">
-                        <span>Add a comment</span>
-                        <textarea></textarea>
-                        <span>Category</span>
-                        <input></input>
-                        <span>Email</span>
-                        <input></input>
-                        <span>Assignee</span>
-                        <input></input>
-                        <button>Sumbit Feedback</button>
+                        <div>
+                            <label>Add a comment</label>
+                            <textarea name="report-issue-comment"></textarea>
+                        </div>
+                        <div>
+                            <label>Category</label>
+                            <select id="report-issue-category" name="report-issue-category">
+                                <option value="category01">Category 01</option>
+                                <option value="category02">Category 02</option>
+                                <option value="category03">Category 03</option>
+                                <option value="category04">Category 04</option>
+                                <option value="category05">Category 05</option>
+                                <option value="category06">Category 06</option>
+                                <option value="category07">Category 07</option>
+                                <option value="category08">Category 08</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label>Email</label>
+                            <input name="report-issue-email" value="Email 01"></input>
+                        </div>
+                        <div>
+                            <label>Assignee</label>
+                            <select id="report-issue-category" name="report-issue-assignee">
+                                <option value="assignee01">Assignee 01</option>
+                                <option value="assignee02">Assignee 02</option>
+                                <option value="assignee03">Assignee 03</option>
+                                <option value="assignee04">Assignee 04</option>
+                                <option value="assignee05">Assignee 05</option>
+                                <option value="assignee06">Assignee 06</option>
+                                <option value="assignee07">Assignee 07</option>
+                                <option value="assignee08">Assignee 08</option>
+                            </select>
+                        </div>
+                        <div class="icons-array">
+                            <i class="fa fa-hand-pointer-o"></i>
+                            <i class="fa fa-commenting-o"></i>
+                            <i class="fa fa-pencil"></i>
+                            <i class="fa fa-mouse-pointer"></i>
+                            <i class="fa fa-eye-slash"></i>
+                        </div>
+                        <button class="submit-feedback">Sumbit Feedback</button>
                     </div>
                 </div>
             </div>

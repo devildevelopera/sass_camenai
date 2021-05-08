@@ -22,3 +22,15 @@ ul {
 label {
     margin-bottom: 0 !important;
 }
+
+textarea,
+input,
+select {
+    &:focus-visible {
+        outline: none;
+    }
+}
+
+select {
+    height: 27px;
+}

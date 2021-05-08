@@ -18,7 +18,7 @@ $(() => {
         $('#report-issue-draggable').hide();
     });
 
-    $('#report-issue-draggable .card .card-body button').click((e) => {
+    $('#report-issue-draggable .card .card-body .submit-feedback').click((e) => {
         $('#report-issue-draggable').hide();
     });
 });

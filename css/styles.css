@@ -3119,6 +3119,16 @@ label {
   margin-bottom: 0 !important;
 }
 
+textarea:focus-visible,
+input:focus-visible,
+select:focus-visible {
+  outline: none;
+}
+
+select {
+  height: 27px;
+}
+
 html {
   color: #000;
   font-size: 14px;
@@ -3790,24 +3800,53 @@ to layouts.
 }
 
 .cnt .cnt-map #report-issue-draggable .card-body {
-  padding: 10px;
   font-size: 14px;
+  padding: 5px 10px 15px;
 }
 
 .cnt .cnt-map #report-issue-draggable .card-body textarea,
-.cnt .cnt-map #report-issue-draggable .card-body input {
+.cnt .cnt-map #report-issue-draggable .card-body input,
+.cnt .cnt-map #report-issue-draggable .card-body select {
   width: 100%;
 }
 
-.cnt .cnt-map #report-issue-draggable .card-body button {
+.cnt .cnt-map #report-issue-draggable .card-body input,
+.cnt .cnt-map #report-issue-draggable .card-body select {
+  margin-bottom: 5px;
+}
+
+.cnt .cnt-map #report-issue-draggable .card-body .icons-array {
+  display: -ms-grid;
+  display: grid;
+  margin-top: 10px;
+  border: 1px solid #666666;
+  -ms-grid-columns: auto auto auto auto auto;
+      grid-template-columns: auto auto auto auto auto;
+}
+
+.cnt .cnt-map #report-issue-draggable .card-body .icons-array i {
+  padding: 5px;
+  cursor: pointer;
+  font-size: 20px;
+  text-align: center;
+}
+
+.cnt .cnt-map #report-issue-draggable .card-body .icons-array i:not(:last-child) {
+  border-right: 1px solid #666666;
+}
+
+.cnt .cnt-map #report-issue-draggable .card-body .icons-array i:hover {
+  background-color: #cccccc;
+}
+
+.cnt .cnt-map #report-issue-draggable .card-body .submit-feedback {
   width: 100%;
   color: #fff;
-  margin-top: 15px;
-  margin-bottom: 5px;
+  margin-top: 13px;
   background-color: gray;
 }
 
-.cnt .cnt-map #report-issue-draggable .card-body button:focus {
+.cnt .cnt-map #report-issue-draggable .card-body .submit-feedback:focus {
   outline: none;
 }
 
