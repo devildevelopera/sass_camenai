@@ -52,7 +52,7 @@
                             margin-right: $margin*2;
                             margin-bottom: $margin/2;
                             .fa-search {
-                                right: 10px;
+                                right: 5px;
                                 position: absolute;
                                 color: lighten($black, 40%);
                             }
@@ -266,7 +266,6 @@
                     ul {
                         li {
                             padding: 5px 10px;
-                            line-height: normal;
                             &:hover {
                                 background-color: lighten($black, 95%);
                             }
@@ -309,12 +308,9 @@
                 height: 100%;
                 text-align: left;
                 &-header {
-                    padding: 0px;
+                    padding: 10px;
                     color: $white;
-                    line-height: 46px;
                     text-align: center;
-                    padding-left: 10px;
-                    padding-right: 10px;
                     background-color: $red;
                     i {
                         cursor: pointer;

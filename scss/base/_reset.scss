@@ -11,26 +11,3 @@ body {
         box-sizing: inherit;
     }
 }
-
-ul {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-    margin-bottom: 0 !important;
-}
-
-label {
-    margin-bottom: 0 !important;
-}
-
-textarea,
-input,
-select {
-    &:focus-visible {
-        outline: none;
-    }
-}
-
-select {
-    height: 27px;
-}
