@@ -6,21 +6,21 @@
 /* Track */
 
 .fancyscroll::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 2.5px $grey;
     border-radius: 5px;
+    box-shadow: inset 0 0 2.5px lighten($black, 50%);
 }
 
 
 /* Handle */
 
 .fancyscroll::-webkit-scrollbar-thumb {
-    background: lighten($black, 70%);
     border-radius: 5px;
+    background: lighten($black, 80%);
 }
 
 
 /* Handle on hover */
 
 .fancyscroll::-webkit-scrollbar-thumb:hover {
-    background: lighten($black, 80%);
+    background: lighten($black, 70%);
 }

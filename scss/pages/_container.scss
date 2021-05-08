@@ -54,7 +54,7 @@
                             .fa-search {
                                 right: 5px;
                                 position: absolute;
-                                color: lighten($black, 40%);
+                                color: lighten($black, 50%);
                             }
                             input {
                                 width: 100%;
@@ -242,7 +242,7 @@
                             top: 7px;
                             left: 10px;
                             position: absolute;
-                            color: lighten($black, 40%);
+                            color: lighten($black, 50%);
                         }
                         input {
                             width: 100%;
@@ -256,7 +256,7 @@
                         flex-direction: row;
                         align-items: center;
                         justify-content: space-between;
-                        background-color: lighten($black, 50%);
+                        background-color: lighten($black, 80%);
                         img {
                             width: 20px;
                             height: 20px;
@@ -342,7 +342,7 @@
                     .icons-array {
                         display: grid;
                         margin-top: 10px;
-                        border: 1px solid lighten($black, 40%);
+                        border: 1px solid lighten($black, 80%);
                         grid-template-columns: auto auto auto auto auto;
                         i {
                             padding: 5px;
@@ -350,10 +350,10 @@
                             font-size: 20px;
                             text-align: center;
                             &:not(:last-child) {
-                                border-right: 1px solid lighten($black, 40%);
+                                border-right: 1px solid lighten($black, 80%);
                             }
                             &:hover {
-                                background-color: lighten($black, 80%);
+                                background-color: lighten($black, 95%);
                             }
                         }
                     }
@@ -388,7 +388,7 @@
             }
         }
         /* location-control */
-        .location-control {
+        #location-control {
             z-index: 1;
             right: 20px;
             bottom: 140px;
