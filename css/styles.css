@@ -3263,7 +3263,7 @@ Files inside this folder should contain all styles relating
 to layouts.
 */
 /* Import layout files */
-/* Header Styles */
+/* header */
 .hdr {
   color: #fff;
   height: 100px;
@@ -3417,7 +3417,7 @@ Files inside this folder should contain all styles relating
 to layouts.
 */
 /* Import Pages files */
-/* Container styles */
+/* container */
 .cnt {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3427,6 +3427,8 @@ to layouts.
       -ms-flex-direction: row;
           flex-direction: row;
   height: calc(100vh - 100px);
+  /* side menu */
+  /* map-section */
 }
 
 @media only screen and (max-width: 768px) {
@@ -3534,10 +3536,16 @@ to layouts.
       -ms-flex: 1;
           flex: 1;
   position: relative;
-}
-
-.cnt .cnt-map #map {
-  height: 100%;
+  /* side menu open icon */
+  /* POI modal */
+  /* POI delete modal */
+  /* bookmarks modal */
+  /* report issue modal open icon */
+  /* report issue modal */
+  /* view type control */
+  /* location-control */
+  /* zoom-control */
+  /* map */
 }
 
 .cnt .cnt-map #menu-btn {
@@ -3954,5 +3962,9 @@ to layouts.
 
 .cnt .cnt-map .zoom-control i:last-child {
   border-bottom: none;
+}
+
+.cnt .cnt-map #map {
+  height: 100%;
 }
 /*# sourceMappingURL=styles.css.map */

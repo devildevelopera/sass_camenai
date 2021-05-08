@@ -1,4 +1,4 @@
-/* Container styles */
+/* container */
 
 .cnt {
     display: flex;
@@ -8,6 +8,7 @@
         height: calc(100vh - 172.5px);
         flex-direction: column-reverse;
     }
+    /* side menu */
     .cnt-settings {
         width: 325px;
         overflow-y: auto;
@@ -86,12 +87,11 @@
             }
         }
     }
+    /* map-section */
     .cnt-map {
         flex: 1;
         position: relative;
-        #map {
-            height: 100%;
-        }
+        /* side menu open icon */
         #menu-btn {
             left: 0;
             top: 10px;
@@ -111,6 +111,7 @@
                 font-size: 36px;
             }
         }
+        /* POI modal */
         #poi-draggable {
             top: 20px;
             left: 20px;
@@ -152,6 +153,7 @@
                 }
             }
         }
+        /* POI delete modal */
         #poi-delete-draggable {
             top: 20px;
             left: 192px;
@@ -198,6 +200,7 @@
                 }
             }
         }
+        /* bookmarks modal */
         #bookmarks-draggable {
             top: 190px;
             left: 20px;
@@ -272,6 +275,7 @@
                 }
             }
         }
+        /* report issue modal open icon */
         #report-issue-btn {
             top: 48px;
             right: 0;
@@ -290,6 +294,7 @@
                 font-size: 36px;
             }
         }
+        /* report issue modal */
         #report-issue-draggable {
             top: 48px;
             z-index: 2;
@@ -368,6 +373,7 @@
                 }
             }
         }
+        /* view type control */
         #view-type-control {
             z-index: 1;
             left: 20px;
@@ -382,6 +388,7 @@
                 cursor: pointer;
             }
         }
+        /* location-control */
         .location-control {
             z-index: 1;
             right: 20px;
@@ -396,6 +403,7 @@
                 }
             }
         }
+        /* zoom-control */
         .zoom-control {
             z-index: 1;
             right: 20px;
@@ -414,6 +422,10 @@
                     border-bottom: none;
                 }
             }
+        }
+        /* map */
+        #map {
+            height: 100%;
         }
     }
 }
