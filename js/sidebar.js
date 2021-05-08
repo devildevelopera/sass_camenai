@@ -1,6 +1,6 @@
 $(() => {
     $('.cnt .cnt-settings .close-menu img').click((e) => {
-        $('.cnt-settings').hide();
+        $('.cnt-settings').hide(50);
         $('.cnt .cnt-map #menu-btn').show();
         $('#poi-draggable').css({ 'top': '75px', 'left': '20px' });
         $('#poi-delete-draggable').css({ 'top': '75px', 'left': '192px' });
@@ -8,7 +8,7 @@ $(() => {
     });
 
     $('.cnt .cnt-map #menu-btn').click((e) => {
-        $('.cnt-settings').show();
+        $('.cnt-settings').show(50);
         $('.cnt .cnt-map #menu-btn').hide();
         $('#poi-draggable').css({ 'top': '20px', 'left': '20px' });
         $('#poi-delete-draggable').css({ 'top': '20px', 'left': '192px' });
