@@ -16,6 +16,7 @@
     .hdr-left {
         img {
             height: 70px;
+            cursor: pointer;
             vertical-align: middle;
         }
     }
@@ -26,7 +27,7 @@
             display: block;
             text-align: center;
         }
-        .hdr-user {
+        .hdr-username {
             padding: $padding;
             @include mobileContentDisplay {
                 display: none;
@@ -72,6 +73,7 @@
                 @include displayFlexRow;
                 padding-left: 0;
                 li {
+                    cursor: pointer;
                     padding: 8px 14px;
                     display: inline-block;
                 }
