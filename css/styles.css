@@ -3144,7 +3144,6 @@ select {
 html {
   color: #000;
   font-size: 14px;
-  line-height: 1.5;
   font-weight: normal;
   font-family: "Open Sans", sans-serif;
 }
@@ -3163,7 +3162,6 @@ h4,
 h5,
 h6 {
   margin: 0;
-  line-height: 1.2;
   font-weight: bold;
   margin-bottom: 1em;
 }
@@ -3231,7 +3229,6 @@ to a reusable component.
   cursor: pointer;
   font-size: 14px;
   font-weight: 400;
-  line-height: 30px;
   background: url(https://cdn0.iconfinder.com/data/icons/entypo/91/arrow56-512.png) no-repeat calc(100% - 8px) center;
   background-size: 20px;
 }
@@ -3884,6 +3881,10 @@ to layouts.
 
 .cnt .cnt-map #report-issue-draggable .card-body .submit-feedback:focus {
   outline: none;
+}
+
+.cnt .cnt-map #report-issue-draggable .card-body .submit-feedback:active {
+  background-color: #4d4d4d;
 }
 
 .cnt .cnt-map #view-type-control {

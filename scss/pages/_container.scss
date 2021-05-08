@@ -369,6 +369,9 @@
                         &:focus {
                             outline: none;
                         }
+                        &:active {
+                            background-color: lighten($black, 30%);
+                        }
                     }
                 }
             }
