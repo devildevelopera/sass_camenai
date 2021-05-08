@@ -12,6 +12,9 @@
 </head>
 
 <body>
+
+    <!-- header -->
+
     <div class="hdr">
         <div class="hdr-left">
             <img src="https://qanjqlr57htq3ya-dashboard.azurewebsites.net/imgs/camenai_logo_horizontaal_wit.svg" />
@@ -39,7 +42,13 @@
             </div>
         </div>
     </div>
+
+    <!-- container -->
+
     <div class="cnt">
+
+        <!-- side menu -->
+
         <div class="cnt-settings fancyscroll">
             <div class="close-menu">
                 <img src="https://cdn4.iconfinder.com/data/icons/math-numbers-solid/24/times-solid-128.png" />
@@ -108,10 +117,19 @@
                 <li><i class="fa fa-file-o"></i>Analytics</li>
             </ul>
         </div>
+
+        <!-- map-section -->
+
         <div class="cnt-map">
+
+            <!-- side menu open icon -->
+
             <div id="menu-btn">
                 <i class="fa fa-arrow-right"></i>
             </div>
+
+            <!-- POI modal -->
+
             <div id="poi-draggable" class="ui-widget-content">
                 <div class="card">
                     <div class="card-header"><span id="poi-draggable-header">Utrecht</span><i class="fa fa-times"></i>
@@ -138,6 +156,9 @@
                     </div>
                 </div>
             </div>
+
+            <!-- POI delete modal -->
+
             <div id="poi-delete-draggable" class="ui-widget-content">
                 <div class="card">
                     <div class="card-header">
@@ -151,6 +172,9 @@
                     </div>
                 </div>
             </div>
+
+            <!-- bookmarks modal -->
+
             <div id="bookmarks-draggable" class="ui-widget-content">
                 <div class="card">
                     <div class="card-header">Bookmarks<i class="fa fa-times"></i></div>
@@ -174,9 +198,15 @@
                     </div>
                 </div>
             </div>
+
+            <!-- report issue modal open icon -->
+
             <div id="report-issue-btn">
                 <i class="fa fa-info-circle"></i>
             </div>
+
+            <!-- report issue modal -->
+
             <div id="report-issue-draggable">
                 <div class="card">
                     <div class="card-header">
@@ -228,6 +258,9 @@
                     </div>
                 </div>
             </div>
+
+            <!-- view type control -->
+
             <div id="view-type-control">
                 <div>
                     <input type="radio" name="view-type" id="view-type-light" checked="checked" />
@@ -238,29 +271,47 @@
                     <label for="view-type-satellite">satellite</label>
                 </div>
             </div>
+
+            <!-- location-control -->
+
             <div class="location-control">
                 <i class="fa fa-dot-circle-o"></i>
             </div>
+
+            <!-- zoom-control -->
+
             <div class="zoom-control">
                 <i class="fa fa-plus"></i>
                 <i class="fa fa-minus"></i>
                 <i class="fa fa-compass"></i>
             </div>
+
+            <!-- map -->
+
             <div id="map"></div>
         </div>
     </div>
+
+    <!-- jquery -->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js" type="text/javascript"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- custom scripts -->
+
     <script src="js/map.js "></script>
     <script src="js/poi.js "></script>
     <script src="js/sidebar.js "></script>
     <script src="js/bookmarks.js "></script>
     <script src="js/poi-delete.js "></script>
     <script src="js/report-issue.js "></script>
+
+    <!-- google map api -->
+
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBIwzALxUPNbatRBj3Xi1Uhp0fFzwWNBkE&callback=initMap&libraries=&v=weekly" type=" text/javascript " async></script>
+
 </body>
 
 </html>

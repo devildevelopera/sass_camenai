@@ -1,4 +1,5 @@
-// Header Styles
+/* Header Styles */
+
 .hdr {
     color: $white;
     height: 100px;
@@ -38,9 +39,9 @@
                     margin: $padding/2;
                 }
                 .fa-search {
-                    position: absolute;
                     top: 10px;
                     left: 10px;
+                    position: absolute;
                     color: lighten($black, 40%);
                 }
                 input {

@@ -1,8 +1,16 @@
-// Mixins
+/* Mixins */
+
 @mixin displayFlexRow {
     display: flex;
     align-items: center;
     flex-direction: row;
+}
+
+@mixin mapControlBox {
+    border-radius: 5px;
+    background-color: $white;
+    border: 1px solid lighten($black, 80%);
+    box-shadow: 0 0 1px lighten($black, 30%);
 }
 
 @mixin mobileContentDisplay {
@@ -15,11 +23,4 @@
     @media only screen and (min-width: $smallBreakpoint) {
         @content;
     }
-}
-
-@mixin mapControlBox {
-    border-radius: 5px;
-    background-color: $white;
-    border: 1px solid lighten($black, 80%);
-    box-shadow: 0 0 1px lighten($black, 30%);
 }

@@ -34,6 +34,7 @@
 * http://github.com/necolas/normalize.css
 * MIT License
 */
+/* Vendor */
 /*
 This file is used to contain all vendor imports.
 */
@@ -3081,16 +3082,27 @@ This file is used to contain all vendor imports.
   clip: auto;
 }
 
+/* Abstracts */
 /*
 This file is used to contain all abstracts imports.
 Files inside this folder can contain abstract settings,
 helpers or functions. They have no direct output.
 */
+/* Import Abstracts files */
+/* Font Imports */
+/* Mixins */
+/* Fonts */
+/* Font Sizing */
+/*Colors*/
+/* Spacing */
+/* Breakpoints */
+/* Base Styles */
 /*
 This file is used to contain all base imports.
 Files inside this folder can contain global styles used in
 the project.
 */
+/* Import Base files */
 /*
 This file can be used to overwrite any normailze settings.
 */
@@ -3143,6 +3155,7 @@ html {
   }
 }
 
+/* Header Styles */
 h1,
 h2,
 h3,
@@ -3168,6 +3181,7 @@ p {
   margin-bottom: 1em;
 }
 
+/* Text Styles */
 em {
   font-style: italic;
 }
@@ -3180,11 +3194,13 @@ strong {
   text-transform: uppercase;
 }
 
+/* Components */
 /*
 This file is used to contain all component imports.
 Files inside this folder should contain all styles relating
 to a reusable component.
 */
+/* Import Component files */
 .fancyscroll::-webkit-scrollbar {
   width: 10px;
 }
@@ -3240,11 +3256,14 @@ to a reusable component.
   background-color: #f2f2f2;
 }
 
+/* Layout */
 /*
 This file is used to contain all layout imports.
 Files inside this folder should contain all styles relating
 to layouts.
 */
+/* Import layout files */
+/* Header Styles */
 .hdr {
   color: #fff;
   height: 100px;
@@ -3323,9 +3342,9 @@ to layouts.
 }
 
 .hdr .hdr-right .hdr-search .search .fa-search {
-  position: absolute;
   top: 10px;
   left: 10px;
+  position: absolute;
   color: #666666;
 }
 
@@ -3391,6 +3410,14 @@ to layouts.
   border-right: 1px solid #f1f1f1;
 }
 
+/* Pages */
+/*
+This file is used to contain all pages imports.
+Files inside this folder should contain all styles relating
+to layouts.
+*/
+/* Import Pages files */
+/* Container styles */
 .cnt {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3462,8 +3489,8 @@ to layouts.
 
 .cnt .cnt-settings ul li #accordionPOI .card #collapsePOI .card-body ul li .search-POI {
   position: relative;
-  margin-right: 2em;
   margin-top: 0.5em;
+  margin-right: 2em;
   margin-bottom: 0.5em;
 }
 
@@ -3480,8 +3507,8 @@ to layouts.
   text-indent: 5px;
   border-radius: 4px;
   -moz-border-radius: 4px;
-  border: 1px solid #cccccc;
   -webkit-border-radius: 4px;
+  border: 1px solid #cccccc;
 }
 
 .cnt .cnt-settings ul li i {
@@ -3759,8 +3786,8 @@ to layouts.
 
 .cnt .cnt-map #report-issue-draggable {
   top: 48px;
-  right: 80px;
   z-index: 2;
+  right: 80px;
   cursor: move;
   width: 220px;
   position: absolute;
