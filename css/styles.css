@@ -3110,6 +3110,7 @@ html,
 body {
   margin: 0;
   padding: 0;
+  border: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -3118,6 +3119,27 @@ html *,
 body * {
   -webkit-box-sizing: inherit;
           box-sizing: inherit;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  margin-bottom: 0 !important;
+}
+
+ul li {
+  line-height: normal;
+}
+
+textarea,
+input,
+select {
+  outline: none;
+}
+
+button {
+  border: none;
 }
 
 html {
@@ -3161,25 +3183,17 @@ to a reusable component.
 */
 /* Import Component files */
 button {
-  border: none;
   line-height: 25px !important;
 }
 
-textarea:focus-visible,
-input:focus-visible,
-select:focus-visible {
-  outline: none;
+.drag-able-modal {
+  position: absolute;
 }
 
-ul {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-  margin-bottom: 0 !important;
-}
-
-ul li {
-  line-height: normal;
+.imageIcon {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
 }
 
 label {
@@ -3188,10 +3202,6 @@ label {
 
 select {
   height: 27px;
-}
-
-select:focus-visible {
-  outline: none;
 }
 
 .fancyscroll::-webkit-scrollbar {
@@ -3349,11 +3359,10 @@ to layouts.
 .hdr .hdr-right .hdr-search .search input {
   width: 220px;
   height: 36px;
-  outline: none;
   text-indent: 32px;
+  border: 1px solid #fff;
   border-radius: 4px;
   -moz-border-radius: 4px;
-  border: 1px solid #fff;
   -webkit-border-radius: 4px;
 }
 
@@ -3396,7 +3405,6 @@ to layouts.
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  padding-left: 0;
 }
 
 .hdr .hdr-right .hdr-menu ul li {
@@ -3464,11 +3472,6 @@ to layouts.
   border-bottom: 1px solid #cccccc;
 }
 
-.cnt .cnt-settings .close-menu img {
-  width: 20px;
-  height: 20px;
-}
-
 .cnt .cnt-settings ul li {
   font-size: 14px;
   border-bottom: 1px solid #cccccc;
@@ -3480,7 +3483,7 @@ to layouts.
 
 .cnt .cnt-settings ul li #accordionPOI .card #collapsePOI .card-body ul {
   margin-left: 13px;
-  padding-left: 1.5em;
+  padding-left: 0.5em;
   border-left: 1px solid #cccccc;
 }
 
@@ -3490,9 +3493,7 @@ to layouts.
 
 .cnt .cnt-settings ul li #accordionPOI .card #collapsePOI .card-body ul li .search-POI {
   position: relative;
-  margin-top: 0.5em;
-  margin-right: 2em;
-  margin-bottom: 0.5em;
+  margin: 0.5em 0.5em 0.5em 0;
 }
 
 .cnt .cnt-settings ul li #accordionPOI .card #collapsePOI .card-body ul li .search-POI .fa-search {
@@ -3503,8 +3504,6 @@ to layouts.
 
 .cnt .cnt-settings ul li #accordionPOI .card #collapsePOI .card-body ul li .search-POI input {
   width: 100%;
-  height: 30px;
-  outline: none;
   text-indent: 5px;
   border-radius: 4px;
   -moz-border-radius: 4px;
@@ -3517,10 +3516,7 @@ to layouts.
 }
 
 .cnt .cnt-settings ul li .detections-img {
-  width: 20px;
-  height: 20px;
   float: right;
-  cursor: pointer;
   margin-top: 0.5em;
   margin-right: 0.5em;
 }
@@ -3576,24 +3572,18 @@ to layouts.
   z-index: 2;
   cursor: move;
   width: 160px;
-  position: absolute;
-  text-align: center;
   border-radius: 5px;
 }
 
-.cnt .cnt-map #poi-draggable .card {
-  text-align: left;
-}
-
 .cnt .cnt-map #poi-draggable .card-header {
+  padding-right: 25px;
   padding: 0;
   color: #fff;
-  overflow: hidden;
   padding-left: 10px;
-  padding-right: 25px;
+  background-color: gray;
+  overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-  background-color: gray;
 }
 
 .cnt .cnt-map #poi-draggable .card-header i {
@@ -3634,11 +3624,11 @@ to layouts.
 }
 
 .cnt .cnt-map #poi-delete-draggable .card-header {
+  text-align: center;
+  padding-right: 10px;
   padding: 0;
   color: #fff;
-  text-align: center;
   padding-left: 10px;
-  padding-right: 10px;
   background-color: gray;
 }
 
@@ -3692,10 +3682,10 @@ to layouts.
 }
 
 .cnt .cnt-map #bookmarks-draggable .card-header {
+  padding-right: 25px;
   padding: 0;
   color: #fff;
   padding-left: 10px;
-  padding-right: 25px;
   background-color: gray;
 }
 
@@ -3806,26 +3796,33 @@ to layouts.
 }
 
 .cnt .cnt-map #report-issue-draggable .card-header {
-  padding: 10px;
+  padding: 0;
   color: #fff;
+  padding-left: 10px;
+  background-color: gray;
+  padding: 10px;
   text-align: center;
   background-color: #d52b1e;
 }
 
 .cnt .cnt-map #report-issue-draggable .card-header i {
+  top: 4px;
+  right: 10px;
   cursor: pointer;
   position: absolute;
 }
 
+.cnt .cnt-map #report-issue-draggable .card-header i {
+  left: 10px;
+}
+
 .cnt .cnt-map #report-issue-draggable .card-header i:first-child {
   top: 5px;
-  left: 10px;
   font-size: 36px;
 }
 
 .cnt .cnt-map #report-issue-draggable .card-header i:last-child {
   top: 13px;
-  right: 10px;
   font-size: 20px;
 }
 
