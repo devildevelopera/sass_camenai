@@ -3186,7 +3186,7 @@ button {
   line-height: 25px !important;
 }
 
-.drag-able-modal {
+.drag-modal {
   position: absolute;
 }
 
@@ -3613,7 +3613,6 @@ to layouts.
   width: 220px;
   height: 132px;
   display: none;
-  position: absolute;
   text-align: center;
   border-radius: 5px;
 }
@@ -3672,7 +3671,6 @@ to layouts.
   width: 160px;
   height: 70px;
   padding: 1px 3px;
-  position: absolute;
   text-align: center;
   border-radius: 5px;
 }
@@ -3812,12 +3810,10 @@ to layouts.
   position: absolute;
 }
 
-.cnt .cnt-map #report-issue-draggable .card-header i {
-  left: 10px;
-}
-
 .cnt .cnt-map #report-issue-draggable .card-header i:first-child {
   top: 5px;
+  left: 10px;
+  right: inherit;
   font-size: 36px;
 }
 
