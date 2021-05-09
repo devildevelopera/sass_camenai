@@ -8,5 +8,5 @@ $(() => {
 
     $('#poi-delete-draggable .card .card-body button').click((e) => {
         $('#poi-delete-draggable').hide();
-    })
+    });
 });

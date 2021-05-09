@@ -34,6 +34,9 @@
                 &:hover {
                     background-color: lighten($black, 95%);
                 }
+                i {
+                    padding: $padding*2/3;
+                }
                 #accordionPOI .card #collapsePOI .card-body ul {
                     margin-left: 13px;
                     padding-left: $padding/2;
@@ -59,9 +62,6 @@
                         }
                     }
                 }
-                i {
-                    padding: $padding*2/3;
-                }
                 .detections-img {
                     float: right;
                     margin-top: $margin/2;
@@ -82,30 +82,19 @@
         #menu-btn {
             left: 0;
             top: 10px;
-            z-index: 2;
-            padding: 5px;
             display: none;
-            color: $white;
-            cursor: pointer;
-            transition: 0.35s;
-            position: absolute;
+            @include sideButtonStyle;
             border-radius: 0 5px 5px 0;
             background-color: lighten($blue, 10%);
             &:hover {
                 background-color: $blue;
-            }
-            i {
-                font-size: 36px;
             }
         }
         /* POI modal */
         #poi-draggable {
             top: 20px;
             left: 20px;
-            z-index: 2;
-            cursor: move;
             width: 160px;
-            border-radius: 5px;
             .card {
                 &-header {
                     padding-right: 25px;
@@ -119,9 +108,6 @@
                             padding-left: 10px;
                         }
                     }
-                    #collapsePOIOptions .card-body ul li {
-                        padding-left: 10px;
-                    }
                 }
             }
         }
@@ -129,16 +115,10 @@
         #poi-delete-draggable {
             top: 20px;
             left: 192px;
-            z-index: 2;
-            cursor: move;
             width: 220px;
             height: 132px;
-            display: none;
-            text-align: center;
-            border-radius: 5px;
             .card {
                 height: 100%;
-                text-align: left;
                 &-header {
                     text-align: center;
                     padding-right: 10px;
@@ -151,9 +131,6 @@
                     justify-content: space-around;
                     button {
                         width: 75px;
-                        &:focus {
-                            outline: none;
-                        }
                         &:first-child {
                             color: $white;
                             background-color: lighten($black, 30%);
@@ -166,13 +143,8 @@
         #bookmarks-draggable {
             top: 190px;
             left: 20px;
-            z-index: 2;
-            cursor: move;
             width: 160px;
-            height: 70px;
-            padding: 1px 3px;
             text-align: center;
-            border-radius: 5px;
             .card {
                 text-align: left;
                 &-header {
@@ -182,16 +154,15 @@
                 &-body {
                     padding: 0;
                     font-size: 14px;
-                    line-height: 25px;
                     .edit-bookmarks {
-                        padding-left: 10px;
+                        padding: 0 10px;
                         border-bottom: solidBlackBorder();
                     }
                     .search-bookmarks {
                         padding: 0 10px;
                         position: relative;
                         .fa-search {
-                            top: 7px;
+                            top: 5px;
                             left: 10px;
                             position: absolute;
                             color: lighten($black, 50%);
@@ -199,21 +170,13 @@
                         input {
                             width: 100%;
                             border: none;
-                            outline: none;
                             text-indent: 17px;
                         }
                     }
                     .folder-name {
-                        display: flex;
-                        flex-direction: row;
-                        align-items: center;
+                        @include displayFlexRow;
                         justify-content: space-between;
                         background-color: lighten($black, 80%);
-                        img {
-                            width: 20px;
-                            height: 20px;
-                            cursor: pointer;
-                        }
                     }
                     ul {
                         li {
@@ -228,34 +191,20 @@
         }
         /* report issue modal open icon */
         #report-issue-btn {
-            top: 48px;
             right: 0;
-            z-index: 2;
-            padding: 5px;
-            color: $white;
-            cursor: pointer;
-            transition: 0.35s;
-            position: absolute;
+            top: 48px;
+            @include sideButtonStyle;
             border-radius: 5px 0 0 5px;
             background-color: lighten($red, 10%);
             &:hover {
                 background-color: $red;
             }
-            i {
-                font-size: 36px;
-            }
         }
         /* report issue modal */
         #report-issue-draggable {
             top: 48px;
-            z-index: 2;
             right: 80px;
-            cursor: move;
             width: 220px;
-            // display: none;
-            position: absolute;
-            text-align: center;
-            border-radius: 5px;
             .card {
                 height: 100%;
                 text-align: left;
@@ -312,9 +261,6 @@
                         color: $white;
                         margin-top: 13px;
                         background-color: lighten($black, 50%);
-                        &:focus {
-                            outline: none;
-                        }
                         &:active {
                             background-color: lighten($black, 30%);
                         }
@@ -324,12 +270,10 @@
         }
         /* view type control */
         #view-type-control {
-            z-index: 1;
             left: 20px;
             bottom: 30px;
             width: 170px;
             height: 38px;
-            position: absolute;
             @include mapControlBox;
             @include displayFlexRow;
             justify-content: space-around;
@@ -339,10 +283,8 @@
         }
         /* location-control */
         #location-control {
-            z-index: 1;
             right: 20px;
             bottom: 140px;
-            position: absolute;
             @include mapControlBox;
             i {
                 padding: 8px;
@@ -354,15 +296,13 @@
         }
         /* zoom-control */
         .zoom-control {
-            z-index: 1;
             right: 20px;
             bottom: 30px;
-            position: absolute;
             @include mapControlBox;
             i {
-                padding: 8px;
                 display: block;
                 cursor: pointer;
+                padding: $padding/2;
                 border-bottom: solidBlackBorder();
                 &:hover {
                     background-color: lighten($black, 95%);

@@ -16,5 +16,5 @@ $(() => {
 
     $('#bookmarks-draggable .card-header i').click((e) => {
         $('#bookmarks-draggable').hide();
-    })
+    });
 });

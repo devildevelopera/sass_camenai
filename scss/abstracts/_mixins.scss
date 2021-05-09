@@ -7,6 +7,8 @@
 }
 
 @mixin mapControlBox {
+    z-index: 1;
+    position: absolute;
     border-radius: 5px;
     background-color: $white;
     border: solidBlackBorder();
@@ -34,6 +36,18 @@
         right: 10px;
         cursor: pointer;
         position: absolute;
+    }
+}
+
+@mixin sideButtonStyle {
+    z-index: 2;
+    padding: 5px;
+    color: $white;
+    cursor: pointer;
+    transition: 0.35s;
+    position: absolute;
+    i {
+        font-size: 36px;
     }
 }
 

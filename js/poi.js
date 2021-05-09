@@ -8,7 +8,7 @@ $(() => {
 
     $('#poi-draggable .card-header i').click((e) => {
         $('#poi-draggable').hide();
-    })
+    });
 
     $('#collapsePOIOptions .card-body ul li:last-child').click((e) => {
         $('#poi-delete-draggable').show();
