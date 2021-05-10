@@ -7,7 +7,7 @@
     background: $purple-rain;
     padding-left: $padding *2;
     justify-content: space-between;
-    @include mobileContentDisplay {
+    @include maxSMContent {
         display: block;
         padding-left: 0;
         height: inherit;
@@ -23,20 +23,20 @@
     .hdr-right {
         @include displayFlexRow;
         justify-content: space-between;
-        @include mobileContentDisplay {
+        @include maxSMContent {
             display: block;
             text-align: center;
         }
         .hdr-username {
             padding: $padding;
-            @include mobileContentDisplay {
+            @include maxSMContent {
                 display: none;
             }
         }
         .hdr-search {
             .search {
                 position: relative;
-                @include mobileContentDisplay {
+                @include maxSMContent {
                     margin: $padding/2;
                 }
                 .fa-search {
@@ -51,7 +51,7 @@
                     text-indent: 32px;
                     border: 1px solid $white;
                     @include searchInputBorderRadius;
-                    @include mobileContentDisplay {
+                    @include maxSMContent {
                         width: 100%;
                     }
                 }
@@ -61,7 +61,7 @@
             padding: $padding/2;
             @include displayFlexRow;
             justify-content: space-around;
-            @include desktopContentDisplay {
+            @include minSMContent {
                 .loginname {
                     display: none;
                 }

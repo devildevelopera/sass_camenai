@@ -4,8 +4,10 @@
     display: flex;
     flex-direction: row;
     height: calc(100vh - 100px);
-    @include mobileContentDisplay {
+    @include maxSMContent {
         height: calc(100vh - 172.5px);
+    }
+    @include maxMDContent {
         flex-direction: column-reverse;
     }
     /* side menu */
@@ -16,7 +18,7 @@
         padding: $padding/2;
         height: calc(100vh - 100px);
         border: solidBlackBorder();
-        @include mobileContentDisplay {
+        @include maxMDContent {
             width: 100%;
             height: 200px;
         }
@@ -35,9 +37,9 @@
                     background-color: lighten($black, 95%);
                 }
                 i {
-                    padding: $padding*2/3;
+                    padding: 10px;
                 }
-                #accordionPOI .card #collapsePOI .card-body ul {
+                #accordionPOI ul {
                     margin-left: 13px;
                     padding-left: $padding/2;
                     border-left: solidBlackBorder();
@@ -49,16 +51,27 @@
                             position: relative;
                             margin: $margin/2 $margin/2 $margin/2 0;
                             .fa-search {
-                                right: 5px;
+                                top: 7px;
+                                right: 7px;
+                                padding: 0;
                                 position: absolute;
                                 color: lighten($black, 50%);
                             }
                             input {
                                 width: 100%;
                                 text-indent: 5px;
-                                @include searchInputBorderRadius;
                                 border: solidBlackBorder();
+                                @include searchInputBorderRadius;
                             }
+                        }
+                    }
+                }
+                #accordionImgRecording ul {
+                    li:first-child {
+                        background-color: transparent;
+                        h2 i {
+                            padding: 0;
+                            padding-right: 10px;
                         }
                     }
                 }
@@ -177,8 +190,15 @@
                         @include displayFlexRow;
                         justify-content: space-between;
                         background-color: lighten($black, 80%);
+                        i {
+                            padding: 0 5px;
+                            font-size: 25px;
+                            font-weight: bold;
+                        }
                     }
                     ul {
+                        height: 200px;
+                        overflow-y: scroll;
                         li {
                             padding: 5px 10px;
                             &:hover {
@@ -248,11 +268,11 @@
                             cursor: pointer;
                             font-size: 20px;
                             text-align: center;
-                            &:not(:last-child) {
-                                border-right: solidBlackBorder();
-                            }
                             &:hover {
                                 background-color: lighten($black, 95%);
+                            }
+                            &:not(:last-child) {
+                                border-right: solidBlackBorder();
                             }
                         }
                     }
@@ -277,8 +297,141 @@
             @include mapControlBox;
             @include displayFlexRow;
             justify-content: space-around;
+            @media only screen and (max-width: 680px) {
+                bottom: 80px;
+                left: calc(50% - 95px);
+            }
             input {
                 cursor: pointer;
+            }
+        }
+        /* add-bookmark control */
+        #add-bookmark-control {
+            bottom: 30px;
+            height: 38px;
+            @include mapControlBox;
+            @include displayFlexRow;
+            left: calc(50% - 308px);
+            @include maxXLContent {
+                left: calc(50% - 115px);
+            }
+            div {
+                height: 100%;
+                padding: 0 10px;
+                cursor: pointer;
+                @include displayFlexRow;
+                &:hover {
+                    background-color: lighten($black, 95%);
+                }
+                span {
+                    margin-left: 4px;
+                    @include maxXLContent {
+                        display: none;
+                    }
+                }
+                i {
+                    font-size: 15px;
+                }
+            }
+        }
+        /* undo control */
+        #undo-control {
+            bottom: 30px;
+            height: 38px;
+            @include mapControlBox;
+            @include displayFlexRow;
+            left: calc(50% - 160px);
+            @include maxXLContent {
+                left: calc(50% - 76px);
+            }
+            div {
+                height: 100%;
+                padding: 0 10px;
+                cursor: pointer;
+                @include displayFlexRow;
+                &:hover {
+                    background-color: lighten($black, 95%);
+                }
+                i {
+                    font-size: 15px;
+                }
+            }
+        }
+        /* back-forward control */
+        #back-forward-control {
+            bottom: 30px;
+            height: 38px;
+            @include mapControlBox;
+            @include displayFlexRow;
+            left: calc(50% - 115px);
+            @include maxXLContent {
+                left: calc(50% - 31px);
+            }
+            div {
+                height: 100%;
+                padding: 0 10px;
+                cursor: pointer;
+                @include displayFlexRow;
+                &:hover {
+                    background-color: lighten($black, 95%);
+                }
+                &:not(:last-child) {
+                    border-right: solidBlackBorder();
+                }
+                &:nth-child(2) {
+                    span {
+                        margin-left: 4px;
+                        @include maxXLContent {
+                            display: none;
+                        }
+                    }
+                }
+                &:nth-child(3) {
+                    span {
+                        margin-right: 4px;
+                        @include maxXLContent {
+                            display: none;
+                        }
+                    }
+                }
+                i {
+                    font-size: 20px;
+                }
+            }
+        }
+        /* street-dimension control */
+        #street-dimension-control {
+            bottom: 30px;
+            height: 38px;
+            @include mapControlBox;
+            @include displayFlexRow;
+            left: calc(50% + 112px);
+            @include maxXLContent {
+                left: calc(50% + 98px);
+            }
+            @media only screen and (max-width: 680px) {
+                bottom: 130px;
+                left: calc(50% - 89px);
+            }
+            div {
+                height: 100%;
+                padding: 0 10px;
+                cursor: pointer;
+                @include displayFlexRow;
+                &:hover {
+                    background-color: lighten($black, 95%);
+                }
+                &:last-child {
+                    font-weight: 500;
+                }
+                &:not(:last-child) {
+                    border-right: solidBlackBorder();
+                }
+                span {
+                    @include maxXLContent {
+                        display: none;
+                    }
+                }
             }
         }
         /* location-control */

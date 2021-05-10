@@ -99,7 +99,22 @@
                             <div id="collapseImgRecording" class="collapse" aria-labelledby="headingImgRecording" data-parent="#accordionImgRecording">
                                 <div class="card-body">
                                     <ul>
-                                        <li>Test</li>
+                                        <li>
+                                            <div class="accordion" id="accordionImgRecordingTimeRange">
+                                                <div class="card">
+                                                    <div class="card-head" id="headingImgRecordingTimeRange">
+                                                        <h2 class="mb-0" data-toggle="collapse" data-target="#collapseImgRecordingTimeRange" aria-expanded="true" aria-controls="collapseImgRecordingTimeRange">
+                                                            <i class="fa fa-clock-o"></i>Time Range
+                                                        </h2>
+                                                    </div>
+                                                    <div id="collapseImgRecordingTimeRange" class="collapse show" aria-labelledby="headingImgRecordingTimeRange" data-parent="#accordionImgRecordingTimeRange">
+                                                        <div class="card-body">
+                                                            Date range picker here
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
                                         <li>Test</li>
                                         <li>Test</li>
                                         <li>Test</li>
@@ -185,11 +200,11 @@
                             <input placeholder="Search">
                         </div>
                         <div class="folder-name">
-                            <img class="imageIcon" src="https://cdn4.iconfinder.com/data/icons/navigation-40/24/chevron-left-128.png" />
+                            <i class="fa fa-angle-left"></i>
                             <span>Folder 01</span>
-                            <img class="imageIcon" src="https://cdn4.iconfinder.com/data/icons/navigation-40/24/chevron-right-128.png" />
+                            <i class="fa fa-angle-right"></i>
                         </div>
-                        <ul>
+                        <ul class="fancyscroll">
                             <li>Littering Street A nr 45 needs cleaning</li>
                             <li>Littering Street D nr 12 needs cleaning</li>
                             <li>Broken street furniture Street G nr 45 needs repair</li>
@@ -270,6 +285,32 @@
                     <input type="radio" name="view-type" id="view-type-satellite" />
                     <label for="view-type-satellite">satellite</label>
                 </div>
+            </div>
+
+            <!-- add-bookmark control -->
+            <div id="add-bookmark-control">
+                <div><i class="fa fa-bookmark-o"></i><span>Add Bookmark</span></div>
+            </div>
+
+            <!-- undo control -->
+            <div id="undo-control">
+                <div><i class="fa fa-undo mr-1"></i></div>
+            </div>
+
+            <!-- back-forward control -->
+            <div id="back-forward-control">
+                <div><i class="fa fa-angle-double-left"></i></div>
+                <div><i class="fa fa-angle-left"></i><span>Back</span></div>
+                <div><span>Forward</span><i class="fa fa-angle-right"></i></div>
+                <div><i class="fa fa-angle-double-right"></i></div>
+            </div>
+
+            <!-- street-dimension-control -->
+            <div id="street-dimension-control">
+                <div>S<span>treet</span></div>
+                <div>2D</div>
+                <div>45°</div>
+                <div>2D <span>Viewer</span></div>
             </div>
 
             <!-- location-control -->

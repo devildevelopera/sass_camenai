@@ -3095,7 +3095,12 @@ helpers or functions. They have no direct output.
 /* Font Sizing */
 /*Colors*/
 /* Spacing */
-/* Breakpoints */
+/* Extra small devices (phones, 600px and down) */
+/* Small devices (portrait tablets and large phones, 600px and up) */
+/* Medium devices (landscape tablets, 768px and up) */
+/* Large devices (laptops/desktops, 992px and up) */
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+/* Double Extra large devices (large laptops and desktops, 1200px and up) */
 /* Base Styles */
 /*
 This file is used to contain all base imports.
@@ -3153,7 +3158,7 @@ html {
   font-family: "Open Sans", sans-serif;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (max-width: 768px) {
   html {
     font-size: 16px;
   }
@@ -3213,19 +3218,19 @@ select {
 }
 
 .fancyscroll::-webkit-scrollbar {
-  width: 10px;
+  width: 5px;
 }
 
 /* Track */
 .fancyscroll::-webkit-scrollbar-track {
-  border-radius: 5px;
+  border-radius: 2.5px;
   -webkit-box-shadow: inset 0 0 2.5px gray;
           box-shadow: inset 0 0 2.5px gray;
 }
 
 /* Handle */
 .fancyscroll::-webkit-scrollbar-thumb {
-  border-radius: 5px;
+  border-radius: 2.5px;
   background: #cccccc;
 }
 
@@ -3449,6 +3454,11 @@ to layouts.
 @media only screen and (max-width: 768px) {
   .cnt {
     height: calc(100vh - 172.5px);
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .cnt {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;
@@ -3465,7 +3475,7 @@ to layouts.
   border: 1px solid #cccccc;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 992px) {
   .cnt .cnt-settings {
     width: 100%;
     height: 200px;
@@ -3490,37 +3500,48 @@ to layouts.
 }
 
 .cnt .cnt-settings ul li i {
-  padding: 0.66667em;
+  padding: 10px;
 }
 
-.cnt .cnt-settings ul li #accordionPOI .card #collapsePOI .card-body ul {
+.cnt .cnt-settings ul li #accordionPOI ul {
   margin-left: 13px;
   padding-left: 0.5em;
   border-left: 1px solid #cccccc;
 }
 
-.cnt .cnt-settings ul li #accordionPOI .card #collapsePOI .card-body ul li:first-child {
+.cnt .cnt-settings ul li #accordionPOI ul li:first-child {
   background-color: transparent;
 }
 
-.cnt .cnt-settings ul li #accordionPOI .card #collapsePOI .card-body ul li .search-POI {
+.cnt .cnt-settings ul li #accordionPOI ul li .search-POI {
   position: relative;
   margin: 0.5em 0.5em 0.5em 0;
 }
 
-.cnt .cnt-settings ul li #accordionPOI .card #collapsePOI .card-body ul li .search-POI .fa-search {
-  right: 5px;
+.cnt .cnt-settings ul li #accordionPOI ul li .search-POI .fa-search {
+  top: 7px;
+  right: 7px;
+  padding: 0;
   position: absolute;
   color: gray;
 }
 
-.cnt .cnt-settings ul li #accordionPOI .card #collapsePOI .card-body ul li .search-POI input {
+.cnt .cnt-settings ul li #accordionPOI ul li .search-POI input {
   width: 100%;
   text-indent: 5px;
+  border: 1px solid #cccccc;
   border-radius: 4px;
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
-  border: 1px solid #cccccc;
+}
+
+.cnt .cnt-settings ul li #accordionImgRecording ul li:first-child {
+  background-color: transparent;
+}
+
+.cnt .cnt-settings ul li #accordionImgRecording ul li:first-child h2 i {
+  padding: 0;
+  padding-right: 10px;
 }
 
 .cnt .cnt-settings ul li .detections-img {
@@ -3546,6 +3567,10 @@ to layouts.
   /* report issue modal open icon */
   /* report issue modal */
   /* view type control */
+  /* add-bookmark control */
+  /* undo control */
+  /* back-forward control */
+  /* street-dimension control */
   /* location-control */
   /* zoom-control */
   /* map */
@@ -3725,6 +3750,17 @@ to layouts.
   background-color: #cccccc;
 }
 
+.cnt .cnt-map #bookmarks-draggable .card-body .folder-name i {
+  padding: 0 5px;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.cnt .cnt-map #bookmarks-draggable .card-body ul {
+  height: 200px;
+  overflow-y: scroll;
+}
+
 .cnt .cnt-map #bookmarks-draggable .card-body ul li {
   padding: 5px 10px;
 }
@@ -3827,12 +3863,12 @@ to layouts.
   text-align: center;
 }
 
-.cnt .cnt-map #report-issue-draggable .card-body .icons-array i:not(:last-child) {
-  border-right: 1px solid #cccccc;
-}
-
 .cnt .cnt-map #report-issue-draggable .card-body .icons-array i:hover {
   background-color: #f2f2f2;
+}
+
+.cnt .cnt-map #report-issue-draggable .card-body .icons-array i:not(:last-child) {
+  border-right: 1px solid #cccccc;
 }
 
 .cnt .cnt-map #report-issue-draggable .card-body .submit-feedback {
@@ -3870,8 +3906,270 @@ to layouts.
       justify-content: space-around;
 }
 
+@media only screen and (max-width: 680px) {
+  .cnt .cnt-map #view-type-control {
+    bottom: 80px;
+    left: calc(50% - 95px);
+  }
+}
+
 .cnt .cnt-map #view-type-control input {
   cursor: pointer;
+}
+
+.cnt .cnt-map #add-bookmark-control {
+  bottom: 30px;
+  height: 38px;
+  z-index: 1;
+  position: absolute;
+  border-radius: 5px;
+  background-color: #fff;
+  border: 1px solid #cccccc;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  left: calc(50% - 308px);
+}
+
+@media only screen and (max-width: 1400px) {
+  .cnt .cnt-map #add-bookmark-control {
+    left: calc(50% - 115px);
+  }
+}
+
+.cnt .cnt-map #add-bookmark-control div {
+  height: 100%;
+  padding: 0 10px;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.cnt .cnt-map #add-bookmark-control div:hover {
+  background-color: #f2f2f2;
+}
+
+.cnt .cnt-map #add-bookmark-control div span {
+  margin-left: 4px;
+}
+
+@media only screen and (max-width: 1400px) {
+  .cnt .cnt-map #add-bookmark-control div span {
+    display: none;
+  }
+}
+
+.cnt .cnt-map #add-bookmark-control div i {
+  font-size: 15px;
+}
+
+.cnt .cnt-map #undo-control {
+  bottom: 30px;
+  height: 38px;
+  z-index: 1;
+  position: absolute;
+  border-radius: 5px;
+  background-color: #fff;
+  border: 1px solid #cccccc;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  left: calc(50% - 160px);
+}
+
+@media only screen and (max-width: 1400px) {
+  .cnt .cnt-map #undo-control {
+    left: calc(50% - 76px);
+  }
+}
+
+.cnt .cnt-map #undo-control div {
+  height: 100%;
+  padding: 0 10px;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.cnt .cnt-map #undo-control div:hover {
+  background-color: #f2f2f2;
+}
+
+.cnt .cnt-map #undo-control div i {
+  font-size: 15px;
+}
+
+.cnt .cnt-map #back-forward-control {
+  bottom: 30px;
+  height: 38px;
+  z-index: 1;
+  position: absolute;
+  border-radius: 5px;
+  background-color: #fff;
+  border: 1px solid #cccccc;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  left: calc(50% - 115px);
+}
+
+@media only screen and (max-width: 1400px) {
+  .cnt .cnt-map #back-forward-control {
+    left: calc(50% - 31px);
+  }
+}
+
+.cnt .cnt-map #back-forward-control div {
+  height: 100%;
+  padding: 0 10px;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.cnt .cnt-map #back-forward-control div:hover {
+  background-color: #f2f2f2;
+}
+
+.cnt .cnt-map #back-forward-control div:not(:last-child) {
+  border-right: 1px solid #cccccc;
+}
+
+.cnt .cnt-map #back-forward-control div:nth-child(2) span {
+  margin-left: 4px;
+}
+
+@media only screen and (max-width: 1400px) {
+  .cnt .cnt-map #back-forward-control div:nth-child(2) span {
+    display: none;
+  }
+}
+
+.cnt .cnt-map #back-forward-control div:nth-child(3) span {
+  margin-right: 4px;
+}
+
+@media only screen and (max-width: 1400px) {
+  .cnt .cnt-map #back-forward-control div:nth-child(3) span {
+    display: none;
+  }
+}
+
+.cnt .cnt-map #back-forward-control div i {
+  font-size: 20px;
+}
+
+.cnt .cnt-map #street-dimension-control {
+  bottom: 30px;
+  height: 38px;
+  z-index: 1;
+  position: absolute;
+  border-radius: 5px;
+  background-color: #fff;
+  border: 1px solid #cccccc;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  left: calc(50% + 112px);
+}
+
+@media only screen and (max-width: 1400px) {
+  .cnt .cnt-map #street-dimension-control {
+    left: calc(50% + 98px);
+  }
+}
+
+@media only screen and (max-width: 680px) {
+  .cnt .cnt-map #street-dimension-control {
+    bottom: 130px;
+    left: calc(50% - 89px);
+  }
+}
+
+.cnt .cnt-map #street-dimension-control div {
+  height: 100%;
+  padding: 0 10px;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.cnt .cnt-map #street-dimension-control div:hover {
+  background-color: #f2f2f2;
+}
+
+.cnt .cnt-map #street-dimension-control div:last-child {
+  font-weight: 500;
+}
+
+.cnt .cnt-map #street-dimension-control div:not(:last-child) {
+  border-right: 1px solid #cccccc;
+}
+
+@media only screen and (max-width: 1400px) {
+  .cnt .cnt-map #street-dimension-control div span {
+    display: none;
+  }
 }
 
 .cnt .cnt-map #location-control {

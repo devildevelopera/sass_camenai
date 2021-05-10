@@ -3,7 +3,7 @@ html {
     font-size: 14px;
     font-weight: normal;
     font-family: $sansSerif, sans-serif;
-    @media only screen and (min-width: $smallBreakpoint) {
+    @include maxSMContent {
         font-size: $baseFontSize;
     }
 }
