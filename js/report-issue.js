@@ -14,7 +14,7 @@ $(() => {
         }
     });
 
-    $('#report-issue-draggable .card .card-header .fa-times').click((e) => {
+    $('#report-issue-draggable .card .card-header img:last-child').click((e) => {
         $('#report-issue-draggable').hide();
     });
 

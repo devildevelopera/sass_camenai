@@ -1,0 +1,46 @@
+#date-range-control {
+    .date-range-slider {
+        width: 433px;
+        margin-top: 20px;
+        position: relative;
+        text-align: center;
+        #d-slider {
+            height: 28px;
+            margin-left: -10px;
+            width: calc(100% + 35px);
+            border-top-right-radius: 14px;
+            border-bottom-right-radius: 14px;
+            background-color: rgba(255, 255, 255, 0.9);
+            span {
+                top: 9px;
+                width: 18px;
+                height: 10px;
+                position: absolute;
+                border-left: 1px solid $black;
+                &:first-child {
+                    top: 5px;
+                    z-index: 3;
+                    height: 18px;
+                    cursor: grab;
+                }
+            }
+            .ui-slider-handle {
+                &.ui-state-default.ui-corner-all {
+                    border-radius: 50%;
+                    border: 1px solid $black;
+                    background-color: $purple-rain;
+                    box-shadow: inset 0px 0px 0px 3px $white;
+                }
+                &.ui-state-active,
+                &.ui-state-hover,
+                &.ui-state-focus {
+                    border: none;
+                    outline: 0;
+                }
+            }
+        }
+        input {
+            margin-top: 10px;
+        }
+    }
+}

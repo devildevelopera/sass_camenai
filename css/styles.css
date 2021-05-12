@@ -3213,10 +3213,6 @@ label {
   margin-bottom: 0 !important;
 }
 
-select {
-  height: 27px;
-}
-
 .fancyscroll::-webkit-scrollbar {
   width: 5px;
 }
@@ -3274,6 +3270,138 @@ select {
 
 .accordion .card-body ul li:last-child {
   margin-bottom: 5px;
+}
+
+#date-range-control .date-range-select {
+  width: 80px;
+  margin-top: 20px;
+  margin-right: 13px;
+  position: relative;
+}
+
+#date-range-control .date-range-select select {
+  display: none;
+}
+
+#date-range-control .date-range-select .select-selected {
+  border-top-left-radius: 14px;
+  border-bottom-left-radius: 14px;
+  color: #000;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  padding: 2.75px 8px;
+  border: 1px solid transparent;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+}
+
+#date-range-control .date-range-select .select-selected:after {
+  width: 0;
+  height: 0;
+  top: 14px;
+  right: 7px;
+  content: "";
+  position: absolute;
+  border: 6px solid transparent;
+  border-color: #000 transparent transparent transparent;
+}
+
+#date-range-control .date-range-select .select-selected.select-arrow-active {
+  border-bottom-left-radius: 0px;
+}
+
+#date-range-control .date-range-select .select-selected.select-arrow-active:after {
+  top: 7px;
+  border-color: transparent transparent #000 transparent;
+}
+
+#date-range-control .date-range-select .select-items {
+  left: 0;
+  right: 0;
+  z-index: 99;
+  position: absolute;
+}
+
+#date-range-control .date-range-select .select-items div {
+  color: #000;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  padding: 2.75px 8px;
+  border: 1px solid transparent;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+}
+
+#date-range-control .date-range-select .select-items div:hover {
+  background-color: #f2f2f2;
+}
+
+#date-range-control .date-range-select .select-items div:last-child {
+  border-bottom-left-radius: 14px;
+}
+
+#date-range-control .date-range-select .select-items .same-as-selected::after {
+  float: right;
+  content: url("../imgs/1x/check.png");
+}
+
+#date-range-control .date-range-select .select-hide {
+  display: none;
+}
+
+#date-range-control .date-range-slider {
+  width: 433px;
+  margin-top: 20px;
+  position: relative;
+  text-align: center;
+}
+
+#date-range-control .date-range-slider #d-slider {
+  height: 28px;
+  margin-left: -10px;
+  width: calc(100% + 35px);
+  border-top-right-radius: 14px;
+  border-bottom-right-radius: 14px;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+#date-range-control .date-range-slider #d-slider span {
+  top: 9px;
+  width: 18px;
+  height: 10px;
+  position: absolute;
+  border-left: 1px solid #000;
+}
+
+#date-range-control .date-range-slider #d-slider span:first-child {
+  top: 5px;
+  z-index: 3;
+  height: 18px;
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+
+#date-range-control .date-range-slider #d-slider .ui-slider-handle.ui-state-default.ui-corner-all {
+  border-radius: 50%;
+  border: 1px solid #000;
+  background-color: #7641B2;
+  -webkit-box-shadow: inset 0px 0px 0px 3px #fff;
+          box-shadow: inset 0px 0px 0px 3px #fff;
+}
+
+#date-range-control .date-range-slider #d-slider .ui-slider-handle.ui-state-active, #date-range-control .date-range-slider #d-slider .ui-slider-handle.ui-state-hover, #date-range-control .date-range-slider #d-slider .ui-slider-handle.ui-state-focus {
+  border: none;
+  outline: 0;
+}
+
+#date-range-control .date-range-slider input {
+  margin-top: 10px;
 }
 
 /* Layout */
@@ -3471,8 +3599,8 @@ to layouts.
   overflow-y: auto;
   overflow-x: hidden;
   padding: 0.5em;
-  height: calc(100vh - 100px);
   border: 1px solid #cccccc;
+  height: calc(100vh - 100px);
 }
 
 @media only screen and (max-width: 992px) {
@@ -3499,12 +3627,12 @@ to layouts.
   background-color: #f2f2f2;
 }
 
-.cnt .cnt-settings ul li i {
+.cnt .cnt-settings ul li .menu-img {
   padding: 10px;
 }
 
 .cnt .cnt-settings ul li #accordionPOI ul {
-  margin-left: 13px;
+  margin-left: 16px;
   padding-left: 0.5em;
   border-left: 1px solid #cccccc;
 }
@@ -3529,6 +3657,7 @@ to layouts.
 .cnt .cnt-settings ul li #accordionPOI ul li .search-POI input {
   width: 100%;
   text-indent: 5px;
+  padding-right: 25px;
   border: 1px solid #cccccc;
   border-radius: 4px;
   -moz-border-radius: 4px;
@@ -3564,6 +3693,7 @@ to layouts.
   /* POI modal */
   /* POI delete modal */
   /* bookmarks modal */
+  /* date-range-control */
   /* report issue modal open icon */
   /* report issue modal */
   /* view type control */
@@ -3591,12 +3721,12 @@ to layouts.
   background-color: #12beff;
 }
 
-.cnt .cnt-map #menu-btn i {
-  font-size: 36px;
-}
-
 .cnt .cnt-map #menu-btn:hover {
   background-color: #00a1de;
+}
+
+.cnt .cnt-map #menu-btn i {
+  font-size: 32px;
 }
 
 .cnt .cnt-map #poi-draggable {
@@ -3635,7 +3765,7 @@ to layouts.
   top: 20px;
   left: 192px;
   width: 220px;
-  height: 132px;
+  height: 129px;
 }
 
 .cnt .cnt-map #poi-delete-draggable .card {
@@ -3730,7 +3860,7 @@ to layouts.
 .cnt .cnt-map #bookmarks-draggable .card-body .search-bookmarks input {
   width: 100%;
   border: none;
-  text-indent: 17px;
+  padding-left: 17px;
 }
 
 .cnt .cnt-map #bookmarks-draggable .card-body .folder-name {
@@ -3769,6 +3899,16 @@ to layouts.
   background-color: #f2f2f2;
 }
 
+.cnt .cnt-map #date-range-control {
+  top: 0;
+  z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  left: calc(50% - 265px);
+}
+
 .cnt .cnt-map #report-issue-btn {
   right: 0;
   top: 48px;
@@ -3783,10 +3923,6 @@ to layouts.
   background-color: #e44d42;
 }
 
-.cnt .cnt-map #report-issue-btn i {
-  font-size: 36px;
-}
-
 .cnt .cnt-map #report-issue-btn:hover {
   background-color: #d52b1e;
 }
@@ -3799,7 +3935,7 @@ to layouts.
 
 .cnt .cnt-map #report-issue-draggable .card {
   height: 100%;
-  text-align: left;
+  font-size: 18px;
 }
 
 .cnt .cnt-map #report-issue-draggable .card-header {
@@ -3808,8 +3944,20 @@ to layouts.
   padding-left: 10px;
   background-color: gray;
   padding: 10px;
-  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   background-color: #d52b1e;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .cnt .cnt-map #report-issue-draggable .card-header i {
@@ -3819,16 +3967,8 @@ to layouts.
   position: absolute;
 }
 
-.cnt .cnt-map #report-issue-draggable .card-header i:first-child {
-  top: 5px;
-  left: 10px;
-  right: inherit;
-  font-size: 36px;
-}
-
-.cnt .cnt-map #report-issue-draggable .card-header i:last-child {
-  top: 13px;
-  font-size: 20px;
+.cnt .cnt-map #report-issue-draggable .card-header img:last-child {
+  cursor: pointer;
 }
 
 .cnt .cnt-map #report-issue-draggable .card-body {
@@ -3847,6 +3987,10 @@ to layouts.
   margin-bottom: 5px;
 }
 
+.cnt .cnt-map #report-issue-draggable .card-body select {
+  height: 27px;
+}
+
 .cnt .cnt-map #report-issue-draggable .card-body .icons-array {
   display: -ms-grid;
   display: grid;
@@ -3856,18 +4000,17 @@ to layouts.
       grid-template-columns: auto auto auto auto auto;
 }
 
-.cnt .cnt-map #report-issue-draggable .card-body .icons-array i {
+.cnt .cnt-map #report-issue-draggable .card-body .icons-array div {
   padding: 5px;
   cursor: pointer;
-  font-size: 20px;
   text-align: center;
 }
 
-.cnt .cnt-map #report-issue-draggable .card-body .icons-array i:hover {
+.cnt .cnt-map #report-issue-draggable .card-body .icons-array div:hover {
   background-color: #f2f2f2;
 }
 
-.cnt .cnt-map #report-issue-draggable .card-body .icons-array i:not(:last-child) {
+.cnt .cnt-map #report-issue-draggable .card-body .icons-array div:not(:last-child) {
   border-right: 1px solid #cccccc;
 }
 
@@ -3974,10 +4117,6 @@ to layouts.
   }
 }
 
-.cnt .cnt-map #add-bookmark-control div i {
-  font-size: 15px;
-}
-
 .cnt .cnt-map #undo-control {
   bottom: 30px;
   height: 38px;
@@ -4023,10 +4162,6 @@ to layouts.
 
 .cnt .cnt-map #undo-control div:hover {
   background-color: #f2f2f2;
-}
-
-.cnt .cnt-map #undo-control div i {
-  font-size: 15px;
 }
 
 .cnt .cnt-map #back-forward-control {
@@ -4155,10 +4290,6 @@ to layouts.
 }
 
 .cnt .cnt-map #street-dimension-control div:hover {
-  background-color: #f2f2f2;
-}
-
-.cnt .cnt-map #street-dimension-control div:last-child {
   font-weight: 500;
 }
 
@@ -4174,7 +4305,7 @@ to layouts.
 
 .cnt .cnt-map #location-control {
   right: 20px;
-  bottom: 140px;
+  bottom: 130px;
   z-index: 1;
   position: absolute;
   border-radius: 5px;
@@ -4182,37 +4313,50 @@ to layouts.
   border: 1px solid #cccccc;
 }
 
-.cnt .cnt-map #location-control i {
-  padding: 8px;
+.cnt .cnt-map #location-control img {
+  padding: 4.5px;
   cursor: pointer;
 }
 
-.cnt .cnt-map #location-control i:hover {
+.cnt .cnt-map #location-control img:hover {
   background-color: #f2f2f2;
 }
 
 .cnt .cnt-map .zoom-control {
   right: 20px;
+  width: 30px;
+  height: 90px;
   bottom: 30px;
+  display: -ms-grid;
+  display: grid;
   z-index: 1;
   position: absolute;
   border-radius: 5px;
   background-color: #fff;
   border: 1px solid #cccccc;
+  -ms-grid-rows: 30px 30px 30px;
+      grid-template-rows: 30px 30px 30px;
 }
 
-.cnt .cnt-map .zoom-control i {
-  display: block;
+.cnt .cnt-map .zoom-control div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   cursor: pointer;
-  padding: 0.5em;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   border-bottom: 1px solid #cccccc;
 }
 
-.cnt .cnt-map .zoom-control i:hover {
+.cnt .cnt-map .zoom-control div:hover {
   background-color: #f2f2f2;
 }
 
-.cnt .cnt-map .zoom-control i:last-child {
+.cnt .cnt-map .zoom-control div:last-child {
   border-bottom: none;
 }
 

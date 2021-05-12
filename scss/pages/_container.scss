@@ -16,8 +16,8 @@
         overflow-y: auto;
         overflow-x: hidden;
         padding: $padding/2;
-        height: calc(100vh - 100px);
         border: solidBlackBorder();
+        height: calc(100vh - 100px);
         @include maxMDContent {
             width: 100%;
             height: 200px;
@@ -36,11 +36,11 @@
                 &:hover {
                     background-color: lighten($black, 95%);
                 }
-                i {
+                .menu-img {
                     padding: 10px;
                 }
                 #accordionPOI ul {
-                    margin-left: 13px;
+                    margin-left: 16px;
                     padding-left: $padding/2;
                     border-left: solidBlackBorder();
                     li {
@@ -60,6 +60,7 @@
                             input {
                                 width: 100%;
                                 text-indent: 5px;
+                                padding-right: 25px;
                                 border: solidBlackBorder();
                                 @include searchInputBorderRadius;
                             }
@@ -102,6 +103,9 @@
             &:hover {
                 background-color: $blue;
             }
+            i {
+                font-size: 32px;
+            }
         }
         /* POI modal */
         #poi-draggable {
@@ -129,7 +133,7 @@
             top: 20px;
             left: 192px;
             width: 220px;
-            height: 132px;
+            height: 129px;
             .card {
                 height: 100%;
                 &-header {
@@ -183,7 +187,7 @@
                         input {
                             width: 100%;
                             border: none;
-                            text-indent: 17px;
+                            padding-left: 17px;
                         }
                     }
                     .folder-name {
@@ -209,6 +213,14 @@
                 }
             }
         }
+        /* date-range-control */
+        #date-range-control {
+            top: 0;
+            z-index: 2;
+            display: flex;
+            position: absolute;
+            left: calc(50% - 265px);
+        }
         /* report issue modal open icon */
         #report-issue-btn {
             right: 0;
@@ -227,23 +239,15 @@
             width: 220px;
             .card {
                 height: 100%;
-                text-align: left;
+                font-size: 18px;
                 &-header {
                     @include cardHeaderStyle;
                     padding: 10px;
-                    text-align: center;
+                    @include displayFlexRow;
                     background-color: $red;
-                    i {
-                        &:first-child {
-                            top: 5px;
-                            left: 10px;
-                            right: inherit;
-                            font-size: 36px;
-                        }
-                        &:last-child {
-                            top: 13px;
-                            font-size: 20px;
-                        }
+                    justify-content: space-between;
+                    img:last-child {
+                        cursor: pointer;
                     }
                 }
                 &-body {
@@ -258,15 +262,17 @@
                     select {
                         margin-bottom: 5px;
                     }
+                    select {
+                        height: 27px;
+                    }
                     .icons-array {
                         display: grid;
                         margin-top: 10px;
                         border: solidBlackBorder();
                         grid-template-columns: auto auto auto auto auto;
-                        i {
+                        div {
                             padding: 5px;
                             cursor: pointer;
-                            font-size: 20px;
                             text-align: center;
                             &:hover {
                                 background-color: lighten($black, 95%);
@@ -329,9 +335,6 @@
                         display: none;
                     }
                 }
-                i {
-                    font-size: 15px;
-                }
             }
         }
         /* undo control */
@@ -351,9 +354,6 @@
                 @include displayFlexRow;
                 &:hover {
                     background-color: lighten($black, 95%);
-                }
-                i {
-                    font-size: 15px;
                 }
             }
         }
@@ -419,9 +419,6 @@
                 cursor: pointer;
                 @include displayFlexRow;
                 &:hover {
-                    background-color: lighten($black, 95%);
-                }
-                &:last-child {
                     font-weight: 500;
                 }
                 &:not(:last-child) {
@@ -437,10 +434,10 @@
         /* location-control */
         #location-control {
             right: 20px;
-            bottom: 140px;
+            bottom: 130px;
             @include mapControlBox;
-            i {
-                padding: 8px;
+            img {
+                padding: 4.5px;
                 cursor: pointer;
                 &:hover {
                     background-color: lighten($black, 95%);
@@ -450,12 +447,17 @@
         /* zoom-control */
         .zoom-control {
             right: 20px;
+            width: 30px;
+            height: 90px;
             bottom: 30px;
+            display: grid;
             @include mapControlBox;
-            i {
-                display: block;
+            grid-template-rows: 30px 30px 30px;
+            div {
+                display: flex;
                 cursor: pointer;
-                padding: $padding/2;
+                align-items: center;
+                justify-content: center;
                 border-bottom: solidBlackBorder();
                 &:hover {
                     background-color: lighten($black, 95%);

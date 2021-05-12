@@ -33,10 +33,10 @@
                 <div class="loginname">Sander</div>
                 <ul>
                     <li class="gear">
-                        <img src="imgs/hdr-gear.png" />
+                        <img src="imgs/1x/hdr-gear.png" />
                     </li>
                     <li>
-                        <img src="imgs/hdr-logout.png" />
+                        <img src="imgs/1x/hdr-logout.png" />
                     </li>
                 </ul>
             </div>
@@ -59,7 +59,7 @@
                         <div class="card">
                             <div class="card-head" id="headingPOI">
                                 <h2 class="mb-0 collapsed" data-toggle="collapse" data-target="#collapsePOI" aria-expanded="false" aria-controls="collapsePOI">
-                                    <i class="fa fa-map-marker"></i>Point of Interest
+                                    <img class="menu-img" src="imgs/1x/poi.png">Point of Interest
                                 </h2>
                             </div>
                             <div id="collapsePOI" class="collapse" aria-labelledby="headingPOI" data-parent="#accordionPOI">
@@ -85,15 +85,15 @@
                         </div>
                     </div>
                 </li>
-                <li id="bookmarks"><i class="fa fa-bookmark-o"></i>Bookmarks</li>
-                <li><i class="fa fa-eye"></i>Detections <img class="detections-img imageIcon" src="https://cdn2.iconfinder.com/data/icons/250-perfect-vector-pictograms/48/9.6-128.png" />
+                <li id="bookmarks"><img class="menu-img" src="imgs/1x/bookmark.png">Bookmarks</li>
+                <li><img class="menu-img" src="imgs/1x/detections.png">Detections <img class="detections-img imageIcon" src="https://cdn2.iconfinder.com/data/icons/250-perfect-vector-pictograms/48/9.6-128.png" />
                 </li>
                 <li>
                     <div class="accordion" id="accordionImgRecording">
                         <div class="card">
                             <div class="card-head" id="headingImgRecording">
                                 <h2 class="mb-0 collapsed" data-toggle="collapse" data-target="#collapseImgRecording" aria-expanded="false" aria-controls="collapseImgRecording">
-                                    <i class="fa fa-tripadvisor"></i>Image recording
+                                    <img class="menu-img" src="imgs/1x/image-recording.png" />Image recording
                                 </h2>
                             </div>
                             <div id="collapseImgRecording" class="collapse" aria-labelledby="headingImgRecording" data-parent="#accordionImgRecording">
@@ -104,7 +104,7 @@
                                                 <div class="card">
                                                     <div class="card-head" id="headingImgRecordingTimeRange">
                                                         <h2 class="mb-0" data-toggle="collapse" data-target="#collapseImgRecordingTimeRange" aria-expanded="true" aria-controls="collapseImgRecordingTimeRange">
-                                                            <i class="fa fa-clock-o"></i>Time Range
+                                                            <img src="imgs/1x/clock.png" />Time Range
                                                         </h2>
                                                     </div>
                                                     <div id="collapseImgRecordingTimeRange" class="collapse show" aria-labelledby="headingImgRecordingTimeRange" data-parent="#accordionImgRecordingTimeRange">
@@ -127,9 +127,7 @@
                         </div>
                     </div>
                 </li>
-                <li><i class="fa fa-area-chart"></i>Area Selection</li>
-                <li><i class="fa fa-save"></i>Save Point of Interest</li>
-                <li><i class="fa fa-file-o"></i>Analytics</li>
+                <li><img class="menu-img" src="imgs/1x/save-pooi.png" />Save Point of Interest</li>
             </ul>
         </div>
 
@@ -214,10 +212,25 @@
                 </div>
             </div>
 
+            <!-- date range control -->
+            <div id="date-range-control">
+                <div class="date-range-select">
+                    <select>
+                        <option>Day</option>
+                        <option>Week</option>
+                        <option>Month</option>
+                    </select>
+                </div>
+                <div class="date-range-slider">
+                    <div id="d-slider"></div>
+                    <input id="date-range-value" />
+                </div>
+            </div>
+
             <!-- report issue modal open icon -->
 
             <div id="report-issue-btn">
-                <i class="fa fa-info-circle"></i>
+                <img src="imgs/1x/report-issue-icon.png" />
             </div>
 
             <!-- report issue modal -->
@@ -225,7 +238,7 @@
             <div id="report-issue-draggable" class="drag-modal">
                 <div class="card">
                     <div class="card-header">
-                        <i class="fa fa-info-circle"></i> Report Issue <i class="fa fa-times"></i>
+                        <img src="imgs/1x/report-issue-icon.png" /> Report Issue <img src="imgs/1x/report-issue-close-icon.png" />
                     </div>
                     <div class="card-body">
                         <div>
@@ -263,11 +276,11 @@
                             </select>
                         </div>
                         <div class="icons-array">
-                            <i class="fa fa-hand-pointer-o"></i>
-                            <i class="fa fa-commenting-o"></i>
-                            <i class="fa fa-pencil"></i>
-                            <i class="fa fa-mouse-pointer"></i>
-                            <i class="fa fa-eye-slash"></i>
+                            <div><img src="imgs/1x/mouse-selection.png" /></div>
+                            <div><img src="imgs/1x/message.png" /></div>
+                            <div><img src="imgs/1x/pencil.png" /></div>
+                            <div><img src="imgs/1x/top-left-arrow.png" /></div>
+                            <div><img src="imgs/1x/eye-slash.png" /></div>
                         </div>
                         <button class="submit-feedback">Sumbit Feedback</button>
                     </div>
@@ -289,20 +302,20 @@
 
             <!-- add-bookmark control -->
             <div id="add-bookmark-control">
-                <div><i class="fa fa-bookmark-o"></i><span>Add Bookmark</span></div>
+                <div><img src="imgs/1x/bookmark.png" /><span>Add Bookmark</span></div>
             </div>
 
             <!-- undo control -->
             <div id="undo-control">
-                <div><i class="fa fa-undo mr-1"></i></div>
+                <div><img src="imgs/1x/undo.png" /></div>
             </div>
 
             <!-- back-forward control -->
             <div id="back-forward-control">
-                <div><i class="fa fa-angle-double-left"></i></div>
-                <div><i class="fa fa-angle-left"></i><span>Back</span></div>
-                <div><span>Forward</span><i class="fa fa-angle-right"></i></div>
-                <div><i class="fa fa-angle-double-right"></i></div>
+                <div><img src="imgs/1x/fast-backward.png" /></div>
+                <div><img src="imgs/1x/backward.png" /><span>Back</span></div>
+                <div><span>Forward</span><img src="imgs/1x/forward.png" /></div>
+                <div><img src="imgs/1x/fast-forward.png" /></div>
             </div>
 
             <!-- street-dimension-control -->
@@ -316,15 +329,15 @@
             <!-- location-control -->
 
             <div id="location-control">
-                <i class="fa fa-dot-circle-o"></i>
+                <img src="imgs/1x/location.png" />
             </div>
 
             <!-- zoom-control -->
 
             <div class="zoom-control">
-                <i class="fa fa-plus"></i>
-                <i class="fa fa-minus"></i>
-                <i class="fa fa-compass"></i>
+                <div><img src="imgs/1x/plus.png" /></div>
+                <div><img src="imgs/1x/minus.png" /></div>
+                <div><img src="imgs/1x/direction-needle.png" /></div>
             </div>
 
             <!-- map -->
@@ -348,6 +361,8 @@
     <script src="js/bookmarks.js "></script>
     <script src="js/poi-delete.js "></script>
     <script src="js/report-issue.js "></script>
+    <script src="js/date-range-select.js "></script>
+    <script src="js/date-range-slider.js "></script>
 
     <!-- google map api -->
 
