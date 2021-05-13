@@ -4095,18 +4095,27 @@ to layouts.
   border-radius: 5px;
   background-color: #fff;
   border: 1px solid #cccccc;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto;
+      grid-template-columns: auto auto;
+}
+
+.cnt .cnt-map #view-type-control div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.cnt .cnt-map #view-type-control div input {
+  cursor: pointer;
+  margin-right: 5px;
 }
 
 @media only screen and (max-width: 680px) {
@@ -4114,10 +4123,6 @@ to layouts.
     bottom: 80px;
     left: calc(50% - 95px);
   }
-}
-
-.cnt .cnt-map #view-type-control input {
-  cursor: pointer;
 }
 
 .cnt .cnt-map #add-bookmark-control {
