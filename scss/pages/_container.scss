@@ -84,6 +84,9 @@
                 #accordionImgRecording .card #collapseImgRecording .card-body ul {
                     margin-left: 13px;
                     border-left: solidBlackBorder();
+                    li h2 img {
+                        margin-right: 5px;
+                    }
                 }
             }
         }
@@ -94,8 +97,8 @@
         position: relative;
         /* side menu open icon */
         #menu-btn {
-            left: 0;
             top: 10px;
+            left: -2.44px;
             display: none;
             @include sideButtonStyle;
             border-radius: 0 5px 5px 0;
@@ -215,11 +218,14 @@
         }
         /* date-range-control */
         #date-range-control {
-            top: 0;
+            top: 20px;
             z-index: 2;
             display: flex;
             position: absolute;
             left: calc(50% - 265px);
+            @include maxXSContent {
+                left: calc(50% - 170px);
+            }
         }
         /* report issue modal open icon */
         #report-issue-btn {

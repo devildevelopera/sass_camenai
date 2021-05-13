@@ -41,9 +41,9 @@
 
 @mixin sideButtonStyle {
     z-index: 2;
-    padding: 5px;
     color: $white;
     cursor: pointer;
     transition: 0.35s;
+    padding: 5px 8.5px;
     position: absolute;
 }

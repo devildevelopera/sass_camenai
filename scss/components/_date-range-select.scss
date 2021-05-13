@@ -1,20 +1,22 @@
 #date-range-control {
     .date-range-select {
         width: 80px;
-        margin-top: 20px;
         margin-right: 13px;
         position: relative;
         select {
             display: none;
         }
         .select-selected {
-            border-top-left-radius: 14px;
-            border-bottom-left-radius: 14px;
             color: $black;
+            display: flex;
+            height: 28.5px;
             cursor: pointer;
             user-select: none;
             padding: 2.75px 8px;
+            align-items: center;
+            border-top-left-radius: 14px;
             border: 1px solid transparent;
+            border-bottom-left-radius: 14px;
             background-color: rgba(255, 255, 255, 0.9);
             border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
             &:after {

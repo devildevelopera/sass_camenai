@@ -1,9 +1,11 @@
 #date-range-control {
     .date-range-slider {
         width: 433px;
-        margin-top: 20px;
         position: relative;
         text-align: center;
+        @include maxXSContent {
+            width: 220px;
+        }
         #d-slider {
             height: 28px;
             margin-left: -10px;
@@ -39,8 +41,31 @@
                 }
             }
         }
-        input {
-            margin-top: 10px;
+        #date-range-value {
+            width: 130px;
+            height: 22px;
+            display: flex;
+            margin: 10px auto;
+            align-items: center;
+            justify-content: space-between;
+            background-color: rgba(255, 255, 255, 0.9);
+            div {
+                width: 22px;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                &:hover {
+                    cursor: pointer;
+                    background-color: lighten($black, 95%);
+                }
+                &:first-child {
+                    border-right: solidBlackBorder();
+                }
+                &:last-child {
+                    border-left: solidBlackBorder();
+                }
+            }
         }
     }
 }

@@ -3274,7 +3274,6 @@ label {
 
 #date-range-control .date-range-select {
   width: 80px;
-  margin-top: 20px;
   margin-right: 13px;
   position: relative;
 }
@@ -3284,16 +3283,23 @@ label {
 }
 
 #date-range-control .date-range-select .select-selected {
-  border-top-left-radius: 14px;
-  border-bottom-left-radius: 14px;
   color: #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 28.5px;
   cursor: pointer;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
   padding: 2.75px 8px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-top-left-radius: 14px;
   border: 1px solid transparent;
+  border-bottom-left-radius: 14px;
   background-color: rgba(255, 255, 255, 0.9);
   border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
 }
@@ -3357,9 +3363,14 @@ label {
 
 #date-range-control .date-range-slider {
   width: 433px;
-  margin-top: 20px;
   position: relative;
   text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+  #date-range-control .date-range-slider {
+    width: 220px;
+  }
 }
 
 #date-range-control .date-range-slider #d-slider {
@@ -3400,8 +3411,47 @@ label {
   outline: 0;
 }
 
-#date-range-control .date-range-slider input {
-  margin-top: 10px;
+#date-range-control .date-range-slider #date-range-value {
+  width: 130px;
+  height: 22px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 10px auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+#date-range-control .date-range-slider #date-range-value div {
+  width: 22px;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#date-range-control .date-range-slider #date-range-value div:hover {
+  cursor: pointer;
+  background-color: #f2f2f2;
+}
+
+#date-range-control .date-range-slider #date-range-value div:first-child {
+  border-right: 1px solid #cccccc;
+}
+
+#date-range-control .date-range-slider #date-range-value div:last-child {
+  border-left: 1px solid #cccccc;
 }
 
 /* Layout */
@@ -3684,6 +3734,10 @@ to layouts.
   border-left: 1px solid #cccccc;
 }
 
+.cnt .cnt-settings ul li #accordionImgRecording .card #collapseImgRecording .card-body ul li h2 img {
+  margin-right: 5px;
+}
+
 .cnt .cnt-map {
   -webkit-box-flex: 1;
       -ms-flex: 1;
@@ -3707,15 +3761,15 @@ to layouts.
 }
 
 .cnt .cnt-map #menu-btn {
-  left: 0;
   top: 10px;
+  left: -2.44px;
   display: none;
   z-index: 2;
-  padding: 5px;
   color: #fff;
   cursor: pointer;
   -webkit-transition: 0.35s;
   transition: 0.35s;
+  padding: 5px 8.5px;
   position: absolute;
   border-radius: 0 5px 5px 0;
   background-color: #12beff;
@@ -3900,7 +3954,7 @@ to layouts.
 }
 
 .cnt .cnt-map #date-range-control {
-  top: 0;
+  top: 20px;
   z-index: 2;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3909,15 +3963,21 @@ to layouts.
   left: calc(50% - 265px);
 }
 
+@media only screen and (max-width: 600px) {
+  .cnt .cnt-map #date-range-control {
+    left: calc(50% - 170px);
+  }
+}
+
 .cnt .cnt-map #report-issue-btn {
   right: 0;
   top: 48px;
   z-index: 2;
-  padding: 5px;
   color: #fff;
   cursor: pointer;
   -webkit-transition: 0.35s;
   transition: 0.35s;
+  padding: 5px 8.5px;
   position: absolute;
   border-radius: 5px 0 0 5px;
   background-color: #e44d42;
