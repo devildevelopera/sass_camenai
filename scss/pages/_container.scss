@@ -300,6 +300,33 @@
                 }
             }
         }
+        /* bright contrast control */
+        #bright-contrast-control {
+            right: 0;
+            top: 110px;
+            display: grid;
+            @include mapControlBox;
+            grid-template-rows: auto auto auto;
+            div {
+                width: 42px;
+                height: 42px;
+                display: flex;
+                cursor: pointer;
+                align-items: center;
+                justify-content: center;
+                border-bottom: solidBlackBorder();
+                &:hover {
+                    background-color: lighten($black, 95%);
+                }
+                &:first-child {
+                    background-color: lighten($black, 50%);
+                }
+                &:first-child,
+                &:last-child {
+                    border-bottom: none;
+                }
+            }
+        }
         /* view type control */
         #view-type-control {
             left: 20px;
@@ -456,8 +483,8 @@
                 }
             }
         }
-        /* zoom-control */
-        .zoom-control {
+        /* zoom control */
+        #zoom-control {
             right: 20px;
             width: 30px;
             height: 90px;
@@ -479,9 +506,18 @@
                 }
             }
         }
-        /* map */
-        #map {
+        /* map section*/
+        #map-section {
             height: 100%;
+            .img-sec {
+                height: 65%;
+                background-size: cover;
+                background-position: center;
+                background-image: url('../imgs/street.jpg');
+            }
+            .map-sec {
+                height: 35%;
+            }
         }
     }
 }

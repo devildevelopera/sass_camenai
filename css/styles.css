@@ -3750,14 +3750,15 @@ to layouts.
   /* date-range-control */
   /* report issue modal open icon */
   /* report issue modal */
+  /* bright contrast control */
   /* view type control */
   /* add-bookmark control */
   /* undo control */
   /* back-forward control */
   /* street-dimension control */
   /* location-control */
-  /* zoom-control */
-  /* map */
+  /* zoom control */
+  /* map section*/
 }
 
 .cnt .cnt-map #menu-btn {
@@ -4085,6 +4086,48 @@ to layouts.
   background-color: #4d4d4d;
 }
 
+.cnt .cnt-map #bright-contrast-control {
+  right: 0;
+  top: 110px;
+  display: -ms-grid;
+  display: grid;
+  z-index: 1;
+  position: absolute;
+  border-radius: 5px;
+  background-color: #fff;
+  border: 1px solid #cccccc;
+  -ms-grid-rows: auto auto auto;
+      grid-template-rows: auto auto auto;
+}
+
+.cnt .cnt-map #bright-contrast-control div {
+  width: 42px;
+  height: 42px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-bottom: 1px solid #cccccc;
+}
+
+.cnt .cnt-map #bright-contrast-control div:hover {
+  background-color: #f2f2f2;
+}
+
+.cnt .cnt-map #bright-contrast-control div:first-child {
+  background-color: gray;
+}
+
+.cnt .cnt-map #bright-contrast-control div:first-child, .cnt .cnt-map #bright-contrast-control div:last-child {
+  border-bottom: none;
+}
+
 .cnt .cnt-map #view-type-control {
   left: 20px;
   bottom: 30px;
@@ -4387,7 +4430,7 @@ to layouts.
   background-color: #f2f2f2;
 }
 
-.cnt .cnt-map .zoom-control {
+.cnt .cnt-map #zoom-control {
   right: 20px;
   width: 30px;
   height: 90px;
@@ -4403,7 +4446,7 @@ to layouts.
       grid-template-rows: 30px 30px 30px;
 }
 
-.cnt .cnt-map .zoom-control div {
+.cnt .cnt-map #zoom-control div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4417,15 +4460,26 @@ to layouts.
   border-bottom: 1px solid #cccccc;
 }
 
-.cnt .cnt-map .zoom-control div:hover {
+.cnt .cnt-map #zoom-control div:hover {
   background-color: #f2f2f2;
 }
 
-.cnt .cnt-map .zoom-control div:last-child {
+.cnt .cnt-map #zoom-control div:last-child {
   border-bottom: none;
 }
 
-.cnt .cnt-map #map {
+.cnt .cnt-map #map-section {
   height: 100%;
+}
+
+.cnt .cnt-map #map-section .img-sec {
+  height: 65%;
+  background-size: cover;
+  background-position: center;
+  background-image: url("../imgs/street.jpg");
+}
+
+.cnt .cnt-map #map-section .map-sec {
+  height: 35%;
 }
 /*# sourceMappingURL=styles.css.map */
