@@ -1,4 +1,6 @@
 $(() => {
+    var today = new Date();
+    $("#date-range-value span").html(today.getDate() + '-' + (today.getMonth() + 1) + '-' + today.getFullYear());
 
     var renderDateRangeSlider = () => {
         var valMap = [];
@@ -7,15 +9,15 @@ $(() => {
         }
 
         $("#d-slider").slider({
-                max: valMap.length - 1,
-                slide: (event, ui) => {
-                    var dd = valMap[ui.value] + 1;
-                    if (dd.toString().length === 1) {
-                        dd = '0' + dd;
-                    }
-                    $("#date-range-value span").html(dd + '-05-2021');
+            max: valMap.length - 1,
+            slide: (event, ui) => {
+                var dd = valMap[ui.value] + 1;
+                if (dd.toString().length === 1) {
+                    dd = '0' + dd;
                 }
-            })
+                $("#date-range-value span").html(dd + '-' + (today.getMonth() + 1) + '-' + today.getFullYear());
+            }
+        })
             .each(() => {
                 var opt = $("#d-slider").data().uiSlider.options;
 
