@@ -5,7 +5,7 @@
     height: 100px;
     @include displayFlexRow;
     background: $purple-rain;
-    padding-left: $padding *2;
+    padding-left: $padding * 2;
     justify-content: space-between;
     @include maxSMContent {
         display: block;
@@ -48,7 +48,7 @@
                 input {
                     width: 220px;
                     height: 36px;
-                    text-indent: 32px;
+                    padding-left: 32px;
                     border: 1px solid $white;
                     @include searchInputBorderRadius;
                     @include maxSMContent {

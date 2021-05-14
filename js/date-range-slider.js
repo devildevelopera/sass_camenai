@@ -1,6 +1,6 @@
 $(() => {
     var today = new Date();
-    $("#date-range-value span").html(today.getDate() + '-' + (today.getMonth() + 1) + '-' + today.getFullYear());
+    $("#date-range-value span").html([today.getDate(), (today.getMonth() + 1), today.getFullYear()].join('/'));
 
     var renderDateRangeSlider = () => {
         var valMap = [];
@@ -15,7 +15,7 @@ $(() => {
                 if (dd.toString().length === 1) {
                     dd = '0' + dd;
                 }
-                $("#date-range-value span").html(dd + '-' + (today.getMonth() + 1) + '-' + today.getFullYear());
+                $("#date-range-value span").html([dd, (today.getMonth() + 1), today.getFullYear()].join('/'));
             }
         })
             .each(() => {
