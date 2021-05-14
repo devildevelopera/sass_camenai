@@ -21,4 +21,4 @@ $(() => {
         $('#poi-delete-draggable-header').text('Are you sure you want to delete ' + text + '?');
         $('#poi-draggable').show();
     });
-})
+});

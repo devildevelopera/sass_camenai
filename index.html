@@ -51,18 +51,21 @@
 
         <div class="cnt-settings fancyscroll">
             <div class="close-menu">
-                <img class="imageIcon" src="https://cdn4.iconfinder.com/data/icons/math-numbers-solid/24/times-solid-128.png" />
+                <img class="imageIcon"
+                    src="https://cdn4.iconfinder.com/data/icons/math-numbers-solid/24/times-solid-128.png" />
             </div>
             <ul>
                 <li>
                     <div class="accordion" id="accordionPOI">
                         <div class="card">
                             <div class="card-head" id="headingPOI">
-                                <h2 class="mb-0 collapsed" data-toggle="collapse" data-target="#collapsePOI" aria-expanded="false" aria-controls="collapsePOI">
+                                <h2 class="mb-0 collapsed" data-toggle="collapse" data-target="#collapsePOI"
+                                    aria-expanded="false" aria-controls="collapsePOI">
                                     <img class="menu-img" src="imgs/1x/poi.png">Point of Interest
                                 </h2>
                             </div>
-                            <div id="collapsePOI" class="collapse" aria-labelledby="headingPOI" data-parent="#accordionPOI">
+                            <div id="collapsePOI" class="collapse" aria-labelledby="headingPOI"
+                                data-parent="#accordionPOI">
                                 <div class="card-body">
                                     <ul>
                                         <li>
@@ -86,28 +89,36 @@
                     </div>
                 </li>
                 <li id="bookmarks"><img class="menu-img" src="imgs/1x/bookmark.png">Bookmarks</li>
-                <li><img class="menu-img" src="imgs/1x/detections.png">Detections <img class="detections-img imageIcon" src="https://cdn2.iconfinder.com/data/icons/250-perfect-vector-pictograms/48/9.6-128.png" />
+                <li><img class="menu-img" src="imgs/1x/detections.png">Detections <img class="detections-img imageIcon"
+                        src="https://cdn2.iconfinder.com/data/icons/250-perfect-vector-pictograms/48/9.6-128.png" />
                 </li>
                 <li>
                     <div class="accordion" id="accordionImgRecording">
                         <div class="card">
                             <div class="card-head" id="headingImgRecording">
-                                <h2 class="mb-0 collapsed" data-toggle="collapse" data-target="#collapseImgRecording" aria-expanded="false" aria-controls="collapseImgRecording">
+                                <h2 class="mb-0 collapsed" data-toggle="collapse" data-target="#collapseImgRecording"
+                                    aria-expanded="false" aria-controls="collapseImgRecording">
                                     <img class="menu-img" src="imgs/1x/image-recording.png" />Image recording
                                 </h2>
                             </div>
-                            <div id="collapseImgRecording" class="collapse" aria-labelledby="headingImgRecording" data-parent="#accordionImgRecording">
+                            <div id="collapseImgRecording" class="collapse" aria-labelledby="headingImgRecording"
+                                data-parent="#accordionImgRecording">
                                 <div class="card-body">
                                     <ul>
                                         <li>
                                             <div class="accordion" id="accordionImgRecordingTimeRange">
                                                 <div class="card">
                                                     <div class="card-head" id="headingImgRecordingTimeRange">
-                                                        <h2 class="mb-0" data-toggle="collapse" data-target="#collapseImgRecordingTimeRange" aria-expanded="true" aria-controls="collapseImgRecordingTimeRange">
+                                                        <h2 class="mb-0" data-toggle="collapse"
+                                                            data-target="#collapseImgRecordingTimeRange"
+                                                            aria-expanded="true"
+                                                            aria-controls="collapseImgRecordingTimeRange">
                                                             <img src="imgs/1x/clock.png" />Time Range
                                                         </h2>
                                                     </div>
-                                                    <div id="collapseImgRecordingTimeRange" class="collapse show" aria-labelledby="headingImgRecordingTimeRange" data-parent="#accordionImgRecordingTimeRange">
+                                                    <div id="collapseImgRecordingTimeRange" class="collapse show"
+                                                        aria-labelledby="headingImgRecordingTimeRange"
+                                                        data-parent="#accordionImgRecordingTimeRange">
                                                         <div class="card-body">
                                                             Date range picker here
                                                         </div>
@@ -151,11 +162,13 @@
                         <div class="accordion" id="accordionPOIOptions">
                             <div class="card">
                                 <div class="card-head" id="headingPOIOptions">
-                                    <h2 class="mb-0 collapsed" data-toggle="collapse" data-target="#collapsePOIOptions" aria-expanded="false" aria-controls="collapsePOIOptions">
+                                    <h2 class="mb-0 collapsed" data-toggle="collapse" data-target="#collapsePOIOptions"
+                                        aria-expanded="false" aria-controls="collapsePOIOptions">
                                         P.O.I Options
                                     </h2>
                                 </div>
-                                <div id="collapsePOIOptions" class="collapse" aria-labelledby="headingPOIOptions" data-parent="#accordionPOIOptions">
+                                <div id="collapsePOIOptions" class="collapse" aria-labelledby="headingPOIOptions"
+                                    data-parent="#accordionPOIOptions">
                                     <div class="card-body">
                                         <ul>
                                             <li><i class="fa fa-pencil"></i> Edit Present</li>
@@ -242,7 +255,8 @@
             <div id="report-issue-draggable" class="drag-modal">
                 <div class="card">
                     <div class="card-header">
-                        <img src="imgs/1x/report-issue-icon.png" /> Report Issue <img src="imgs/1x/report-issue-close-icon.png" />
+                        <img src="imgs/1x/report-issue-icon.png" /> Report Issue <img
+                            src="imgs/1x/report-issue-close-icon.png" />
                     </div>
                     <div class="card-body">
                         <div>
@@ -360,7 +374,12 @@
             <div id="map-section">
                 <div class="img-sec">
                 </div>
-                <div class="map-sec"></div>
+                <div class="bdr-sec">
+                    <img src="imgs/1x/border-handler.png" />
+                </div>
+                <div class="map-sec1">
+                    <div id="right_panel"></div>
+                </div>
             </div>
         </div>
     </div>
@@ -368,7 +387,8 @@
     <!-- jquery -->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"
+        type="text/javascript"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
@@ -376,6 +396,7 @@
 
     <script src="js/map.js "></script>
     <script src="js/poi.js "></script>
+    <script src="js/resize.js "></script>
     <script src="js/sidebar.js "></script>
     <script src="js/bookmarks.js "></script>
     <script src="js/poi-delete.js "></script>
@@ -385,7 +406,10 @@
 
     <!-- google map api -->
 
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBIwzALxUPNbatRBj3Xi1Uhp0fFzwWNBkE&callback=initMap&libraries=&v=weekly" type=" text/javascript " async></script>
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBIwzALxUPNbatRBj3Xi1Uhp0fFzwWNBkE&callback=initMap&libraries=&v=weekly"
+        type=" text/javascript " async>
+    </script>
 
 </body>
 

@@ -1,7 +1,7 @@
-var _customerSelect = function() {
+var _customerSelect = function () {
     var x, i, j, l, ll, selElmnt, a, b, c;
     /* Look for any elements with the class "date-range-select": */
-    var initFun = function() {
+    var initFun = function () {
         l = x.length;
         for (i = 0; i < l; i++) {
             selElmnt = x[i].getElementsByTagName("select")[0];
@@ -19,7 +19,7 @@ var _customerSelect = function() {
                 create a new DIV that will act as an option item: */
                 c = document.createElement("DIV");
                 c.innerHTML = selElmnt.options[j].innerHTML;
-                c.addEventListener("click", function(e) {
+                c.addEventListener("click", function (e) {
                     /* When an item is clicked, update the original select box,
                     and the selected item: */
                     var y, i, k, s, h, sl, yl;
@@ -44,7 +44,7 @@ var _customerSelect = function() {
                 b.appendChild(c);
             }
             x[i].appendChild(b);
-            a.addEventListener("click", function(e) {
+            a.addEventListener("click", function (e) {
                 /* When the select box is clicked, close any other select boxes,
                 and open/close the current select box: */
                 e.stopPropagation();
@@ -54,7 +54,7 @@ var _customerSelect = function() {
             });
         }
     }
-    var closeAllSelect = function(elmnt) {
+    var closeAllSelect = function (elmnt) {
         /* A function that will close all select boxes in the document,
         except the current select box: */
         var x, y, i, xl, yl, arrNo = [];
@@ -79,13 +79,14 @@ var _customerSelect = function() {
     /* If the user clicks anywhere outside the select box,
     then close all select boxes: */
     return {
-        init: function() {
+        init: function () {
             x = document.getElementsByClassName("date-range-select");
             initFun();
             document.addEventListener("click", closeAllSelect);
         }
     }
 }();
+
 $(() => {
     _customerSelect.init();
 });

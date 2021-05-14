@@ -4,4 +4,4 @@ initMap = () => {
         center: { lat: 52, lng: 4 },
         disableDefaultUI: true,
     });
-}
+};
