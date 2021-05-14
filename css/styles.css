@@ -4473,7 +4473,7 @@ to layouts.
 }
 
 .cnt .cnt-map #map-section .img-sec {
-  height: 65%;
+  height: 64%;
   background-size: cover;
   background-position: center;
   background-image: url("../imgs/street.jpg");
@@ -4495,15 +4495,7 @@ to layouts.
   left: calc(50% - 18.5px);
 }
 
-.cnt .cnt-map #map-section .map-sec1 {
-  height: calc(35% - 5px);
-}
-
-.cnt .cnt-map #map-section .map-sec1 #right_panel {
-  right: 0;
-  width: 100%;
-  height: 150px;
-  position: absolute;
-  background-color: #f0f0ff;
+.cnt .cnt-map #map-section .map-sec {
+  height: calc(36% - 5px);
 }
 /*# sourceMappingURL=styles.css.map */
