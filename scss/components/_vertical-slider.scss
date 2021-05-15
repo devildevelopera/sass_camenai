@@ -1,0 +1,29 @@
+.slider.slider-vertical {
+    margin-top: 18px;
+    height: 80px !important;
+    .slider-track {
+        margin-top: -10px;
+        left: 15% !important;
+        width: 15px !important;
+        background-size: 5px 9px;
+        border: solidBlackBorder();
+        background-position: center;
+        border-radius: 7.5px !important;
+        height: calc(100% + 10px) !important;
+        background-repeat: no-repeat round !important;
+        background-image: url("../imgs/SVG/horizontal_line.svg") !important;
+        .slider-selection {
+            background: transparent !important;
+        }
+    }
+    .tooltip-inner {
+        display: none;
+    }
+    .slider-handle {
+        left: 6px !important;
+        width: 9px !important;
+        height: 9px !important;
+        background-image: none !important;
+        background-color: lighten($black, 30%) !important;
+    }
+}
