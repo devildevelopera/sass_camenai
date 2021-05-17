@@ -3203,12 +3203,6 @@ button {
   border-radius: 5px;
 }
 
-.imageIcon {
-  width: 20px;
-  height: 20px;
-  cursor: pointer;
-}
-
 label {
   margin-bottom: 0 !important;
 }
@@ -3244,12 +3238,13 @@ label {
   font-size: 14px;
   font-weight: 400;
   line-height: 25px;
-  background: url(https://cdn0.iconfinder.com/data/icons/entypo/91/arrow56-512.png) no-repeat calc(100% - 8px) center;
-  background-size: 20px;
+  background: url("../imgs/1x/arrow-down.png") no-repeat calc(100% - 8px) center;
+  background-size: 15px;
 }
 
 .accordion .card h2.collapsed {
-  background-image: url(https://cdn0.iconfinder.com/data/icons/arrows-android-l-lollipop-icon-pack/24/expand2-256.png);
+  background-image: url("../imgs/1x/arrow-right.png");
+  background-size: 9px;
 }
 
 .accordion .card-body {
@@ -3277,6 +3272,10 @@ label {
   height: 80px !important;
 }
 
+.slider.slider-vertical:hover .tooltip {
+  opacity: 1;
+}
+
 .slider.slider-vertical .slider-track {
   margin-top: -10px;
   left: 15% !important;
@@ -3294,8 +3293,36 @@ label {
   background: transparent !important;
 }
 
-.slider.slider-vertical .tooltip-inner {
+.slider.slider-vertical .tooltip.tooltip-min.right .tooltip-inner,
+.slider.slider-vertical .tooltip.tooltip-max.right .tooltip-inner {
   display: none;
+}
+
+.slider.slider-vertical .tooltip.tooltip-main.right {
+  width: 105px;
+  padding-bottom: 5px;
+  left: -125px !important;
+}
+
+.slider.slider-vertical .tooltip.tooltip-main.right .tooltip-inner {
+  color: #000;
+  background-color: #fff;
+  border-radius: 0 !important;
+}
+
+.slider.slider-vertical .tooltip.tooltip-main.right .tooltip-arrow {
+  top: 50%;
+  width: 0;
+  height: 0;
+  right: -5px;
+  margin-top: -7.5px;
+  position: absolute;
+  border-style: solid;
+  border-color: transparent;
+  border-left-color: #fff;
+  border-right-color: #000;
+  border-width: 5px 5px 5px 0;
+  border-width: 5px 0px 5px 5px;
 }
 
 .slider.slider-vertical .slider-handle {
@@ -3304,6 +3331,23 @@ label {
   height: 9px !important;
   background-image: none !important;
   background-color: #4d4d4d !important;
+}
+
+.tooltip > .tooltip-inner {
+  color: #000;
+  border-radius: 0;
+  background-color: #fff;
+}
+
+.tooltip.bs-tooltip-left .arrow:before {
+  border-left-color: #fff;
+  border-right-color: #fff;
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+}
+
+.tooltip.fade.bs-tooltip-left.show {
+  left: 13px !important;
 }
 
 #date-range-control .date-range-select {
@@ -3759,8 +3803,8 @@ to layouts.
 
 .cnt .cnt-settings ul li .detections-img {
   float: right;
-  margin-top: 0.5em;
-  margin-right: 0.5em;
+  margin-top: 10px;
+  margin-right: 5px;
 }
 
 .cnt .cnt-settings ul li #accordionImgRecording .card #collapseImgRecording .card-body ul {

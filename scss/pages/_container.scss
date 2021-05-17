@@ -78,8 +78,8 @@
                 }
                 .detections-img {
                     float: right;
-                    margin-top: $margin/2;
-                    margin-right: $margin/2;
+                    margin-top: 10px;
+                    margin-right: 5px;
                 }
                 #accordionImgRecording .card #collapseImgRecording .card-body ul {
                     margin-left: 13px;
@@ -307,7 +307,7 @@
             display: grid;
             @include mapControlBox;
             grid-template-rows: auto auto auto;
-            &>div {
+            & > div {
                 width: 42px;
                 height: 42px;
                 display: flex;

@@ -1,6 +1,11 @@
 .slider.slider-vertical {
     margin-top: 18px;
     height: 80px !important;
+    &:hover {
+        .tooltip {
+            opacity: 1;
+        }
+    }
     .slider-track {
         margin-top: -10px;
         left: 15% !important;
@@ -16,8 +21,35 @@
             background: transparent !important;
         }
     }
-    .tooltip-inner {
-        display: none;
+    .tooltip.tooltip-min.right,
+    .tooltip.tooltip-max.right {
+        .tooltip-inner {
+            display: none;
+        }
+    }
+    .tooltip.tooltip-main.right {
+        width: 105px;
+        padding-bottom: 5px;
+        left: -125px !important;
+        .tooltip-inner {
+            color: $black;
+            background-color: $white;
+            border-radius: 0 !important;
+        }
+        .tooltip-arrow {
+            top: 50%;
+            width: 0;
+            height: 0;
+            right: -5px;
+            margin-top: -7.5px;
+            position: absolute;
+            border-style: solid;
+            border-color: transparent;
+            border-left-color: $white;
+            border-right-color: #000;
+            border-width: 5px 5px 5px 0;
+            border-width: 5px 0px 5px 5px;
+        }
     }
     .slider-handle {
         left: 6px !important;
@@ -26,4 +58,21 @@
         background-image: none !important;
         background-color: lighten($black, 30%) !important;
     }
+}
+
+.tooltip>.tooltip-inner {
+    color: $black;
+    border-radius: 0;
+    background-color: $white;
+}
+
+.tooltip.bs-tooltip-left .arrow:before {
+    border-left-color: $white;
+    border-right-color: $white;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+}
+
+.tooltip.fade.bs-tooltip-left.show {
+    left: 13px !important;
 }
