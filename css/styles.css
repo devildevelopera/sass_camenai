@@ -4619,9 +4619,48 @@ to layouts.
 
 .cnt .cnt-map #map-section .img-sec {
   height: 68%;
+  position: relative;
   background-size: cover;
   background-position: center;
   background-image: url("../imgs/street.jpg");
+}
+
+.cnt .cnt-map #map-section .img-sec .img-direc-control {
+  bottom: 20px;
+  width: 150px;
+  padding: 5px;
+  border-radius: 50%;
+  position: absolute;
+  text-align: center;
+  left: calc(50% - 75px);
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.cnt .cnt-map #map-section .img-sec .img-direc-control img {
+  cursor: pointer;
+}
+
+.cnt .cnt-map #map-section .img-sec .img-direc-control div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.cnt .cnt-map #map-section .img-sec .img-prev-next {
+  right: 70px;
+  bottom: 20px;
+  position: absolute;
+}
+
+.cnt .cnt-map #map-section .img-sec .img-prev-next img {
+  cursor: pointer;
 }
 
 .cnt .cnt-map #map-section .bdr-sec {
