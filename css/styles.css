@@ -3713,7 +3713,7 @@ to layouts.
   }
 }
 
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 1200px) {
   .cnt {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
@@ -3731,7 +3731,7 @@ to layouts.
   height: calc(100vh - 100px);
 }
 
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 1200px) {
   .cnt .cnt-settings {
     width: 100%;
     height: 200px;
@@ -3830,6 +3830,7 @@ to layouts.
   /* report issue modal */
   /* bright contrast control */
   /* view type control */
+  /* on off control control */
   /* add-bookmark control */
   /* undo control */
   /* back-forward control */
@@ -4253,10 +4254,62 @@ to layouts.
   margin-right: 5px;
 }
 
-@media only screen and (max-width: 680px) {
+@media only screen and (max-width: 768px) {
   .cnt .cnt-map #view-type-control {
     bottom: 80px;
-    left: calc(50% - 95px);
+    left: calc(50% - 130px);
+  }
+}
+
+.cnt .cnt-map #on-off-control {
+  bottom: 30px;
+  height: 38px;
+  z-index: 1;
+  position: absolute;
+  border-radius: 5px;
+  background-color: #fff;
+  border: 1px solid #cccccc;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  left: 195px;
+}
+
+.cnt .cnt-map #on-off-control div {
+  height: 100%;
+  padding: 0 5px;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.cnt .cnt-map #on-off-control div:last-child:hover {
+  background-color: #f2f2f2;
+}
+
+.cnt .cnt-map #on-off-control div:not(:last-child) {
+  border-right: 1px solid #cccccc;
+}
+
+@media only screen and (max-width: 768px) {
+  .cnt .cnt-map #on-off-control {
+    bottom: 80px;
+    left: calc(50% + 45px);
   }
 }
 
@@ -4281,7 +4334,7 @@ to layouts.
   left: calc(50% - 308px);
 }
 
-@media only screen and (max-width: 1400px) {
+@media only screen and (max-width: 1510px) {
   .cnt .cnt-map #add-bookmark-control {
     left: calc(50% - 115px);
   }
@@ -4311,7 +4364,7 @@ to layouts.
   margin-left: 4px;
 }
 
-@media only screen and (max-width: 1400px) {
+@media only screen and (max-width: 1510px) {
   .cnt .cnt-map #add-bookmark-control div span {
     display: none;
   }
@@ -4338,7 +4391,7 @@ to layouts.
   left: calc(50% - 160px);
 }
 
-@media only screen and (max-width: 1400px) {
+@media only screen and (max-width: 1510px) {
   .cnt .cnt-map #undo-control {
     left: calc(50% - 76px);
   }
@@ -4385,7 +4438,7 @@ to layouts.
   left: calc(50% - 115px);
 }
 
-@media only screen and (max-width: 1400px) {
+@media only screen and (max-width: 1510px) {
   .cnt .cnt-map #back-forward-control {
     left: calc(50% - 31px);
   }
@@ -4419,7 +4472,7 @@ to layouts.
   margin-left: 4px;
 }
 
-@media only screen and (max-width: 1400px) {
+@media only screen and (max-width: 1510px) {
   .cnt .cnt-map #back-forward-control div:nth-child(2) span {
     display: none;
   }
@@ -4429,7 +4482,7 @@ to layouts.
   margin-right: 4px;
 }
 
-@media only screen and (max-width: 1400px) {
+@media only screen and (max-width: 1510px) {
   .cnt .cnt-map #back-forward-control div:nth-child(3) span {
     display: none;
   }
@@ -4460,13 +4513,13 @@ to layouts.
   left: calc(50% + 112px);
 }
 
-@media only screen and (max-width: 1400px) {
+@media only screen and (max-width: 1510px) {
   .cnt .cnt-map #street-dimension-control {
     left: calc(50% + 98px);
   }
 }
 
-@media only screen and (max-width: 680px) {
+@media only screen and (max-width: 768px) {
   .cnt .cnt-map #street-dimension-control {
     bottom: 130px;
     left: calc(50% - 89px);
@@ -4497,7 +4550,7 @@ to layouts.
   border-right: 1px solid #cccccc;
 }
 
-@media only screen and (max-width: 1400px) {
+@media only screen and (max-width: 1510px) {
   .cnt .cnt-map #street-dimension-control div span {
     display: none;
   }

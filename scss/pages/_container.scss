@@ -7,7 +7,7 @@
     @include maxSMContent {
         height: calc(100vh - 172.5px);
     }
-    @include maxMDContent {
+    @include maxLGContent {
         flex-direction: column-reverse;
     }
     /* side menu */
@@ -18,7 +18,7 @@
         padding: $padding/2;
         border: solidBlackBorder();
         height: calc(100vh - 100px);
-        @include maxMDContent {
+        @include maxLGContent {
             width: 100%;
             height: 200px;
         }
@@ -356,9 +356,33 @@
                     margin-right: 5px;
                 }
             }
-            @media only screen and (max-width: 680px) {
+            @include maxSMContent {
                 bottom: 80px;
-                left: calc(50% - 95px);
+                left: calc(50% - 130px);
+            }
+        }
+        /* on off control control */
+        #on-off-control {
+            bottom: 30px;
+            height: 38px;
+            @include mapControlBox;
+            @include displayFlexRow;
+            left: 195px;
+            div {
+                height: 100%;
+                padding: 0 5px;
+                cursor: pointer;
+                @include displayFlexRow;
+                &:last-child:hover {
+                    background-color: lighten($black, 95%);
+                }
+                &:not(:last-child) {
+                    border-right: solidBlackBorder();
+                }
+            }
+            @include maxSMContent {
+                bottom: 80px;
+                left: calc(50% + 45px);
             }
         }
         /* add-bookmark control */
@@ -459,7 +483,7 @@
             @include maxXLContent {
                 left: calc(50% + 98px);
             }
-            @media only screen and (max-width: 680px) {
+            @include maxSMContent {
                 bottom: 130px;
                 left: calc(50% - 89px);
             }
