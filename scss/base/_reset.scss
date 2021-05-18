@@ -32,6 +32,6 @@ select {
 button {
     border: none;
     &:focus {
-        outline: none;
+        outline: none !important;
     }
 }

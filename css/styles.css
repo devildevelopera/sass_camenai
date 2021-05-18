@@ -3148,7 +3148,7 @@ button {
 }
 
 button:focus {
-  outline: none;
+  outline: none !important;
 }
 
 html {
@@ -3832,6 +3832,7 @@ to layouts.
   /* view type control */
   /* on off control control */
   /* add-bookmark control */
+  /* add bookmark modal */
   /* undo control */
   /* back-forward control */
   /* street-dimension control */
@@ -4306,6 +4307,10 @@ to layouts.
   border-right: 1px solid #cccccc;
 }
 
+.cnt .cnt-map #on-off-control div:last-child {
+  width: 34.23px;
+}
+
 @media only screen and (max-width: 768px) {
   .cnt .cnt-map #on-off-control {
     bottom: 80px;
@@ -4341,6 +4346,7 @@ to layouts.
 }
 
 .cnt .cnt-map #add-bookmark-control div {
+  width: 140px;
   height: 100%;
   padding: 0 10px;
   cursor: pointer;
@@ -4354,6 +4360,9 @@ to layouts.
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .cnt .cnt-map #add-bookmark-control div:hover {
@@ -4368,6 +4377,127 @@ to layouts.
   .cnt .cnt-map #add-bookmark-control div span {
     display: none;
   }
+}
+
+.cnt .cnt-map #add-bookmark-draggable {
+  width: 140px;
+  bottom: 90px;
+  left: calc(50% - 308px);
+}
+
+@media only screen and (max-width: 1510px) {
+  .cnt .cnt-map #add-bookmark-draggable {
+    left: calc(50% - 115px);
+  }
+}
+
+.cnt .cnt-map #add-bookmark-draggable .card {
+  height: 100%;
+  text-align: center;
+}
+
+.cnt .cnt-map #add-bookmark-draggable .card-header {
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  background-color: #fff;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.cnt .cnt-map #add-bookmark-draggable .card-body {
+  font-size: 14px;
+  padding: 0 0 10px 0;
+}
+
+.cnt .cnt-map #add-bookmark-draggable .card-body .change-folder {
+  cursor: pointer;
+  padding: 5px 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.cnt .cnt-map #add-bookmark-draggable .card-body .change-folder:hover {
+  background-color: #f2f2f2;
+}
+
+.cnt .cnt-map #add-bookmark-draggable .card-body #add-bookmark-folder {
+  display: none;
+}
+
+.cnt .cnt-map #add-bookmark-draggable .card-body .new-folder {
+  cursor: pointer;
+  padding: 5px 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.cnt .cnt-map #add-bookmark-draggable .card-body .new-folder:hover {
+  background-color: #f2f2f2;
+}
+
+.cnt .cnt-map #add-bookmark-draggable .card-body .new-folder img {
+  margin-right: 5px;
+}
+
+.cnt .cnt-map #add-bookmark-draggable .card-body .new-folder-name {
+  display: none;
+}
+
+.cnt .cnt-map #add-bookmark-draggable .card-body input,
+.cnt .cnt-map #add-bookmark-draggable .card-body select {
+  margin: 0 10px;
+  margin-bottom: 5px;
+  width: calc(100% - 20px);
+}
+
+.cnt .cnt-map #add-bookmark-draggable .card-body select {
+  height: 27px;
+}
+
+.cnt .cnt-map #add-bookmark-draggable .card-body div:nth-child(4) {
+  border-top: 1px solid #cccccc;
+}
+
+.cnt .cnt-map #add-bookmark-draggable .card-body .submit-bookmark {
+  color: #fff;
+  margin: 0 10px;
+  margin-top: 5px;
+  border-radius: 3px;
+  width: calc(100% - 20px);
+  background-color: gray;
+}
+
+.cnt .cnt-map #add-bookmark-draggable .card-body .submit-bookmark:active {
+  background-color: #4d4d4d;
 }
 
 .cnt .cnt-map #undo-control {
@@ -4660,6 +4790,7 @@ to layouts.
 }
 
 .cnt .cnt-map #map-section .img-sec .img-prev-next img {
+  height: 29px;
   cursor: pointer;
 }
 

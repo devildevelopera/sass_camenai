@@ -307,7 +307,7 @@
             display: grid;
             @include mapControlBox;
             grid-template-rows: auto auto auto;
-            & > div {
+            &>div {
                 width: 42px;
                 height: 42px;
                 display: flex;
@@ -379,6 +379,9 @@
                 &:not(:last-child) {
                     border-right: solidBlackBorder();
                 }
+                &:last-child {
+                    width: 34.23px;
+                }
             }
             @include maxSMContent {
                 bottom: 80px;
@@ -396,10 +399,12 @@
                 left: calc(50% - 115px);
             }
             div {
+                width: 140px;
                 height: 100%;
                 padding: 0 10px;
                 cursor: pointer;
                 @include displayFlexRow;
+                justify-content: space-between;
                 &:hover {
                     background-color: lighten($black, 95%);
                 }
@@ -407,6 +412,78 @@
                     margin-left: 4px;
                     @include maxXLContent {
                         display: none;
+                    }
+                }
+            }
+        }
+        /* add bookmark modal */
+        #add-bookmark-draggable {
+            width: 140px;
+            bottom: 90px;
+            left: calc(50% - 308px);
+            @include maxXLContent {
+                left: calc(50% - 115px);
+            }
+            .card {
+                height: 100%;
+                text-align: center;
+                &-header {
+                    padding: 10px;
+                    @include displayFlexRow;
+                    background-color: $white;
+                    justify-content: space-between;
+                }
+                &-body {
+                    font-size: 14px;
+                    padding: 0 0 10px 0;
+                    .change-folder {
+                        cursor: pointer;
+                        padding: 5px 10px;
+                        @include displayFlexRow;
+                        justify-content: space-between;
+                        &:hover {
+                            background-color: lighten($black, 95%);
+                        }
+                    }
+                    #add-bookmark-folder {
+                        display: none;
+                    }
+                    .new-folder {
+                        cursor: pointer;
+                        padding: 5px 10px;
+                        @include displayFlexRow;
+                        &:hover {
+                            background-color: lighten($black, 95%);
+                        }
+                        img {
+                            margin-right: 5px;
+                        }
+                    }
+                    .new-folder-name {
+                        display: none;
+                    }
+                    input,
+                    select {
+                        margin: 0 10px;
+                        margin-bottom: 5px;
+                        width: calc(100% - 20px);
+                    }
+                    select {
+                        height: 27px;
+                    }
+                    div:nth-child(4) {
+                        border-top: solidBlackBorder();
+                    }
+                    .submit-bookmark {
+                        color: $white;
+                        margin: 0 10px;
+                        margin-top: 5px;
+                        border-radius: 3px;
+                        width: calc(100% - 20px);
+                        background-color: lighten($black, 50%);
+                        &:active {
+                            background-color: lighten($black, 30%);
+                        }
                     }
                 }
             }
@@ -573,6 +650,7 @@
                     bottom: 20px;
                     position: absolute;
                     img {
+                        height: 29px;
                         cursor: pointer;
                     }
                 }
