@@ -3286,7 +3286,7 @@ label {
   border-radius: 7.5px !important;
   height: calc(100% + 10px) !important;
   background-repeat: no-repeat round !important;
-  background-image: url("../imgs/SVG/horizontal_line.svg") !important;
+  background-image: url("../imgs/SVG/horizontal-line.svg") !important;
 }
 
 .slider.slider-vertical .slider-track .slider-selection {
@@ -3321,7 +3321,6 @@ label {
   border-color: transparent;
   border-left-color: #fff;
   border-right-color: #000;
-  border-width: 5px 5px 5px 0;
   border-width: 5px 0px 5px 5px;
 }
 
@@ -3348,6 +3347,68 @@ label {
 
 .tooltip.fade.bs-tooltip-left.show {
   left: 13px !important;
+}
+
+.slider.slider-horizontal {
+  width: 80px !important;
+}
+
+.slider.slider-horizontal:hover .tooltip {
+  opacity: 1;
+}
+
+.slider.slider-horizontal .slider-track {
+  margin-left: -10px;
+  top: 15% !important;
+  height: 15px !important;
+  margin-top: 0 !important;
+  background-size: 9px 5px;
+  border: 1px solid #cccccc;
+  background-position: center;
+  border-radius: 7.5px !important;
+  width: calc(100% + 10px) !important;
+  background-repeat: round no-repeat !important;
+  background-image: url("../imgs/SVG/vertical-line.svg") !important;
+}
+
+.slider.slider-horizontal .slider-track .slider-selection {
+  background: transparent !important;
+}
+
+.slider.slider-horizontal .tooltip.tooltip-min.top .tooltip-inner,
+.slider.slider-horizontal .tooltip.tooltip-max.top .tooltip-inner {
+  display: none;
+}
+
+.slider.slider-horizontal .tooltip.tooltip-main.top {
+  margin-top: -30px !important;
+}
+
+.slider.slider-horizontal .tooltip.tooltip-main.top .tooltip-inner {
+  width: 35px;
+  color: #fff;
+  background-color: #000;
+  padding: 2px 0 !important;
+  border-radius: 0 !important;
+}
+
+.slider.slider-horizontal .tooltip.tooltip-main.top .tooltip-arrow {
+  width: 0;
+  height: 0;
+  left: 12px;
+  bottom: -5px;
+  position: absolute;
+  border-top: 5px solid #000;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+}
+
+.slider.slider-horizontal .slider-handle {
+  top: 6px !important;
+  width: 9px !important;
+  height: 9px !important;
+  background-image: none !important;
+  background-color: #4d4d4d !important;
 }
 
 #date-range-control .date-range-select {
@@ -3759,22 +3820,22 @@ to layouts.
   padding: 10px;
 }
 
-.cnt .cnt-settings ul li #accordionPOI ul {
+.cnt .cnt-settings ul li.accordionPOI #accordionPOI ul {
   margin-left: 16px;
   padding-left: 0.5em;
   border-left: 1px solid #cccccc;
 }
 
-.cnt .cnt-settings ul li #accordionPOI ul li:first-child {
+.cnt .cnt-settings ul li.accordionPOI #accordionPOI ul li:first-child {
   background-color: transparent;
 }
 
-.cnt .cnt-settings ul li #accordionPOI ul li .search-POI {
+.cnt .cnt-settings ul li.accordionPOI #accordionPOI ul li .search-POI {
   position: relative;
   margin: 0.5em 0.5em 0.5em 0;
 }
 
-.cnt .cnt-settings ul li #accordionPOI ul li .search-POI .fa-search {
+.cnt .cnt-settings ul li.accordionPOI #accordionPOI ul li .search-POI .fa-search {
   top: 7px;
   right: 7px;
   padding: 0;
@@ -3782,7 +3843,7 @@ to layouts.
   color: gray;
 }
 
-.cnt .cnt-settings ul li #accordionPOI ul li .search-POI input {
+.cnt .cnt-settings ul li.accordionPOI #accordionPOI ul li .search-POI input {
   width: 100%;
   text-indent: 5px;
   padding-right: 25px;
@@ -3792,28 +3853,40 @@ to layouts.
   -webkit-border-radius: 4px;
 }
 
-.cnt .cnt-settings ul li #accordionImgRecording ul li:first-child {
-  background-color: transparent;
-}
-
-.cnt .cnt-settings ul li #accordionImgRecording ul li:first-child h2 i {
-  padding: 0;
-  padding-right: 10px;
-}
-
-.cnt .cnt-settings ul li .detections-img {
+.cnt .cnt-settings ul li.detections .detections-img {
   float: right;
   margin-top: 10px;
   margin-right: 5px;
 }
 
-.cnt .cnt-settings ul li #accordionImgRecording .card #collapseImgRecording .card-body ul {
+.cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording ul {
   margin-left: 13px;
   border-left: 1px solid #cccccc;
 }
 
-.cnt .cnt-settings ul li #accordionImgRecording .card #collapseImgRecording .card-body ul li h2 img {
+.cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording ul li {
+  background-color: transparent;
+}
+
+.cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording ul li h2 img {
   margin-right: 5px;
+}
+
+.cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording ul li .image-quality {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: 20px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording ul li .image-quality div:last-child img {
+  margin-right: 1em;
 }
 
 .cnt .cnt-map {

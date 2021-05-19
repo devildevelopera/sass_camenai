@@ -6,7 +6,7 @@ $(() => {
         }
     });
 
-    $('#bookmarks').click((e) => {
+    $('.bookmarks').click((e) => {
         if ($('#bookmarks-draggable').is(":visible")) {
             $('#bookmarks-draggable').hide();
         } else {

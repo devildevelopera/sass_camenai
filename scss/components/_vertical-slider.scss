@@ -16,7 +16,7 @@
         border-radius: 7.5px !important;
         height: calc(100% + 10px) !important;
         background-repeat: no-repeat round !important;
-        background-image: url("../imgs/SVG/horizontal_line.svg") !important;
+        background-image: url("../imgs/SVG/horizontal-line.svg") !important;
         .slider-selection {
             background: transparent !important;
         }
@@ -46,8 +46,7 @@
             border-style: solid;
             border-color: transparent;
             border-left-color: $white;
-            border-right-color: #000;
-            border-width: 5px 5px 5px 0;
+            border-right-color: $black;
             border-width: 5px 0px 5px 5px;
         }
     }

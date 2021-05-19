@@ -1,0 +1,57 @@
+.slider.slider-horizontal {
+    width: 80px !important;
+    &:hover {
+        .tooltip {
+            opacity: 1;
+        }
+    }
+    .slider-track {
+        margin-left: -10px;
+        top: 15% !important;
+        height: 15px !important;
+        margin-top: 0 !important;
+        background-size: 9px 5px;
+        border: solidBlackBorder();
+        background-position: center;
+        border-radius: 7.5px !important;
+        width: calc(100% + 10px) !important;
+        background-repeat: round no-repeat !important;
+        background-image: url("../imgs/SVG/vertical-line.svg") !important;
+        .slider-selection {
+            background: transparent !important;
+        }
+    }
+    .tooltip.tooltip-min.top,
+    .tooltip.tooltip-max.top {
+        .tooltip-inner {
+            display: none;
+        }
+    }
+    .tooltip.tooltip-main.top {
+        margin-top: -30px !important;
+        .tooltip-inner {
+            width: 35px;
+            color: $white;
+            background-color: $black;
+            padding: 2px 0 !important;
+            border-radius: 0 !important;
+        }
+        .tooltip-arrow {
+            width: 0;
+            height: 0;
+            left: 12px;
+            bottom: -5px;
+            position: absolute;
+            border-top: 5px solid $black;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+        }
+    }
+    .slider-handle {
+        top: 6px !important;
+        width: 9px !important;
+        height: 9px !important;
+        background-image: none !important;
+        background-color: lighten($black, 30%) !important;
+    }
+}

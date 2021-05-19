@@ -39,53 +39,64 @@
                 .menu-img {
                     padding: 10px;
                 }
-                #accordionPOI ul {
-                    margin-left: 16px;
-                    padding-left: $padding/2;
-                    border-left: solidBlackBorder();
-                    li {
-                        &:first-child {
-                            background-color: transparent;
-                        }
-                        .search-POI {
-                            position: relative;
-                            margin: $margin/2 $margin/2 $margin/2 0;
-                            .fa-search {
-                                top: 7px;
-                                right: 7px;
-                                padding: 0;
-                                position: absolute;
-                                color: lighten($black, 50%);
+                &.accordionPOI {
+                    #accordionPOI ul {
+                        margin-left: 16px;
+                        padding-left: $padding/2;
+                        border-left: solidBlackBorder();
+                        li {
+                            &:first-child {
+                                background-color: transparent;
                             }
-                            input {
-                                width: 100%;
-                                text-indent: 5px;
-                                padding-right: 25px;
-                                border: solidBlackBorder();
-                                @include searchInputBorderRadius;
+                            .search-POI {
+                                position: relative;
+                                margin: $margin/2 $margin/2 $margin/2 0;
+                                .fa-search {
+                                    top: 7px;
+                                    right: 7px;
+                                    padding: 0;
+                                    position: absolute;
+                                    color: lighten($black, 50%);
+                                }
+                                input {
+                                    width: 100%;
+                                    text-indent: 5px;
+                                    padding-right: 25px;
+                                    border: solidBlackBorder();
+                                    @include searchInputBorderRadius;
+                                }
                             }
                         }
                     }
                 }
-                #accordionImgRecording ul {
-                    li:first-child {
-                        background-color: transparent;
-                        h2 i {
-                            padding: 0;
-                            padding-right: 10px;
-                        }
-                    }
-                }
-                .detections-img {
-                    float: right;
-                    margin-top: 10px;
-                    margin-right: 5px;
-                }
-                #accordionImgRecording .card #collapseImgRecording .card-body ul {
-                    margin-left: 13px;
-                    border-left: solidBlackBorder();
-                    li h2 img {
+                &.detections {
+                    .detections-img {
+                        float: right;
+                        margin-top: 10px;
                         margin-right: 5px;
+                    }
+                }
+                &.accordionImgRecording {
+                    #accordionImgRecording ul {
+                        margin-left: 13px;
+                        border-left: solidBlackBorder();
+                        li {
+                            background-color: transparent;
+                            h2 {
+                                img {
+                                    margin-right: 5px;
+                                }
+                            }
+                            .image-quality {
+                                display: flex;
+                                margin-right: 20px;
+                                align-items: center;
+                                justify-content: space-between;
+                                div:last-child img {
+                                    margin-right: $margin;
+                                }
+                            }
+                        }
                     }
                 }
             }

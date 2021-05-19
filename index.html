@@ -55,7 +55,7 @@
                 <img src="imgs/1x/side-menu-close-icon.png" />
             </div>
             <ul>
-                <li>
+                <li class="accordionPOI">
                     <div class="accordion" id="accordionPOI">
                         <div class="card">
                             <div class="card-head" id="headingPOI">
@@ -86,11 +86,11 @@
                         </div>
                     </div>
                 </li>
-                <li id="bookmarks"><img class="menu-img" src="imgs/1x/bookmark.png">Bookmarks</li>
-                <li>
+                <li class="bookmarks"><img class="menu-img" src="imgs/1x/bookmark.png">Bookmarks</li>
+                <li class="detections">
                     <img class="menu-img" src="imgs/1x/detections.png">Detections <img class="detections-img" src="imgs/1x/detections.png" />
                 </li>
-                <li>
+                <li class="accordionImgRecording">
                     <div class="accordion" id="accordionImgRecording">
                         <div class="card">
                             <div class="card-head" id="headingImgRecording">
@@ -111,39 +111,48 @@
                                                     </div>
                                                     <div id="collapseImgRecordingTimeRange" class="collapse show" aria-labelledby="headingImgRecordingTimeRange" data-parent="#accordionImgRecordingTimeRange">
                                                         <div class="card-body">
-                                                            Date range picker here
+                                                            time range picker here
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </li>
                                         <li>
-                                            <div class="accordion" id="accordionImgRecordingTimeRange">
+                                            <div class="accordion" id="accordionImgRecordingImageFilter">
                                                 <div class="card">
-                                                    <div class="card-head" id="headingImgRecordingTimeRange">
-                                                        <h2 class="mb-0" data-toggle="collapse" data-target="#collapseImgRecordingTimeRange" aria-expanded="true" aria-controls="collapseImgRecordingTimeRange">
-                                                            <img src="imgs/1x/clock.png" />Time Range
+                                                    <div class="card-head" id="headingImgRecordingImageFilter">
+                                                        <h2 class="mb-0" data-toggle="collapse" data-target="#collapseImgRecordingImageFilter" aria-expanded="true" aria-controls="collapseImgRecordingImageFilter">
+                                                            <img src="imgs/1x/imge-filter.png" />Image Filter
                                                         </h2>
                                                     </div>
-                                                    <div id="collapseImgRecordingTimeRange" class="collapse show" aria-labelledby="headingImgRecordingTimeRange" data-parent="#accordionImgRecordingTimeRange">
+                                                    <div id="collapseImgRecordingImageFilter" class="collapse show" aria-labelledby="headingImgRecordingImageFilter" data-parent="#accordionImgRecordingImageFilter">
                                                         <div class="card-body">
-                                                            Date range picker here
+                                                            <div class="image-quality">
+                                                                <div>
+                                                                    <img src="imgs/1x/image-quality.png" />
+                                                                    <span>Image Quality</span>
+                                                                </div>
+                                                                <div>
+                                                                    <img src="imgs/1x/radio.png" />
+                                                                    <input id="image-quality-horizontal-slider" type="text" data-slider-min="0" data-slider-max="100" data-slider-step="10" data-slider-value="25" />
+                                                                </div>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </li>
                                         <li>
-                                            <div class="accordion" id="accordionImgRecordingTimeRange">
+                                            <div class="accordion" id="accordionImgRecordingDetections">
                                                 <div class="card">
-                                                    <div class="card-head" id="headingImgRecordingTimeRange">
-                                                        <h2 class="mb-0" data-toggle="collapse" data-target="#collapseImgRecordingTimeRange" aria-expanded="true" aria-controls="collapseImgRecordingTimeRange">
-                                                            <img src="imgs/1x/clock.png" />Time Range
+                                                    <div class="card-head" id="headingImgRecordingDetections">
+                                                        <h2 class="mb-0" data-toggle="collapse" data-target="#collapseImgRecordingDetections" aria-expanded="true" aria-controls="collapseImgRecordingDetections">
+                                                            <img src="imgs/1x/detections.png" />Detections
                                                         </h2>
                                                     </div>
-                                                    <div id="collapseImgRecordingTimeRange" class="collapse show" aria-labelledby="headingImgRecordingTimeRange" data-parent="#accordionImgRecordingTimeRange">
+                                                    <div id="collapseImgRecordingDetections" class="collapse show" aria-labelledby="headingImgRecordingDetections" data-parent="#accordionImgRecordingDetections">
                                                         <div class="card-body">
-                                                            Date range picker here
+                                                            ditections here
                                                         </div>
                                                     </div>
                                                 </div>
@@ -482,6 +491,7 @@
     <script src="js/img-prev-next.js "></script>
     <script src="js/vertical-slider.js "></script>
     <script src="js/date-range-slider.js "></script>
+    <script src="js/horizontal-slider.js "></script>
 
     <!-- google map api -->
 
