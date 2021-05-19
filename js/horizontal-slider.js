@@ -6,4 +6,10 @@ $().ready(() => {
             return value + '%';
         },
     });
+
+    var slider = new Slider('#gps-accuracy-horizontal-slider', {
+        formatter: function(value) {
+            return value + '%';
+        },
+    });
 });

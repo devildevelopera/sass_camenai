@@ -3872,7 +3872,7 @@ to layouts.
   margin-right: 5px;
 }
 
-.cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording ul li .image-quality {
+.cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording ul li .image-filter-item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3885,7 +3885,7 @@ to layouts.
           justify-content: space-between;
 }
 
-.cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording ul li .image-quality div:last-child img {
+.cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording ul li .image-filter-item div:last-child img {
   margin-right: 1em;
 }
 
