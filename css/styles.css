@@ -3989,6 +3989,10 @@ to layouts.
   margin-right: 10px;
 }
 
+.cnt .cnt-settings ul li .menu-title {
+  font-weight: 500;
+}
+
 .cnt .cnt-settings ul li.accordionPOI #accordionPOI ul {
   margin-left: 16px;
   padding-left: 0.5em;
@@ -4020,6 +4024,15 @@ to layouts.
   border-radius: 4px;
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
+}
+
+.cnt .cnt-settings ul li.detections {
+  position: relative;
+}
+
+.cnt .cnt-settings ul li.detections img:last-child {
+  right: 5px;
+  position: absolute;
 }
 
 .cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording ul {
@@ -4120,7 +4133,7 @@ to layouts.
 
 .cnt .cnt-map #poi-draggable .card-header {
   padding-right: 25px;
-  padding: 0;
+  padding: 5px;
   color: #fff;
   padding-left: 10px;
   background-color: gray;
@@ -4158,7 +4171,7 @@ to layouts.
 .cnt .cnt-map #poi-delete-draggable .card-header {
   text-align: center;
   padding-right: 10px;
-  padding: 0;
+  padding: 5px;
   color: #fff;
   padding-left: 10px;
   background-color: gray;
@@ -4205,7 +4218,7 @@ to layouts.
 
 .cnt .cnt-map #bookmarks-draggable .card-header {
   padding-right: 25px;
-  padding: 0;
+  padding: 5px;
   color: #fff;
   padding-left: 10px;
   background-color: gray;
@@ -4328,7 +4341,7 @@ to layouts.
 }
 
 .cnt .cnt-map #report-issue-draggable .card-header {
-  padding: 0;
+  padding: 5px;
   color: #fff;
   padding-left: 10px;
   background-color: gray;
@@ -4645,7 +4658,7 @@ to layouts.
 }
 
 .cnt .cnt-map #add-bookmark-draggable .card-header {
-  padding: 10px;
+  padding: 5px 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

@@ -47,6 +47,9 @@
                 .menu-img {
                     margin-right: 10px;
                 }
+                .menu-title {
+                    font-weight: 500;
+                }
                 &.accordionPOI {
                     #accordionPOI ul {
                         margin-left: 16px;
@@ -75,6 +78,13 @@
                                 }
                             }
                         }
+                    }
+                }
+                &.detections {
+                    position: relative;
+                    img:last-child {
+                        right: 5px;
+                        position: absolute;
                     }
                 }
                 &.accordionImgRecording {
@@ -458,7 +468,7 @@
                 height: 100%;
                 text-align: center;
                 &-header {
-                    padding: 10px;
+                    padding: 5px 10px;
                     @include displayFlexRow;
                     background-color: $white;
                     justify-content: space-between;

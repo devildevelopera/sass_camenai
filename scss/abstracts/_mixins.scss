@@ -27,7 +27,7 @@
 }
 
 @mixin cardHeaderStyle {
-    padding: 0;
+    padding: 5px;
     color: $white;
     padding-left: 10px;
     background-color: lighten($black, 50%);
