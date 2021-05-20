@@ -90,7 +90,7 @@
                                     }
                                 }
                                 .card-body {
-                                    height: 340px;
+                                    height: 330px;
                                 }
                             }
                             #accordionImgRecordingImageFilter {
@@ -107,6 +107,9 @@
                                     div:last-child img {
                                         margin-right: $margin;
                                     }
+                                }
+                                #accordionImgRecordingImageFilterInput {
+                                    margin: -5px 13px 0px 22px;
                                 }
                             }
                             #accordionImgRecordingDetections {

@@ -4036,7 +4036,7 @@ to layouts.
 }
 
 .cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording ul li #accordionImgRecordingTimeRange .card-body {
-  height: 340px;
+  height: 330px;
 }
 
 .cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording ul li #accordionImgRecordingImageFilter h2 img, .cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording ul li #accordionImgRecordingDetections h2 img {
@@ -4058,6 +4058,10 @@ to layouts.
 
 .cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording ul li #accordionImgRecordingImageFilter .image-filter-item div:last-child img, .cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording ul li #accordionImgRecordingDetections .image-filter-item div:last-child img {
   margin-right: 1em;
+}
+
+.cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording ul li #accordionImgRecordingImageFilter #accordionImgRecordingImageFilterInput, .cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording ul li #accordionImgRecordingDetections #accordionImgRecordingImageFilterInput {
+  margin: -5px 13px 0px 22px;
 }
 
 .cnt .cnt-map {
