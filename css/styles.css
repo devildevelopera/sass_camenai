@@ -4146,7 +4146,7 @@ to layouts.
 }
 
 .cnt .cnt-map #poi-draggable .card-header i {
-  top: 4px;
+  top: 8px;
   right: 10px;
   cursor: pointer;
   position: absolute;
@@ -4181,7 +4181,7 @@ to layouts.
 }
 
 .cnt .cnt-map #poi-delete-draggable .card-header i {
-  top: 4px;
+  top: 8px;
   right: 10px;
   cursor: pointer;
   position: absolute;
@@ -4228,7 +4228,7 @@ to layouts.
 }
 
 .cnt .cnt-map #bookmarks-draggable .card-header i {
-  top: 4px;
+  top: 8px;
   right: 10px;
   cursor: pointer;
   position: absolute;
@@ -4366,7 +4366,7 @@ to layouts.
 }
 
 .cnt .cnt-map #report-issue-draggable .card-header i {
-  top: 4px;
+  top: 8px;
   right: 10px;
   cursor: pointer;
   position: absolute;
