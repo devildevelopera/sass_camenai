@@ -3151,6 +3151,10 @@ button:focus {
   outline: none !important;
 }
 
+.card {
+  border: none !important;
+}
+
 html {
   color: #000;
   font-size: 14px;
@@ -4161,7 +4165,7 @@ to layouts.
   top: 20px;
   left: 192px;
   width: 220px;
-  height: 129px;
+  height: 145px;
 }
 
 .cnt .cnt-map #poi-delete-draggable .card {
