@@ -3236,8 +3236,8 @@ label {
 .accordion .card h2 {
   cursor: pointer;
   font-size: 14px;
-  font-weight: 400;
-  line-height: 25px;
+  font-weight: 500;
+  line-height: 34px;
   background: url("../imgs/1x/arrow-down.png") no-repeat calc(100% - 8px) center;
   background-size: 15px;
 }
@@ -3381,6 +3381,7 @@ label {
 }
 
 .slider.slider-horizontal .tooltip.tooltip-main.top {
+  pointer-events: none;
   margin-top: -30px !important;
 }
 
@@ -3591,6 +3592,164 @@ label {
 
 #date-range-control .date-range-slider #date-range-value div:last-child {
   border-left: 1px solid #cccccc;
+}
+
+.andp-date-picker {
+  cursor: text;
+}
+
+.andp-date-picker:not(:empty) {
+  height: inherit;
+}
+
+.andp-date-picker span {
+  background: #e8e8e8;
+  display: inline-block;
+  margin: 0 1px 1px;
+  border-radius: 4px;
+  padding: 2px 10px;
+}
+
+.andp-datepicker-container {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  width: 256px;
+  overflow: hidden;
+  position: absolute;
+  z-index: 1000;
+  background: #fff;
+}
+
+.andp-body {
+  padding: 0 8px 8px;
+  border: solid 1px #ccc;
+  border-top: 0;
+}
+
+.andp-header {
+  background: gray;
+  padding: 5px 0px;
+}
+
+.andp-header select {
+  border: 0;
+  font-size: 14px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.andp-month-select {
+  margin-right: 5px;
+  width: 96px;
+}
+
+.andp-year-select {
+  width: 65px;
+}
+
+.andp-header button {
+  background: none;
+  border: 0;
+  color: #fff;
+  padding: 0;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 45px;
+  text-align: center;
+  outline: none !important;
+}
+
+.andp-prev {
+  float: left;
+}
+
+.andp-next {
+  float: right;
+}
+
+.andp-days-names div {
+  width: 34px;
+  float: left;
+  text-align: center;
+  font-size: 12px;
+  color: gray;
+  padding: 10px 0;
+}
+
+.andp-days-numbers {
+  display: table;
+  border-collapse: collapse;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.andp-column {
+  display: table-row;
+}
+
+.andp-column div {
+  display: table-cell;
+  border: 1px solid #f1f1f1;
+  width: 34px;
+  height: 28px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 10px;
+  color: #000;
+}
+
+.andp-column div.day {
+  cursor: pointer;
+}
+
+.andp-column .old-dates {
+  color: #d2d2d2;
+}
+
+.andp-column div.selected {
+  background: gray !important;
+  color: #fff;
+  border-color: gray !important;
+}
+
+.andp-column div.soft-select {
+  background: #dedede;
+  border-color: #dedede;
+}
+
+.andp-info {
+  font-size: 12px;
+  margin-top: 9px;
+}
+
+.andp-action-btns {
+  text-align: right;
+  margin-top: 7px;
+}
+
+.andp-action-btns button {
+  color: #fff;
+  margin: 0 10px;
+  margin-top: 5px;
+  border-radius: 3px;
+  width: calc(100% - 20px);
+  background-color: gray;
+}
+
+.andp-action-btns button:active {
+  background-color: #4d4d4d;
+}
+
+.date-range-picker-input {
+  width: 256px;
+  text-indent: 5px;
+  border: 1px solid #cccccc;
 }
 
 /* Layout */
@@ -3816,8 +3975,18 @@ to layouts.
   background-color: #f2f2f2;
 }
 
+.cnt .cnt-settings ul li.bookmarks, .cnt .cnt-settings ul li.detections, .cnt .cnt-settings ul li.point-of-interest, .cnt .cnt-settings ul li.download-data {
+  height: 35px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .cnt .cnt-settings ul li .menu-img {
-  padding: 10px;
+  margin-right: 10px;
 }
 
 .cnt .cnt-settings ul li.accordionPOI #accordionPOI ul {
@@ -3853,12 +4022,6 @@ to layouts.
   -webkit-border-radius: 4px;
 }
 
-.cnt .cnt-settings ul li.detections .detections-img {
-  float: right;
-  margin-top: 10px;
-  margin-right: 5px;
-}
-
 .cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording ul {
   margin-left: 13px;
   border-left: 1px solid #cccccc;
@@ -3868,15 +4031,23 @@ to layouts.
   background-color: transparent;
 }
 
-.cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording ul li h2 img {
+.cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording ul li #accordionImgRecordingTimeRange h2 img {
   margin-right: 5px;
 }
 
-.cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording ul li .image-filter-item {
+.cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording ul li #accordionImgRecordingTimeRange .card-body {
+  height: 340px;
+}
+
+.cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording ul li #accordionImgRecordingImageFilter h2 img, .cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording ul li #accordionImgRecordingDetections h2 img {
+  margin-right: 5px;
+}
+
+.cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording ul li #accordionImgRecordingImageFilter .image-filter-item, .cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording ul li #accordionImgRecordingDetections .image-filter-item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-right: 20px;
+  margin: 10px 20px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -3885,7 +4056,7 @@ to layouts.
           justify-content: space-between;
 }
 
-.cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording ul li .image-filter-item div:last-child img {
+.cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording ul li #accordionImgRecordingImageFilter .image-filter-item div:last-child img, .cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording ul li #accordionImgRecordingDetections .image-filter-item div:last-child img {
   margin-right: 1em;
 }
 

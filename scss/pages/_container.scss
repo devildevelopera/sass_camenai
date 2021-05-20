@@ -36,8 +36,16 @@
                 &:hover {
                     background-color: lighten($black, 95%);
                 }
+                &.bookmarks,
+                &.detections,
+                &.point-of-interest,
+                &.download-data {
+                    height: 35px;
+                    display: flex;
+                    align-items: center;
+                }
                 .menu-img {
-                    padding: 10px;
+                    margin-right: 10px;
                 }
                 &.accordionPOI {
                     #accordionPOI ul {
@@ -69,32 +77,40 @@
                         }
                     }
                 }
-                &.detections {
-                    .detections-img {
-                        float: right;
-                        margin-top: 10px;
-                        margin-right: 5px;
-                    }
-                }
                 &.accordionImgRecording {
                     #accordionImgRecording ul {
                         margin-left: 13px;
                         border-left: solidBlackBorder();
                         li {
                             background-color: transparent;
-                            h2 {
-                                img {
-                                    margin-right: 5px;
+                            #accordionImgRecordingTimeRange {
+                                h2 {
+                                    img {
+                                        margin-right: 5px;
+                                    }
+                                }
+                                .card-body {
+                                    height: 340px;
                                 }
                             }
-                            .image-filter-item {
-                                display: flex;
-                                margin-right: 20px;
-                                align-items: center;
-                                justify-content: space-between;
-                                div:last-child img {
-                                    margin-right: $margin;
+                            #accordionImgRecordingImageFilter {
+                                h2 {
+                                    img {
+                                        margin-right: 5px;
+                                    }
                                 }
+                                .image-filter-item {
+                                    display: flex;
+                                    margin: 10px 20px;
+                                    align-items: center;
+                                    justify-content: space-between;
+                                    div:last-child img {
+                                        margin-right: $margin;
+                                    }
+                                }
+                            }
+                            #accordionImgRecordingDetections {
+                                @extend #accordionImgRecordingImageFilter
                             }
                         }
                     }

@@ -28,6 +28,7 @@
         }
     }
     .tooltip.tooltip-main.top {
+        pointer-events: none;
         margin-top: -30px !important;
         .tooltip-inner {
             width: 35px;

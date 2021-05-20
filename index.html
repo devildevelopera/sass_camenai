@@ -88,7 +88,7 @@
                 </li>
                 <li class="bookmarks"><img class="menu-img" src="imgs/1x/bookmark.png">Bookmarks</li>
                 <li class="detections">
-                    <img class="menu-img" src="imgs/1x/detections.png">Detections <img class="detections-img" src="imgs/1x/radio.png" />
+                    <img class="menu-img" src="imgs/1x/detections.png" />Detections<img class="detections-img" src="imgs/1x/radio.png" />
                 </li>
                 <li class="accordionImgRecording">
                     <div class="accordion" id="accordionImgRecording">
@@ -105,13 +105,14 @@
                                             <div class="accordion" id="accordionImgRecordingTimeRange">
                                                 <div class="card">
                                                     <div class="card-head" id="headingImgRecordingTimeRange">
-                                                        <h2 class="mb-0" data-toggle="collapse" data-target="#collapseImgRecordingTimeRange" aria-expanded="true" aria-controls="collapseImgRecordingTimeRange">
+                                                        <h2 class="mb-0 collapsed" data-toggle="collapse" data-target="#collapseImgRecordingTimeRange" aria-expanded="false" aria-controls="collapseImgRecordingTimeRange">
                                                             <img src="imgs/1x/clock.png" />Time Range
                                                         </h2>
                                                     </div>
-                                                    <div id="collapseImgRecordingTimeRange" class="collapse show" aria-labelledby="headingImgRecordingTimeRange" data-parent="#accordionImgRecordingTimeRange">
+                                                    <div id="collapseImgRecordingTimeRange" class="collapse" aria-labelledby="headingImgRecordingTimeRange" data-parent="#accordionImgRecordingTimeRange">
                                                         <div class="card-body">
-                                                            time range picker here
+                                                            <input class="date-range-picker-input" name="date-range-picker-input">
+                                                            <div id="calendar-div"></div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -121,11 +122,11 @@
                                             <div class="accordion" id="accordionImgRecordingImageFilter">
                                                 <div class="card">
                                                     <div class="card-head" id="headingImgRecordingImageFilter">
-                                                        <h2 class="mb-0" data-toggle="collapse" data-target="#collapseImgRecordingImageFilter" aria-expanded="true" aria-controls="collapseImgRecordingImageFilter">
+                                                        <h2 class="mb-0 collapsed" data-toggle="collapse" data-target="#collapseImgRecordingImageFilter" aria-expanded="false" aria-controls="collapseImgRecordingImageFilter">
                                                             <img src="imgs/1x/imge-filter.png" />Image Filter
                                                         </h2>
                                                     </div>
-                                                    <div id="collapseImgRecordingImageFilter" class="collapse show" aria-labelledby="headingImgRecordingImageFilter" data-parent="#accordionImgRecordingImageFilter">
+                                                    <div id="collapseImgRecordingImageFilter" class="collapse" aria-labelledby="headingImgRecordingImageFilter" data-parent="#accordionImgRecordingImageFilter">
                                                         <div class="card-body">
                                                             <div class="image-filter-item">
                                                                 <div>
@@ -147,6 +148,20 @@
                                                                     <input id="gps-accuracy-horizontal-slider" type="text" data-slider-min="0" data-slider-max="100" data-slider-step="10" data-slider-value="25" />
                                                                 </div>
                                                             </div>
+                                                            <div class="accordion" id="accordionImgRecordingImageFilterInput">
+                                                                <div class="card">
+                                                                    <div class="card-head" id="headingImgRecordingImageFilterInput">
+                                                                        <h2 class="mb-0 collapsed" data-toggle="collapse" data-target="#collapseImgRecordingImageFilterInput" aria-expanded="false" aria-controls="collapseImgRecordingImageFilterInput">
+                                                                            <img src="imgs/1x/input.png" />Input
+                                                                        </h2>
+                                                                    </div>
+                                                                    <div id="collapseImgRecordingImageFilterInput" class="collapse" aria-labelledby="headingImgRecordingImageFilterInput" data-parent="#accordionImgRecordingImageFilterInput">
+                                                                        <div class="card-body">
+                                                                            Input content here
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -156,13 +171,102 @@
                                             <div class="accordion" id="accordionImgRecordingDetections">
                                                 <div class="card">
                                                     <div class="card-head" id="headingImgRecordingDetections">
-                                                        <h2 class="mb-0" data-toggle="collapse" data-target="#collapseImgRecordingDetections" aria-expanded="true" aria-controls="collapseImgRecordingDetections">
+                                                        <h2 class="mb-0 collapsed" data-toggle="collapse" data-target="#collapseImgRecordingDetections" aria-expanded="false" aria-controls="collapseImgRecordingDetections">
                                                             <img src="imgs/1x/detections.png" />Detections
                                                         </h2>
                                                     </div>
-                                                    <div id="collapseImgRecordingDetections" class="collapse show" aria-labelledby="headingImgRecordingDetections" data-parent="#accordionImgRecordingDetections">
+                                                    <div id="collapseImgRecordingDetections" class="collapse" aria-labelledby="headingImgRecordingDetections" data-parent="#accordionImgRecordingDetections">
                                                         <div class="card-body">
-                                                            ditections here
+                                                            <div class="image-filter-item">
+                                                                <div>
+                                                                    <img src="imgs/1x/trash.png" />
+                                                                    <span>Trash</span>
+                                                                </div>
+                                                                <div>
+                                                                    <img src="imgs/1x/radio.png" />
+                                                                    <input id="trash-horizontal-slider" type="text" data-slider-min="0" data-slider-max="100" data-slider-step="10" data-slider-value="25" />
+                                                                </div>
+                                                            </div>
+                                                            <div class="image-filter-item">
+                                                                <div>
+                                                                    <img src="imgs/1x/reload-damage.png" />
+                                                                    <span>Reload Damage</span>
+                                                                </div>
+                                                                <div>
+                                                                    <img src="imgs/1x/radio.png" />
+                                                                    <input id="reload-damage-horizontal-slider" type="text" data-slider-min="0" data-slider-max="100" data-slider-step="10" data-slider-value="25" />
+                                                                </div>
+                                                            </div>
+                                                            <div class="image-filter-item">
+                                                                <div>
+                                                                    <img src="imgs/1x/vegetation.png" />
+                                                                    <span>Vegetation</span>
+                                                                </div>
+                                                                <div>
+                                                                    <img src="imgs/1x/radio.png" />
+                                                                    <input id="vegetation-horizontal-slider" type="text" data-slider-min="0" data-slider-max="100" data-slider-step="10" data-slider-value="25" />
+                                                                </div>
+                                                            </div>
+                                                            <div class="image-filter-item">
+                                                                <div>
+                                                                    <img src="imgs/1x/street-furniture.png" />
+                                                                    <span>Street Furniture</span>
+                                                                </div>
+                                                                <div>
+                                                                    <img src="imgs/1x/radio.png" />
+                                                                    <input id="street-hurniture-horizontal-slider" type="text" data-slider-min="0" data-slider-max="100" data-slider-step="10" data-slider-value="25" />
+                                                                </div>
+                                                            </div>
+                                                            <div class="image-filter-item">
+                                                                <div>
+                                                                    <img src="imgs/1x/road-paint.png" />
+                                                                    <span>Road Paint</span>
+                                                                </div>
+                                                                <div>
+                                                                    <img src="imgs/1x/radio.png" />
+                                                                    <input id="road-paint-horizontal-slider" type="text" data-slider-min="0" data-slider-max="100" data-slider-step="10" data-slider-value="25" />
+                                                                </div>
+                                                            </div>
+                                                            <div class="image-filter-item">
+                                                                <div>
+                                                                    <img src="imgs/1x/canals.png" />
+                                                                    <span>Canals</span>
+                                                                </div>
+                                                                <div>
+                                                                    <img src="imgs/1x/radio.png" />
+                                                                    <input id="canals-horizontal-slider" type="text" data-slider-min="0" data-slider-max="100" data-slider-step="10" data-slider-value="25" />
+                                                                </div>
+                                                            </div>
+                                                            <div class="image-filter-item">
+                                                                <div>
+                                                                    <img src="imgs/1x/faces.png" />
+                                                                    <span>Faces</span>
+                                                                </div>
+                                                                <div>
+                                                                    <img src="imgs/1x/radio.png" />
+                                                                    <input id="faces-horizontal-slider" type="text" data-slider-min="0" data-slider-max="100" data-slider-step="10" data-slider-value="25" />
+                                                                </div>
+                                                            </div>
+                                                            <div class="image-filter-item">
+                                                                <div>
+                                                                    <img src="imgs/1x/license-plates.png" />
+                                                                    <span>License Plates</span>
+                                                                </div>
+                                                                <div>
+                                                                    <img src="imgs/1x/radio.png" />
+                                                                    <input id="license-plates-horizontal-slider" type="text" data-slider-min="0" data-slider-max="100" data-slider-step="10" data-slider-value="25" />
+                                                                </div>
+                                                            </div>
+                                                            <div class="image-filter-item">
+                                                                <div>
+                                                                    <img src="imgs/1x/graffiti.png" />
+                                                                    <span>Graffiti</span>
+                                                                </div>
+                                                                <div>
+                                                                    <img src="imgs/1x/radio.png" />
+                                                                    <input id="graffiti-horizontal-slider" type="text" data-slider-min="0" data-slider-max="100" data-slider-step="10" data-slider-value="25" />
+                                                                </div>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -174,7 +278,8 @@
                         </div>
                     </div>
                 </li>
-                <li><img class="menu-img" src="imgs/1x/save-pooi.png" />Save Point of Interest</li>
+                <li class="point-of-interest"><img class="menu-img" src="imgs/1x/save-poi.png" />Point of Interest </li>
+                <li class="download-data"><img class="menu-img" src="imgs/1x/download.png" />Download Data</li>
             </ul>
         </div>
 
@@ -500,8 +605,10 @@
     <script src="js/report-issue.js "></script>
     <script src="js/img-prev-next.js "></script>
     <script src="js/vertical-slider.js "></script>
+    <script src="js/date-range-picker.js "></script>
     <script src="js/date-range-slider.js "></script>
     <script src="js/horizontal-slider.js "></script>
+    <script src="js/date-range-picker-ui.js "></script>
 
     <!-- google map api -->
 
