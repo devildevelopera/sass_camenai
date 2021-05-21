@@ -6,6 +6,7 @@
     }
 }
 
+
 /* Small devices (portrait tablets and large phones, 600px and up) */
 
 @mixin minXSContent {
@@ -19,6 +20,7 @@
         @content;
     }
 }
+
 
 /* Medium devices (landscape tablets, 768px and up) */
 
@@ -34,6 +36,7 @@
     }
 }
 
+
 /* Large devices (laptops/desktops, 992px and up) */
 
 @mixin minMDContent {
@@ -47,6 +50,7 @@
         @content;
     }
 }
+
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 
@@ -62,16 +66,17 @@
     }
 }
 
+
 /* Double Extra large devices (large laptops and desktops, 1200px and up) */
 
 @mixin maxXLContent {
-    @media only screen and (max-width: 1510px) {
+    @media only screen and (max-width: 1444px) {
         @content;
     }
 }
 
 @mixin maxXLContent {
-    @media only screen and (max-width: 1510px) {
+    @media only screen and (max-width: 1444px) {
         @content;
     }
 }

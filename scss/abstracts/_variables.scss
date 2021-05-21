@@ -8,6 +8,13 @@ $baseFontSize: 16px;
 
 /*Colors*/
 
+
+/* #000000 = 100% black
+#333333 = 80% black =   lighten(@black, 20%);
+#666666 = 60% black =   lighten(@black, 40%);
+#999999 = 40% black =   lighten(@black, 60%);
+#CCCCCC = 20% black =   lighten(@black, 80%)*/
+
 $white: #fff;
 $black: #000;
 $red: #d52b1e;

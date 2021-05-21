@@ -1,12 +1,11 @@
-(function($) {
+$(() => {
 
     var $body = $('body');
 
     // initialize date converter
     let d = new Date();
     let today = d.getFullYear() + '-' + (d.getMonth() + 1) + '-' + d.getDate();
-    console.log(today)
-        // disable autocomplete
+    // disable autocomplete
     $('form').attr('autocomplete', 'off');
 
     // give each calendar instance a unique id
@@ -41,7 +40,8 @@
 
     var sel_input;
     var params;
-    $.fn.nepaliDatePicker = function(_params) {
+
+    $.fn.dateRangePicker = (_params) => {
         params = _params;
         // detect OS
         if (navigator.platform.toUpperCase().indexOf('MAC') >= 0) {
@@ -120,7 +120,7 @@
 
 
         // when user clicks in input / selector field
-        $(document).ready(function() {
+        $(() => {
 
             // update globally.
             sel_input = this;
@@ -235,14 +235,14 @@
 
 
         // update days when month or year is changed
-        $body.on('change', '.andp-month-select, .andp-year-select', function() {
+        $body.on('change', '.andp-month-select, .andp-year-select', () => {
             generate_days();
         });
 
     };
 
     // change months on button click
-    $body.on('click', '.andp-datepicker-container.open .andp-change-months', function(event) {
+    $body.on('click', '.andp-datepicker-container.open .andp-change-months', (event) => {
         // show next month
         selected_month = parseInt($month_select.val());
         selected_year = parseInt($year_select.val());
@@ -316,7 +316,6 @@
             var next_date = smaller_date;
 
             var days_difference = get_days_difference(selected_date, last_captured_date);
-
             // reset all captured dates
             user_selected_dates = [];
 
@@ -338,7 +337,7 @@
 
 
     // insert/update date only if appy-date button was clicked
-    $body.on('click', '.andp-datepicker-container.open .apply-date', function() {
+    $body.on('click', '.andp-datepicker-container.open .apply-date', () => {
         if (user_selected_dates.length >= 2) {
             params.setRange(user_selected_dates[0], user_selected_dates[user_selected_dates.length - 1]);
         } else {
@@ -347,7 +346,7 @@
     })
 
 
-    function format_date_yyyy_mm_dd(date) {
+    var format_date_yyyy_mm_dd = (date) => {
         let date_ar = date.split('-');
         let new_date = date_ar[0] + '-';
         new_date += (date_ar[1].length == 1) ? '0' + date_ar[1] : date_ar[1];
@@ -358,7 +357,7 @@
 
     }
 
-    function init(this_sel) {
+    var init = (this_sel) => {
 
         // close other instance of calendar
         $('.andp-datepicker-container').removeClass('open').hide();
@@ -447,7 +446,7 @@
 
     }
 
-    function fix_calendar_alignment() {
+    var fix_calendar_alignment = () => {
 
         // fix calendar layout and position in dom
         var elem_pos = $selector.offset();
@@ -475,14 +474,14 @@
 
     }
 
-    function generate_days() {
+    var generate_days = () => {
 
         month = $month_select.val();
         year = $year_select.val();
 
         $days_container.html('');
 
-        var month_start_day = new Date(year, parseInt(month) - 1, 1).getDay();
+        var month_start_day = new Date(year, parseInt(month) - 1, 1).getDay() + 1;
         console.log('m', month);
         console.log('y', year);
         console.log(month_start_day);
@@ -513,7 +512,7 @@
             next_year = parseInt(year);
 
             var total_days_in_last_month = new Date(last_year, last_month, 0).getDate();
-
+            console.log('last-month-days', total_days_in_last_month)
             if (y == 1) {
                 append_html += '<div class="andp-column">';
             }
@@ -549,29 +548,22 @@
         $days_container.append(append_html);
     }
 
-    function get_days_difference(date_1, date_2) {
+    var get_days_difference = (date_1, date_2) => {
 
         date_1 = date_1.split('-');
         date_2 = date_2.split('-');
-
-        var converter = new DateConverter();
-        converter.setNepaliDate(date_1[0], date_1[1], date_1[2]);
-        return converter.getNepaliDateDifference(date_2[0], date_2[1], date_2[2]);
+        var d1 = new Date(date_1[0], date_1[1], date_1[2]);
+        var d2 = new Date(date_2[0], date_2[1], date_2[2]);
+        var diff = (d1 - d2) / (24 * 60 * 60 * 1000);
+        return Math.abs(diff);
     }
 
-    function find_older_date(date_1, date_2) {
+    var find_older_date = (date_1, date_2) => {
         date_1 = date_1.split('-');
         date_2 = date_2.split('-');
 
-        var converter = new DateConverter();
-        converter.setNepaliDate(date_1[0], date_1[1], date_1[2]);
-        var date_1_eng = [converter.getEnglishYear(), converter.getEnglishMonth(), converter.getEnglishDate()];
-
-        converter.setNepaliDate(date_2[0], date_2[1], date_2[2]);
-        var date_2_eng = [converter.getEnglishYear(), converter.getEnglishMonth(), converter.getEnglishDate()];
-
-        var firstDate = new Date(date_1_eng[0], date_1_eng[1], date_1_eng[2]);
-        var secondDate = new Date(date_2_eng[0], date_2_eng[1], date_2_eng[2]);
+        var firstDate = new Date(date_1[0], date_1[1], date_1[2]);
+        var secondDate = new Date(date_2[0], date_2[1], date_2[2]);
 
         if (firstDate > secondDate) {
             return 1;
@@ -580,7 +572,7 @@
         }
     }
 
-    function get_next_day(date_1) {
+    var get_next_day = (date_1) => {
         date_1 = date_1.split('-');
 
         year = parseInt(date_1[0]);
@@ -602,7 +594,7 @@
         return year + '-' + month + '-' + day;
     }
 
-    function select_date(selected_date, soft_select = false) {
+    var select_date = (selected_date, soft_select = false) => {
 
         selected_date = format_date_yyyy_mm_dd(selected_date);
 
@@ -633,324 +625,8 @@
         }
     }
 
-    function generate_hidden_input_fields(value) {
+    var generate_hidden_input_fields = (value) => {
         $form.append('<input class="andp-hidden-dates" type="hidden" data-cal_id="' + cal_id + '" name="' + input_field_name + '[]" value="' + value + '">');
-    }
+    };
 
-
-    function DateConverter() {
-        this.englishMonths = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
-        this.englishLeapMonths = [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
-
-        this.nepaliMonths = [
-            [30, 32, 31, 32, 31, 30, 30, 30, 29, 30, 29, 31], //2000
-            [31, 31, 32, 31, 31, 31, 30, 29, 30, 29, 30, 30], //2001
-            [31, 31, 32, 32, 31, 30, 30, 29, 30, 29, 30, 30], // 2002
-            [31, 32, 31, 32, 31, 30, 30, 30, 29, 29, 30, 31], // 2003
-            [30, 32, 31, 32, 31, 30, 30, 30, 29, 30, 29, 31], // 2004
-            [31, 31, 32, 31, 31, 31, 30, 29, 30, 29, 30, 30], // 2005
-            [31, 31, 32, 32, 31, 30, 30, 29, 30, 29, 30, 30], // 2006
-            [31, 32, 31, 32, 31, 30, 30, 30, 29, 29, 30, 31], // 2006
-            [31, 31, 31, 32, 31, 31, 29, 30, 30, 29, 29, 31], // 2007
-            [31, 31, 32, 31, 31, 31, 30, 29, 30, 29, 30, 30], // 2008
-            [31, 31, 32, 32, 31, 30, 30, 29, 30, 29, 30, 30], // 2009
-            [31, 32, 31, 32, 31, 30, 30, 30, 29, 29, 30, 31], // 2010
-            [31, 31, 31, 32, 31, 31, 29, 30, 30, 29, 30, 30],
-            [31, 31, 32, 31, 31, 31, 30, 29, 30, 29, 30, 30],
-            [31, 31, 32, 32, 31, 30, 30, 29, 30, 29, 30, 30],
-            [31, 32, 31, 32, 31, 30, 30, 30, 29, 29, 30, 31],
-            [31, 31, 31, 32, 31, 31, 29, 30, 30, 29, 30, 30],
-            [31, 31, 32, 31, 31, 31, 30, 29, 30, 29, 30, 30],
-            [31, 32, 31, 32, 31, 30, 30, 29, 30, 29, 30, 30],
-            [31, 32, 31, 32, 31, 30, 30, 30, 29, 30, 29, 31],
-            [31, 31, 31, 32, 31, 31, 30, 29, 30, 29, 30, 30],
-            [31, 31, 32, 31, 31, 31, 30, 29, 30, 29, 30, 30],
-            [31, 32, 31, 32, 31, 30, 30, 30, 29, 29, 30, 30],
-            [31, 32, 31, 32, 31, 30, 30, 30, 29, 30, 29, 31],
-            [31, 31, 31, 32, 31, 31, 30, 29, 30, 29, 30, 30],
-            [31, 31, 32, 31, 31, 31, 30, 29, 30, 29, 30, 30],
-            [31, 32, 31, 32, 31, 30, 30, 30, 29, 29, 30, 31],
-            [30, 32, 31, 32, 31, 30, 30, 30, 29, 30, 29, 31],
-            [31, 31, 32, 31, 31, 31, 30, 29, 30, 29, 30, 30],
-            [31, 31, 32, 31, 32, 30, 30, 29, 30, 29, 30, 30],
-            [31, 32, 31, 32, 31, 30, 30, 30, 29, 29, 30, 31],
-            [30, 32, 31, 32, 31, 30, 30, 30, 29, 30, 29, 31],
-            [31, 31, 32, 31, 31, 31, 30, 29, 30, 29, 30, 30],
-            [31, 31, 32, 32, 31, 30, 30, 29, 30, 29, 30, 30],
-            [31, 32, 31, 32, 31, 30, 30, 30, 29, 29, 30, 31],
-            [30, 32, 31, 32, 31, 31, 29, 30, 30, 29, 29, 31],
-            [31, 31, 32, 31, 31, 31, 30, 29, 30, 29, 30, 30],
-            [31, 31, 32, 32, 31, 30, 30, 29, 30, 29, 30, 30],
-            [31, 32, 31, 32, 31, 30, 30, 30, 29, 29, 30, 31],
-            [31, 31, 31, 32, 31, 31, 29, 30, 30, 29, 30, 30],
-            [31, 31, 32, 31, 31, 31, 30, 29, 30, 29, 30, 30],
-            [31, 31, 32, 32, 31, 30, 30, 29, 30, 29, 30, 30],
-            [31, 32, 31, 32, 31, 30, 30, 30, 29, 29, 30, 31],
-            [31, 31, 31, 32, 31, 31, 29, 30, 30, 29, 30, 30],
-            [31, 31, 32, 31, 31, 31, 30, 29, 30, 29, 30, 30],
-            [31, 32, 31, 32, 31, 30, 30, 29, 30, 29, 30, 30],
-            [31, 32, 31, 32, 31, 30, 30, 30, 29, 29, 30, 31],
-            [31, 31, 31, 32, 31, 31, 30, 29, 30, 29, 30, 30],
-            [31, 31, 32, 31, 31, 31, 30, 29, 30, 29, 30, 30],
-            [31, 32, 31, 32, 31, 30, 30, 30, 29, 29, 30, 30],
-            [31, 32, 31, 32, 31, 30, 30, 30, 29, 30, 29, 31],
-            [31, 31, 31, 32, 31, 31, 30, 29, 30, 29, 30, 30],
-            [31, 31, 32, 31, 31, 31, 30, 29, 30, 29, 30, 30],
-            [31, 32, 31, 32, 31, 30, 30, 30, 29, 29, 30, 30],
-            [31, 32, 31, 32, 31, 30, 30, 30, 29, 30, 29, 31],
-            [31, 31, 32, 31, 31, 31, 30, 29, 30, 29, 30, 30],
-            [31, 31, 32, 31, 32, 30, 30, 29, 30, 29, 30, 30],
-            [31, 32, 31, 32, 31, 30, 30, 30, 29, 29, 30, 31],
-            [30, 32, 31, 32, 31, 30, 30, 30, 29, 30, 29, 31],
-            [31, 31, 32, 31, 31, 31, 30, 29, 30, 29, 30, 30],
-            [31, 31, 32, 32, 31, 30, 30, 29, 30, 29, 30, 30],
-            [31, 32, 31, 32, 31, 30, 30, 30, 29, 29, 30, 31],
-            [30, 32, 31, 32, 31, 31, 29, 30, 29, 30, 29, 31],
-            [31, 31, 32, 31, 31, 31, 30, 29, 30, 29, 30, 30],
-            [31, 31, 32, 32, 31, 30, 30, 29, 30, 29, 30, 30],
-            [31, 32, 31, 32, 31, 30, 30, 30, 29, 29, 30, 31],
-            [31, 31, 31, 32, 31, 31, 29, 30, 30, 29, 29, 31],
-            [31, 31, 32, 31, 31, 31, 30, 29, 30, 29, 30, 30],
-            [31, 31, 32, 32, 31, 30, 30, 29, 30, 29, 30, 30],
-            [31, 32, 31, 32, 31, 30, 30, 30, 29, 29, 30, 31],
-            [31, 31, 31, 32, 31, 31, 29, 30, 30, 29, 30, 30],
-            [31, 31, 32, 31, 31, 31, 30, 29, 30, 29, 30, 30], //2071
-            [31, 32, 31, 32, 31, 30, 30, 29, 30, 29, 30, 30], //2072
-            [31, 32, 31, 32, 31, 30, 30, 30, 29, 29, 30, 31], //2073
-            [31, 31, 31, 32, 31, 31, 30, 29, 30, 29, 30, 30],
-            [31, 31, 32, 31, 31, 31, 30, 29, 30, 29, 30, 30],
-            [31, 32, 31, 32, 31, 30, 30, 30, 29, 29, 30, 30], // 2076
-            [31, 32, 31, 32, 31, 30, 30, 30, 29, 30, 29, 31],
-            [31, 31, 31, 32, 31, 31, 30, 29, 30, 29, 30, 30],
-            [31, 31, 32, 31, 31, 31, 30, 29, 30, 29, 30, 30],
-            [31, 32, 31, 32, 31, 30, 30, 30, 29, 29, 30, 30],
-            [31, 31, 32, 32, 31, 30, 30, 30, 29, 30, 30, 30],
-            [30, 32, 31, 32, 31, 30, 30, 30, 29, 30, 30, 30],
-            [31, 31, 32, 31, 31, 30, 30, 30, 29, 30, 30, 30],
-            [31, 31, 32, 31, 31, 30, 30, 30, 29, 30, 30, 30],
-            [31, 32, 31, 32, 30, 31, 30, 30, 29, 30, 30, 30],
-            [30, 32, 31, 32, 31, 30, 30, 30, 29, 30, 30, 30],
-            [31, 31, 32, 31, 31, 31, 30, 30, 29, 30, 30, 30],
-            [30, 31, 32, 32, 30, 31, 30, 30, 29, 30, 30, 30],
-            [30, 32, 31, 32, 31, 30, 30, 30, 29, 30, 30, 30],
-            [30, 32, 31, 32, 31, 30, 30, 30, 29, 30, 30, 30], //2090
-            [31, 31, 32, 31, 31, 31, 30, 30, 29, 30, 30, 30],
-            [30, 31, 32, 32, 31, 30, 30, 30, 29, 30, 30, 30],
-            [30, 32, 31, 32, 31, 30, 30, 30, 29, 30, 30, 30],
-            [31, 31, 32, 31, 31, 30, 30, 30, 29, 30, 30, 30],
-            [31, 31, 32, 31, 31, 31, 30, 29, 30, 30, 30, 30],
-            [30, 31, 32, 32, 31, 30, 30, 29, 30, 29, 30, 30],
-            [31, 32, 31, 32, 31, 30, 30, 30, 29, 30, 30, 30],
-            [31, 31, 32, 31, 31, 31, 29, 30, 29, 30, 29, 31],
-            [31, 31, 32, 31, 31, 31, 30, 29, 29, 30, 30, 30] //2099
-        ];
-
-        this.setCurrentDate = function() {
-            var d = new Date();
-            this.setEnglishDate(d.getFullYear(), d.getMonth() + 1, d.getDate());
-        };
-
-
-        //English to Nepali date conversion
-
-        this.setEnglishDate = function(year, month, date) {
-            if (!this.isEnglishRange(year, month, date))
-                throw new Exception("Invalid date format.");
-
-            this.englishYear = year;
-            this.englishMonth = month;
-            this.englishDate = date;
-
-            //Setting nepali reference to 2000/1/1 with english date 1943/4/14
-            this.nepaliYear = year;
-            this.nepaliMonth = month;
-            this.nepaliDate = date;
-            this.getDay();
-
-        };
-
-        this.toEnglishString = function(format) {
-            if (typeof(format) === 'undefined')
-                format = "-";
-            return this.englishYear + format + this.englishMonth + format + this.englishDate;
-        };
-
-        this.getEnglishDateDifference = function(year, month, date) {
-
-            //Getting difference from the current date with the date provided
-            var difference = this.countTotalEnglishDays(this.englishYear, this.englishMonth, this.englishDate) - this.countTotalEnglishDays(year, month, date);
-            return (difference < 0 ? -difference : difference);
-
-        };
-
-        this.countTotalEnglishDays = function(year, month, date) {
-            var totalDays = year * 365 + date;
-
-            for (var i = 0; i < month - 1; i++)
-                totalDays = totalDays + this.englishMonths[i];
-
-            totalDays = totalDays + this.countleap(year, month);
-            return totalDays;
-        };
-
-        this.countleap = function(year, month) {
-            if (month <= 2)
-                year--;
-
-            return (Math.floor(year / 4) - Math.floor(year / 100) + Math.floor(year / 400));
-        };
-
-        this.isEnglishRange = function(year, month, date) {
-            if (year < 1944 || year > 2042)
-                return false;
-
-            if (month < 1 || month > 12)
-                return false;
-
-            if (date < 1 || date > 31)
-                return false;
-
-            return true;
-        };
-
-        this.isLeapYear = function(year) {
-            if (year % 4 === 0) {
-                return (year % 100 === 0) ? (year % 400 === 0) : true;
-            } else
-                return false;
-        };
-
-
-        //Nepali to English conversion
-
-        this.setNepaliDate = function(year, month, date) {
-            if (!this.isNepaliRange(year, month, date)) {
-                console.log('Invalid Date Format');
-                // throw new Exception("Invalid date format.");
-                return;
-            }
-
-            this.nepaliYear = year;
-            this.nepaliMonth = month;
-            this.nepaliDate = date;
-
-            //Setting english reference to 1944/1/1 with nepali date 2000/9/17
-            this.englishYear = 1944;
-            this.englishMonth = 1;
-            this.englishDate = 1;
-
-            var difference = this.getNepaliDateDifference(2000, 9, 17);
-
-            //Getting english year untill the difference remains less than 365
-            while (difference >= (this.isLeapYear(this.englishYear) ? 366 : 365)) {
-                difference = difference - (this.isLeapYear(this.englishYear) ? 366 : 365);
-                this.englishYear++;
-            }
-
-            //Getting english month untill the difference remains less than 31
-            var monthDays = this.isLeapYear(this.englishYear) ? this.englishLeapMonths : this.englishMonths;
-            var i = 0;
-            while (difference >= monthDays[i]) {
-                this.englishMonth++;
-                difference = difference - monthDays[i];
-                i++;
-            }
-
-            //Remaning days is the date;
-            this.englishDate = this.englishDate + difference;
-
-            this.getDay();
-
-        };
-
-        this.toNepaliString = function(format) {
-            if (typeof(format) === 'undefined')
-                format = "-";
-            return this.nepaliYear + format + this.nepaliMonth + format + this.nepaliDate;
-        };
-
-        this.getNepaliDateDifference = function(year, month, date) {
-
-            //Getting difference from the current date with the date provided
-            var difference = this.countTotalNepaliDays(this.nepaliYear, this.nepaliMonth, this.nepaliDate) - this.countTotalNepaliDays(year, month, date);
-            return (difference < 0 ? -difference : difference);
-
-        };
-
-        this.countTotalNepaliDays = function(year, month, date) {
-            var total = 0;
-            if (year < 2000)
-                return 0;
-
-            total = total + (date - 1);
-
-            var yearIndex = year - 2000;
-            for (var i = 0; i < month - 1; i++)
-                total = total + this.nepaliMonths[yearIndex][i];
-
-            for (var i = 0; i < yearIndex; i++)
-                total = total + this.nepaliYearDays(i);
-
-            return total;
-        };
-
-        this.nepaliYearDays = function(index) {
-            var total = 0;
-
-            for (var i = 0; i < 12; i++)
-                total += this.nepaliMonths[index][i];
-
-            return total;
-        };
-
-        this.isNepaliRange = function(year, month, date) {
-            if (year < 2000 || year > 2098)
-                return false;
-
-            if (month < 1 || month > 12)
-                return false;
-
-            if (date < 1 || date > this.nepaliMonths[year - 2000][month - 1])
-                return false;
-
-            return true;
-        };
-
-
-        //Class Regular methods
-
-        this.getDay = function() {
-
-            //Reference date 1943/4/14 Wednesday
-            var difference = this.getEnglishDateDifference(1943, 4, 14);
-            this.weekDay = ((3 + (difference % 7)) % 7) + 1;
-            return this.weekDay;
-
-        };
-
-        this.getEnglishYear = function() {
-            return this.englishYear;
-        };
-
-        this.getEnglishMonth = function() {
-            return this.englishMonth;
-        };
-
-        this.getEnglishDate = function() {
-            return this.englishDate;
-        };
-
-        this.getNepaliYear = function() {
-            return this.nepaliYear;
-        };
-
-        this.getNepaliMonth = function() {
-            return this.nepaliMonth;
-        };
-
-        this.getNepaliDate = function() {
-            return this.nepaliDate;
-        };
-    }
-
-}(jQuery));
+});

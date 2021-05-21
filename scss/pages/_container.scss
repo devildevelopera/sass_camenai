@@ -109,6 +109,12 @@
                                         margin-right: 5px;
                                     }
                                 }
+                                .quality,
+                                .confidence {
+                                    text-align: end;
+                                    margin-right: 25px;
+                                    margin-bottom: -15px;
+                                }
                                 .image-filter-item {
                                     display: flex;
                                     margin: 10px 20px;
@@ -116,6 +122,9 @@
                                     justify-content: space-between;
                                     div:last-child img {
                                         margin-right: $margin;
+                                    }
+                                    &:first-child {
+                                        margin: 0 20px;
                                     }
                                 }
                                 #accordionImgRecordingImageFilterInput {
@@ -176,7 +185,7 @@
             top: 20px;
             left: 192px;
             width: 220px;
-            height: 145px;
+            height: 110px;
             .card {
                 height: 100%;
                 &-header {
@@ -382,7 +391,7 @@
         #view-type-control {
             left: 20px;
             bottom: 30px;
-            width: 170px;
+            width: 155px;
             height: 38px;
             @include mapControlBox;
             display: grid;
@@ -398,7 +407,7 @@
             }
             @include maxSMContent {
                 bottom: 80px;
-                left: calc(50% - 130px);
+                left: calc(50% - 123px);
             }
         }
         /* on off control control */
@@ -407,7 +416,7 @@
             height: 38px;
             @include mapControlBox;
             @include displayFlexRow;
-            left: 195px;
+            left: 181px;
             div {
                 height: 100%;
                 padding: 0 5px;
@@ -425,7 +434,7 @@
             }
             @include maxSMContent {
                 bottom: 80px;
-                left: calc(50% + 45px);
+                left: calc(50% + 38px);
             }
         }
         /* add-bookmark control */
@@ -436,7 +445,7 @@
             @include displayFlexRow;
             left: calc(50% - 308px);
             @include maxXLContent {
-                left: calc(50% - 115px);
+                left: calc(50% - 118px);
             }
             div {
                 width: 140px;
@@ -447,6 +456,9 @@
                 justify-content: space-between;
                 &:hover {
                     background-color: lighten($black, 95%);
+                }
+                @include maxXLContent {
+                    width: inherit;
                 }
                 span {
                     margin-left: 4px;
@@ -460,7 +472,7 @@
         #add-bookmark-draggable {
             width: 140px;
             bottom: 90px;
-            left: calc(50% - 308px);
+            left: calc(50% - 307px);
             @include maxXLContent {
                 left: calc(50% - 115px);
             }
@@ -534,7 +546,7 @@
             height: 38px;
             @include mapControlBox;
             @include displayFlexRow;
-            left: calc(50% - 160px);
+            left: calc(50% - 159px);
             @include maxXLContent {
                 left: calc(50% - 76px);
             }
@@ -596,9 +608,9 @@
             height: 38px;
             @include mapControlBox;
             @include displayFlexRow;
-            left: calc(50% + 112px);
+            left: calc(50% + 103px);
             @include maxXLContent {
-                left: calc(50% + 98px);
+                left: calc(50% + 101px);
             }
             @include maxSMContent {
                 bottom: 130px;

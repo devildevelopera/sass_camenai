@@ -1,11 +1,12 @@
-var _setRange = function(start, end) {
+var _setRange = (start, end) => {
     if (start && end) {
-        $(".date-range-picker-input").val(start + ' ~ ' + end);
+        $(".date-range-picker-input").val(start + ' to ' + end);
     }
 }
-jQuery(document).ready(function() {
-    $('.date-picker').nepaliDatePicker({
+
+$().ready(() => {
+    $('.date-picker').dateRangePicker({
         calendarE1: '#calendar-div',
         setRange: _setRange
     });
-})
+});

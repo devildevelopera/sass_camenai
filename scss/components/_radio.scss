@@ -1,0 +1,50 @@
+.radio-item input[type='radio'] {
+    padding: 0;
+    width: 15px;
+    height: 15px;
+    visibility: hidden;
+}
+
+.radio-item input[type=radio] {
+    &::before {
+        content: "";
+        width: 15px;
+        height: 15px;
+        background: $white;
+        border-radius: 50%;
+        position: relative;
+        visibility: visible;
+        display: inline-block;
+        border: 2px solid lighten($black, 80%);
+    }
+    &::after {
+        left: 3px;
+        top: -27px;
+        width: 9px;
+        height: 9px;
+        content: "";
+        border-radius: 50%;
+        position: relative;
+        visibility: visible;
+        display: inline-block;
+        background: lighten($black, 80%);
+        @include minSMContent {
+            top: -24px;
+        }
+    }
+    &:checked::after {
+        left: 3px;
+        top: -27px;
+        width: 9px;
+        height: 9px;
+        content: "";
+        border-radius: 50%;
+        position: relative;
+        visibility: visible;
+        display: inline-block;
+        background: $purple-rain;
+        @include minSMContent {
+            top: -24px;
+        }
+    }
+}

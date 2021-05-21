@@ -128,6 +128,9 @@
                                                     </div>
                                                     <div id="collapseImgRecordingImageFilter" class="collapse" aria-labelledby="headingImgRecordingImageFilter" data-parent="#accordionImgRecordingImageFilter">
                                                         <div class="card-body">
+                                                            <div class="quality">
+                                                                <img src="imgs/1x/quality.png" />
+                                                            </div>
                                                             <div class="image-filter-item">
                                                                 <div>
                                                                     <img src="imgs/1x/image-quality.png" />
@@ -177,6 +180,9 @@
                                                     </div>
                                                     <div id="collapseImgRecordingDetections" class="collapse" aria-labelledby="headingImgRecordingDetections" data-parent="#accordionImgRecordingDetections">
                                                         <div class="card-body">
+                                                            <div class="confidence">
+                                                                <img src="imgs/1x/confidence.png" />
+                                                            </div>
                                                             <div class="image-filter-item">
                                                                 <div>
                                                                     <img src="imgs/1x/trash.png" />
@@ -458,13 +464,14 @@
             <!-- view type control -->
 
             <div id="view-type-control">
-                <div>
-                    <input type="radio" name="view-type" id="view-type-light" checked="checked" />
-                    <label for="view-type-light">light</label>
+                <div class="radio-item">
+                    <input type="radio" id="view-type-light" name="view-type" value="view-type-light" checked="checked">
+                    <label for="view-type-light">Light</label>
                 </div>
-                <div>
-                    <input type="radio" name="view-type" id="view-type-satellite" />
-                    <label for="view-type-satellite">satellite</label>
+
+                <div class="radio-item">
+                    <input type="radio" id="view-type-satellite" name="view-type" value="view-type-satellite">
+                    <label for="view-type-satellite">Satellite</label>
                 </div>
             </div>
 
