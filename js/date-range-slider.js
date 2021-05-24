@@ -81,10 +81,12 @@ var _customerSelect = function() {
 
     var renderDateRangeSlider = (type) => {
         var step_num = 31;
+        var mon_str = (new Date().getMonth() + 1).toString().length === 1 ? '0' + (new Date().getMonth() + 1) : new Date().getMonth() + 1;
+
         switch (type) {
             case 'Day':
                 step_num = 31;
-                $("#date-range-value span").html(['01', (new Date().getMonth() + 1), new Date().getFullYear()].join('/'));
+                $("#date-range-value span").html(['01', mon_str, new Date().getFullYear()].join('-'));
                 break;
             case 'Week':
                 step_num = 5;
@@ -112,7 +114,7 @@ var _customerSelect = function() {
                         if (input_val.toString().length === 1) {
                             input_val = '0' + input_val;
                         }
-                        $("#date-range-value span").html([input_val, (new Date().getMonth() + 1), new Date().getFullYear()].join('/'));
+                        $("#date-range-value span").html([input_val, mon_str, new Date().getFullYear()].join('-'));
                     } else if (type === 'Week') {
                         var input_val = valMap[ui.value] + 1;
                         if (input_val.toString().length === 1) {
@@ -136,7 +138,7 @@ var _customerSelect = function() {
                 var arrayLength = valMap.length;
 
                 for (var i = 0; i < arrayLength; i++) {
-                    var el = $('<span></span>').css('left', i / vals * 100 + '%');
+                    var el = $('<span></span>').css('left', `calc(${i / vals * 100 + '%'} + 9px)`);
 
                     $("#d-slider").append(el);
 

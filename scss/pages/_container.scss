@@ -202,7 +202,7 @@
                         width: 75px;
                         &:first-child {
                             color: $white;
-                            background-color: lighten($black, 30%);
+                            background-color: $basic-black-color;
                         }
                     }
                 }
@@ -343,7 +343,7 @@
                         margin-top: 13px;
                         background-color: lighten($black, 50%);
                         &:active {
-                            background-color: lighten($black, 30%);
+                            background-color: $basic-black-color;
                         }
                     }
                 }
@@ -352,7 +352,7 @@
         /* bright contrast control */
         #bright-contrast-control {
             right: 0;
-            top: 110px;
+            top: 58px;
             display: grid;
             @include mapControlBox;
             grid-template-rows: auto auto auto;
@@ -534,7 +534,7 @@
                         width: calc(100% - 20px);
                         background-color: lighten($black, 50%);
                         &:active {
-                            background-color: lighten($black, 30%);
+                            background-color: $basic-black-color;
                         }
                     }
                 }
@@ -687,7 +687,6 @@
                     position: absolute;
                     text-align: center;
                     left: calc(50% - 75px);
-                    background-color: rgba(255, 255, 255, 0.5);
                     img {
                         cursor: pointer;
                     }

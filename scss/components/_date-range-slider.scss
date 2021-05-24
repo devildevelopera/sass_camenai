@@ -1,6 +1,6 @@
 #date-range-control {
     .date-range-slider {
-        width: 433px;
+        width: 390px;
         position: relative;
         text-align: center;
         @include maxXSContent {
@@ -8,8 +8,9 @@
         }
         #d-slider {
             height: 28px;
-            margin-left: -10px;
-            width: calc(100% + 35px);
+            margin-left: -5px;
+            width: calc(100% + 30px);
+            @include boxShadowTemplate;
             border-top-right-radius: 14px;
             border-bottom-right-radius: 14px;
             background-color: rgba(255, 255, 255, 0.9);
@@ -18,7 +19,7 @@
                 width: 18px;
                 height: 10px;
                 position: absolute;
-                border-left: 1px solid $black;
+                border-left: 1px solid $basic-black-color;
                 &:first-child {
                     top: 5px;
                     z-index: 3;
@@ -45,8 +46,9 @@
             width: 130px;
             height: 22px;
             display: flex;
-            margin: 10px auto;
+            margin: 2px auto;
             align-items: center;
+            @include boxShadowTemplate;
             justify-content: space-between;
             background-color: rgba(255, 255, 255, 0.9);
             div {

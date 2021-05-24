@@ -10,10 +10,11 @@ $baseFontSize: 16px;
 
 
 /* #000000 = 100% black
-#333333 = 80% black =   lighten(@black, 20%);
-#666666 = 60% black =   lighten(@black, 40%);
-#999999 = 40% black =   lighten(@black, 60%);
-#CCCCCC = 20% black =   lighten(@black, 80%)*/
+#333333 = 80% black =   lighten($black, 20%);
+#4D4D4D = 70% black =   lighten($black, 30%);
+#666666 = 60% black =   lighten($black, 40%);
+#999999 = 40% black =   lighten($black, 60%);
+#CCCCCC = 20% black =   lighten($black, 80%)*/
 
 $white: #fff;
 $black: #000;
@@ -21,6 +22,7 @@ $red: #d52b1e;
 $blue: #00a1de;
 $concrete: #f1f1f1;
 $purple-rain: #7641B2;
+$basic-black-color: lighten($black, 30%);
 
 /* Spacing */
 

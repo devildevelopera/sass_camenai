@@ -3094,10 +3094,11 @@ helpers or functions. They have no direct output.
 /* Font Sizing */
 /*Colors*/
 /* #000000 = 100% black
-#333333 = 80% black =   lighten(@black, 20%);
-#666666 = 60% black =   lighten(@black, 40%);
-#999999 = 40% black =   lighten(@black, 60%);
-#CCCCCC = 20% black =   lighten(@black, 80%)*/
+#333333 = 80% black =   lighten($black, 20%);
+#4D4D4D = 70% black =   lighten($black, 30%);
+#666666 = 60% black =   lighten($black, 40%);
+#999999 = 40% black =   lighten($black, 60%);
+#CCCCCC = 20% black =   lighten($black, 80%)*/
 /* Spacing */
 /* Extra small devices (phones, 600px and down) */
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -3122,6 +3123,7 @@ body {
   border: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  color: #4d4d4d !important;
 }
 
 html *,
@@ -3478,8 +3480,8 @@ label {
 }
 
 #date-range-control .date-range-select {
-  width: 80px;
-  margin-right: 13px;
+  width: 91px;
+  margin-right: 7px;
   position: relative;
 }
 
@@ -3488,7 +3490,6 @@ label {
 }
 
 #date-range-control .date-range-select .select-selected {
-  color: #000;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3498,10 +3499,12 @@ label {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  padding: 2.75px 8px;
+  padding: 2.75px 12px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-shadow: 0 0 4px gray;
+          box-shadow: 0 0 4px gray;
   border-top-left-radius: 14px;
   border: 1px solid transparent;
   border-bottom-left-radius: 14px;
@@ -3534,6 +3537,9 @@ label {
   right: 0;
   z-index: 99;
   position: absolute;
+  -webkit-box-shadow: 0 0 4px gray;
+          box-shadow: 0 0 4px gray;
+  border-bottom-left-radius: 14px;
 }
 
 #date-range-control .date-range-select .select-items div {
@@ -3567,7 +3573,7 @@ label {
 }
 
 #date-range-control .date-range-slider {
-  width: 433px;
+  width: 390px;
   position: relative;
   text-align: center;
 }
@@ -3580,8 +3586,10 @@ label {
 
 #date-range-control .date-range-slider #d-slider {
   height: 28px;
-  margin-left: -10px;
-  width: calc(100% + 35px);
+  margin-left: -5px;
+  width: calc(100% + 30px);
+  -webkit-box-shadow: 0 0 4px gray;
+          box-shadow: 0 0 4px gray;
   border-top-right-radius: 14px;
   border-bottom-right-radius: 14px;
   background-color: rgba(255, 255, 255, 0.9);
@@ -3592,7 +3600,7 @@ label {
   width: 18px;
   height: 10px;
   position: absolute;
-  border-left: 1px solid #000;
+  border-left: 1px solid #4d4d4d;
 }
 
 #date-range-control .date-range-slider #d-slider span:first-child {
@@ -3622,10 +3630,12 @@ label {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 10px auto;
+  margin: 2px auto;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-shadow: 0 0 4px gray;
+          box-shadow: 0 0 4px gray;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -4489,7 +4499,7 @@ to layouts.
 
 .cnt .cnt-map #bright-contrast-control {
   right: 0;
-  top: 110px;
+  top: 58px;
   display: -ms-grid;
   display: grid;
   z-index: 1;
@@ -4497,6 +4507,8 @@ to layouts.
   border-radius: 5px;
   background-color: #fff;
   border: 1px solid #cccccc;
+  -webkit-box-shadow: 0 0 4px gray;
+          box-shadow: 0 0 4px gray;
   -ms-grid-rows: auto auto auto;
       grid-template-rows: auto auto auto;
 }
@@ -4553,6 +4565,8 @@ to layouts.
   border-radius: 5px;
   background-color: #fff;
   border: 1px solid #cccccc;
+  -webkit-box-shadow: 0 0 4px gray;
+          box-shadow: 0 0 4px gray;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: auto auto;
@@ -4591,6 +4605,8 @@ to layouts.
   border-radius: 5px;
   background-color: #fff;
   border: 1px solid #cccccc;
+  -webkit-box-shadow: 0 0 4px gray;
+          box-shadow: 0 0 4px gray;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4647,6 +4663,8 @@ to layouts.
   border-radius: 5px;
   background-color: #fff;
   border: 1px solid #cccccc;
+  -webkit-box-shadow: 0 0 4px gray;
+          box-shadow: 0 0 4px gray;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4835,6 +4853,8 @@ to layouts.
   border-radius: 5px;
   background-color: #fff;
   border: 1px solid #cccccc;
+  -webkit-box-shadow: 0 0 4px gray;
+          box-shadow: 0 0 4px gray;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4882,6 +4902,8 @@ to layouts.
   border-radius: 5px;
   background-color: #fff;
   border: 1px solid #cccccc;
+  -webkit-box-shadow: 0 0 4px gray;
+          box-shadow: 0 0 4px gray;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4957,6 +4979,8 @@ to layouts.
   border-radius: 5px;
   background-color: #fff;
   border: 1px solid #cccccc;
+  -webkit-box-shadow: 0 0 4px gray;
+          box-shadow: 0 0 4px gray;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -5021,6 +5045,8 @@ to layouts.
   border-radius: 5px;
   background-color: #fff;
   border: 1px solid #cccccc;
+  -webkit-box-shadow: 0 0 4px gray;
+          box-shadow: 0 0 4px gray;
 }
 
 .cnt .cnt-map #location-control img {
@@ -5044,6 +5070,8 @@ to layouts.
   border-radius: 5px;
   background-color: #fff;
   border: 1px solid #cccccc;
+  -webkit-box-shadow: 0 0 4px gray;
+          box-shadow: 0 0 4px gray;
   -ms-grid-rows: 30px 30px 30px;
       grid-template-rows: 30px 30px 30px;
 }
@@ -5090,7 +5118,6 @@ to layouts.
   position: absolute;
   text-align: center;
   left: calc(50% - 75px);
-  background-color: rgba(255, 255, 255, 0.5);
 }
 
 .cnt .cnt-map #map-section .img-sec .img-direc-control img {
