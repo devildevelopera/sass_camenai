@@ -391,7 +391,7 @@
         #view-type-control {
             left: 20px;
             bottom: 30px;
-            width: 155px;
+            width: 170px;
             height: 38px;
             @include mapControlBox;
             display: grid;
@@ -412,24 +412,26 @@
         }
         /* on off control control */
         #on-off-control {
+            left: 197px;
+            width: 75px;
             bottom: 30px;
             height: 38px;
+            display: grid;
+            font-size: 15px;
             @include mapControlBox;
-            @include displayFlexRow;
-            left: 181px;
+            grid-template-columns: 37.5px auto;
             div {
+                width: 100%;
                 height: 100%;
-                padding: 0 5px;
                 cursor: pointer;
+                user-select: none;
                 @include displayFlexRow;
+                justify-content: center;
                 &:last-child:hover {
                     background-color: lighten($black, 95%);
                 }
                 &:not(:last-child) {
                     border-right: solidBlackBorder();
-                }
-                &:last-child {
-                    width: 34.23px;
                 }
             }
             @include maxSMContent {
@@ -681,12 +683,11 @@
                 background-image: url("../imgs/street.jpg");
                 .img-direc-control {
                     bottom: 20px;
-                    width: 150px;
-                    padding: 5px;
+                    width: 130px;
                     border-radius: 50%;
                     position: absolute;
                     text-align: center;
-                    left: calc(50% - 75px);
+                    left: calc(50% - 65px);
                     img {
                         cursor: pointer;
                     }

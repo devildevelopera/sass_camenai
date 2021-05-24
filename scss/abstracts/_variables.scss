@@ -14,6 +14,7 @@ $baseFontSize: 16px;
 #4D4D4D = 70% black =   lighten($black, 30%);
 #666666 = 60% black =   lighten($black, 40%);
 #999999 = 40% black =   lighten($black, 60%);
+#B3B3B3 = 30% black =   lighten($black, 70%);
 #CCCCCC = 20% black =   lighten($black, 80%)*/
 
 $white: #fff;
@@ -23,6 +24,7 @@ $blue: #00a1de;
 $concrete: #f1f1f1;
 $purple-rain: #7641B2;
 $basic-black-color: lighten($black, 30%);
+$light-black-color: lighten($black, 70%);
 
 /* Spacing */
 

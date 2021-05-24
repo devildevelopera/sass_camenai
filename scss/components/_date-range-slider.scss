@@ -19,7 +19,7 @@
                 width: 18px;
                 height: 10px;
                 position: absolute;
-                border-left: 1px solid $basic-black-color;
+                border-left: 1px solid $light-black-color;
                 &:first-child {
                     top: 5px;
                     z-index: 3;
@@ -30,8 +30,8 @@
             .ui-slider-handle {
                 &.ui-state-default.ui-corner-all {
                     border-radius: 50%;
-                    border: 1px solid $black;
                     background-color: $purple-rain;
+                    border: 1px solid $basic-black-color;
                     box-shadow: inset 0px 0px 0px 3px $white;
                 }
                 &.ui-state-active,
@@ -43,15 +43,21 @@
             }
         }
         #date-range-value {
-            width: 130px;
+            width: 128px;
             height: 22px;
             display: flex;
-            margin: 2px auto;
+            margin: 2px 95px 2px;
             align-items: center;
             @include boxShadowTemplate;
             justify-content: space-between;
+            border-bottom-left-radius: 4px;
+            border-bottom-right-radius: 4px;
             background-color: rgba(255, 255, 255, 0.9);
-            div {
+            div:nth-child(2) {
+                width: 84px;
+                height: 100%;
+            }
+            div:not(:nth-child(2)) {
                 width: 22px;
                 height: 100%;
                 display: flex;
@@ -59,7 +65,7 @@
                 justify-content: center;
                 &:hover {
                     cursor: pointer;
-                    background-color: lighten($black, 95%);
+                    background-color: lighten($black, 80%);
                 }
                 &:first-child {
                     border-right: solidBlackBorder();
