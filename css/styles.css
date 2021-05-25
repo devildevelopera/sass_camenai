@@ -4025,12 +4025,9 @@ to layouts.
 }
 
 .cnt .cnt-settings ul li {
+  cursor: pointer;
   font-size: 14px;
   border-bottom: 1px solid #cccccc;
-}
-
-.cnt .cnt-settings ul li:hover {
-  background-color: #f2f2f2;
 }
 
 .cnt .cnt-settings ul li.bookmarks, .cnt .cnt-settings ul li.detections, .cnt .cnt-settings ul li.point-of-interest, .cnt .cnt-settings ul li.download-data {
