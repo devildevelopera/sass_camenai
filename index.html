@@ -26,13 +26,16 @@
             </div>
             <div class="hdr-search">
                 <div class="search">
-                    <i class="fa fa-search"></i>
+                    <img src="imgs/1x/header-search.png" />
                     <input placeholder="Search location or lat. l...">
                 </div>
             </div>
             <div class="hdr-menu">
                 <div class="loginname">Sander</div>
                 <ul>
+                    <li class="gear">
+                        <img src="imgs/1x/header-question.png" />
+                    </li>
                     <li class="gear">
                         <img src="imgs/1x/hdr-gear.png" />
                     </li>
@@ -303,7 +306,7 @@
 
             <div id="poi-draggable" class="drag-modal">
                 <div class="card">
-                    <div class="card-header"><span id="poi-draggable-header">Utrecht</span><i class="fa fa-times"></i>
+                    <div class="card-header"><span id="poi-draggable-header">Utrecht</span><img src="imgs/1x/poi-close-icon.png" />
                     </div>
                     <div class="card-body">
                         <div class="accordion" id="accordionPOIOptions">
@@ -316,8 +319,7 @@
                                 <div id="collapsePOIOptions" class="collapse" aria-labelledby="headingPOIOptions" data-parent="#accordionPOIOptions">
                                     <div class="card-body">
                                         <ul>
-                                            <li><i class="fa fa-pencil"></i> Edit Present</li>
-                                            <li><i class="fa fa-file-o"></i> Analytics</li>
+                                            <li><i class="fa fa-pencil"></i> Edit</li>
                                             <li><i class="fa fa-trash"></i> Delete</li>
                                         </ul>
                                     </div>
@@ -348,17 +350,17 @@
 
             <div id="bookmarks-draggable" class="drag-modal">
                 <div class="card">
-                    <div class="card-header">Bookmarks<i class="fa fa-times"></i></div>
+                    <div class="card-header">Bookmarks<img src="imgs/1x/poi-close-icon.png" /></div>
                     <div class="card-body">
-                        <div class="edit-bookmarks"><i class="fa fa-pencil"></i> Edit Bookmarks</div>
+                        <div class="edit-bookmarks"><img src="imgs/1x/bookmark-edit.png" /> Edit Bookmarks</div>
                         <div class="search-bookmarks">
-                            <i class="fa fa-search"></i>
+                            <img src="imgs/1x/bookmark-search.png" />
                             <input placeholder="Search">
                         </div>
                         <div class="folder-name">
-                            <i class="fa fa-angle-left"></i>
-                            <span>Folder 01</span>
-                            <i class="fa fa-angle-right"></i>
+                            <div><img src="imgs/1x/bookmark-folder-arrow-left.png" /></div>
+                            <div><span>Folder 01</span></div>
+                            <div><img src="imgs/1x/bookmark-folder-arrow-right.png" /></div>
                         </div>
                         <ul class="fancyscroll">
                             <li>Littering Street A nr 45 needs cleaning</li>
@@ -396,6 +398,12 @@
             <!-- <div id="report-issue-btn">
                 <img src="imgs/1x/report-issue-icon.png" />
             </div> -->
+
+            <!-- green close icon -->
+
+            <div id="green-close-btn">
+                <img src="imgs/1x/green-close-icon.png" />
+            </div>
 
             <!-- report issue modal -->
 
@@ -488,14 +496,14 @@
                 <div><img src="imgs/1x/add-bookmark.png" /><span>Add Bookmark</span></div>
             </div>
 
-            <!-- add bookmark modal -->
+            <!-- add bookmark expanded -->
 
-            <div id="add-bookmark-draggable" class="drag-modal">
+            <div id="add-bookmark-expanded">
                 <div class="card">
                     <div class="card-header">
                         <img src="imgs/1x/add-bookmark.png" /> Add Bookmark
                     </div>
-                    <div class="card-body">
+                    <div class="card-body fancyscroll">
                         <div class="change-folder">
                             <img src="imgs/1x/folder.png" />
                             <label>Change Folder</label>
@@ -530,25 +538,33 @@
             <!-- undo control -->
 
             <div id="undo-control">
-                <div><img src="imgs/1x/undo.png" /></div>
+                <img src="imgs/1x/undo.png" />
             </div>
 
             <!-- back forward control -->
 
             <div id="back-forward-control">
-                <div><img src="imgs/1x/fast-backward.png" /></div>
-                <div><img src="imgs/1x/backward.png" /><span>Back</span></div>
-                <div><span>Forward</span><img src="imgs/1x/forward.png" /></div>
-                <div><img src="imgs/1x/fast-forward.png" /></div>
+                <div>
+                    <div><img src="imgs/1x/fast-backward.png" /></div>
+                </div>
+                <div>
+                    <div><img src="imgs/1x/backward.png" /><span>Back</span></div>
+                </div>
+                <div>
+                    <div><span>Forward</span><img src="imgs/1x/forward.png" /></div>
+                </div>
+                <div>
+                    <div><img src="imgs/1x/fast-forward.png" /></div>
+                </div>
             </div>
 
             <!-- street dimension control -->
 
             <div id="street-dimension-control">
-                <div>S<span>treet</span></div>
+                <div id="street-map-toggle">Street</div>
                 <div>2D</div>
                 <div>45°</div>
-                <div>2D <span>Viewer</span></div>
+                <div>2D Viewer</div>
             </div>
 
             <!-- location control -->
@@ -616,6 +632,7 @@
     <script src="js/date-range-slider.js "></script>
     <script src="js/horizontal-slider.js "></script>
     <script src="js/date-range-picker-ui.js "></script>
+    <script src="js/street-dimention-control.js "></script>
 
     <!-- google map api -->
 

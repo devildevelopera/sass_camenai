@@ -1,14 +1,3 @@
-html {
-    color: $black;
-    font-size: 14px;
-    font-weight: normal;
-    font-family: $sansSerif, sans-serif;
-    @include maxSMContent {
-        font-size: $baseFontSize;
-    }
-}
-
-
 /* Header Styles */
 
 h1,

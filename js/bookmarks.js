@@ -14,7 +14,7 @@ $(() => {
         }
     });
 
-    $('#bookmarks-draggable .card-header i').click((e) => {
+    $('#bookmarks-draggable .card-header img').click((e) => {
         $('#bookmarks-draggable').hide();
     });
 });

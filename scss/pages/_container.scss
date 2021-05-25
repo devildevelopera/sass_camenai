@@ -100,7 +100,7 @@
                                     }
                                 }
                                 .card-body {
-                                    height: 330px;
+                                    height: 370px;
                                 }
                             }
                             #accordionImgRecordingImageFilter {
@@ -150,7 +150,7 @@
             left: -2.44px;
             display: none;
             @include sideButtonStyle;
-            border-radius: 0 5px 5px 0;
+            border-radius: 0 4px 4px 0;
             background-color: lighten($blue, 10%);
             &:hover {
                 background-color: $blue;
@@ -174,6 +174,7 @@
                     padding: 0;
                     .card-head {
                         h2 {
+                            line-height: 30px;
                             padding-left: 10px;
                         }
                     }
@@ -183,15 +184,15 @@
         /* POI delete modal */
         #poi-delete-draggable {
             top: 20px;
-            left: 192px;
-            width: 220px;
-            height: 110px;
+            left: 200px;
+            width: 209px;
+            height: 120px;
             .card {
                 height: 100%;
                 &-header {
                     text-align: center;
-                    padding-right: 10px;
                     @include cardHeaderStyle;
+                    padding-left: 5px;
                 }
                 &-body {
                     padding: 0;
@@ -199,10 +200,15 @@
                     align-items: center;
                     justify-content: space-around;
                     button {
-                        width: 75px;
+                        height: 30px;
+                        color: $white;
+                        width: 74.5px;
+                        font-size: 16px;
                         &:first-child {
-                            color: $white;
                             background-color: $basic-black-color;
+                        }
+                        &:last-child {
+                            background-color: lighten($black, 50%);
                         }
                     }
                 }
@@ -210,7 +216,7 @@
         }
         /* bookmarks modal */
         #bookmarks-draggable {
-            top: 190px;
+            top: 160px;
             left: 20px;
             width: 160px;
             text-align: center;
@@ -225,16 +231,17 @@
                     font-size: 14px;
                     .edit-bookmarks {
                         padding: 0 10px;
+                        line-height: 29px;
                         border-bottom: solidBlackBorder();
                     }
                     .search-bookmarks {
                         padding: 0 10px;
+                        line-height: 28px;
                         position: relative;
-                        .fa-search {
-                            top: 5px;
+                        img {
+                            top: 8px;
                             left: 10px;
                             position: absolute;
-                            color: lighten($black, 50%);
                         }
                         input {
                             width: 100%;
@@ -243,17 +250,26 @@
                         }
                     }
                     .folder-name {
-                        @include displayFlexRow;
+                        height: 30px;
+                        display: grid;
+                        font-size: 12px;
                         justify-content: space-between;
                         background-color: lighten($black, 80%);
-                        i {
-                            padding: 0 5px;
-                            font-size: 25px;
-                            font-weight: bold;
+                        grid-template-columns: 30px 100px 30px;
+                        div {
+                            @include displayFlexRow;
+                            justify-content: center;
+                            &:first-child {
+                                border-right: 2px solid $white;
+                            }
+                            &:last-child {
+                                border-left: 2px solid $white;
+                            }
                         }
                     }
                     ul {
-                        height: 200px;
+                        height: 160px;
+                        font-size: 12px;
                         overflow-y: scroll;
                         li {
                             padding: 5px 10px;
@@ -281,7 +297,7 @@
             right: 0;
             top: 48px;
             @include sideButtonStyle;
-            border-radius: 5px 0 0 5px;
+            border-radius: 4px 0 0 4px;
             background-color: lighten($red, 10%);
             &:hover {
                 background-color: $red;
@@ -349,26 +365,37 @@
                 }
             }
         }
+        /* green close icon */
+        #green-close-btn {
+            right: 0;
+            top: 48px;
+            cursor: pointer;
+            @include mapControlBox;
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+        }
         /* bright contrast control */
         #bright-contrast-control {
             right: 0;
-            top: 58px;
+            top: 114px;
+            width: 46px;
+            height: 426px;
             display: grid;
             @include mapControlBox;
-            grid-template-rows: auto auto auto;
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+            grid-template-rows: 46px 46px 144px 144px 46px;
             &>div {
-                width: 42px;
-                height: 42px;
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 border-bottom: solidBlackBorder();
-                &:nth-child(2):hover,
-                &:last-child:hover {
-                    background-color: lighten($black, 95%);
+                &:nth-child(2):active,
+                &:last-child:active {
+                    background-color: #C0BCB7;
                 }
                 &:first-child {
-                    background-color: lighten($black, 50%);
+                    background-color: $bright-contrast-color;
                 }
                 &:first-child,
                 &:last-child {
@@ -381,7 +408,6 @@
                 }
                 &:nth-child(3),
                 &:nth-child(4) {
-                    height: 130px;
                     display: flex;
                     flex-direction: column;
                 }
@@ -412,7 +438,7 @@
         }
         /* on off control control */
         #on-off-control {
-            left: 197px;
+            left: 200px;
             width: 75px;
             bottom: 30px;
             height: 38px;
@@ -424,11 +450,10 @@
                 width: 100%;
                 height: 100%;
                 cursor: pointer;
-                user-select: none;
                 @include displayFlexRow;
                 justify-content: center;
                 &:last-child:hover {
-                    background-color: lighten($black, 95%);
+                    background-color: lighten($black, 80%);
                 }
                 &:not(:last-child) {
                     border-right: solidBlackBorder();
@@ -443,38 +468,46 @@
         #add-bookmark-control {
             bottom: 30px;
             height: 38px;
+            width: 152px;
+            font-size: 17px;
             @include mapControlBox;
             @include displayFlexRow;
-            left: calc(50% - 308px);
+            left: calc(50% - 330px);
             @include maxXLContent {
                 left: calc(50% - 118px);
             }
             div {
-                width: 140px;
+                width: 100%;
                 height: 100%;
                 padding: 0 10px;
                 cursor: pointer;
                 @include displayFlexRow;
                 justify-content: space-between;
-                &:hover {
-                    background-color: lighten($black, 95%);
-                }
                 @include maxXLContent {
                     width: inherit;
                 }
+                &:active {
+                    background-color: lighten($black, 80%);
+                }
                 span {
-                    margin-left: 4px;
                     @include maxXLContent {
                         display: none;
                     }
                 }
             }
         }
-        /* add bookmark modal */
-        #add-bookmark-draggable {
-            width: 140px;
-            bottom: 90px;
-            left: calc(50% - 307px);
+        /* add bookmark expanded */
+        #add-bookmark-expanded {
+            z-index: 2;
+            width: 152px;
+            bottom: 30px;
+            height: 210px;
+            display: none;
+            user-select: none;
+            position: absolute;
+            border-radius: 4px;
+            left: calc(50% - 330px);
+            @include boxShadowTemplate;
             @include maxXLContent {
                 left: calc(50% - 115px);
             }
@@ -482,22 +515,25 @@
                 height: 100%;
                 text-align: center;
                 &-header {
-                    padding: 5px 10px;
+                    height: 38px;
+                    padding: 0 10px;
+                    font-size: 17px;
+                    cursor: pointer;
                     @include displayFlexRow;
                     background-color: $white;
                     justify-content: space-between;
+                    &:active {
+                        background-color: lighten($black, 80%);
+                    }
                 }
                 &-body {
-                    font-size: 14px;
+                    height: 172px;
                     padding: 0 0 10px 0;
                     .change-folder {
                         cursor: pointer;
                         padding: 5px 10px;
                         @include displayFlexRow;
                         justify-content: space-between;
-                        &:hover {
-                            background-color: lighten($black, 95%);
-                        }
                     }
                     #add-bookmark-folder {
                         display: none;
@@ -506,15 +542,15 @@
                         cursor: pointer;
                         padding: 5px 10px;
                         @include displayFlexRow;
-                        &:hover {
-                            background-color: lighten($black, 95%);
-                        }
                         img {
-                            margin-right: 5px;
+                            margin-right: 10px;
                         }
                     }
                     .new-folder-name {
                         display: none;
+                    }
+                    .folder-name {
+                        line-height: 31px;
                     }
                     input,
                     select {
@@ -529,10 +565,11 @@
                         border-top: solidBlackBorder();
                     }
                     .submit-bookmark {
+                        height: 30px;
                         color: $white;
                         margin: 0 10px;
                         margin-top: 5px;
-                        border-radius: 3px;
+                        border-radius: 2.5px;
                         width: calc(100% - 20px);
                         background-color: lighten($black, 50%);
                         &:active {
@@ -544,41 +581,39 @@
         }
         /* undo control */
         #undo-control {
+            width: 38px;
             bottom: 30px;
             height: 38px;
+            cursor: pointer;
             @include mapControlBox;
             @include displayFlexRow;
-            left: calc(50% - 159px);
+            justify-content: center;
+            left: calc(50% - 168px);
             @include maxXLContent {
                 left: calc(50% - 76px);
             }
-            div {
-                height: 100%;
-                padding: 0 10px;
-                cursor: pointer;
-                @include displayFlexRow;
-                &:hover {
-                    background-color: lighten($black, 95%);
-                }
+            &:active {
+                background-color: lighten($black, 80%);
             }
         }
         /* back-forward control */
         #back-forward-control {
             bottom: 30px;
             height: 38px;
+            width: 240px;
+            display: grid;
+            font-size: 17px;
             @include mapControlBox;
-            @include displayFlexRow;
-            left: calc(50% - 115px);
+            left: calc(50% - 120px);
+            grid-template-columns: 34px 72px 100px 34px;
             @include maxXLContent {
                 left: calc(50% - 31px);
             }
-            div {
-                height: 100%;
-                padding: 0 10px;
-                cursor: pointer;
+            &>div {
                 @include displayFlexRow;
-                &:hover {
-                    background-color: lighten($black, 95%);
+                justify-content: center;
+                &:active {
+                    background-color: lighten($black, 80%);
                 }
                 &:not(:last-child) {
                     border-right: solidBlackBorder();
@@ -599,8 +634,11 @@
                         }
                     }
                 }
-                i {
-                    font-size: 20px;
+                div {
+                    height: 100%;
+                    cursor: pointer;
+                    text-align: center;
+                    @include displayFlexRow;
                 }
             }
         }
@@ -608,9 +646,12 @@
         #street-dimension-control {
             bottom: 30px;
             height: 38px;
+            width: 248px;
+            display: grid;
+            font-size: 17px;
             @include mapControlBox;
-            @include displayFlexRow;
-            left: calc(50% + 103px);
+            left: calc(50% + 130px);
+            grid-template-columns: 68px 40px 44px 96px;
             @include maxXLContent {
                 left: calc(50% + 101px);
             }
@@ -620,19 +661,14 @@
             }
             div {
                 height: 100%;
-                padding: 0 10px;
                 cursor: pointer;
                 @include displayFlexRow;
-                &:hover {
-                    font-weight: 500;
+                justify-content: center;
+                &:active {
+                    background-color: lighten($black, 80%);
                 }
                 &:not(:last-child) {
                     border-right: solidBlackBorder();
-                }
-                span {
-                    @include maxXLContent {
-                        display: none;
-                    }
                 }
             }
         }
@@ -645,7 +681,7 @@
                 padding: 4.5px;
                 cursor: pointer;
                 &:hover {
-                    background-color: lighten($black, 95%);
+                    background-color: lighten($black, 80%);
                 }
             }
         }
@@ -665,7 +701,7 @@
                 justify-content: center;
                 border-bottom: solidBlackBorder();
                 &:hover {
-                    background-color: lighten($black, 95%);
+                    background-color: lighten($black, 80%);
                 }
                 &:last-child {
                     border-bottom: none;
@@ -676,7 +712,7 @@
         #map-section {
             height: 100%;
             .img-sec {
-                height: 68%;
+                height: 72%;
                 position: relative;
                 background-size: cover;
                 background-position: center;
@@ -684,7 +720,6 @@
                 .img-direc-control {
                     bottom: 20px;
                     width: 130px;
-                    border-radius: 50%;
                     position: absolute;
                     text-align: center;
                     left: calc(50% - 65px);
@@ -721,7 +756,7 @@
                 }
             }
             .map-sec {
-                height: calc(32% - 5px);
+                height: calc(28% - 5px);
             }
         }
     }

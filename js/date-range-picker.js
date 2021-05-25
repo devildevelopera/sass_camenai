@@ -482,9 +482,6 @@ $(() => {
         $days_container.html('');
 
         var month_start_day = new Date(year, parseInt(month) - 1, 1).getDay() + 1;
-        console.log('m', month);
-        console.log('y', year);
-        console.log(month_start_day);
         var total_days_in_selected_month = new Date(year, month, 0).getDate();
 
         append_html = '';
@@ -512,7 +509,6 @@ $(() => {
             next_year = parseInt(year);
 
             var total_days_in_last_month = new Date(last_year, last_month, 0).getDate();
-            console.log('last-month-days', total_days_in_last_month)
             if (y == 1) {
                 append_html += '<div class="andp-column">';
             }

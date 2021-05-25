@@ -1,21 +1,17 @@
 $(() => {
-    var div = $("#add-bookmark-draggable").draggable({
-        containment: "parent",
-        drag: () => {
-            $('h3').text('Left: ' + div.offset().left + ' - Top: ' + div.offset().top);
-        }
-    });
-
     $("#add-bookmark-control").on("click", () => {
-        if ($('#add-bookmark-draggable').is(":visible")) {
-            $('#add-bookmark-draggable').hide();
-        } else {
-            $('#add-bookmark-draggable').show();
-        }
+        $("#add-bookmark-control").hide();
+        $('#add-bookmark-expanded').show(10);
     });
 
-    $('#add-bookmark-draggable .card .card-body .submit-bookmark').click((e) => {
-        $('#add-bookmark-draggable').hide();
+    $('#add-bookmark-expanded .card .card-header').click((e) => {
+        $('#add-bookmark-expanded').hide(10);
+        $("#add-bookmark-control").show(10);
+    });
+
+    $('#add-bookmark-expanded .card .card-body .submit-bookmark').click((e) => {
+        $('#add-bookmark-expanded').hide(10);
+        $("#add-bookmark-control").show(10);
     });
 
     $("#add-bookmark-folder").on('change', () => {
@@ -23,14 +19,28 @@ $(() => {
         $("#add-bookmark-folder").hide();
         $(".new-folder-name").val('');
         $(".new-folder-name").hide();
+        $('#add-bookmark-expanded .card .card-body .submit-bookmark').css('opacity', 1);
+        $('#add-bookmark-expanded .card .card-body div:nth-child(5)').css('opacity', 1);
     });
 
     $(".change-folder").on('click', () => {
-        $("#add-bookmark-folder").show();
+        if ($("#add-bookmark-folder").is(":visible")) {
+            $("#add-bookmark-folder").hide();
+            $('#add-bookmark-expanded .card .card-body .submit-bookmark').css('opacity', 1);
+            $('#add-bookmark-expanded .card .card-body div:nth-child(5)').css('opacity', 1);
+        } else {
+            $("#add-bookmark-folder").show();
+            $(".new-folder-name").hide();
+            $('#add-bookmark-expanded .card .card-body .submit-bookmark').css('opacity', 0.1);
+            $('#add-bookmark-expanded .card .card-body div:nth-child(5)').css('opacity', 0.1);
+        }
     });
 
     $(".new-folder").on('click', () => {
         $(".new-folder-name").show();
+        $("#add-bookmark-folder").hide();
+        $('#add-bookmark-expanded .card .card-body .submit-bookmark').css('opacity', 0.1);
+        $('#add-bookmark-expanded .card .card-body div:nth-child(5)').css('opacity', 0.1);
     });
 
     $('.new-folder-name').keyup(function(e) {
@@ -41,6 +51,8 @@ $(() => {
             }
             $(".new-folder-name").val('');
             $(".new-folder-name").hide();
+            $('#add-bookmark-expanded .card .card-body .submit-bookmark').css('opacity', 1);
+            $('#add-bookmark-expanded .card .card-body div:nth-child(5)').css('opacity', 1);
         }
     });
 });

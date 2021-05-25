@@ -8,10 +8,10 @@
 
 @mixin mapControlBox {
     z-index: 1;
+    user-select: none;
     position: absolute;
-    border-radius: 5px;
+    border-radius: 4px;
     background-color: $white;
-    border: solidBlackBorder();
     @include boxShadowTemplate;
 }
 
@@ -28,13 +28,13 @@
 }
 
 @mixin cardHeaderStyle {
-    padding: 5px;
+    padding: 4px;
     color: $white;
     padding-left: 10px;
-    background-color: lighten($black, 50%);
-    i {
-        top: 8px;
-        right: 10px;
+    background-color: lighten($black, 40%);
+    img {
+        top: 9px;
+        right: 7px;
         cursor: pointer;
         position: absolute;
     }

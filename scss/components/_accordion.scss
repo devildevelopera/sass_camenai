@@ -20,13 +20,10 @@
                     cursor: pointer;
                     font-size: 14px;
                     padding-left: 10px;
-                    line-height: 25px;
+                    line-height: 30px;
                     border-bottom: none !important;
                     &:hover {
-                        background-color: lighten($black, 95%);
-                    }
-                    &:last-child {
-                        margin-bottom: 5px;
+                        background-color: lighten($black, 80%);
                     }
                 }
             }

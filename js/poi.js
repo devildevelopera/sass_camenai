@@ -6,7 +6,7 @@ $(() => {
         }
     });
 
-    $('#poi-draggable .card-header i').click((e) => {
+    $('#poi-draggable .card-header img').click((e) => {
         $('#poi-draggable').hide();
     });
 

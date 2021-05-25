@@ -44,6 +44,7 @@ This file is used to contain all vendor imports.
  */
 /* FONT PATH
  * -------------------------- */
+@import url("https://fonts.google.com/specimen/Roboto");
 @font-face {
   font-family: 'FontAwesome';
   src: url("../fonts/fontawesome-webfont.eot?v=4.7.0");
@@ -3089,6 +3090,7 @@ Files inside this folder can contain abstract settings,
 helpers or functions. They have no direct output.
 */
 /* Import Abstracts files */
+/* Import Fonts files */
 /* Mixins */
 /* Fonts */
 /* Font Sizing */
@@ -3097,6 +3099,7 @@ helpers or functions. They have no direct output.
 #333333 = 80% black =   lighten($black, 20%);
 #4D4D4D = 70% black =   lighten($black, 30%);
 #666666 = 60% black =   lighten($black, 40%);
+#808080 = 50% black =   lighten($black, 50%);
 #999999 = 40% black =   lighten($black, 60%);
 #B3B3B3 = 30% black =   lighten($black, 70%);
 #CCCCCC = 20% black =   lighten($black, 80%)*/
@@ -3120,10 +3123,13 @@ This file can be used to overwrite any normailze settings.
 html,
 body {
   margin: 0;
-  padding: 0;
   border: 0;
+  padding: 0;
+  font-size: 14px;
+  font-weight: normal;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  font-family: "Roboto", sans-serif !important;
   color: #4d4d4d !important;
 }
 
@@ -3162,19 +3168,6 @@ button:focus {
   border: none !important;
 }
 
-html {
-  color: #000;
-  font-size: 14px;
-  font-weight: normal;
-  font-family: "Open Sans", sans-serif;
-}
-
-@media only screen and (max-width: 768px) {
-  html {
-    font-size: 16px;
-  }
-}
-
 /* Header Styles */
 h1,
 h2,
@@ -3211,7 +3204,7 @@ button {
   cursor: move;
   display: none;
   position: absolute;
-  border-radius: 5px;
+  border-radius: 4px;
 }
 
 label {
@@ -3220,10 +3213,6 @@ label {
 
 .radio-item label {
   font-size: 17px;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
 }
 
 .radio-item input[type=radio] {
@@ -3331,16 +3320,12 @@ label {
   cursor: pointer;
   font-size: 14px;
   padding-left: 10px;
-  line-height: 25px;
+  line-height: 30px;
   border-bottom: none !important;
 }
 
 .accordion .card-body ul li:hover {
-  background-color: #f2f2f2;
-}
-
-.accordion .card-body ul li:last-child {
-  margin-bottom: 5px;
+  background-color: #cccccc;
 }
 
 .slider.slider-vertical {
@@ -3357,10 +3342,10 @@ label {
   left: 15% !important;
   width: 15px !important;
   background-size: 5px 9px;
-  border: 1px solid #cccccc;
   background-position: center;
   border-radius: 7.5px !important;
   height: calc(100% + 10px) !important;
+  border: 1px solid #736357;
   background-repeat: no-repeat round !important;
   background-image: url("../imgs/SVG/horizontal-line.svg") !important;
 }
@@ -3405,7 +3390,7 @@ label {
   width: 9px !important;
   height: 9px !important;
   background-image: none !important;
-  background-color: #4d4d4d !important;
+  background-color: #736357 !important;
 }
 
 .tooltip > .tooltip-inner {
@@ -3814,7 +3799,7 @@ label {
   color: #fff;
   margin: 0 10px;
   margin-top: 5px;
-  border-radius: 3px;
+  border-radius: 2.5px;
   width: calc(100% - 20px);
   background-color: gray;
 }
@@ -3890,7 +3875,8 @@ to layouts.
 }
 
 .hdr .hdr-right .hdr-username {
-  padding: 1em;
+  font-size: 17px;
+  padding-right: 1em;
 }
 
 @media only screen and (max-width: 768px) {
@@ -3909,7 +3895,7 @@ to layouts.
   }
 }
 
-.hdr .hdr-right .hdr-search .search .fa-search {
+.hdr .hdr-right .hdr-search .search img {
   top: 10px;
   left: 10px;
   position: absolute;
@@ -3917,8 +3903,9 @@ to layouts.
 }
 
 .hdr .hdr-right .hdr-search .search input {
-  width: 220px;
+  width: 240px;
   height: 36px;
+  font-size: 16px;
   padding-left: 32px;
   border: 1px solid #fff;
   border-radius: 4px;
@@ -4120,7 +4107,7 @@ to layouts.
 }
 
 .cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording ul li #accordionImgRecordingTimeRange .card-body {
-  height: 330px;
+  height: 370px;
 }
 
 .cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording ul li #accordionImgRecordingImageFilter h2 img, .cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording ul li #accordionImgRecordingDetections h2 img {
@@ -4172,11 +4159,12 @@ to layouts.
   /* date-range-control */
   /* report issue modal open icon */
   /* report issue modal */
+  /* green close icon */
   /* bright contrast control */
   /* view type control */
   /* on off control control */
   /* add-bookmark control */
-  /* add bookmark modal */
+  /* add bookmark expanded */
   /* undo control */
   /* back-forward control */
   /* street-dimension control */
@@ -4196,7 +4184,7 @@ to layouts.
   transition: 0.35s;
   padding: 5px 8.5px;
   position: absolute;
-  border-radius: 0 5px 5px 0;
+  border-radius: 0 4px 4px 0;
   background-color: #12beff;
 }
 
@@ -4216,18 +4204,18 @@ to layouts.
 
 .cnt .cnt-map #poi-draggable .card-header {
   padding-right: 25px;
-  padding: 5px;
+  padding: 4px;
   color: #fff;
   padding-left: 10px;
-  background-color: gray;
+  background-color: #666666;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
 
-.cnt .cnt-map #poi-draggable .card-header i {
-  top: 8px;
-  right: 10px;
+.cnt .cnt-map #poi-draggable .card-header img {
+  top: 9px;
+  right: 7px;
   cursor: pointer;
   position: absolute;
 }
@@ -4237,14 +4225,15 @@ to layouts.
 }
 
 .cnt .cnt-map #poi-draggable .card-body .card-head h2 {
+  line-height: 30px;
   padding-left: 10px;
 }
 
 .cnt .cnt-map #poi-delete-draggable {
   top: 20px;
-  left: 192px;
-  width: 220px;
-  height: 110px;
+  left: 200px;
+  width: 209px;
+  height: 120px;
 }
 
 .cnt .cnt-map #poi-delete-draggable .card {
@@ -4253,16 +4242,16 @@ to layouts.
 
 .cnt .cnt-map #poi-delete-draggable .card-header {
   text-align: center;
-  padding-right: 10px;
-  padding: 5px;
+  padding: 4px;
   color: #fff;
   padding-left: 10px;
-  background-color: gray;
+  background-color: #666666;
+  padding-left: 5px;
 }
 
-.cnt .cnt-map #poi-delete-draggable .card-header i {
-  top: 8px;
-  right: 10px;
+.cnt .cnt-map #poi-delete-draggable .card-header img {
+  top: 9px;
+  right: 7px;
   cursor: pointer;
   position: absolute;
 }
@@ -4280,16 +4269,22 @@ to layouts.
 }
 
 .cnt .cnt-map #poi-delete-draggable .card-body button {
-  width: 75px;
+  height: 30px;
+  color: #fff;
+  width: 74.5px;
+  font-size: 16px;
 }
 
 .cnt .cnt-map #poi-delete-draggable .card-body button:first-child {
-  color: #fff;
   background-color: #4d4d4d;
 }
 
+.cnt .cnt-map #poi-delete-draggable .card-body button:last-child {
+  background-color: gray;
+}
+
 .cnt .cnt-map #bookmarks-draggable {
-  top: 190px;
+  top: 160px;
   left: 20px;
   width: 160px;
   text-align: center;
@@ -4301,15 +4296,15 @@ to layouts.
 
 .cnt .cnt-map #bookmarks-draggable .card-header {
   padding-right: 25px;
-  padding: 5px;
+  padding: 4px;
   color: #fff;
   padding-left: 10px;
-  background-color: gray;
+  background-color: #666666;
 }
 
-.cnt .cnt-map #bookmarks-draggable .card-header i {
-  top: 8px;
-  right: 10px;
+.cnt .cnt-map #bookmarks-draggable .card-header img {
+  top: 9px;
+  right: 7px;
   cursor: pointer;
   position: absolute;
 }
@@ -4321,19 +4316,20 @@ to layouts.
 
 .cnt .cnt-map #bookmarks-draggable .card-body .edit-bookmarks {
   padding: 0 10px;
+  line-height: 29px;
   border-bottom: 1px solid #cccccc;
 }
 
 .cnt .cnt-map #bookmarks-draggable .card-body .search-bookmarks {
   padding: 0 10px;
+  line-height: 28px;
   position: relative;
 }
 
-.cnt .cnt-map #bookmarks-draggable .card-body .search-bookmarks .fa-search {
-  top: 5px;
+.cnt .cnt-map #bookmarks-draggable .card-body .search-bookmarks img {
+  top: 8px;
   left: 10px;
   position: absolute;
-  color: gray;
 }
 
 .cnt .cnt-map #bookmarks-draggable .card-body .search-bookmarks input {
@@ -4343,6 +4339,19 @@ to layouts.
 }
 
 .cnt .cnt-map #bookmarks-draggable .card-body .folder-name {
+  height: 30px;
+  display: -ms-grid;
+  display: grid;
+  font-size: 12px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #cccccc;
+  -ms-grid-columns: 30px 100px 30px;
+      grid-template-columns: 30px 100px 30px;
+}
+
+.cnt .cnt-map #bookmarks-draggable .card-body .folder-name div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4353,20 +4362,22 @@ to layouts.
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  background-color: #cccccc;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-.cnt .cnt-map #bookmarks-draggable .card-body .folder-name i {
-  padding: 0 5px;
-  font-size: 25px;
-  font-weight: bold;
+.cnt .cnt-map #bookmarks-draggable .card-body .folder-name div:first-child {
+  border-right: 2px solid #fff;
+}
+
+.cnt .cnt-map #bookmarks-draggable .card-body .folder-name div:last-child {
+  border-left: 2px solid #fff;
 }
 
 .cnt .cnt-map #bookmarks-draggable .card-body ul {
-  height: 200px;
+  height: 160px;
+  font-size: 12px;
   overflow-y: scroll;
 }
 
@@ -4404,7 +4415,7 @@ to layouts.
   transition: 0.35s;
   padding: 5px 8.5px;
   position: absolute;
-  border-radius: 5px 0 0 5px;
+  border-radius: 4px 0 0 4px;
   background-color: #e44d42;
 }
 
@@ -4424,10 +4435,10 @@ to layouts.
 }
 
 .cnt .cnt-map #report-issue-draggable .card-header {
-  padding: 5px;
+  padding: 4px;
   color: #fff;
   padding-left: 10px;
-  background-color: gray;
+  background-color: #666666;
   padding: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4445,9 +4456,9 @@ to layouts.
           justify-content: space-between;
 }
 
-.cnt .cnt-map #report-issue-draggable .card-header i {
-  top: 8px;
-  right: 10px;
+.cnt .cnt-map #report-issue-draggable .card-header img {
+  top: 9px;
+  right: 7px;
   cursor: pointer;
   position: absolute;
 }
@@ -4510,25 +4521,48 @@ to layouts.
   background-color: #4d4d4d;
 }
 
+.cnt .cnt-map #green-close-btn {
+  right: 0;
+  top: 48px;
+  cursor: pointer;
+  z-index: 1;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  position: absolute;
+  border-radius: 4px;
+  background-color: #fff;
+  -webkit-box-shadow: 0 0 4px gray;
+          box-shadow: 0 0 4px gray;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
 .cnt .cnt-map #bright-contrast-control {
   right: 0;
-  top: 58px;
+  top: 114px;
+  width: 46px;
+  height: 426px;
   display: -ms-grid;
   display: grid;
   z-index: 1;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   position: absolute;
-  border-radius: 5px;
+  border-radius: 4px;
   background-color: #fff;
-  border: 1px solid #cccccc;
   -webkit-box-shadow: 0 0 4px gray;
           box-shadow: 0 0 4px gray;
-  -ms-grid-rows: auto auto auto;
-      grid-template-rows: auto auto auto;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  -ms-grid-rows: 46px 46px 144px 144px 46px;
+      grid-template-rows: 46px 46px 144px 144px 46px;
 }
 
 .cnt .cnt-map #bright-contrast-control > div {
-  width: 42px;
-  height: 42px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4541,12 +4575,12 @@ to layouts.
   border-bottom: 1px solid #cccccc;
 }
 
-.cnt .cnt-map #bright-contrast-control > div:nth-child(2):hover, .cnt .cnt-map #bright-contrast-control > div:last-child:hover {
-  background-color: #f2f2f2;
+.cnt .cnt-map #bright-contrast-control > div:nth-child(2):active, .cnt .cnt-map #bright-contrast-control > div:last-child:active {
+  background-color: #C0BCB7;
 }
 
 .cnt .cnt-map #bright-contrast-control > div:first-child {
-  background-color: gray;
+  background-color: #736357;
 }
 
 .cnt .cnt-map #bright-contrast-control > div:first-child, .cnt .cnt-map #bright-contrast-control > div:last-child {
@@ -4558,7 +4592,6 @@ to layouts.
 }
 
 .cnt .cnt-map #bright-contrast-control > div:nth-child(3), .cnt .cnt-map #bright-contrast-control > div:nth-child(4) {
-  height: 130px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4574,10 +4607,13 @@ to layouts.
   width: 170px;
   height: 38px;
   z-index: 1;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   position: absolute;
-  border-radius: 5px;
+  border-radius: 4px;
   background-color: #fff;
-  border: 1px solid #cccccc;
   -webkit-box-shadow: 0 0 4px gray;
           box-shadow: 0 0 4px gray;
   display: -ms-grid;
@@ -4611,7 +4647,7 @@ to layouts.
 }
 
 .cnt .cnt-map #on-off-control {
-  left: 197px;
+  left: 200px;
   width: 75px;
   bottom: 30px;
   height: 38px;
@@ -4619,10 +4655,13 @@ to layouts.
   display: grid;
   font-size: 15px;
   z-index: 1;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   position: absolute;
-  border-radius: 5px;
+  border-radius: 4px;
   background-color: #fff;
-  border: 1px solid #cccccc;
   -webkit-box-shadow: 0 0 4px gray;
           box-shadow: 0 0 4px gray;
   -ms-grid-columns: 37.5px auto;
@@ -4633,10 +4672,6 @@ to layouts.
   width: 100%;
   height: 100%;
   cursor: pointer;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4653,7 +4688,7 @@ to layouts.
 }
 
 .cnt .cnt-map #on-off-control div:last-child:hover {
-  background-color: #f2f2f2;
+  background-color: #cccccc;
 }
 
 .cnt .cnt-map #on-off-control div:not(:last-child) {
@@ -4670,11 +4705,16 @@ to layouts.
 .cnt .cnt-map #add-bookmark-control {
   bottom: 30px;
   height: 38px;
+  width: 152px;
+  font-size: 17px;
   z-index: 1;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   position: absolute;
-  border-radius: 5px;
+  border-radius: 4px;
   background-color: #fff;
-  border: 1px solid #cccccc;
   -webkit-box-shadow: 0 0 4px gray;
           box-shadow: 0 0 4px gray;
   display: -webkit-box;
@@ -4687,7 +4727,7 @@ to layouts.
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  left: calc(50% - 308px);
+  left: calc(50% - 330px);
 }
 
 @media only screen and (max-width: 1444px) {
@@ -4697,7 +4737,7 @@ to layouts.
 }
 
 .cnt .cnt-map #add-bookmark-control div {
-  width: 140px;
+  width: 100%;
   height: 100%;
   padding: 0 10px;
   cursor: pointer;
@@ -4714,10 +4754,6 @@ to layouts.
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-}
-
-.cnt .cnt-map #add-bookmark-control div:hover {
-  background-color: #f2f2f2;
 }
 
 @media only screen and (max-width: 1444px) {
@@ -4726,8 +4762,8 @@ to layouts.
   }
 }
 
-.cnt .cnt-map #add-bookmark-control div span {
-  margin-left: 4px;
+.cnt .cnt-map #add-bookmark-control div:active {
+  background-color: #cccccc;
 }
 
 @media only screen and (max-width: 1444px) {
@@ -4736,25 +4772,39 @@ to layouts.
   }
 }
 
-.cnt .cnt-map #add-bookmark-draggable {
-  width: 140px;
-  bottom: 90px;
-  left: calc(50% - 307px);
+.cnt .cnt-map #add-bookmark-expanded {
+  z-index: 2;
+  width: 152px;
+  bottom: 30px;
+  height: 210px;
+  display: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  position: absolute;
+  border-radius: 4px;
+  left: calc(50% - 330px);
+  -webkit-box-shadow: 0 0 4px gray;
+          box-shadow: 0 0 4px gray;
 }
 
 @media only screen and (max-width: 1444px) {
-  .cnt .cnt-map #add-bookmark-draggable {
+  .cnt .cnt-map #add-bookmark-expanded {
     left: calc(50% - 115px);
   }
 }
 
-.cnt .cnt-map #add-bookmark-draggable .card {
+.cnt .cnt-map #add-bookmark-expanded .card {
   height: 100%;
   text-align: center;
 }
 
-.cnt .cnt-map #add-bookmark-draggable .card-header {
-  padding: 5px 10px;
+.cnt .cnt-map #add-bookmark-expanded .card-header {
+  height: 38px;
+  padding: 0 10px;
+  font-size: 17px;
+  cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4771,12 +4821,16 @@ to layouts.
           justify-content: space-between;
 }
 
-.cnt .cnt-map #add-bookmark-draggable .card-body {
-  font-size: 14px;
+.cnt .cnt-map #add-bookmark-expanded .card-header:active {
+  background-color: #cccccc;
+}
+
+.cnt .cnt-map #add-bookmark-expanded .card-body {
+  height: 172px;
   padding: 0 0 10px 0;
 }
 
-.cnt .cnt-map #add-bookmark-draggable .card-body .change-folder {
+.cnt .cnt-map #add-bookmark-expanded .card-body .change-folder {
   cursor: pointer;
   padding: 5px 10px;
   display: -webkit-box;
@@ -4794,15 +4848,11 @@ to layouts.
           justify-content: space-between;
 }
 
-.cnt .cnt-map #add-bookmark-draggable .card-body .change-folder:hover {
-  background-color: #f2f2f2;
-}
-
-.cnt .cnt-map #add-bookmark-draggable .card-body #add-bookmark-folder {
+.cnt .cnt-map #add-bookmark-expanded .card-body #add-bookmark-folder {
   display: none;
 }
 
-.cnt .cnt-map #add-bookmark-draggable .card-body .new-folder {
+.cnt .cnt-map #add-bookmark-expanded .card-body .new-folder {
   cursor: pointer;
   padding: 5px 10px;
   display: -webkit-box;
@@ -4817,54 +4867,60 @@ to layouts.
           flex-direction: row;
 }
 
-.cnt .cnt-map #add-bookmark-draggable .card-body .new-folder:hover {
-  background-color: #f2f2f2;
+.cnt .cnt-map #add-bookmark-expanded .card-body .new-folder img {
+  margin-right: 10px;
 }
 
-.cnt .cnt-map #add-bookmark-draggable .card-body .new-folder img {
-  margin-right: 5px;
-}
-
-.cnt .cnt-map #add-bookmark-draggable .card-body .new-folder-name {
+.cnt .cnt-map #add-bookmark-expanded .card-body .new-folder-name {
   display: none;
 }
 
-.cnt .cnt-map #add-bookmark-draggable .card-body input,
-.cnt .cnt-map #add-bookmark-draggable .card-body select {
+.cnt .cnt-map #add-bookmark-expanded .card-body .folder-name {
+  line-height: 31px;
+}
+
+.cnt .cnt-map #add-bookmark-expanded .card-body input,
+.cnt .cnt-map #add-bookmark-expanded .card-body select {
   margin: 0 10px;
   margin-bottom: 5px;
   width: calc(100% - 20px);
 }
 
-.cnt .cnt-map #add-bookmark-draggable .card-body select {
+.cnt .cnt-map #add-bookmark-expanded .card-body select {
   height: 27px;
 }
 
-.cnt .cnt-map #add-bookmark-draggable .card-body div:nth-child(5) {
+.cnt .cnt-map #add-bookmark-expanded .card-body div:nth-child(5) {
   border-top: 1px solid #cccccc;
 }
 
-.cnt .cnt-map #add-bookmark-draggable .card-body .submit-bookmark {
+.cnt .cnt-map #add-bookmark-expanded .card-body .submit-bookmark {
+  height: 30px;
   color: #fff;
   margin: 0 10px;
   margin-top: 5px;
-  border-radius: 3px;
+  border-radius: 2.5px;
   width: calc(100% - 20px);
   background-color: gray;
 }
 
-.cnt .cnt-map #add-bookmark-draggable .card-body .submit-bookmark:active {
+.cnt .cnt-map #add-bookmark-expanded .card-body .submit-bookmark:active {
   background-color: #4d4d4d;
 }
 
 .cnt .cnt-map #undo-control {
+  width: 38px;
   bottom: 30px;
   height: 38px;
+  cursor: pointer;
   z-index: 1;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   position: absolute;
-  border-radius: 5px;
+  border-radius: 4px;
   background-color: #fff;
-  border: 1px solid #cccccc;
   -webkit-box-shadow: 0 0 4px gray;
           box-shadow: 0 0 4px gray;
   display: -webkit-box;
@@ -4877,7 +4933,10 @@ to layouts.
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  left: calc(50% - 159px);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  left: calc(50% - 168px);
 }
 
 @media only screen and (max-width: 1444px) {
@@ -4886,47 +4945,30 @@ to layouts.
   }
 }
 
-.cnt .cnt-map #undo-control div {
-  height: 100%;
-  padding: 0 10px;
-  cursor: pointer;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-}
-
-.cnt .cnt-map #undo-control div:hover {
-  background-color: #f2f2f2;
+.cnt .cnt-map #undo-control:active {
+  background-color: #cccccc;
 }
 
 .cnt .cnt-map #back-forward-control {
   bottom: 30px;
   height: 38px;
+  width: 240px;
+  display: -ms-grid;
+  display: grid;
+  font-size: 17px;
   z-index: 1;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   position: absolute;
-  border-radius: 5px;
+  border-radius: 4px;
   background-color: #fff;
-  border: 1px solid #cccccc;
   -webkit-box-shadow: 0 0 4px gray;
           box-shadow: 0 0 4px gray;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  left: calc(50% - 115px);
+  left: calc(50% - 120px);
+  -ms-grid-columns: 34px 72px 100px 34px;
+      grid-template-columns: 34px 72px 100px 34px;
 }
 
 @media only screen and (max-width: 1444px) {
@@ -4935,10 +4977,7 @@ to layouts.
   }
 }
 
-.cnt .cnt-map #back-forward-control div {
-  height: 100%;
-  padding: 0 10px;
-  cursor: pointer;
+.cnt .cnt-map #back-forward-control > div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4949,61 +4988,75 @@ to layouts.
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-.cnt .cnt-map #back-forward-control div:hover {
-  background-color: #f2f2f2;
+.cnt .cnt-map #back-forward-control > div:active {
+  background-color: #cccccc;
 }
 
-.cnt .cnt-map #back-forward-control div:not(:last-child) {
+.cnt .cnt-map #back-forward-control > div:not(:last-child) {
   border-right: 1px solid #cccccc;
 }
 
-.cnt .cnt-map #back-forward-control div:nth-child(2) span {
+.cnt .cnt-map #back-forward-control > div:nth-child(2) span {
   margin-left: 4px;
 }
 
 @media only screen and (max-width: 1444px) {
-  .cnt .cnt-map #back-forward-control div:nth-child(2) span {
+  .cnt .cnt-map #back-forward-control > div:nth-child(2) span {
     display: none;
   }
 }
 
-.cnt .cnt-map #back-forward-control div:nth-child(3) span {
+.cnt .cnt-map #back-forward-control > div:nth-child(3) span {
   margin-right: 4px;
 }
 
 @media only screen and (max-width: 1444px) {
-  .cnt .cnt-map #back-forward-control div:nth-child(3) span {
+  .cnt .cnt-map #back-forward-control > div:nth-child(3) span {
     display: none;
   }
 }
 
-.cnt .cnt-map #back-forward-control div i {
-  font-size: 20px;
+.cnt .cnt-map #back-forward-control > div div {
+  height: 100%;
+  cursor: pointer;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
 .cnt .cnt-map #street-dimension-control {
   bottom: 30px;
   height: 38px;
+  width: 248px;
+  display: -ms-grid;
+  display: grid;
+  font-size: 17px;
   z-index: 1;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   position: absolute;
-  border-radius: 5px;
+  border-radius: 4px;
   background-color: #fff;
-  border: 1px solid #cccccc;
   -webkit-box-shadow: 0 0 4px gray;
           box-shadow: 0 0 4px gray;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  left: calc(50% + 103px);
+  left: calc(50% + 130px);
+  -ms-grid-columns: 68px 40px 44px 96px;
+      grid-template-columns: 68px 40px 44px 96px;
 }
 
 @media only screen and (max-width: 1444px) {
@@ -5021,7 +5074,6 @@ to layouts.
 
 .cnt .cnt-map #street-dimension-control div {
   height: 100%;
-  padding: 0 10px;
   cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -5033,30 +5085,30 @@ to layouts.
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-.cnt .cnt-map #street-dimension-control div:hover {
-  font-weight: 500;
+.cnt .cnt-map #street-dimension-control div:active {
+  background-color: #cccccc;
 }
 
 .cnt .cnt-map #street-dimension-control div:not(:last-child) {
   border-right: 1px solid #cccccc;
 }
 
-@media only screen and (max-width: 1444px) {
-  .cnt .cnt-map #street-dimension-control div span {
-    display: none;
-  }
-}
-
 .cnt .cnt-map #location-control {
   right: 20px;
   bottom: 130px;
   z-index: 1;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   position: absolute;
-  border-radius: 5px;
+  border-radius: 4px;
   background-color: #fff;
-  border: 1px solid #cccccc;
   -webkit-box-shadow: 0 0 4px gray;
           box-shadow: 0 0 4px gray;
 }
@@ -5067,7 +5119,7 @@ to layouts.
 }
 
 .cnt .cnt-map #location-control img:hover {
-  background-color: #f2f2f2;
+  background-color: #cccccc;
 }
 
 .cnt .cnt-map #zoom-control {
@@ -5078,10 +5130,13 @@ to layouts.
   display: -ms-grid;
   display: grid;
   z-index: 1;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   position: absolute;
-  border-radius: 5px;
+  border-radius: 4px;
   background-color: #fff;
-  border: 1px solid #cccccc;
   -webkit-box-shadow: 0 0 4px gray;
           box-shadow: 0 0 4px gray;
   -ms-grid-rows: 30px 30px 30px;
@@ -5103,7 +5158,7 @@ to layouts.
 }
 
 .cnt .cnt-map #zoom-control div:hover {
-  background-color: #f2f2f2;
+  background-color: #cccccc;
 }
 
 .cnt .cnt-map #zoom-control div:last-child {
@@ -5115,7 +5170,7 @@ to layouts.
 }
 
 .cnt .cnt-map #map-section .img-sec {
-  height: 68%;
+  height: 72%;
   position: relative;
   background-size: cover;
   background-position: center;
@@ -5125,7 +5180,6 @@ to layouts.
 .cnt .cnt-map #map-section .img-sec .img-direc-control {
   bottom: 20px;
   width: 130px;
-  border-radius: 50%;
   position: absolute;
   text-align: center;
   left: calc(50% - 65px);
@@ -5176,6 +5230,6 @@ to layouts.
 }
 
 .cnt .cnt-map #map-section .map-sec {
-  height: calc(32% - 5px);
+  height: calc(28% - 5px);
 }
 /*# sourceMappingURL=styles.css.map */

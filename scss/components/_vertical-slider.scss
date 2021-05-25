@@ -11,10 +11,10 @@
         left: 15% !important;
         width: 15px !important;
         background-size: 5px 9px;
-        border: solidBlackBorder();
         background-position: center;
         border-radius: 7.5px !important;
         height: calc(100% + 10px) !important;
+        border: 1px solid $bright-contrast-color;
         background-repeat: no-repeat round !important;
         background-image: url("../imgs/SVG/horizontal-line.svg") !important;
         .slider-selection {
@@ -55,7 +55,7 @@
         width: 9px !important;
         height: 9px !important;
         background-image: none !important;
-        background-color: lighten($black, 30%) !important;
+        background-color: $bright-contrast-color !important;
     }
 }
 

@@ -28,7 +28,8 @@
             text-align: center;
         }
         .hdr-username {
-            padding: $padding;
+            font-size: 17px;
+            padding-right: $padding;
             @include maxSMContent {
                 display: none;
             }
@@ -39,15 +40,16 @@
                 @include maxSMContent {
                     margin: $padding/2;
                 }
-                .fa-search {
+                img {
                     top: 10px;
                     left: 10px;
                     position: absolute;
                     color: lighten($black, 50%);
                 }
                 input {
-                    width: 220px;
+                    width: 240px;
                     height: 36px;
+                    font-size: 16px;
                     padding-left: 32px;
                     border: 1px solid $white;
                     @include searchInputBorderRadius;
