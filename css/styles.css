@@ -4003,6 +4003,10 @@ to layouts.
 .cnt .cnt-settings {
   width: 325px;
   overflow-y: auto;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   overflow-x: hidden;
   padding: 0.5em;
   border: 1px solid #cccccc;
@@ -4040,30 +4044,57 @@ to layouts.
           align-items: center;
 }
 
-.cnt .cnt-settings ul li .menu-img {
-  margin-right: 10px;
+.cnt .cnt-settings ul li .menu-icon {
+  width: 35px;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .cnt .cnt-settings ul li .menu-title {
   font-weight: 500;
 }
 
-.cnt .cnt-settings ul li.accordionPOI #accordionPOI ul {
-  margin-left: 16px;
+.cnt .cnt-settings ul li.accordionPOI #accordionPOI .card .card-head h2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.cnt .cnt-settings ul li.accordionPOI #accordionPOI .card ul {
+  margin-left: 17.5px;
   padding-left: 0.5em;
   border-left: 1px solid #cccccc;
 }
 
-.cnt .cnt-settings ul li.accordionPOI #accordionPOI ul li:first-child {
+.cnt .cnt-settings ul li.accordionPOI #accordionPOI .card ul li:first-child {
   background-color: transparent;
 }
 
-.cnt .cnt-settings ul li.accordionPOI #accordionPOI ul li .search-POI {
+.cnt .cnt-settings ul li.accordionPOI #accordionPOI .card ul li .search-POI {
   position: relative;
   margin: 0.5em 0.5em 0.5em 0;
 }
 
-.cnt .cnt-settings ul li.accordionPOI #accordionPOI ul li .search-POI .fa-search {
+.cnt .cnt-settings ul li.accordionPOI #accordionPOI .card ul li .search-POI .fa-search {
   top: 7px;
   right: 7px;
   padding: 0;
@@ -4071,7 +4102,7 @@ to layouts.
   color: gray;
 }
 
-.cnt .cnt-settings ul li.accordionPOI #accordionPOI ul li .search-POI input {
+.cnt .cnt-settings ul li.accordionPOI #accordionPOI .card ul li .search-POI input {
   width: 100%;
   text-indent: 5px;
   padding-right: 25px;
@@ -4085,62 +4116,108 @@ to layouts.
   position: relative;
 }
 
-.cnt .cnt-settings ul li.detections img:last-child {
-  right: 5px;
+.cnt .cnt-settings ul li.detections .detections-img {
+  right: 6px;
   position: absolute;
 }
 
-.cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording ul {
-  margin-left: 13px;
+.cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording .card .card-head h2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording .card ul {
+  margin-left: 17.5px;
   border-left: 1px solid #cccccc;
 }
 
-.cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording ul li {
+.cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording .card ul li {
+  padding-left: 0.5em;
   background-color: transparent;
 }
 
-.cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording ul li #accordionImgRecordingTimeRange h2 img {
-  margin-right: 5px;
+.cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording .card ul li #accordionImgRecordingTimeRange h2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
-.cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording ul li #accordionImgRecordingTimeRange .card-body {
+.cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording .card ul li #accordionImgRecordingTimeRange .card-body {
   height: 370px;
+  padding-left: 10px;
 }
 
-.cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording ul li #accordionImgRecordingImageFilter h2 img, .cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording ul li #accordionImgRecordingDetections h2 img {
-  margin-right: 5px;
+.cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording .card ul li #accordionImgRecordingImageFilter h2, .cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording .card ul li #accordionImgRecordingDetections h2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
-.cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording ul li #accordionImgRecordingImageFilter .quality, .cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording ul li #accordionImgRecordingDetections .quality,
-.cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording ul li #accordionImgRecordingImageFilter .confidence,
-.cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording ul li #accordionImgRecordingDetections .confidence {
+.cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording .card ul li #accordionImgRecordingImageFilter .quality, .cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording .card ul li #accordionImgRecordingDetections .quality,
+.cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording .card ul li #accordionImgRecordingImageFilter .confidence,
+.cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording .card ul li #accordionImgRecordingDetections .confidence {
   text-align: end;
   margin-right: 25px;
   margin-bottom: -15px;
 }
 
-.cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording ul li #accordionImgRecordingImageFilter .image-filter-item, .cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording ul li #accordionImgRecordingDetections .image-filter-item {
+.cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording .card ul li #accordionImgRecordingImageFilter .image-filter-item, .cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording .card ul li #accordionImgRecordingDetections .image-filter-item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 10px 20px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin: 2px 8px 2px 0;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
 
-.cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording ul li #accordionImgRecordingImageFilter .image-filter-item div:last-child img, .cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording ul li #accordionImgRecordingDetections .image-filter-item div:last-child img {
-  margin-right: 1em;
-}
-
-.cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording ul li #accordionImgRecordingImageFilter .image-filter-item:first-child, .cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording ul li #accordionImgRecordingDetections .image-filter-item:first-child {
+.cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording .card ul li #accordionImgRecordingImageFilter .image-filter-item:first-child, .cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording .card ul li #accordionImgRecordingDetections .image-filter-item:first-child {
   margin: 0 20px;
 }
 
-.cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording ul li #accordionImgRecordingImageFilter #accordionImgRecordingImageFilterInput, .cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording ul li #accordionImgRecordingDetections #accordionImgRecordingImageFilterInput {
+.cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording .card ul li #accordionImgRecordingImageFilter .image-filter-item div:first-child, .cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording .card ul li #accordionImgRecordingDetections .image-filter-item div:first-child {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording .card ul li #accordionImgRecordingImageFilter .image-filter-item div:last-child img, .cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording .card ul li #accordionImgRecordingDetections .image-filter-item div:last-child img {
+  margin-right: 1em;
+}
+
+.cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording .card ul li #accordionImgRecordingImageFilter #accordionImgRecordingImageFilterInput, .cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording .card ul li #accordionImgRecordingDetections #accordionImgRecordingImageFilterInput {
   margin: -5px 13px 0px 22px;
 }
 
@@ -4865,7 +4942,7 @@ to layouts.
 }
 
 .cnt .cnt-map #add-bookmark-expanded .card-body .new-folder img {
-  margin-right: 10px;
+  margin-right: 12px;
 }
 
 .cnt .cnt-map #add-bookmark-expanded .card-body .new-folder-name {

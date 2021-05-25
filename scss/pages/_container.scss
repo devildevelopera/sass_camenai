@@ -14,6 +14,7 @@
     .cnt-settings {
         width: 325px;
         overflow-y: auto;
+        user-select: none;
         overflow-x: hidden;
         padding: $padding/2;
         border: solidBlackBorder();
@@ -42,37 +43,45 @@
                     display: flex;
                     align-items: center;
                 }
-                .menu-img {
-                    margin-right: 10px;
+                .menu-icon {
+                    width: 35px;
+                    height: 100%;
+                    @include displayFlexRow;
+                    justify-content: center;
                 }
                 .menu-title {
                     font-weight: 500;
                 }
                 &.accordionPOI {
-                    #accordionPOI ul {
-                        margin-left: 16px;
-                        padding-left: $padding/2;
-                        border-left: solidBlackBorder();
-                        li {
-                            &:first-child {
-                                background-color: transparent;
-                            }
-                            .search-POI {
-                                position: relative;
-                                margin: $margin/2 $margin/2 $margin/2 0;
-                                .fa-search {
-                                    top: 7px;
-                                    right: 7px;
-                                    padding: 0;
-                                    position: absolute;
-                                    color: lighten($black, 50%);
+                    #accordionPOI .card {
+                        .card-head h2 {
+                            @include displayFlexRow;
+                        }
+                        ul {
+                            margin-left: 17.5px;
+                            padding-left: $padding/2;
+                            border-left: solidBlackBorder();
+                            li {
+                                &:first-child {
+                                    background-color: transparent;
                                 }
-                                input {
-                                    width: 100%;
-                                    text-indent: 5px;
-                                    padding-right: 25px;
-                                    border: solidBlackBorder();
-                                    @include searchInputBorderRadius;
+                                .search-POI {
+                                    position: relative;
+                                    margin: $margin/2 $margin/2 $margin/2 0;
+                                    .fa-search {
+                                        top: 7px;
+                                        right: 7px;
+                                        padding: 0;
+                                        position: absolute;
+                                        color: lighten($black, 50%);
+                                    }
+                                    input {
+                                        width: 100%;
+                                        text-indent: 5px;
+                                        padding-right: 25px;
+                                        border: solidBlackBorder();
+                                        @include searchInputBorderRadius;
+                                    }
                                 }
                             }
                         }
@@ -80,57 +89,63 @@
                 }
                 &.detections {
                     position: relative;
-                    img:last-child {
-                        right: 5px;
+                    .detections-img {
+                        right: 6px;
                         position: absolute;
                     }
                 }
                 &.accordionImgRecording {
-                    #accordionImgRecording ul {
-                        margin-left: 13px;
-                        border-left: solidBlackBorder();
-                        li {
-                            background-color: transparent;
-                            #accordionImgRecordingTimeRange {
-                                h2 {
-                                    img {
-                                        margin-right: 5px;
+                    #accordionImgRecording .card {
+                        .card-head h2 {
+                            @include displayFlexRow;
+                        }
+                        ul {
+                            margin-left: 17.5px;
+                            border-left: solidBlackBorder();
+                            li {
+                                padding-left: $padding/2;
+                                background-color: transparent;
+                                #accordionImgRecordingTimeRange {
+                                    h2 {
+                                        @include displayFlexRow;
+                                    }
+                                    .card-body {
+                                        height: 370px;
+                                        padding-left: 10px;
                                     }
                                 }
-                                .card-body {
-                                    height: 370px;
-                                }
-                            }
-                            #accordionImgRecordingImageFilter {
-                                h2 {
-                                    img {
-                                        margin-right: 5px;
+                                #accordionImgRecordingImageFilter {
+                                    h2 {
+                                        @include displayFlexRow;
+                                    }
+                                    .quality,
+                                    .confidence {
+                                        text-align: end;
+                                        margin-right: 25px;
+                                        margin-bottom: -15px;
+                                    }
+                                    .image-filter-item {
+                                        display: flex;
+                                        align-items: center;
+                                        margin: 2px 8px 2px 0;
+                                        justify-content: space-between;
+                                        &:first-child {
+                                            margin: 0 20px;
+                                        }
+                                        div:first-child() {
+                                            @include displayFlexRow;
+                                        }
+                                        div:last-child img {
+                                            margin-right: $margin;
+                                        }
+                                    }
+                                    #accordionImgRecordingImageFilterInput {
+                                        margin: -5px 13px 0px 22px;
                                     }
                                 }
-                                .quality,
-                                .confidence {
-                                    text-align: end;
-                                    margin-right: 25px;
-                                    margin-bottom: -15px;
+                                #accordionImgRecordingDetections {
+                                    @extend #accordionImgRecordingImageFilter
                                 }
-                                .image-filter-item {
-                                    display: flex;
-                                    margin: 10px 20px;
-                                    align-items: center;
-                                    justify-content: space-between;
-                                    div:last-child img {
-                                        margin-right: $margin;
-                                    }
-                                    &:first-child {
-                                        margin: 0 20px;
-                                    }
-                                }
-                                #accordionImgRecordingImageFilterInput {
-                                    margin: -5px 13px 0px 22px;
-                                }
-                            }
-                            #accordionImgRecordingDetections {
-                                @extend #accordionImgRecordingImageFilter
                             }
                         }
                     }
@@ -541,7 +556,7 @@
                         padding: 5px 10px;
                         @include displayFlexRow;
                         img {
-                            margin-right: 10px;
+                            margin-right: 12px;
                         }
                     }
                     .new-folder-name {
