@@ -14,7 +14,6 @@
     .cnt-settings {
         width: 325px;
         overflow-y: auto;
-        user-select: none;
         overflow-x: hidden;
         padding: $padding/2;
         border: solidBlackBorder();
@@ -89,8 +88,9 @@
                 }
                 &.detections {
                     position: relative;
-                    .detections-img {
+                    .pretty {
                         right: 6px;
+                        margin-right: 0;
                         position: absolute;
                     }
                 }
@@ -120,27 +120,33 @@
                                     }
                                     .quality,
                                     .confidence {
+                                        height: 8px;
                                         text-align: end;
-                                        margin-right: 25px;
-                                        margin-bottom: -15px;
+                                        margin-right: 12px;
+                                        img {
+                                            margin-top: -20px;
+                                        }
                                     }
                                     .image-filter-item {
                                         display: flex;
                                         align-items: center;
                                         margin: 2px 8px 2px 0;
                                         justify-content: space-between;
-                                        &:first-child {
-                                            margin: 0 20px;
-                                        }
-                                        div:first-child() {
+                                        &>div:first-child {
                                             @include displayFlexRow;
                                         }
-                                        div:last-child img {
-                                            margin-right: $margin;
+                                        &>div:last-child {
+                                            display: flex;
+                                            align-items: center;
+                                            .pretty {
+                                                margin-right: 20px;
+                                            }
                                         }
                                     }
                                     #accordionImgRecordingImageFilterInput {
-                                        margin: -5px 13px 0px 22px;
+                                        .card-body {
+                                            padding-left: 10px;
+                                        }
                                     }
                                 }
                                 #accordionImgRecordingDetections {
@@ -158,18 +164,27 @@
         flex: 1;
         position: relative;
         /* side menu open icon */
-        #menu-btn {
-            top: 10px;
-            left: -2.44px;
+        #mobile-setting-bar {
+            top: 0;
+            left: 0;
+            z-index: 1;
+            width: 46px;
+            height: 612px;
+            padding-left: 12px;
+            padding-right: 12px;
             display: none;
-            @include sideButtonStyle;
-            border-radius: 0 4px 4px 0;
-            background-color: lighten($blue, 10%);
-            &:hover {
-                background-color: $blue;
-            }
-            i {
-                font-size: 32px;
+            transition: 0.35s;
+            position: absolute;
+            background-color: $white;
+            div {
+                width: 100%;
+                height: 36px;
+                cursor: pointer;
+                @include displayFlexRow;
+                justify-content: center;
+                &.bdr-bottom {
+                    border-bottom: solidBlackBorder();
+                }
             }
         }
         /* POI modal */
@@ -189,6 +204,14 @@
                         h2 {
                             line-height: 30px;
                             padding-left: 10px;
+                        }
+                    }
+                    .card-body {
+                        li {
+                            display: flex;
+                            div {
+                                width: 20px;
+                            }
                         }
                     }
                 }
@@ -444,10 +467,6 @@
                     margin-right: 5px;
                 }
             }
-            @include maxSMContent {
-                bottom: 80px;
-                left: calc(50% - 123px);
-            }
         }
         /* on off control control */
         #on-off-control {
@@ -472,10 +491,6 @@
                     border-right: solidBlackBorder();
                 }
             }
-            @include maxSMContent {
-                bottom: 80px;
-                left: calc(50% + 38px);
-            }
         }
         /* add-bookmark control */
         #add-bookmark-control {
@@ -486,9 +501,6 @@
             @include mapControlBox;
             @include displayFlexRow;
             left: calc(50% - 330px);
-            @include maxXLContent {
-                left: calc(50% - 118px);
-            }
             div {
                 width: 100%;
                 height: 100%;
@@ -496,16 +508,8 @@
                 cursor: pointer;
                 @include displayFlexRow;
                 justify-content: space-between;
-                @include maxXLContent {
-                    width: inherit;
-                }
                 &:active {
                     background-color: lighten($black, 80%);
-                }
-                span {
-                    @include maxXLContent {
-                        display: none;
-                    }
                 }
             }
         }
@@ -516,7 +520,6 @@
             bottom: 30px;
             height: 210px;
             display: none;
-            user-select: none;
             position: absolute;
             border-radius: 4px;
             left: calc(50% - 330px);
@@ -603,9 +606,6 @@
             @include displayFlexRow;
             justify-content: center;
             left: calc(50% - 168px);
-            @include maxXLContent {
-                left: calc(50% - 76px);
-            }
             &:active {
                 background-color: lighten($black, 80%);
             }
@@ -620,9 +620,6 @@
             @include mapControlBox;
             left: calc(50% - 120px);
             grid-template-columns: 34px 72px 100px 34px;
-            @include maxXLContent {
-                left: calc(50% - 31px);
-            }
             &>div {
                 @include displayFlexRow;
                 justify-content: center;
@@ -635,17 +632,11 @@
                 &:nth-child(2) {
                     span {
                         margin-left: 4px;
-                        @include maxXLContent {
-                            display: none;
-                        }
                     }
                 }
                 &:nth-child(3) {
                     span {
                         margin-right: 4px;
-                        @include maxXLContent {
-                            display: none;
-                        }
                     }
                 }
                 div {
@@ -666,13 +657,6 @@
             @include mapControlBox;
             left: calc(50% + 130px);
             grid-template-columns: 68px 40px 44px 96px;
-            @include maxXLContent {
-                left: calc(50% + 101px);
-            }
-            @include maxSMContent {
-                bottom: 130px;
-                left: calc(50% - 89px);
-            }
             div {
                 height: 100%;
                 cursor: pointer;
@@ -689,14 +673,14 @@
         /* location-control */
         #location-control {
             right: 20px;
+            width: 30px;
+            height: 30px;
             bottom: 130px;
             @include mapControlBox;
+            background-color: #006CBC;
             img {
-                padding: 4.5px;
+                padding: 5px;
                 cursor: pointer;
-                &:hover {
-                    background-color: lighten($black, 80%);
-                }
             }
         }
         /* zoom control */
@@ -726,7 +710,7 @@
         #map-section {
             height: 100%;
             .img-sec {
-                height: 72%;
+                height: 74%;
                 position: relative;
                 background-size: cover;
                 background-position: center;
@@ -747,7 +731,7 @@
                     }
                 }
                 .img-prev-next {
-                    right: 70px;
+                    right: 30px;
                     bottom: 20px;
                     position: absolute;
                     img {
@@ -770,7 +754,7 @@
                 }
             }
             .map-sec {
-                height: calc(28% - 5px);
+                height: calc(26% - 5px);
             }
         }
     }

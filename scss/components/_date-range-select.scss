@@ -10,7 +10,6 @@
             display: flex;
             height: 28px;
             cursor: pointer;
-            user-select: none;
             padding-right: 5px;
             padding-left: 12px;
             align-items: center;
@@ -40,7 +39,6 @@
             border-bottom-left-radius: 14px;
             div {
                 cursor: pointer;
-                user-select: none;
                 padding-right: 5px;
                 padding-left: 12px;
                 color: $basic-black-color;

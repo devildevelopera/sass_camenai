@@ -1,15 +1,15 @@
 $(() => {
     $('.cnt .cnt-settings .close-menu img').click((e) => {
         $('.cnt-settings').hide(50);
-        $('.cnt .cnt-map #menu-btn').show();
+        $('.cnt .cnt-map #mobile-setting-bar').show();
         $('#poi-draggable').css({ 'top': '75px', 'left': '20px' });
         $('#poi-delete-draggable').css({ 'top': '75px', 'left': '192px' });
         $('#bookmarks-draggable').css({ 'top': '245px', 'left': '20px' });
     });
 
-    $('.cnt .cnt-map #menu-btn').click((e) => {
+    $('.cnt .cnt-map #mobile-setting-bar div:first-child').click((e) => {
         $('.cnt-settings').show(50);
-        $('.cnt .cnt-map #menu-btn').hide();
+        $('.cnt .cnt-map #mobile-setting-bar').hide();
         $('#poi-draggable').css({ 'top': '20px', 'left': '20px' });
         $('#poi-delete-draggable').css({ 'top': '20px', 'left': '192px' });
         $('#bookmarks-draggable').css({ 'top': '190px', 'left': '20px' });
