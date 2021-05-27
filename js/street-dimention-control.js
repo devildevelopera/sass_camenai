@@ -1,9 +1,9 @@
 $(() => {
-    $('#street-map-toggle').on('click', () => {
-        if ($('#street-map-toggle').html() === 'Street') {
-            $('#street-map-toggle').html('Map');
+    $('#street-map-toggle').on('click', function() {
+        if ($(this).html() === 'Street') {
+            $(this).html('Map');
         } else {
-            $('#street-map-toggle').html('Street');
+            $(this).html('Street');
         }
     })
 })

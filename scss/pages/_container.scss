@@ -12,10 +12,10 @@
     }
     /* side menu */
     .cnt-settings {
+        padding: 8px;
         width: 325px;
         overflow-y: auto;
         overflow-x: hidden;
-        padding: $padding/2;
         border: solidBlackBorder();
         height: calc(100vh - 100px);
         @include maxLGContent {
@@ -25,8 +25,8 @@
         .close-menu {
             cursor: pointer;
             text-align: end;
-            padding-right: $padding/2;
-            padding-bottom: $padding/2;
+            padding-right: 8px;
+            padding-bottom: 8px;
             border-bottom: solidBlackBorder();
         }
         ul {
@@ -57,8 +57,8 @@
                             @include displayFlexRow;
                         }
                         ul {
+                            padding-left: 8px;
                             margin-left: 17.5px;
-                            padding-left: $padding/2;
                             border-left: solidBlackBorder();
                             li {
                                 &:first-child {
@@ -66,9 +66,9 @@
                                 }
                                 .search-POI {
                                     position: relative;
-                                    margin: $margin/2 $margin/2 $margin/2 0;
-                                    .fa-search {
-                                        top: 7px;
+                                    margin: 8px 8px 8px 0;
+                                    img {
+                                        top: 10px;
                                         right: 7px;
                                         padding: 0;
                                         position: absolute;
@@ -103,7 +103,7 @@
                             margin-left: 17.5px;
                             border-left: solidBlackBorder();
                             li {
-                                padding-left: $padding/2;
+                                padding-left: 8px;
                                 background-color: transparent;
                                 #accordionImgRecordingTimeRange {
                                     h2 {
@@ -150,6 +150,9 @@
                                     }
                                 }
                                 #accordionImgRecordingDetections {
+                                    .card .card-head {
+                                        margin-bottom: 5px;
+                                    }
                                     @extend #accordionImgRecordingImageFilter
                                 }
                             }
@@ -306,7 +309,7 @@
                     ul {
                         height: 160px;
                         font-size: 12px;
-                        overflow-y: scroll;
+                        overflow-y: auto;
                         li {
                             padding: 5px 10px;
                             &:hover {
@@ -326,6 +329,153 @@
             left: calc(50% - 265px);
             @include maxXSContent {
                 left: calc(50% - 170px);
+            }
+        }
+        /* help-center-box-draggable */
+        #help-center-box-draggable {
+            top: 20px;
+            right: 120px;
+            width: 390px;
+            padding: 0 20px;
+            height: 676.3px;
+            overflow-y: auto;
+            background-color: $white;
+            >div {
+                &:first-child {
+                    padding: 10px 0;
+                    font-size: 18px;
+                    @include displayFlexRow;
+                    color: lighten($black, 20%);
+                    justify-content: space-between;
+                    border-bottom: solidBlackBorder();
+                    div:last-child img {
+                        cursor: pointer;
+                    }
+                }
+                &:nth-child(2) {
+                    padding: 10px 0;
+                    border-bottom: solidBlackBorder();
+                    >div {
+                        &:first-child {
+                            margin-bottom: 5px;
+                            @include displayFlexRow;
+                            color: lighten($black, 20%);
+                            justify-content: space-between;
+                        }
+                        &:last-child {
+                            font-size: 12px;
+                            color: lighten($black, 50%);
+                        }
+                    }
+                }
+                &:nth-child(3) {
+                    padding: 10px 0;
+                    border-bottom: solidBlackBorder();
+                    >div {
+                        &:first-child {
+                            margin-bottom: 5px;
+                            @include displayFlexRow;
+                            color: lighten($black, 20%);
+                            justify-content: space-between;
+                            button {
+                                color: $white;
+                                display: flex;
+                                width: 47.10px;
+                                height: 20.53px;
+                                font-size: 14px;
+                                align-items: center;
+                                border-radius: 2.5px;
+                                justify-content: center;
+                                background-color: lighten($black, 40%);
+                                &:active {
+                                    background-color: $basic-black-color;
+                                }
+                            }
+                        }
+                        &:last-child {
+                            font-size: 12px;
+                            color: lighten($black, 50%);
+                        }
+                    }
+                }
+                &:last-child {
+                    padding: 10px 0;
+                    >div {
+                        &:first-child {
+                            margin-bottom: 5px;
+                            color: lighten($black, 20%);
+                        }
+                        &:last-child {
+                            div {
+                                font-size: 12px;
+                                margin-bottom: 10px;
+                                span {
+                                    color: lighten($black, 20%);
+                                }
+                                >div {
+                                    padding-left: 16px;
+                                    color: lighten($black, 50%);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        /* setting-box-draggable */
+        #setting-box-draggable {
+            top: 48px;
+            right: 66px;
+            width: 390px;
+            padding: 0 20px;
+            height: 676.3px;
+            overflow-y: auto;
+            background-color: $white;
+            >div {
+                &:first-child {
+                    padding: 10px 0;
+                    font-size: 18px;
+                    @include displayFlexRow;
+                    color: lighten($black, 20%);
+                    justify-content: space-between;
+                    border-bottom: solidBlackBorder();
+                    div:last-child img {
+                        cursor: pointer;
+                    }
+                }
+                &:nth-child(2) {
+                    padding: 10px 0;
+                    border-bottom: solidBlackBorder();
+                    >div {
+                        font-size: 14px;
+                        @include displayFlexRow;
+                        color: lighten($black, 20%);
+                        justify-content: space-between;
+                        &:not(:last-child) {
+                            margin-bottom: 10px;
+                        }
+                    }
+                }
+                &:last-child {
+                    padding: 10px 0;
+                    >div {
+                        &:first-child {
+                            margin-bottom: 5px;
+                            color: lighten($black, 20%);
+                        }
+                        &:last-child {
+                            &>div {
+                                font-size: 14px;
+                                @include displayFlexRow;
+                                color: lighten($black, 20%);
+                                justify-content: space-between;
+                                &:not(:last-child) {
+                                    margin-bottom: 10px;
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
         /* report issue modal open icon */
@@ -402,7 +552,7 @@
             }
         }
         /* green close icon */
-        #green-close-btn {
+        #setting-green-btn {
             right: 0;
             top: 48px;
             cursor: pointer;
@@ -492,43 +642,22 @@
                 }
             }
         }
-        /* add-bookmark control */
-        #add-bookmark-control {
-            bottom: 30px;
-            height: 38px;
-            width: 152px;
-            font-size: 17px;
-            @include mapControlBox;
-            @include displayFlexRow;
-            left: calc(50% - 330px);
-            div {
-                width: 100%;
-                height: 100%;
-                padding: 0 10px;
-                cursor: pointer;
-                @include displayFlexRow;
-                justify-content: space-between;
-                &:active {
-                    background-color: lighten($black, 80%);
-                }
-            }
-        }
         /* add bookmark expanded */
         #add-bookmark-expanded {
             z-index: 2;
+            height: 38px;
             width: 152px;
             bottom: 30px;
-            height: 210px;
-            display: none;
+            overflow: hidden;
             position: absolute;
             border-radius: 4px;
+            transition: height 0.2s;
             left: calc(50% - 330px);
             @include boxShadowTemplate;
             @include maxXLContent {
                 left: calc(50% - 115px);
             }
             .card {
-                height: 100%;
                 text-align: center;
                 &-header {
                     height: 38px;
@@ -670,8 +799,8 @@
                 }
             }
         }
-        /* location-control */
-        #location-control {
+        /* blue-button-control */
+        #blue-button-control {
             right: 20px;
             width: 30px;
             height: 30px;
@@ -681,6 +810,33 @@
             img {
                 padding: 5px;
                 cursor: pointer;
+            }
+        }
+        /* blue-box-draggable */
+        #blue-box-draggable {
+            height: 0;
+            right: 90px;
+            width: 268px;
+            bottom: 130px;
+            display: grid;
+            overflow: hidden;
+            transition: height 0.2s;
+            background-color: $white;
+            grid-template-columns: 239px 29px;
+            &>div {
+                &:last-child {
+                    padding: 5px;
+                    display: flex;
+                    align-items: center;
+                    flex-direction: column;
+                    background-color: #006CBC;
+                    border-top-right-radius: 4px;
+                    justify-content: space-between;
+                    border-bottom-right-radius: 4px;
+                    img {
+                        cursor: pointer;
+                    }
+                }
             }
         }
         /* zoom control */
@@ -717,10 +873,10 @@
                 background-image: url("../imgs/street.jpg");
                 .img-direc-control {
                     bottom: 20px;
-                    width: 130px;
+                    width: 150px;
                     position: absolute;
                     text-align: center;
-                    left: calc(50% - 65px);
+                    left: calc(50% - 75px);
                     img {
                         cursor: pointer;
                     }
@@ -733,9 +889,13 @@
                 .img-prev-next {
                     right: 30px;
                     bottom: 20px;
+                    width: 200px;
+                    display: grid;
                     position: absolute;
+                    grid-template-columns: 45px 45px 45px 70px;
                     img {
-                        height: 29px;
+                        margin: auto;
+                        height: 27.6px;
                         cursor: pointer;
                     }
                 }

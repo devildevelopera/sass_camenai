@@ -1,17 +1,15 @@
 $(() => {
-    $("#add-bookmark-control").on("click", () => {
-        $("#add-bookmark-control").hide();
-        $('#add-bookmark-expanded').show(10);
-    });
+    $("#add-bookmark-expanded .card .card-header").on("click", () => {
+        if ($('#add-bookmark-expanded').css('height') === '38px') {
+            $('#add-bookmark-expanded').css('height', '210px');
+        } else {
+            $('#add-bookmark-expanded').css('height', '38px');
+        }
 
-    $('#add-bookmark-expanded .card .card-header').click((e) => {
-        $('#add-bookmark-expanded').hide(10);
-        $("#add-bookmark-control").show(10);
     });
 
     $('#add-bookmark-expanded .card .card-body .submit-bookmark').click((e) => {
-        $('#add-bookmark-expanded').hide(10);
-        $("#add-bookmark-control").show(10);
+        $('#add-bookmark-expanded').css('height', '38px');;
     });
 
     $("#add-bookmark-folder").on('change', () => {

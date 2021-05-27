@@ -3,9 +3,9 @@
 .hdr {
     color: $white;
     height: 100px;
+    padding-left: 32px;
     @include displayFlexRow;
     background: $purple-rain;
-    padding-left: $padding * 2;
     justify-content: space-between;
     @include maxSMContent {
         display: block;
@@ -29,7 +29,7 @@
         }
         .hdr-username {
             font-size: 17px;
-            padding-right: $padding;
+            padding-right: 16px;
             @include maxSMContent {
                 display: none;
             }
@@ -38,7 +38,7 @@
             .search {
                 position: relative;
                 @include maxSMContent {
-                    margin: $padding/2;
+                    margin: 8px;
                 }
                 img {
                     top: 10px;
@@ -60,7 +60,7 @@
             }
         }
         .hdr-menu {
-            padding: $padding/2;
+            padding: 8px;
             @include displayFlexRow;
             justify-content: space-around;
             @include minSMContent {

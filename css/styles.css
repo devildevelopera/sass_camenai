@@ -4051,7 +4051,6 @@ helpers or functions. They have no direct output.
 #999999 = 40% black =   lighten($black, 60%);
 #B3B3B3 = 30% black =   lighten($black, 70%);
 #CCCCCC = 20% black =   lighten($black, 80%)*/
-/* Spacing */
 /* Extra small devices (phones, 600px and down) */
 /* Small devices (portrait tablets and large phones, 600px and up) */
 /* Medium devices (landscape tablets, 768px and up) */
@@ -4207,7 +4206,7 @@ label {
 
 .radio-item input[type=radio]:checked::after {
   left: 3px;
-  top: -27px;
+  top: -24px;
   width: 10px;
   height: 10px;
   content: "";
@@ -4594,6 +4593,8 @@ label {
 
 #date-range-control .date-range-slider #date-range-value div:not(:nth-child(2)):hover {
   cursor: pointer;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
   background-color: #cccccc;
 }
 
@@ -4753,6 +4754,7 @@ to layouts.
 .hdr {
   color: #fff;
   height: 100px;
+  padding-left: 32px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4764,7 +4766,6 @@ to layouts.
       -ms-flex-direction: row;
           flex-direction: row;
   background: #7641B2;
-  padding-left: 2em;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -4810,7 +4811,7 @@ to layouts.
 
 .hdr .hdr-right .hdr-username {
   font-size: 17px;
-  padding-right: 1em;
+  padding-right: 16px;
 }
 
 @media only screen and (max-width: 768px) {
@@ -4825,7 +4826,7 @@ to layouts.
 
 @media only screen and (max-width: 768px) {
   .hdr .hdr-right .hdr-search .search {
-    margin: 0.5em;
+    margin: 8px;
   }
 }
 
@@ -4854,7 +4855,7 @@ to layouts.
 }
 
 .hdr .hdr-right .hdr-menu {
-  padding: 0.5em;
+  padding: 8px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4935,10 +4936,10 @@ to layouts.
 }
 
 .cnt .cnt-settings {
+  padding: 8px;
   width: 325px;
   overflow-y: auto;
   overflow-x: hidden;
-  padding: 0.5em;
   border: 1px solid #cccccc;
   height: calc(100vh - 100px);
 }
@@ -4953,8 +4954,8 @@ to layouts.
 .cnt .cnt-settings .close-menu {
   cursor: pointer;
   text-align: end;
-  padding-right: 0.5em;
-  padding-bottom: 0.5em;
+  padding-right: 8px;
+  padding-bottom: 8px;
   border-bottom: 1px solid #cccccc;
 }
 
@@ -5010,8 +5011,8 @@ to layouts.
 }
 
 .cnt .cnt-settings ul li.accordionPOI #accordionPOI .card ul {
+  padding-left: 8px;
   margin-left: 17.5px;
-  padding-left: 0.5em;
   border-left: 1px solid #cccccc;
 }
 
@@ -5021,11 +5022,11 @@ to layouts.
 
 .cnt .cnt-settings ul li.accordionPOI #accordionPOI .card ul li .search-POI {
   position: relative;
-  margin: 0.5em 0.5em 0.5em 0;
+  margin: 8px 8px 8px 0;
 }
 
-.cnt .cnt-settings ul li.accordionPOI #accordionPOI .card ul li .search-POI .fa-search {
-  top: 7px;
+.cnt .cnt-settings ul li.accordionPOI #accordionPOI .card ul li .search-POI img {
+  top: 10px;
   right: 7px;
   padding: 0;
   position: absolute;
@@ -5071,7 +5072,7 @@ to layouts.
 }
 
 .cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording .card ul li {
-  padding-left: 0.5em;
+  padding-left: 8px;
   background-color: transparent;
 }
 
@@ -5163,6 +5164,10 @@ to layouts.
   padding-left: 10px;
 }
 
+.cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording .card ul li #accordionImgRecordingDetections .card .card-head {
+  margin-bottom: 5px;
+}
+
 .cnt .cnt-map {
   -webkit-box-flex: 1;
       -ms-flex: 1;
@@ -5173,18 +5178,20 @@ to layouts.
   /* POI delete modal */
   /* bookmarks modal */
   /* date-range-control */
+  /* help-center-box-draggable */
+  /* setting-box-draggable */
   /* report issue modal open icon */
   /* report issue modal */
   /* green close icon */
   /* bright contrast control */
   /* view type control */
   /* on off control control */
-  /* add-bookmark control */
   /* add bookmark expanded */
   /* undo control */
   /* back-forward control */
   /* street-dimension control */
-  /* location-control */
+  /* blue-button-control */
+  /* blue-box-draggable */
   /* zoom control */
   /* map section*/
 }
@@ -5419,7 +5426,7 @@ to layouts.
 .cnt .cnt-map #bookmarks-draggable .card-body ul {
   height: 160px;
   font-size: 12px;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 
 .cnt .cnt-map #bookmarks-draggable .card-body ul li {
@@ -5444,6 +5451,233 @@ to layouts.
   .cnt .cnt-map #date-range-control {
     left: calc(50% - 170px);
   }
+}
+
+.cnt .cnt-map #help-center-box-draggable {
+  top: 20px;
+  right: 120px;
+  width: 390px;
+  padding: 0 20px;
+  height: 676.3px;
+  overflow-y: auto;
+  background-color: #fff;
+}
+
+.cnt .cnt-map #help-center-box-draggable > div:first-child {
+  padding: 10px 0;
+  font-size: 18px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  color: #333333;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-bottom: 1px solid #cccccc;
+}
+
+.cnt .cnt-map #help-center-box-draggable > div:first-child div:last-child img {
+  cursor: pointer;
+}
+
+.cnt .cnt-map #help-center-box-draggable > div:nth-child(2) {
+  padding: 10px 0;
+  border-bottom: 1px solid #cccccc;
+}
+
+.cnt .cnt-map #help-center-box-draggable > div:nth-child(2) > div:first-child {
+  margin-bottom: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  color: #333333;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.cnt .cnt-map #help-center-box-draggable > div:nth-child(2) > div:last-child {
+  font-size: 12px;
+  color: gray;
+}
+
+.cnt .cnt-map #help-center-box-draggable > div:nth-child(3) {
+  padding: 10px 0;
+  border-bottom: 1px solid #cccccc;
+}
+
+.cnt .cnt-map #help-center-box-draggable > div:nth-child(3) > div:first-child {
+  margin-bottom: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  color: #333333;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.cnt .cnt-map #help-center-box-draggable > div:nth-child(3) > div:first-child button {
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 47.10px;
+  height: 20.53px;
+  font-size: 14px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 2.5px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #666666;
+}
+
+.cnt .cnt-map #help-center-box-draggable > div:nth-child(3) > div:first-child button:active {
+  background-color: #4d4d4d;
+}
+
+.cnt .cnt-map #help-center-box-draggable > div:nth-child(3) > div:last-child {
+  font-size: 12px;
+  color: gray;
+}
+
+.cnt .cnt-map #help-center-box-draggable > div:last-child {
+  padding: 10px 0;
+}
+
+.cnt .cnt-map #help-center-box-draggable > div:last-child > div:first-child {
+  margin-bottom: 5px;
+  color: #333333;
+}
+
+.cnt .cnt-map #help-center-box-draggable > div:last-child > div:last-child div {
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+.cnt .cnt-map #help-center-box-draggable > div:last-child > div:last-child div span {
+  color: #333333;
+}
+
+.cnt .cnt-map #help-center-box-draggable > div:last-child > div:last-child div > div {
+  padding-left: 16px;
+  color: gray;
+}
+
+.cnt .cnt-map #setting-box-draggable {
+  top: 48px;
+  right: 66px;
+  width: 390px;
+  padding: 0 20px;
+  height: 676.3px;
+  overflow-y: auto;
+  background-color: #fff;
+}
+
+.cnt .cnt-map #setting-box-draggable > div:first-child {
+  padding: 10px 0;
+  font-size: 18px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  color: #333333;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-bottom: 1px solid #cccccc;
+}
+
+.cnt .cnt-map #setting-box-draggable > div:first-child div:last-child img {
+  cursor: pointer;
+}
+
+.cnt .cnt-map #setting-box-draggable > div:nth-child(2) {
+  padding: 10px 0;
+  border-bottom: 1px solid #cccccc;
+}
+
+.cnt .cnt-map #setting-box-draggable > div:nth-child(2) > div {
+  font-size: 14px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  color: #333333;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.cnt .cnt-map #setting-box-draggable > div:nth-child(2) > div:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.cnt .cnt-map #setting-box-draggable > div:last-child {
+  padding: 10px 0;
+}
+
+.cnt .cnt-map #setting-box-draggable > div:last-child > div:first-child {
+  margin-bottom: 5px;
+  color: #333333;
+}
+
+.cnt .cnt-map #setting-box-draggable > div:last-child > div:last-child > div {
+  font-size: 14px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  color: #333333;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.cnt .cnt-map #setting-box-draggable > div:last-child > div:last-child > div:not(:last-child) {
+  margin-bottom: 10px;
 }
 
 .cnt .cnt-map #report-issue-btn {
@@ -5562,7 +5796,7 @@ to layouts.
   background-color: #4d4d4d;
 }
 
-.cnt .cnt-map #green-close-btn {
+.cnt .cnt-map #setting-green-btn {
   right: 0;
   top: 48px;
   cursor: pointer;
@@ -5713,62 +5947,16 @@ to layouts.
   border-right: 1px solid #cccccc;
 }
 
-.cnt .cnt-map #add-bookmark-control {
-  bottom: 30px;
-  height: 38px;
-  width: 152px;
-  font-size: 17px;
-  z-index: 1;
-  position: absolute;
-  border-radius: 4px;
-  background-color: #fff;
-  -webkit-box-shadow: 0 0 4px gray;
-          box-shadow: 0 0 4px gray;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  left: calc(50% - 330px);
-}
-
-.cnt .cnt-map #add-bookmark-control div {
-  width: 100%;
-  height: 100%;
-  padding: 0 10px;
-  cursor: pointer;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.cnt .cnt-map #add-bookmark-control div:active {
-  background-color: #cccccc;
-}
-
 .cnt .cnt-map #add-bookmark-expanded {
   z-index: 2;
+  height: 38px;
   width: 152px;
   bottom: 30px;
-  height: 210px;
-  display: none;
+  overflow: hidden;
   position: absolute;
   border-radius: 4px;
+  -webkit-transition: height 0.2s;
+  transition: height 0.2s;
   left: calc(50% - 330px);
   -webkit-box-shadow: 0 0 4px gray;
           box-shadow: 0 0 4px gray;
@@ -5781,7 +5969,6 @@ to layouts.
 }
 
 .cnt .cnt-map #add-bookmark-expanded .card {
-  height: 100%;
   text-align: center;
 }
 
@@ -6035,7 +6222,7 @@ to layouts.
   border-right: 1px solid #cccccc;
 }
 
-.cnt .cnt-map #location-control {
+.cnt .cnt-map #blue-button-control {
   right: 20px;
   width: 30px;
   height: 30px;
@@ -6049,8 +6236,47 @@ to layouts.
   background-color: #006CBC;
 }
 
-.cnt .cnt-map #location-control img {
+.cnt .cnt-map #blue-button-control img {
   padding: 5px;
+  cursor: pointer;
+}
+
+.cnt .cnt-map #blue-box-draggable {
+  height: 0;
+  right: 90px;
+  width: 268px;
+  bottom: 130px;
+  display: -ms-grid;
+  display: grid;
+  overflow: hidden;
+  -webkit-transition: height 0.2s;
+  transition: height 0.2s;
+  background-color: #fff;
+  -ms-grid-columns: 239px 29px;
+      grid-template-columns: 239px 29px;
+}
+
+.cnt .cnt-map #blue-box-draggable > div:last-child {
+  padding: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #006CBC;
+  border-top-right-radius: 4px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-bottom-right-radius: 4px;
+}
+
+.cnt .cnt-map #blue-box-draggable > div:last-child img {
   cursor: pointer;
 }
 
@@ -6107,10 +6333,10 @@ to layouts.
 
 .cnt .cnt-map #map-section .img-sec .img-direc-control {
   bottom: 20px;
-  width: 130px;
+  width: 150px;
   position: absolute;
   text-align: center;
-  left: calc(50% - 65px);
+  left: calc(50% - 75px);
 }
 
 .cnt .cnt-map #map-section .img-sec .img-direc-control img {
@@ -6133,11 +6359,17 @@ to layouts.
 .cnt .cnt-map #map-section .img-sec .img-prev-next {
   right: 30px;
   bottom: 20px;
+  width: 200px;
+  display: -ms-grid;
+  display: grid;
   position: absolute;
+  -ms-grid-columns: 45px 45px 45px 70px;
+      grid-template-columns: 45px 45px 45px 70px;
 }
 
 .cnt .cnt-map #map-section .img-sec .img-prev-next img {
-  height: 29px;
+  margin: auto;
+  height: 27.6px;
   cursor: pointer;
 }
 
