@@ -4626,13 +4626,16 @@ label {
 }
 
 .andp-datepicker-container .andp-header {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 26.2px auto auto 26.2px;
+      grid-template-columns: 26.2px auto auto 26.2px;
   background-color: #e6e6e6;
 }
 
 .andp-datepicker-container .andp-header button {
   border: 0;
   padding: 0;
-  width: 45px;
   margin-top: 0;
   color: #fff;
   cursor: pointer;
@@ -4646,19 +4649,20 @@ label {
 
 .andp-datepicker-container .andp-header select {
   border: 0;
+  padding: 0 5px;
   font-size: 14px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  background-color: #cccccc;
+  background-color: #e6e6e6;
 }
 
 .andp-datepicker-container .andp-header select.andp-month-select {
-  width: 75px;
-  margin-right: 5px;
+  border-left: 1px solid #cccccc;
+  border-right: 1px solid #cccccc;
 }
 
 .andp-datepicker-container .andp-header select.andp-year-select {
-  width: 75px;
+  border-right: 1px solid #cccccc;
 }
 
 .andp-datepicker-container .andp-header .andp-prev {
@@ -5184,6 +5188,7 @@ to layouts.
   /* undo control */
   /* back-forward control */
   /* street-dimension control */
+  /* total-recodings-control */
   /* blue-button-control */
   /* blue-box-draggable */
   /* zoom control */
@@ -6287,6 +6292,29 @@ to layouts.
 
 .cnt .cnt-map #street-dimension-control div:not(:last-child) {
   border-right: 1px solid #cccccc;
+}
+
+.cnt .cnt-map #total-recodings-control {
+  right: 70px;
+  bottom: 30px;
+  height: 38px;
+  width: 258px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 17px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 1;
+  position: absolute;
+  border-radius: 4px;
+  background-color: #fff;
+  -webkit-box-shadow: 0 0 4px gray;
+          box-shadow: 0 0 4px gray;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .cnt .cnt-map #blue-button-control {

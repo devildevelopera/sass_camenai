@@ -14,11 +14,12 @@
     position: absolute;
     background: lighten($black, 95%);
     .andp-header {
+        display: grid;
+        grid-template-columns: 26.2px auto auto 26.2px;
         background-color: lighten($black, 90%);
         button {
             border: 0;
             padding: 0;
-            width: 45px;
             margin-top: 0;
             color: $white;
             cursor: pointer;
@@ -30,15 +31,16 @@
         }
         select {
             border: 0;
+            padding: 0 5px;
             font-size: 14px;
             box-sizing: border-box;
-            background-color: lighten($black, 80%);
+            background-color: lighten($black, 90%);
             &.andp-month-select {
-                width: 75px;
-                margin-right: 5px;
+                border-left: solidBlackBorder();
+                border-right: solidBlackBorder();
             }
             &.andp-year-select {
-                width: 75px;
+                border-right: solidBlackBorder();
             }
         }
         .andp-prev {

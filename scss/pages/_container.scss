@@ -858,6 +858,18 @@
                 }
             }
         }
+        /* total-recodings-control */
+        #total-recodings-control {
+            right: 70px;
+            bottom: 30px;
+            height: 38px;
+            width: 258px;
+            display: flex;
+            font-size: 17px;
+            align-items: center;
+            @include mapControlBox;
+            justify-content: center;
+        }
         /* blue-button-control */
         #blue-button-control {
             right: 20px;
