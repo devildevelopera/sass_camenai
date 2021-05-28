@@ -58,50 +58,6 @@
                 <img src="imgs/1x/side-menu-close-icon.png" />
             </div>
             <ul>
-                <li class="accordionPOI">
-                    <div class="accordion" id="accordionPOI">
-                        <div class="card">
-                            <div class="card-head" id="headingPOI">
-                                <h2 class="mb-0 collapsed" data-toggle="collapse" data-target="#collapsePOI" aria-expanded="false" aria-controls="collapsePOI">
-                                    <div class="menu-icon"><img src="imgs/1x/poi.png" /></div>Point of Interest
-                                </h2>
-                            </div>
-                            <div id="collapsePOI" class="collapse" aria-labelledby="headingPOI" data-parent="#accordionPOI">
-                                <div class="card-body">
-                                    <ul>
-                                        <li>
-                                            <div class="search-POI">
-                                                <img src="imgs/1x/bookmark-search.png" />
-                                                <input placeholder="Search">
-                                            </div>
-                                        </li>
-                                        <li>Utrecht</li>
-                                        <li>Amsterdam</li>
-                                        <li>Neighborhood A</li>
-                                        <li>Neighborhood B</li>
-                                        <li>Street A nr 3</li>
-                                        <li>Street A nr 8</li>
-                                        <li>Street B nr 6</li>
-                                        <li>Street B nr 17</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li class="bookmarks">
-                    <div class="menu-icon"><img src="imgs/1x/bookmark.png" /></div>
-                    <span class="menu-title">Bookmarks</span>
-                </li>
-                <li class="detections">
-                    <div class="menu-icon"><img src="imgs/1x/detections.png" /></div><span class="menu-title">Detections</span>
-                    <div class="pretty p-smooth p-default p-round">
-                        <input type="checkbox" />
-                        <div class="state p-success-o">
-                            <label></label>
-                        </div>
-                    </div>
-                </li>
                 <li class="accordionImgRecording">
                     <div class="accordion" id="accordionImgRecording">
                         <div class="card">
@@ -119,7 +75,7 @@
                                                     <div class="card-head" id="headingImgRecordingTimeRange">
                                                         <h2 class="mb-0 collapsed" data-toggle="collapse" data-target="#collapseImgRecordingTimeRange" aria-expanded="false" aria-controls="collapseImgRecordingTimeRange">
                                                             <div class="menu-icon"><img src="imgs/1x/clock.png" /></div>
-                                                            Range
+                                                            Time Range
                                                         </h2>
                                                     </div>
                                                     <div id="collapseImgRecordingTimeRange" class="collapse" aria-labelledby="headingImgRecordingTimeRange" data-parent="#accordionImgRecordingTimeRange">
@@ -151,12 +107,6 @@
                                                                     <span>Image Quality</span>
                                                                 </div>
                                                                 <div>
-                                                                    <div class="pretty p-smooth p-default p-round">
-                                                                        <input type="checkbox" />
-                                                                        <div class="state p-success-o">
-                                                                            <label></label>
-                                                                        </div>
-                                                                    </div>
                                                                     <input id="image-quality-horizontal-slider" type="text" data-slider-min="0" data-slider-max="100" data-slider-step="10" data-slider-value="25" />
                                                                 </div>
                                                             </div>
@@ -166,12 +116,6 @@
                                                                     <span>GPS Accuracy</span>
                                                                 </div>
                                                                 <div>
-                                                                    <div class="pretty p-smooth p-default p-round">
-                                                                        <input type="checkbox" />
-                                                                        <div class="state p-success-o">
-                                                                            <label></label>
-                                                                        </div>
-                                                                    </div>
                                                                     <input id="gps-accuracy-horizontal-slider" type="text" data-slider-min="0" data-slider-max="100" data-slider-step="10" data-slider-value="25" />
                                                                 </div>
                                                             </div>
@@ -217,7 +161,7 @@
                                                                 <div>
                                                                     <div class="pretty p-smooth p-default p-round">
                                                                         <input type="checkbox" />
-                                                                        <div class="state p-success-o">
+                                                                        <div class="state p-danger-o">
                                                                             <label></label>
                                                                         </div>
                                                                     </div>
@@ -227,7 +171,7 @@
                                                             <div class="image-filter-item">
                                                                 <div>
                                                                     <div class="menu-icon"><img src="imgs/1x/reload-damage.png" /></div>
-                                                                    <span>Reload Damage</span>
+                                                                    <span>Road Damage</span>
                                                                 </div>
                                                                 <div>
                                                                     <div class="pretty p-smooth p-default p-round">
@@ -247,7 +191,7 @@
                                                                 <div>
                                                                     <div class="pretty p-smooth p-default p-round">
                                                                         <input type="checkbox" />
-                                                                        <div class="state p-success-o">
+                                                                        <div class="state">
                                                                             <label></label>
                                                                         </div>
                                                                     </div>
@@ -262,7 +206,7 @@
                                                                 <div>
                                                                     <div class="pretty p-smooth p-default p-round">
                                                                         <input type="checkbox" />
-                                                                        <div class="state p-success-o">
+                                                                        <div class="state">
                                                                             <label></label>
                                                                         </div>
                                                                     </div>
@@ -277,7 +221,7 @@
                                                                 <div>
                                                                     <div class="pretty p-smooth p-default p-round">
                                                                         <input type="checkbox" />
-                                                                        <div class="state p-success-o">
+                                                                        <div class="state p-info-o">
                                                                             <label></label>
                                                                         </div>
                                                                     </div>
@@ -292,7 +236,7 @@
                                                                 <div>
                                                                     <div class="pretty p-smooth p-default p-round">
                                                                         <input type="checkbox" />
-                                                                        <div class="state p-success-o">
+                                                                        <div class="state">
                                                                             <label></label>
                                                                         </div>
                                                                     </div>
@@ -307,7 +251,7 @@
                                                                 <div>
                                                                     <div class="pretty p-smooth p-default p-round">
                                                                         <input type="checkbox" />
-                                                                        <div class="state p-success-o">
+                                                                        <div class="state">
                                                                             <label></label>
                                                                         </div>
                                                                     </div>
@@ -322,7 +266,7 @@
                                                                 <div>
                                                                     <div class="pretty p-smooth p-default p-round">
                                                                         <input type="checkbox" />
-                                                                        <div class="state p-success-o">
+                                                                        <div class="state">
                                                                             <label></label>
                                                                         </div>
                                                                     </div>
@@ -337,7 +281,7 @@
                                                                 <div>
                                                                     <div class="pretty p-smooth p-default p-round">
                                                                         <input type="checkbox" />
-                                                                        <div class="state p-success-o">
+                                                                        <div class="state p-warning-o">
                                                                             <label></label>
                                                                         </div>
                                                                     </div>
@@ -355,11 +299,54 @@
                         </div>
                     </div>
                 </li>
+                <li class="accordionPOI">
+                    <div class="accordion" id="accordionPOI">
+                        <div class="card">
+                            <div class="card-head" id="headingPOI">
+                                <h2 class="mb-0 collapsed" data-toggle="collapse" data-target="#collapsePOI" aria-expanded="false" aria-controls="collapsePOI">
+                                    <div class="menu-icon"><img src="imgs/1x/poi.png" /></div>Points of Interest
+                                </h2>
+                            </div>
+                            <div id="collapsePOI" class="collapse" aria-labelledby="headingPOI" data-parent="#accordionPOI">
+                                <div class="card-body">
+                                    <ul>
+                                        <li>
+                                            <div class="search-POI">
+                                                <img src="imgs/1x/bookmark-search.png" />
+                                                <input placeholder="Search">
+                                            </div>
+                                        </li>
+                                        <li>Utrecht</li>
+                                        <li>Amsterdam</li>
+                                        <li>Neighborhood A</li>
+                                        <li>Neighborhood B</li>
+                                        <li>Street A nr 3</li>
+                                        <li>Street A nr 8</li>
+                                        <li>Street B nr 6</li>
+                                        <li>Street B nr 17</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
                 <li class="point-of-interest">
                     <div class="menu-icon"><img src="imgs/1x/save-poi.png" /></div><span class="menu-title"> Save Point
-                        of
-                        Interest</span>
+                        of Interest</span>
                 </li>
+                <li class="bookmarks">
+                    <div class="menu-icon"><img src="imgs/1x/bookmark.png" /></div>
+                    <span class="menu-title">Bookmarks</span>
+                </li>
+                <!-- <li class="detections">
+                    <div class="menu-icon"><img src="imgs/1x/detections.png" /></div><span class="menu-title">Detections</span>
+                    <div class="pretty p-smooth p-default p-round">
+                        <input type="checkbox" />
+                        <div class="state">
+                            <label></label>
+                        </div>
+                    </div>
+                </li> -->
                 <li class="download-data">
                     <div class="menu-icon"><img src="imgs/1x/download.png" /></div><span class="menu-title">Download
                         Data</span>
@@ -501,7 +488,7 @@
                         <span>Tuterial Mode</span>
                         <div class="pretty p-smooth p-default p-round mr-0">
                             <input type="checkbox" />
-                            <div class="state p-success-o">
+                            <div class="state">
                                 <label></label>
                             </div>
                         </div>
@@ -572,7 +559,7 @@
                 <div>
                     <div>
                         <span>Set search as default</span>
-                        <div class="pretty p-smooth p-default p-round mr-0">
+                        <div class="pretty p-smooth p-default p-round">
                             <input type="checkbox" />
                             <div class="state">
                                 <label></label>
@@ -581,35 +568,33 @@
                     </div>
                     <div>
                         <span>Auto Play - Time per image</span>
-                        <div class="pretty p-smooth p-default p-round mr-0">
-                            <input type="checkbox" />
-                            <div class="state">
-                                <label></label>
-                            </div>
+                        <div>
+                            <!-- <span>Seconds</span> -->
+                            <div><img src="imgs/1x/settings-arrow-left.png"></div>
+                            <div>1</div>
+                            <div><img src="imgs/1x/settings-arrow-right.png"></div>
                         </div>
                     </div>
                     <div>
                         <span>Fast Forward steps</span>
-                        <div class="pretty p-smooth p-default p-round mr-0">
-                            <input type="checkbox" />
-                            <div class="state">
-                                <label></label>
-                            </div>
+                        <div>
+                            <div><img src="imgs/1x/settings-arrow-left.png"></div>
+                            <div>5</div>
+                            <div><img src="imgs/1x/settings-arrow-right.png"></div>
                         </div>
                     </div>
                     <div>
                         <span>Viewing angle</span>
-                        <div class="pretty p-smooth p-default p-round mr-0">
-                            <input type="checkbox" />
-                            <div class="state">
-                                <label></label>
-                            </div>
+                        <div>
+                            <div><img src="imgs/1x/settings-arrow-left.png"></div>
+                            <div>10°</div>
+                            <div><img src="imgs/1x/settings-arrow-right.png"></div>
                         </div>
                     </div>
                     <div>
                         <span>Snap to image</span>
-                        <div class="pretty p-smooth p-default p-round mr-0">
-                            <input type="checkbox" />
+                        <div class="pretty p-smooth p-default p-round">
+                            <input type="checkbox" checked />
                             <div class="state">
                                 <label></label>
                             </div>
@@ -617,27 +602,192 @@
                     </div>
                 </div>
                 <div>
-                    <div>F.A.Q.</div>
+                    <div>Detections</div>
                     <div>
                         <div>
-                            <span>Snap to image</span>
-                            <div class="pretty p-smooth p-default p-round mr-0">
-                                <input type="checkbox" />
-                                <div class="state">
-                                    <label></label>
+                            <div>
+                                <div class="pretty p-smooth p-default p-round">
+                                    <input type="checkbox" checked />
+                                    <div class="state">
+                                        <label></label>
+                                    </div>
+                                </div>
+                                <span>Trash</span>
+                            </div>
+                            <div>
+                                <span>Change Color</span>
+                                <div class="pretty p-smooth p-default p-round">
+                                    <input type="checkbox" checked />
+                                    <div class="state  p-danger-o">
+                                        <label></label>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         <div>
-                            <span>Snap to image</span>
-                            <div class="pretty p-smooth p-default p-round mr-0">
-                                <input type="checkbox" />
-                                <div class="state">
-                                    <label></label>
+                            <div>
+                                <div class="pretty p-smooth p-default p-round">
+                                    <input type="checkbox" checked />
+                                    <div class="state">
+                                        <label></label>
+                                    </div>
+                                </div>
+                                <span>Road Damage</span>
+                            </div>
+                            <div>
+                                <span>Change Color</span>
+                                <div class="pretty p-smooth p-default p-round">
+                                    <input type="checkbox" checked />
+                                    <div class="state p-success-o">
+                                        <label></label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                <div class="pretty p-smooth p-default p-round">
+                                    <input type="checkbox" />
+                                    <div class="state">
+                                        <label></label>
+                                    </div>
+                                </div>
+                                <span>Vegetation</span>
+                            </div>
+                            <div>
+                                <span>Change Color</span>
+                                <div class="pretty p-smooth p-default p-round">
+                                    <input type="checkbox" />
+                                    <div class="state">
+                                        <label></label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                <div class="pretty p-smooth p-default p-round">
+                                    <input type="checkbox" />
+                                    <div class="state">
+                                        <label></label>
+                                    </div>
+                                </div>
+                                <span>Street furniture</span>
+                            </div>
+                            <div>
+                                <span>Change Color</span>
+                                <div class="pretty p-smooth p-default p-round">
+                                    <input type="checkbox" />
+                                    <div class="state">
+                                        <label></label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                <div class="pretty p-smooth p-default p-round">
+                                    <input type="checkbox" checked />
+                                    <div class="state">
+                                        <label></label>
+                                    </div>
+                                </div>
+                                <span>Road Paint</span>
+                            </div>
+                            <div>
+                                <span>Change Color</span>
+                                <div class="pretty p-smooth p-default p-round">
+                                    <input type="checkbox" checked />
+                                    <div class="state p-info-o">
+                                        <label></label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                <div class="pretty p-smooth p-default p-round">
+                                    <input type="checkbox" />
+                                    <div class="state">
+                                        <label></label>
+                                    </div>
+                                </div>
+                                <span>Canals</span>
+                            </div>
+                            <div>
+                                <span>Change Color</span>
+                                <div class="pretty p-smooth p-default p-round">
+                                    <input type="checkbox" />
+                                    <div class="state">
+                                        <label></label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                <div class="pretty p-smooth p-default p-round">
+                                    <input type="checkbox" />
+                                    <div class="state">
+                                        <label></label>
+                                    </div>
+                                </div>
+                                <span>Faces</span>
+                            </div>
+                            <div>
+                                <span>Change Color</span>
+                                <div class="pretty p-smooth p-default p-round">
+                                    <input type="checkbox" />
+                                    <div class="state">
+                                        <label></label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                <div class="pretty p-smooth p-default p-round">
+                                    <input type="checkbox" />
+                                    <div class="state">
+                                        <label></label>
+                                    </div>
+                                </div>
+                                <span>Licence-Plates</span>
+                            </div>
+                            <div>
+                                <span>Change Color</span>
+                                <div class="pretty p-smooth p-default p-round">
+                                    <input type="checkbox" />
+                                    <div class="state">
+                                        <label></label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                <div class="pretty p-smooth p-default p-round">
+                                    <input type="checkbox" checked />
+                                    <div class="state">
+                                        <label></label>
+                                    </div>
+                                </div>
+                                <span>Graffiti</span>
+                            </div>
+                            <div>
+                                <span>Change Color</span>
+                                <div class="pretty p-smooth p-default p-round">
+                                    <input type="checkbox" checked />
+                                    <div class="state p-warning-o">
+                                        <label></label>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                </div>
+                <div>
+                    <button>Save Changes</button>
                 </div>
             </div>
 

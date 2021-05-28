@@ -376,13 +376,13 @@ $(() => {
 
         var template = '<div class="andp-datepicker-container" data-cal_id="' + cal_id + '" >';
         template += '<div class = "andp-header">';
-        template += '<button type = "button"  class = "andp-prev andp-change-months"> &#10094; </button>';
+        template += '<button type = "button"  class = "andp-prev andp-change-months"> <img src="imgs/1x/calendar-arrow-left.png"> </button>';
         template += '<select class = "andp-month-select"> </select>';
         template += '<select class = "andp-year-select"> </select>';
-        template += '<button type = "button" class = "andp-next andp-change-months"> &#10095; </button> ';
+        template += '<button type = "button" class = "andp-next andp-change-months"> <img src="imgs/1x/calendar-arrow-right.png"> </button> ';
         template += '</div>';
         template += '<div class="andp-body">';
-        template += '<div class = "andp-days-names"> <div> SUN </div> <div> MON </div> <div> TUE </div> <div> WED </div> <div> THU </div> <div> FRI </div> <div> SAT </div> </div>';
+        template += '<div class = "andp-days-names"> <div> Sun </div> <div> Mon </div> <div> Tue </div> <div> Wed </div> <div> Thu </div> <div> Fri </div> <div> Sat </div> </div>';
         template += '<div class = "andp-days-numbers"> </div>';
 
         if (!single_datepicker) {

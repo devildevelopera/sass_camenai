@@ -96,7 +96,7 @@ This file is used to contain all vendor imports.
 }
 
 .pretty .state label:before {
-  border-color: #bdc3c7;
+  border-color: #666666;
 }
 
 .pretty .state.p-is-hover, .pretty .state.p-is-indeterminate {
@@ -315,23 +315,23 @@ This file is used to contain all vendor imports.
 
 @-webkit-keyframes pulse {
   0% {
-    -webkit-box-shadow: 0px 0px 0px 0px #bdc3c7;
-            box-shadow: 0px 0px 0px 0px #bdc3c7;
+    -webkit-box-shadow: 0px 0px 0px 0px #666666;
+            box-shadow: 0px 0px 0px 0px #666666;
   }
   100% {
-    -webkit-box-shadow: 0px 0px 0px 1.5em rgba(189, 195, 199, 0);
-            box-shadow: 0px 0px 0px 1.5em rgba(189, 195, 199, 0);
+    -webkit-box-shadow: 0px 0px 0px 1.5em rgba(102, 102, 102, 0);
+            box-shadow: 0px 0px 0px 1.5em rgba(102, 102, 102, 0);
   }
 }
 
 @keyframes pulse {
   0% {
-    -webkit-box-shadow: 0px 0px 0px 0px #bdc3c7;
-            box-shadow: 0px 0px 0px 0px #bdc3c7;
+    -webkit-box-shadow: 0px 0px 0px 0px #666666;
+            box-shadow: 0px 0px 0px 0px #666666;
   }
   100% {
-    -webkit-box-shadow: 0px 0px 0px 1.5em rgba(189, 195, 199, 0);
-            box-shadow: 0px 0px 0px 1.5em rgba(189, 195, 199, 0);
+    -webkit-box-shadow: 0px 0px 0px 1.5em rgba(102, 102, 102, 0);
+            box-shadow: 0px 0px 0px 1.5em rgba(102, 102, 102, 0);
   }
 }
 
@@ -346,7 +346,7 @@ This file is used to contain all vendor imports.
 }
 
 .pretty.p-default input:checked ~ .state label:after {
-  background-color: #bdc3c7 !important;
+  background-color: #666666 !important;
 }
 
 .pretty.p-default.p-thick .state label:before, .pretty.p-default.p-thick .state label:after {
@@ -467,7 +467,7 @@ This file is used to contain all vendor imports.
 
 .pretty.p-switch .state:before {
   content: '';
-  border: 1px solid #bdc3c7;
+  border: 1px solid #666666;
   border-radius: 60px;
   width: 2em;
   -webkit-box-sizing: unset;
@@ -496,7 +496,7 @@ This file is used to contain all vendor imports.
 }
 
 .pretty.p-switch .state label:after {
-  background-color: #bdc3c7 !important;
+  background-color: #666666 !important;
 }
 
 .pretty.p-switch input:checked ~ .state:before {
@@ -528,7 +528,7 @@ This file is used to contain all vendor imports.
 
 .pretty.p-switch.p-slim .state:before {
   height: 0.1em;
-  background: #bdc3c7 !important;
+  background: #666666 !important;
   top: calc(50% - 0.1em);
 }
 
@@ -581,7 +581,7 @@ This file is used to contain all vendor imports.
 }
 
 .pretty.p-toggle .state.p-off .icon {
-  color: #bdc3c7;
+  color: #666666;
 }
 
 .pretty.p-toggle input:checked ~ .state.p-on {
@@ -4050,7 +4050,9 @@ helpers or functions. They have no direct output.
 #808080 = 50% black =   lighten($black, 50%);
 #999999 = 40% black =   lighten($black, 60%);
 #B3B3B3 = 30% black =   lighten($black, 70%);
-#CCCCCC = 20% black =   lighten($black, 80%)*/
+#CCCCCC = 20% black =   lighten($black, 80%);
+#E6E6E6 = 10% black =   lighten($black, 90%);
+#F2F2F2 = 5% black =   lighten($black, 95%); */
 /* Extra small devices (phones, 600px and down) */
 /* Small devices (portrait tablets and large phones, 600px and up) */
 /* Medium devices (landscape tablets, 768px and up) */
@@ -4607,22 +4609,24 @@ label {
 }
 
 .date-range-picker-input {
-  width: 256px;
+  border: none;
+  width: 246px;
+  height: 29px;
   text-indent: 5px;
-  border: 1px solid #cccccc;
+  font-size: 12.47px;
+  background-color: #f2f2f2;
 }
 
 .andp-datepicker-container {
-  width: 256px;
+  width: 246px;
   z-index: 1000;
   overflow: hidden;
   position: absolute;
-  background: #fff;
+  background: #f2f2f2;
 }
 
 .andp-datepicker-container .andp-header {
-  padding: 5px 0px;
-  background: gray;
+  background-color: #e6e6e6;
 }
 
 .andp-datepicker-container .andp-header button {
@@ -4645,15 +4649,16 @@ label {
   font-size: 14px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  background-color: #cccccc;
 }
 
 .andp-datepicker-container .andp-header select.andp-month-select {
-  width: 96px;
+  width: 75px;
   margin-right: 5px;
 }
 
 .andp-datepicker-container .andp-header select.andp-year-select {
-  width: 65px;
+  width: 75px;
 }
 
 .andp-datepicker-container .andp-header .andp-prev {
@@ -4667,15 +4672,15 @@ label {
 .andp-datepicker-container .andp-body {
   border-top: 0;
   padding: 0 8px 8px;
-  border: solid 1px #cccccc;
 }
 
 .andp-datepicker-container .andp-body .andp-days-names div {
-  width: 34px;
+  width: 32px;
+  height: 20px;
   float: left;
-  font-size: 12px;
-  padding: 10px 0;
+  font-weight: bold;
   text-align: center;
+  font-size: 10.45px;
   color: gray;
 }
 
@@ -4691,14 +4696,13 @@ label {
 .andp-datepicker-container .andp-body .andp-days-numbers .andp-column div {
   width: 34px;
   height: 28px;
-  color: #000;
-  font-size: 10px;
+  font-size: 11.25px;
   text-align: center;
   display: table-cell;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   vertical-align: middle;
-  border: 1px solid #f1f1f1;
+  color: #4d4d4d;
 }
 
 .andp-datepicker-container .andp-body .andp-days-numbers .andp-column div.day {
@@ -4706,9 +4710,8 @@ label {
 }
 
 .andp-datepicker-container .andp-body .andp-days-numbers .andp-column div.selected {
-  color: #fff;
-  background: gray !important;
-  border-color: gray !important;
+  background: #cccccc !important;
+  border-color: #cccccc !important;
 }
 
 .andp-datepicker-container .andp-body .andp-days-numbers .andp-column div .andp-column div.soft-select {
@@ -4726,7 +4729,6 @@ label {
 }
 
 .andp-datepicker-container .andp-body .andp-action-btns {
-  margin-top: 7px;
   text-align: right;
 }
 
@@ -4938,8 +4940,9 @@ to layouts.
 .cnt .cnt-settings {
   padding: 8px;
   width: 325px;
-  overflow-y: auto;
+  overflow-y: scroll;
   overflow-x: hidden;
+  padding-right: 30px;
   border: 1px solid #cccccc;
   height: calc(100vh - 100px);
 }
@@ -4965,7 +4968,7 @@ to layouts.
   border-bottom: 1px solid #cccccc;
 }
 
-.cnt .cnt-settings ul li.bookmarks, .cnt .cnt-settings ul li.detections, .cnt .cnt-settings ul li.point-of-interest, .cnt .cnt-settings ul li.download-data {
+.cnt .cnt-settings ul li.bookmarks, .cnt .cnt-settings ul li.point-of-interest, .cnt .cnt-settings ul li.download-data {
   height: 35px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4976,8 +4979,9 @@ to layouts.
 }
 
 .cnt .cnt-settings ul li .menu-icon {
-  width: 35px;
+  width: 30px;
   height: 100%;
+  margin-right: 2.5px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4997,62 +5001,6 @@ to layouts.
   font-weight: 500;
 }
 
-.cnt .cnt-settings ul li.accordionPOI #accordionPOI .card .card-head h2 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-}
-
-.cnt .cnt-settings ul li.accordionPOI #accordionPOI .card ul {
-  padding-left: 8px;
-  margin-left: 17.5px;
-  border-left: 1px solid #cccccc;
-}
-
-.cnt .cnt-settings ul li.accordionPOI #accordionPOI .card ul li:first-child {
-  background-color: transparent;
-}
-
-.cnt .cnt-settings ul li.accordionPOI #accordionPOI .card ul li .search-POI {
-  position: relative;
-  margin: 8px 8px 8px 0;
-}
-
-.cnt .cnt-settings ul li.accordionPOI #accordionPOI .card ul li .search-POI img {
-  top: 10px;
-  right: 7px;
-  padding: 0;
-  position: absolute;
-  color: gray;
-}
-
-.cnt .cnt-settings ul li.accordionPOI #accordionPOI .card ul li .search-POI input {
-  width: 100%;
-  text-indent: 5px;
-  padding-right: 25px;
-  border: 1px solid #cccccc;
-  border-radius: 4px;
-  -moz-border-radius: 4px;
-  -webkit-border-radius: 4px;
-}
-
-.cnt .cnt-settings ul li.detections {
-  position: relative;
-}
-
-.cnt .cnt-settings ul li.detections .pretty {
-  right: 6px;
-  margin-right: 0;
-  position: absolute;
-}
-
 .cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording .card .card-head h2 {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -5067,7 +5015,7 @@ to layouts.
 }
 
 .cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording .card ul {
-  margin-left: 17.5px;
+  margin-left: 15px;
   border-left: 1px solid #cccccc;
 }
 
@@ -5090,7 +5038,7 @@ to layouts.
 }
 
 .cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording .card ul li #accordionImgRecordingTimeRange .card-body {
-  height: 370px;
+  height: 305px;
   padding-left: 10px;
 }
 
@@ -5157,7 +5105,7 @@ to layouts.
 }
 
 .cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording .card ul li #accordionImgRecordingImageFilter .image-filter-item > div:last-child .pretty, .cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording .card ul li #accordionImgRecordingDetections .image-filter-item > div:last-child .pretty {
-  margin-right: 20px;
+  margin-right: 17px;
 }
 
 .cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording .card ul li #accordionImgRecordingImageFilter #accordionImgRecordingImageFilterInput .card-body, .cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording .card ul li #accordionImgRecordingDetections #accordionImgRecordingImageFilterInput .card-body {
@@ -5166,6 +5114,52 @@ to layouts.
 
 .cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording .card ul li #accordionImgRecordingDetections .card .card-head {
   margin-bottom: 5px;
+}
+
+.cnt .cnt-settings ul li.accordionPOI #accordionPOI .card .card-head h2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.cnt .cnt-settings ul li.accordionPOI #accordionPOI .card ul {
+  padding-left: 8px;
+  margin-left: 15px;
+  border-left: 1px solid #cccccc;
+}
+
+.cnt .cnt-settings ul li.accordionPOI #accordionPOI .card ul li:first-child {
+  background-color: transparent;
+}
+
+.cnt .cnt-settings ul li.accordionPOI #accordionPOI .card ul li .search-POI {
+  position: relative;
+  margin: 8px 8px 8px 0;
+}
+
+.cnt .cnt-settings ul li.accordionPOI #accordionPOI .card ul li .search-POI img {
+  top: 10px;
+  right: 7px;
+  padding: 0;
+  position: absolute;
+  color: gray;
+}
+
+.cnt .cnt-settings ul li.accordionPOI #accordionPOI .card ul li .search-POI input {
+  width: 100%;
+  text-indent: 5px;
+  padding-right: 25px;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
 }
 
 .cnt .cnt-map {
@@ -5623,7 +5617,7 @@ to layouts.
 }
 
 .cnt .cnt-map #setting-box-draggable > div:nth-child(2) {
-  padding: 10px 0;
+  padding: 15px 0;
   border-bottom: 1px solid #cccccc;
 }
 
@@ -5646,19 +5640,52 @@ to layouts.
 }
 
 .cnt .cnt-map #setting-box-draggable > div:nth-child(2) > div:not(:last-child) {
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
-.cnt .cnt-map #setting-box-draggable > div:last-child {
+.cnt .cnt-map #setting-box-draggable > div:nth-child(2) > div:nth-child(2) > div, .cnt .cnt-map #setting-box-draggable > div:nth-child(2) > div:nth-child(3) > div, .cnt .cnt-map #setting-box-draggable > div:nth-child(2) > div:nth-child(4) > div {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 20px 28.1px 20px;
+      grid-template-columns: 20px 28.1px 20px;
+}
+
+.cnt .cnt-map #setting-box-draggable > div:nth-child(2) > div:nth-child(2) > div > div, .cnt .cnt-map #setting-box-draggable > div:nth-child(2) > div:nth-child(3) > div > div, .cnt .cnt-map #setting-box-draggable > div:nth-child(2) > div:nth-child(4) > div > div {
+  height: 20.5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.cnt .cnt-map #setting-box-draggable > div:nth-child(2) > div:nth-child(2) > div > div:nth-child(2), .cnt .cnt-map #setting-box-draggable > div:nth-child(2) > div:nth-child(3) > div > div:nth-child(2), .cnt .cnt-map #setting-box-draggable > div:nth-child(2) > div:nth-child(4) > div > div:nth-child(2) {
+  border: 1px solid #cccccc;
+}
+
+.cnt .cnt-map #setting-box-draggable > div:nth-child(2) > div:nth-child(2) > div > div:not(:nth-child(2)), .cnt .cnt-map #setting-box-draggable > div:nth-child(2) > div:nth-child(3) > div > div:not(:nth-child(2)), .cnt .cnt-map #setting-box-draggable > div:nth-child(2) > div:nth-child(4) > div > div:not(:nth-child(2)) {
+  cursor: pointer;
+}
+
+.cnt .cnt-map #setting-box-draggable > div:nth-child(2) > div:first-child > div, .cnt .cnt-map #setting-box-draggable > div:nth-child(2) > div:last-child > div {
+  margin-right: 26px;
+}
+
+.cnt .cnt-map #setting-box-draggable > div:nth-child(3) {
   padding: 10px 0;
+  border-bottom: 1px solid #cccccc;
 }
 
-.cnt .cnt-map #setting-box-draggable > div:last-child > div:first-child {
-  margin-bottom: 5px;
+.cnt .cnt-map #setting-box-draggable > div:nth-child(3) > div:first-child {
+  margin-bottom: 15px;
   color: #333333;
 }
 
-.cnt .cnt-map #setting-box-draggable > div:last-child > div:last-child > div {
+.cnt .cnt-map #setting-box-draggable > div:nth-child(3) > div:last-child > div {
   font-size: 14px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -5676,8 +5703,48 @@ to layouts.
           justify-content: space-between;
 }
 
-.cnt .cnt-map #setting-box-draggable > div:last-child > div:last-child > div:not(:last-child) {
-  margin-bottom: 10px;
+.cnt .cnt-map #setting-box-draggable > div:nth-child(3) > div:last-child > div:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.cnt .cnt-map #setting-box-draggable > div:nth-child(3) > div:last-child > div > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.cnt .cnt-map #setting-box-draggable > div:nth-child(3) > div:last-child > div > div:last-child span {
+  font-size: 10px;
+  color: #999999;
+}
+
+.cnt .cnt-map #setting-box-draggable > div:nth-child(3) > div:last-child > div > div > div:first-child {
+  margin-right: 12px;
+}
+
+.cnt .cnt-map #setting-box-draggable > div:nth-child(3) > div:last-child > div > div > div:last-child {
+  margin-left: 12px;
+  margin-right: 26px;
+}
+
+.cnt .cnt-map #setting-box-draggable > div:last-child button {
+  width: 128px;
+  height: 33px;
+  color: #fff;
+  margin-top: 15px;
+  border-radius: 4px;
+  background-color: #666666;
+}
+
+.cnt .cnt-map #setting-box-draggable > div:last-child button:active {
+  background-color: #4d4d4d;
 }
 
 .cnt .cnt-map #report-issue-btn {

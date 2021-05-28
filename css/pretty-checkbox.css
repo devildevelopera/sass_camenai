@@ -55,7 +55,7 @@
 }
 
 .pretty .state label:before {
-  border-color: #bdc3c7;
+  border-color: #666666;
 }
 
 .pretty .state.p-is-hover, .pretty .state.p-is-indeterminate {
@@ -274,23 +274,23 @@
 
 @-webkit-keyframes pulse {
   0% {
-    -webkit-box-shadow: 0px 0px 0px 0px #bdc3c7;
-            box-shadow: 0px 0px 0px 0px #bdc3c7;
+    -webkit-box-shadow: 0px 0px 0px 0px #666666;
+            box-shadow: 0px 0px 0px 0px #666666;
   }
   100% {
-    -webkit-box-shadow: 0px 0px 0px 1.5em rgba(189, 195, 199, 0);
-            box-shadow: 0px 0px 0px 1.5em rgba(189, 195, 199, 0);
+    -webkit-box-shadow: 0px 0px 0px 1.5em rgba(102, 102, 102, 0);
+            box-shadow: 0px 0px 0px 1.5em rgba(102, 102, 102, 0);
   }
 }
 
 @keyframes pulse {
   0% {
-    -webkit-box-shadow: 0px 0px 0px 0px #bdc3c7;
-            box-shadow: 0px 0px 0px 0px #bdc3c7;
+    -webkit-box-shadow: 0px 0px 0px 0px #666666;
+            box-shadow: 0px 0px 0px 0px #666666;
   }
   100% {
-    -webkit-box-shadow: 0px 0px 0px 1.5em rgba(189, 195, 199, 0);
-            box-shadow: 0px 0px 0px 1.5em rgba(189, 195, 199, 0);
+    -webkit-box-shadow: 0px 0px 0px 1.5em rgba(102, 102, 102, 0);
+            box-shadow: 0px 0px 0px 1.5em rgba(102, 102, 102, 0);
   }
 }
 
@@ -305,7 +305,7 @@
 }
 
 .pretty.p-default input:checked ~ .state label:after {
-  background-color: #bdc3c7 !important;
+  background-color: #666666 !important;
 }
 
 .pretty.p-default.p-thick .state label:before, .pretty.p-default.p-thick .state label:after {
@@ -426,7 +426,7 @@
 
 .pretty.p-switch .state:before {
   content: '';
-  border: 1px solid #bdc3c7;
+  border: 1px solid #666666;
   border-radius: 60px;
   width: 2em;
   -webkit-box-sizing: unset;
@@ -455,7 +455,7 @@
 }
 
 .pretty.p-switch .state label:after {
-  background-color: #bdc3c7 !important;
+  background-color: #666666 !important;
 }
 
 .pretty.p-switch input:checked ~ .state:before {
@@ -487,7 +487,7 @@
 
 .pretty.p-switch.p-slim .state:before {
   height: 0.1em;
-  background: #bdc3c7 !important;
+  background: #666666 !important;
   top: calc(50% - 0.1em);
 }
 
@@ -540,7 +540,7 @@
 }
 
 .pretty.p-toggle .state.p-off .icon {
-  color: #bdc3c7;
+  color: #666666;
 }
 
 .pretty.p-toggle input:checked ~ .state.p-on {

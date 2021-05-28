@@ -14,8 +14,9 @@
     .cnt-settings {
         padding: 8px;
         width: 325px;
-        overflow-y: auto;
+        overflow-y: scroll;
         overflow-x: hidden;
+        padding-right: 30px;
         border: solidBlackBorder();
         height: calc(100vh - 100px);
         @include maxLGContent {
@@ -35,7 +36,6 @@
                 font-size: 14px;
                 border-bottom: solidBlackBorder();
                 &.bookmarks,
-                &.detections,
                 &.point-of-interest,
                 &.download-data {
                     height: 35px;
@@ -43,56 +43,14 @@
                     align-items: center;
                 }
                 .menu-icon {
-                    width: 35px;
+                    width: 30px;
                     height: 100%;
+                    margin-right: 2.5px;
                     @include displayFlexRow;
                     justify-content: center;
                 }
                 .menu-title {
                     font-weight: 500;
-                }
-                &.accordionPOI {
-                    #accordionPOI .card {
-                        .card-head h2 {
-                            @include displayFlexRow;
-                        }
-                        ul {
-                            padding-left: 8px;
-                            margin-left: 17.5px;
-                            border-left: solidBlackBorder();
-                            li {
-                                &:first-child {
-                                    background-color: transparent;
-                                }
-                                .search-POI {
-                                    position: relative;
-                                    margin: 8px 8px 8px 0;
-                                    img {
-                                        top: 10px;
-                                        right: 7px;
-                                        padding: 0;
-                                        position: absolute;
-                                        color: lighten($black, 50%);
-                                    }
-                                    input {
-                                        width: 100%;
-                                        text-indent: 5px;
-                                        padding-right: 25px;
-                                        border: solidBlackBorder();
-                                        @include searchInputBorderRadius;
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-                &.detections {
-                    position: relative;
-                    .pretty {
-                        right: 6px;
-                        margin-right: 0;
-                        position: absolute;
-                    }
                 }
                 &.accordionImgRecording {
                     #accordionImgRecording .card {
@@ -100,7 +58,7 @@
                             @include displayFlexRow;
                         }
                         ul {
-                            margin-left: 17.5px;
+                            margin-left: 15px;
                             border-left: solidBlackBorder();
                             li {
                                 padding-left: 8px;
@@ -110,7 +68,7 @@
                                         @include displayFlexRow;
                                     }
                                     .card-body {
-                                        height: 370px;
+                                        height: 305px;
                                         padding-left: 10px;
                                     }
                                 }
@@ -139,7 +97,7 @@
                                             display: flex;
                                             align-items: center;
                                             .pretty {
-                                                margin-right: 20px;
+                                                margin-right: 17px;
                                             }
                                         }
                                     }
@@ -159,6 +117,49 @@
                         }
                     }
                 }
+                &.accordionPOI {
+                    #accordionPOI .card {
+                        .card-head h2 {
+                            @include displayFlexRow;
+                        }
+                        ul {
+                            padding-left: 8px;
+                            margin-left: 15px;
+                            border-left: solidBlackBorder();
+                            li {
+                                &:first-child {
+                                    background-color: transparent;
+                                }
+                                .search-POI {
+                                    position: relative;
+                                    margin: 8px 8px 8px 0;
+                                    img {
+                                        top: 10px;
+                                        right: 7px;
+                                        padding: 0;
+                                        position: absolute;
+                                        color: lighten($black, 50%);
+                                    }
+                                    input {
+                                        width: 100%;
+                                        text-indent: 5px;
+                                        padding-right: 25px;
+                                        border: solidBlackBorder();
+                                        @include searchInputBorderRadius;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                // &.detections {
+                //     position: relative;
+                //     .pretty {
+                //         right: 6px;
+                //         margin-right: 0;
+                //         position: absolute;
+                //     }
+                // }
             }
         }
     }
@@ -444,23 +445,50 @@
                     }
                 }
                 &:nth-child(2) {
-                    padding: 10px 0;
+                    padding: 15px 0;
                     border-bottom: solidBlackBorder();
-                    >div {
+                    &>div {
                         font-size: 14px;
                         @include displayFlexRow;
                         color: lighten($black, 20%);
                         justify-content: space-between;
                         &:not(:last-child) {
-                            margin-bottom: 10px;
+                            margin-bottom: 15px;
+                        }
+                        &:nth-child(2),
+                        &:nth-child(3),
+                        &:nth-child(4) {
+                            &>div {
+                                display: grid;
+                                grid-template-columns: 20px 28.1px 20px;
+                                &>div {
+                                    height: 20.5px;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    &:nth-child(2) {
+                                        border: solidBlackBorder();
+                                    }
+                                    &:not(:nth-child(2)) {
+                                        cursor: pointer;
+                                    }
+                                }
+                            }
+                        }
+                        &:first-child,
+                        &:last-child {
+                            &>div {
+                                margin-right: 26px;
+                            }
                         }
                     }
                 }
-                &:last-child {
+                &:nth-child(3) {
                     padding: 10px 0;
+                    border-bottom: solidBlackBorder();
                     >div {
                         &:first-child {
-                            margin-bottom: 5px;
+                            margin-bottom: 15px;
                             color: lighten($black, 20%);
                         }
                         &:last-child {
@@ -470,9 +498,40 @@
                                 color: lighten($black, 20%);
                                 justify-content: space-between;
                                 &:not(:last-child) {
-                                    margin-bottom: 10px;
+                                    margin-bottom: 15px;
+                                }
+                                &>div {
+                                    @include displayFlexRow;
+                                    &:last-child {
+                                        span {
+                                            font-size: 10px;
+                                            color: lighten($black, 60%);
+                                        }
+                                    }
+                                    &>div {
+                                        &:first-child {
+                                            margin-right: 12px;
+                                        }
+                                        &:last-child {
+                                            margin-left: 12px;
+                                            margin-right: 26px;
+                                        }
+                                    }
                                 }
                             }
+                        }
+                    }
+                }
+                &:last-child {
+                    button {
+                        width: 128px;
+                        height: 33px;
+                        color: $white;
+                        margin-top: 15px;
+                        border-radius: 4px;
+                        background-color: lighten($black, 40%);
+                        &:active {
+                            background-color: $basic-black-color;
                         }
                     }
                 }

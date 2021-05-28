@@ -17,4 +17,8 @@ $(() => {
     $("#setting-box-draggable >div:first-child div:last-child img").on('click', () => {
         $("#setting-box-draggable").hide(100);
     });
+
+    $("#setting-box-draggable >div:last-child button").on('click', () => {
+        $("#setting-box-draggable").hide(100);
+    });
 });

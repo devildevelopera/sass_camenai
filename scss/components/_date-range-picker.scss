@@ -1,18 +1,20 @@
 .date-range-picker-input {
-    width: 256px;
+    border: none;
+    width: 246px;
+    height: 29px;
     text-indent: 5px;
-    border: solidBlackBorder();
+    font-size: 12.47px;
+    background-color: lighten($black, 95%);
 }
 
 .andp-datepicker-container {
-    width: 256px;
+    width: 246px;
     z-index: 1000;
     overflow: hidden;
     position: absolute;
-    background: $white;
+    background: lighten($black, 95%);
     .andp-header {
-        padding: 5px 0px;
-        background: lighten($black, 50%);
+        background-color: lighten($black, 90%);
         button {
             border: 0;
             padding: 0;
@@ -30,12 +32,13 @@
             border: 0;
             font-size: 14px;
             box-sizing: border-box;
+            background-color: lighten($black, 80%);
             &.andp-month-select {
-                width: 96px;
+                width: 75px;
                 margin-right: 5px;
             }
             &.andp-year-select {
-                width: 65px;
+                width: 75px;
             }
         }
         .andp-prev {
@@ -48,13 +51,13 @@
     .andp-body {
         border-top: 0;
         padding: 0 8px 8px;
-        border: solid 1px lighten($black, 80%);
         .andp-days-names div {
-            width: 34px;
+            width: 32px;
+            height: 20px;
             float: left;
-            font-size: 12px;
-            padding: 10px 0;
+            font-weight: bold;
             text-align: center;
+            font-size: 10.45px;
             color: lighten($black, 50%);
         }
         .andp-days-numbers {
@@ -65,20 +68,18 @@
                 div {
                     width: 34px;
                     height: 28px;
-                    color: $black;
-                    font-size: 10px;
+                    font-size: 11.25px;
                     text-align: center;
                     display: table-cell;
                     box-sizing: border-box;
                     vertical-align: middle;
-                    border: 1px solid #f1f1f1;
+                    color: lighten($black, 30%);
                     &.day {
                         cursor: pointer;
                     }
                     &.selected {
-                        color: $white;
-                        background: lighten($black, 50%) !important;
-                        border-color: lighten($black, 50%) !important;
+                        background: lighten($black, 80%) !important;
+                        border-color: lighten($black, 80%) !important;
                     }
                     .andp-column div.soft-select {
                         background: #dedede;
@@ -95,7 +96,6 @@
             }
         }
         .andp-action-btns {
-            margin-top: 7px;
             text-align: right;
             button {
                 color: $white;
