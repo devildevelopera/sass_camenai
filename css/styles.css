@@ -4817,7 +4817,7 @@ to layouts.
 
 .hdr .hdr-right .hdr-username {
   font-size: 17px;
-  padding-right: 16px;
+  padding-right: 20px;
 }
 
 @media only screen and (max-width: 768px) {
@@ -4861,7 +4861,6 @@ to layouts.
 }
 
 .hdr .hdr-right .hdr-menu {
-  padding: 8px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4876,6 +4875,10 @@ to layouts.
       justify-content: space-around;
 }
 
+.hdr .hdr-right .hdr-menu .loginname {
+  font-size: 17px;
+}
+
 @media only screen and (min-width: 768px) {
   .hdr .hdr-right .hdr-menu .loginname {
     display: none;
@@ -4883,21 +4886,17 @@ to layouts.
 }
 
 .hdr .hdr-right .hdr-menu ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  width: 180px;
+  display: -ms-grid;
+  display: grid;
+  text-align: center;
+  -ms-grid-columns: auto auto auto;
+      grid-template-columns: auto auto auto;
 }
 
 .hdr .hdr-right .hdr-menu ul li {
+  padding: 8px;
   cursor: pointer;
-  padding: 8px 14px;
   display: inline-block;
 }
 

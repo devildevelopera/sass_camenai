@@ -29,7 +29,7 @@
         }
         .hdr-username {
             font-size: 17px;
-            padding-right: 16px;
+            padding-right: 20px;
             @include maxSMContent {
                 display: none;
             }
@@ -60,19 +60,22 @@
             }
         }
         .hdr-menu {
-            padding: 8px;
             @include displayFlexRow;
             justify-content: space-around;
-            @include minSMContent {
-                .loginname {
+            .loginname {
+                font-size: 17px;
+                @include minSMContent {
                     display: none;
                 }
             }
             ul {
-                @include displayFlexRow;
+                width: 180px;
+                display: grid;
+                text-align: center;
+                grid-template-columns: auto auto auto;
                 li {
+                    padding: 8px;
                     cursor: pointer;
-                    padding: 8px 14px;
                     display: inline-block;
                 }
                 .gear {
