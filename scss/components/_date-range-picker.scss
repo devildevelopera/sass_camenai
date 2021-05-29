@@ -15,26 +15,28 @@
     background: lighten($black, 95%);
     .andp-header {
         display: grid;
-        grid-template-columns: 26.2px auto auto 26.2px;
+        grid-template-columns: 26.2px 96.8px 96.8px 26.2px;
         background-color: lighten($black, 90%);
         button {
             border: 0;
             padding: 0;
             margin-top: 0;
-            color: $white;
             cursor: pointer;
             background: none;
             font-weight: bold;
             text-align: center;
             box-sizing: border-box;
             outline: none !important;
+            color: lighten($black, 50%);
         }
         select {
             border: 0;
             padding: 0 5px;
             font-size: 14px;
             box-sizing: border-box;
-            background-color: lighten($black, 90%);
+            -webkit-appearance: none;
+            background: url("../imgs/1x/calendar-arrow-down.png") no-repeat right lighten($black, 90%);
+            background-position-x: 75px;
             &.andp-month-select {
                 border-left: solidBlackBorder();
                 border-right: solidBlackBorder();

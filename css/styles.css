@@ -4628,8 +4628,8 @@ label {
 .andp-datepicker-container .andp-header {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 26.2px auto auto 26.2px;
-      grid-template-columns: 26.2px auto auto 26.2px;
+  -ms-grid-columns: 26.2px 96.8px 96.8px 26.2px;
+      grid-template-columns: 26.2px 96.8px 96.8px 26.2px;
   background-color: #e6e6e6;
 }
 
@@ -4637,7 +4637,6 @@ label {
   border: 0;
   padding: 0;
   margin-top: 0;
-  color: #fff;
   cursor: pointer;
   background: none;
   font-weight: bold;
@@ -4645,6 +4644,7 @@ label {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   outline: none !important;
+  color: gray;
 }
 
 .andp-datepicker-container .andp-header select {
@@ -4653,7 +4653,9 @@ label {
   font-size: 14px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  background-color: #e6e6e6;
+  -webkit-appearance: none;
+  background: url("../imgs/1x/calendar-arrow-down.png") no-repeat right #e6e6e6;
+  background-position-x: 75px;
 }
 
 .andp-datepicker-container .andp-header select.andp-month-select {
