@@ -54,10 +54,8 @@
     }
     .andp-body {
         border-top: 0;
-        padding: 0 8px 8px;
         .andp-days-names div {
-            width: 32px;
-            height: 20px;
+            width: 35px;
             float: left;
             font-weight: bold;
             text-align: center;
@@ -67,10 +65,12 @@
         .andp-days-numbers {
             display: table;
             border-collapse: collapse;
+            border-top: solidBlackBorder();
+            border-bottom: solidBlackBorder();
             .andp-column {
                 display: table-row;
                 div {
-                    width: 34px;
+                    width: 35px;
                     height: 28px;
                     font-size: 11.25px;
                     text-align: center;
@@ -100,11 +100,11 @@
             }
         }
         .andp-action-btns {
-            text-align: right;
+            text-align: center;
+            border-top: solidBlackBorder();
             button {
+                margin: 10px;
                 color: $white;
-                margin: 0 10px;
-                margin-top: 5px;
                 border-radius: 2.5px;
                 width: calc(100% - 20px);
                 background-color: lighten($black, 50%);
@@ -114,4 +114,15 @@
             }
         }
     }
+}
+
+.time-picker-select {
+    border: none;
+    width: 121px;
+    height: 29px;
+    padding: 0 5px;
+    text-indent: 55px;
+    font-size: 12.47px;
+    -webkit-appearance: none;
+    background-color: lighten($black, 95%);
 }

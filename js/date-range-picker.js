@@ -393,6 +393,8 @@ $(() => {
             }
             template += '<div class="andp-info" style="display:none"><i class="mdi mdi-information text-primary"></i> Press <strong>' + control_key + '</strong> or <strong>Shift</strong> key for multiple selection </div>';
         }
+        template += '<select class="time-picker-select start" name="time-picker-first-input" value="00"></select>:';
+        template += '<select class="time-picker-select end" name="time-picker-last-input" value="00"></select>';
         template += '<div class="andp-action-btns">';
 
         if (!single_datepicker) {
@@ -436,6 +438,22 @@ $(() => {
             }
             append_html += '>' + i + '</option>';
             $year_select.append(append_html);
+        }
+
+        $time_picker_first_select = $sel_calendar.find('.time-picker-select.start');
+        for (i = 0; i <= 23; i++) {
+            value = i.toString().length === 1 ? '0' + i : i;
+            append_html = '<option value="' + i + '"';
+            append_html += '>' + value + '</option>';
+            $time_picker_first_select.append(append_html);
+        }
+
+        $time_picker_last_select = $sel_calendar.find('.time-picker-select.end');
+        for (i = 0; i <= 59; i++) {
+            value = i.toString().length === 1 ? '0' + i : i;
+            append_html = '<option value="' + i + '"';
+            append_html += '>' + value + '</option>';
+            $time_picker_last_select.append(append_html);
         }
 
         generate_days();
