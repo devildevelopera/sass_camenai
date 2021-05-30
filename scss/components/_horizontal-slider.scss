@@ -1,8 +1,8 @@
 $image_count: 10;
-$image_url: url("../imgs/SVG/vertical-line.svg");
+$image_url_unit: url("../imgs/SVG/vertical-line.svg");
 $image_position: '0';
 @for $i from 1 through ($image_count+1) {
-    $image_url: #{ $image_url+', '+$image_url };
+    $image_url: #{ $image_url+', '+$image_url_unit };
     $image_position: #{ $image_position+', '+($i * (100% / $image_count)) };
 }
 
@@ -20,9 +20,10 @@ $image_position: '0';
         margin-top: 0 !important;
         background-size: 9px 5px;
         border: solidBlackBorder();
+        background-position-y: 4px;
         border-radius: 7.5px !important;
         width: calc(100% + 10px) !important;
-        background-position: $image_position;
+        background-position-x: $image_position;
         background-image: $image_url !important;
         background-repeat: no-repeat !important;
         .slider-selection {
