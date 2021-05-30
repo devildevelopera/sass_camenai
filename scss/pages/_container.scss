@@ -88,7 +88,7 @@
                                     .image-filter-item {
                                         display: flex;
                                         align-items: center;
-                                        margin: 2px 8px 2px 0;
+                                        margin: 3px 3px 3px 0;
                                         justify-content: space-between;
                                         &>div:first-child {
                                             @include displayFlexRow;
@@ -97,7 +97,7 @@
                                             display: flex;
                                             align-items: center;
                                             .pretty {
-                                                margin-right: 17px;
+                                                margin-right: 19px;
                                             }
                                         }
                                     }

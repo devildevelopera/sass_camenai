@@ -2,7 +2,7 @@ $().ready(() => {
 
     setTimeout(() => {
         $(".slider.slider-horizontal .tooltip.tooltip-main.top .tooltip-arrow").append('<div class="inner-triangle"></div>');
-    }, 1000);
+    }, 500);
 
 
     var slider = new Slider("#image-quality-horizontal-slider", {

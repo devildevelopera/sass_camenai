@@ -19,13 +19,21 @@ $image_position: '0';
         height: 15px !important;
         margin-top: 0 !important;
         background-size: 9px 5px;
-        border: solidBlackBorder();
-        background-position-y: 4px;
-        border-radius: 7.5px !important;
+        background-position-y: 5px;
         width: calc(100% + 10px) !important;
         background-position-x: $image_position;
         background-image: $image_url !important;
         background-repeat: no-repeat !important;
+        &:after {
+            right: -3px;
+            width: 97px;
+            content: '_';
+            height: 15px;
+            color: $white;
+            position: absolute;
+            border-radius: 7.5px;
+            border: solidBlackBorder();
+        }
         .slider-selection {
             border-radius: 0 !important;
             box-shadow: none !important;
