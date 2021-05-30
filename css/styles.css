@@ -6156,9 +6156,8 @@ to layouts.
   padding: 0 0 10px 0;
 }
 
-.cnt .cnt-map #add-bookmark-expanded .card-body .change-folder {
-  cursor: pointer;
-  padding: 5px 10px;
+.cnt .cnt-map #add-bookmark-expanded .card-body .change-folder h2 {
+  font-weight: 400;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -6169,13 +6168,25 @@ to layouts.
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
 }
 
-.cnt .cnt-map #add-bookmark-expanded .card-body #add-bookmark-folder {
-  display: none;
+.cnt .cnt-map #add-bookmark-expanded .card-body .change-folder h2 img {
+  margin: 0 10px;
+}
+
+.cnt .cnt-map #add-bookmark-expanded .card-body .change-folder ul {
+  height: 130px;
+  overflow: auto;
+}
+
+.cnt .cnt-map #add-bookmark-expanded .card-body .change-folder ul li {
+  text-align: start;
+  padding-right: 5px;
+}
+
+.cnt .cnt-map #add-bookmark-expanded .card-body .change-folder ul li.selected:after {
+  float: right;
+  content: url("../imgs/1x/check.png");
 }
 
 .cnt .cnt-map #add-bookmark-expanded .card-body .new-folder {

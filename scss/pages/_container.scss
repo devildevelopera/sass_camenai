@@ -758,13 +758,25 @@
                     height: 172px;
                     padding: 0 0 10px 0;
                     .change-folder {
-                        cursor: pointer;
-                        padding: 5px 10px;
-                        @include displayFlexRow;
-                        justify-content: space-between;
-                    }
-                    #add-bookmark-folder {
-                        display: none;
+                        h2 {
+                            font-weight: 400;
+                            @include displayFlexRow;
+                            img {
+                                margin: 0 10px;
+                            }
+                        }
+                        ul {
+                            height: 130px;
+                            overflow: auto;
+                            li {
+                                text-align: start;
+                                padding-right: 5px;
+                                &.selected:after {
+                                    float: right;
+                                    content: url("../imgs/1x/check.png");
+                                }
+                            }
+                        }
                     }
                     .new-folder {
                         cursor: pointer;

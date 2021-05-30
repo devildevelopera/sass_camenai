@@ -903,19 +903,30 @@
                     </div>
                     <div class="card-body fancyscroll">
                         <div class="change-folder">
-                            <img src="imgs/1x/folder.png" />
-                            <label>Change Folder</label>
-                            <img src="imgs/1x/arrow-right.png" />
+                            <div class="accordion" id="accordionAddBookmarkChangeFolder">
+                                <div class="card">
+                                    <div class="card-head" id="headingAddBookmarkChangeFolder">
+                                        <h2 class="mb-0 collapsed" data-toggle="collapse" data-target="#collapseAddBookmarkChangeFolder" aria-expanded="false" aria-controls="collapseAddBookmarkChangeFolder">
+                                            <img src="imgs/1x/folder.png" />Change Folder
+                                        </h2>
+                                    </div>
+                                    <div id="collapseAddBookmarkChangeFolder" class="collapse" aria-labelledby="headingAddBookmarkChangeFolder" data-parent="#accordionAddBookmarkChangeFolder">
+                                        <div class="card-body">
+                                            <ul class="fancyscroll">
+                                                <li class="selected">Folder 01</li>
+                                                <li>Folder 02</li>
+                                                <li>Folder 03</li>
+                                                <li>Folder 04</li>
+                                                <li>Folder 05</li>
+                                                <li>Folder 06</li>
+                                                <li>Folder 07</li>
+                                                <li>Folder 08</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <select id="add-bookmark-folder" name="add-bookmark-folder">
-                            <option value="Folder 01">Folder 01</option>
-                            <option value="Folder 02">Folder 02</option>
-                            <option value="Folder 03">Folder 03</option>
-                            <option value="Folder 04">Folder 04</option>
-                            <option value="Folder 05">Folder 05</option>
-                            <option value="Folder 06">Folder 06</option>
-                            <option value="Folder 07">Folder 07</option>
-                            <option value="Folder 08">Folder 08</option>
                         </select>
                         <div class="new-folder">
                             <img src="imgs/1x/new-folder.png" />
