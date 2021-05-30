@@ -31,7 +31,8 @@ $(() => {
     $('.new-folder-name').keyup(function(e) {
         if (e.keyCode == 13) {
             var new_folder = $(".new-folder-name").val();
-            $("#collapseAddBookmarkChangeFolder ul").append(`<li value="${new_folder}">${new_folder}</li>`);
+            $("#add-bookmark-expanded .change-folder ul li").removeClass('selected');
+            $("#collapseAddBookmarkChangeFolder ul").append(`<li value="${new_folder}" class="selected">${new_folder}</li>`);
             if ($(".new-folder-name").val()) {
                 $(".folder-name").html($(".new-folder-name").val());
             }
