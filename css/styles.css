@@ -4305,6 +4305,9 @@ label {
 }
 
 .slider.slider-vertical .slider-track .slider-selection {
+  border-radius: 0 !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
   background: transparent !important;
 }
 
@@ -4388,6 +4391,9 @@ label {
 }
 
 .slider.slider-horizontal .slider-track .slider-selection {
+  border-radius: 0 !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
   background: transparent !important;
 }
 
