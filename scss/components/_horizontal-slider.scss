@@ -1,3 +1,11 @@
+$image_count: 10;
+$image_url: url("../imgs/SVG/vertical-line.svg");
+$image_position: '0';
+@for $i from 1 through ($image_count+1) {
+    $image_url: #{ $image_url+', '+$image_url };
+    $image_position: #{ $image_position+', '+($i * (100% / $image_count)) };
+}
+
 .slider.slider-horizontal {
     width: 80px !important;
     &:hover {
@@ -12,11 +20,11 @@
         margin-top: 0 !important;
         background-size: 9px 5px;
         border: solidBlackBorder();
-        background-position: center;
         border-radius: 7.5px !important;
         width: calc(100% + 10px) !important;
-        background-repeat: round no-repeat !important;
-        background-image: url("../imgs/SVG/vertical-line.svg") !important;
+        background-position: $image_position;
+        background-image: $image_url !important;
+        background-repeat: no-repeat !important;
         .slider-selection {
             background: transparent !important;
         }
