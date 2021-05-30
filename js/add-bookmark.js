@@ -16,7 +16,6 @@ $(() => {
         $(".folder-name").html(e.target.innerHTML);
         $("#add-bookmark-expanded .change-folder ul li").removeClass('selected');
         e.target.className = 'selected';
-        $("#headingAddBookmarkChangeFolder").trigger('click');
         $(".new-folder-name").val('');
         $(".new-folder-name").hide();
         $('#add-bookmark-expanded .card .card-body .submit-bookmark').css('opacity', 1);
