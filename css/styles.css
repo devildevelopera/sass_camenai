@@ -4396,15 +4396,17 @@ label {
 
 .slider.slider-horizontal .tooltip.tooltip-main.top {
   pointer-events: none;
-  margin-top: -30px !important;
+  margin-top: -27px !important;
+  margin-left: -6px;
 }
 
 .slider.slider-horizontal .tooltip.tooltip-main.top .tooltip-inner {
   width: 35px;
-  color: #fff;
-  background-color: #000;
   padding: 2px 0 !important;
-  border-radius: 0 !important;
+  color: #4d4d4d;
+  border-radius: 2.5px !important;
+  background-color: #f2f2f2;
+  border: 1px solid #999999;
 }
 
 .slider.slider-horizontal .tooltip.tooltip-main.top .tooltip-arrow {
@@ -4413,9 +4415,20 @@ label {
   left: 12px;
   bottom: -5px;
   position: absolute;
-  border-top: 5px solid #000;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid #999999;
+}
+
+.slider.slider-horizontal .tooltip.tooltip-main.top .tooltip-arrow .inner-triangle {
+  width: 0;
+  height: 0;
+  top: -7px;
+  left: -5px;
+  position: relative;
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
+  border-top: 5px solid #f2f2f2;
 }
 
 .slider.slider-horizontal .slider-handle {
