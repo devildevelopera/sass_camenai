@@ -893,6 +893,7 @@
             width: 248px;
             display: grid;
             font-size: 17px;
+            font-weight: 300;
             @include mapControlBox;
             left: calc(50% + 130px);
             grid-template-columns: 68px 40px 44px 96px;
@@ -906,6 +907,9 @@
                 }
                 &:not(:last-child) {
                     border-right: solidBlackBorder();
+                }
+                &.selected {
+                    font-weight: 400;
                 }
             }
         }

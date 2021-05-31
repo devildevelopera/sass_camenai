@@ -6379,6 +6379,7 @@ to layouts.
   display: -ms-grid;
   display: grid;
   font-size: 17px;
+  font-weight: 300;
   z-index: 1;
   position: absolute;
   border-radius: 4px;
@@ -6414,6 +6415,10 @@ to layouts.
 
 .cnt .cnt-map #street-dimension-control div:not(:last-child) {
   border-right: 1px solid #cccccc;
+}
+
+.cnt .cnt-map #street-dimension-control div.selected {
+  font-weight: 400;
 }
 
 .cnt .cnt-map #total-recodings-control {
