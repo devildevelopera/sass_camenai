@@ -4173,6 +4173,7 @@ label {
   width: 15px;
   height: 15px;
   visibility: hidden;
+  -moz-appearance: initial;
 }
 
 .radio-item input[type=radio]::before {

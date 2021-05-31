@@ -7,6 +7,7 @@
         width: 15px;
         height: 15px;
         visibility: hidden;
+        -moz-appearance: initial;
         &::before {
             content: "";
             width: 16px;
