@@ -16,7 +16,7 @@
                 width: 18px;
                 height: 10px;
                 position: absolute;
-                border-left: 1px solid $light-black-color;
+                border-left: solidBlackBorder(70%);
                 &:first-child {
                     top: 5px;
                     z-index: 3;
@@ -28,7 +28,7 @@
                 &.ui-state-default.ui-corner-all {
                     border-radius: 50%;
                     background-color: $purple-rain;
-                    border: 1px solid $basic-black-color;
+                    border: solidBlackBorder(30%);
                     box-shadow: inset 0px 0px 0px 3px $white;
                 }
                 &.ui-state-active,

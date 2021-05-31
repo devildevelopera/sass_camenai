@@ -107,7 +107,9 @@
                                                                     <span>Image Quality</span>
                                                                 </div>
                                                                 <div>
-                                                                    <input id="image-quality-horizontal-slider" type="text" data-slider-min="0" data-slider-max="100" data-slider-step="10" data-slider-value="50" />
+                                                                    <div class="image-quality-horizontal-slider">
+                                                                        <input id="image-quality-horizontal-slider" type="text" data-slider-min="0" data-slider-max="100" data-slider-step="10" data-slider-value="50" />
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                             <div class="image-filter-item">
@@ -116,7 +118,9 @@
                                                                     <span>GPS Accuracy</span>
                                                                 </div>
                                                                 <div>
-                                                                    <input id="gps-accuracy-horizontal-slider" type="text" data-slider-min="0" data-slider-max="100" data-slider-step="10" data-slider-value="50" />
+                                                                    <div class="gps-accuracy-horizontal-slider">
+                                                                        <input id="gps-accuracy-horizontal-slider" type="text" data-slider-min="0" data-slider-max="100" data-slider-step="10" data-slider-value="50" />
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                             <div class="accordion" id="accordionImgRecordingImageFilterInput">
@@ -159,13 +163,15 @@
                                                                     <span>Trash</span>
                                                                 </div>
                                                                 <div>
-                                                                    <div class="pretty p-smooth p-default p-round">
-                                                                        <input type="checkbox" />
+                                                                    <div class="pretty p-default p-round">
+                                                                        <input type="checkbox" name="trash" />
                                                                         <div class="state p-danger-o">
                                                                             <label></label>
                                                                         </div>
                                                                     </div>
-                                                                    <input id="trash-horizontal-slider" type="text" data-slider-min="0" data-slider-max="100" data-slider-step="10" data-slider-value="50" />
+                                                                    <div class="trash-horizontal-slider">
+                                                                        <input id="trash-horizontal-slider" type="text" data-slider-min="0" data-slider-max="100" data-slider-step="10" data-slider-value="50" />
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                             <div class="image-filter-item">
@@ -174,13 +180,15 @@
                                                                     <span>Road Damage</span>
                                                                 </div>
                                                                 <div>
-                                                                    <div class="pretty p-smooth p-default p-round">
-                                                                        <input type="checkbox" />
+                                                                    <div class="pretty p-default p-round">
+                                                                        <input type="checkbox" name="reload-damage" />
                                                                         <div class="state p-success-o">
                                                                             <label></label>
                                                                         </div>
                                                                     </div>
-                                                                    <input id="reload-damage-horizontal-slider" type="text" data-slider-min="0" data-slider-max="100" data-slider-step="10" data-slider-value="50" />
+                                                                    <div class="reload-damage-horizontal-slider">
+                                                                        <input id="reload-damage-horizontal-slider" type="text" data-slider-min="0" data-slider-max="100" data-slider-step="10" data-slider-value="50" />
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                             <div class="image-filter-item">
@@ -189,13 +197,15 @@
                                                                     <span>Vegetation</span>
                                                                 </div>
                                                                 <div>
-                                                                    <div class="pretty p-smooth p-default p-round">
-                                                                        <input type="checkbox" />
+                                                                    <div class="pretty p-default p-round">
+                                                                        <input type="checkbox" name="vegetation" />
                                                                         <div class="state">
                                                                             <label></label>
                                                                         </div>
                                                                     </div>
-                                                                    <input id="vegetation-horizontal-slider" type="text" data-slider-min="0" data-slider-max="100" data-slider-step="10" data-slider-value="50" />
+                                                                    <div class="vegetation-horizontal-slider">
+                                                                        <input id="vegetation-horizontal-slider" type="text" data-slider-min="0" data-slider-max="100" data-slider-step="10" data-slider-value="50" />
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                             <div class="image-filter-item">
@@ -204,13 +214,15 @@
                                                                     <span>Street Furniture</span>
                                                                 </div>
                                                                 <div>
-                                                                    <div class="pretty p-smooth p-default p-round">
-                                                                        <input type="checkbox" />
+                                                                    <div class="pretty p-default p-round">
+                                                                        <input type="checkbox" name="street-hurniture" />
                                                                         <div class="state">
                                                                             <label></label>
                                                                         </div>
                                                                     </div>
-                                                                    <input id="street-hurniture-horizontal-slider" type="text" data-slider-min="0" data-slider-max="100" data-slider-step="10" data-slider-value="50" />
+                                                                    <div class="street-hurniture-horizontal-slider">
+                                                                        <input id="street-hurniture-horizontal-slider" type="text" data-slider-min="0" data-slider-max="100" data-slider-step="10" data-slider-value="50" />
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                             <div class="image-filter-item">
@@ -219,13 +231,15 @@
                                                                     <span>Road Paint</span>
                                                                 </div>
                                                                 <div>
-                                                                    <div class="pretty p-smooth p-default p-round">
-                                                                        <input type="checkbox" />
+                                                                    <div class="pretty p-default p-round">
+                                                                        <input type="checkbox" name="road-paint" />
                                                                         <div class="state p-info-o">
                                                                             <label></label>
                                                                         </div>
                                                                     </div>
-                                                                    <input id="road-paint-horizontal-slider" type="text" data-slider-min="0" data-slider-max="100" data-slider-step="10" data-slider-value="50" />
+                                                                    <div class="road-paint-horizontal-slider">
+                                                                        <input id="road-paint-horizontal-slider" type="text" data-slider-min="0" data-slider-max="100" data-slider-step="10" data-slider-value="50" />
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                             <div class="image-filter-item">
@@ -234,13 +248,15 @@
                                                                     <span>Canals</span>
                                                                 </div>
                                                                 <div>
-                                                                    <div class="pretty p-smooth p-default p-round">
-                                                                        <input type="checkbox" />
+                                                                    <div class="pretty p-default p-round">
+                                                                        <input type="checkbox" name="canals" />
                                                                         <div class="state">
                                                                             <label></label>
                                                                         </div>
                                                                     </div>
-                                                                    <input id="canals-horizontal-slider" type="text" data-slider-min="0" data-slider-max="100" data-slider-step="10" data-slider-value="50" />
+                                                                    <div class="canals-horizontal-slider">
+                                                                        <input id="canals-horizontal-slider" type="text" data-slider-min="0" data-slider-max="100" data-slider-step="10" data-slider-value="50" />
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                             <div class="image-filter-item">
@@ -249,13 +265,15 @@
                                                                     <span>Faces</span>
                                                                 </div>
                                                                 <div>
-                                                                    <div class="pretty p-smooth p-default p-round">
-                                                                        <input type="checkbox" />
+                                                                    <div class="pretty p-default p-round">
+                                                                        <input type="checkbox" name="faces" />
                                                                         <div class="state">
                                                                             <label></label>
                                                                         </div>
                                                                     </div>
-                                                                    <input id="faces-horizontal-slider" type="text" data-slider-min="0" data-slider-max="100" data-slider-step="10" data-slider-value="50" />
+                                                                    <div class="faces-horizontal-slider">
+                                                                        <input id="faces-horizontal-slider" type="text" data-slider-min="0" data-slider-max="100" data-slider-step="10" data-slider-value="50" />
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                             <div class="image-filter-item">
@@ -264,13 +282,15 @@
                                                                     <span>License Plates</span>
                                                                 </div>
                                                                 <div>
-                                                                    <div class="pretty p-smooth p-default p-round">
-                                                                        <input type="checkbox" />
+                                                                    <div class="pretty p-default p-round">
+                                                                        <input type="checkbox" name="license-plates" />
                                                                         <div class="state">
                                                                             <label></label>
                                                                         </div>
                                                                     </div>
-                                                                    <input id="license-plates-horizontal-slider" type="text" data-slider-min="0" data-slider-max="100" data-slider-step="10" data-slider-value="50" />
+                                                                    <div class="license-plates-horizontal-slider">
+                                                                        <input id="license-plates-horizontal-slider" type="text" data-slider-min="0" data-slider-max="100" data-slider-step="10" data-slider-value="50" />
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                             <div class="image-filter-item mb-2">
@@ -279,13 +299,15 @@
                                                                     <span>Graffiti</span>
                                                                 </div>
                                                                 <div>
-                                                                    <div class="pretty p-smooth p-default p-round">
-                                                                        <input type="checkbox" />
+                                                                    <div class="pretty p-default p-round">
+                                                                        <input type="checkbox" name="graffiti" />
                                                                         <div class="state p-warning-o">
                                                                             <label></label>
                                                                         </div>
                                                                     </div>
-                                                                    <input id="graffiti-horizontal-slider" type="text" data-slider-min="0" data-slider-max="100" data-slider-step="10" data-slider-value="50" />
+                                                                    <div class="graffiti-horizontal-slider">
+                                                                        <input id="graffiti-horizontal-slider" type="text" data-slider-min="0" data-slider-max="100" data-slider-step="10" data-slider-value="50" />
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -343,7 +365,7 @@
                 </li>
                 <!-- <li class="detections">
                     <div class="menu-icon"><img src="imgs/1x/detections.png" /></div><span class="menu-title">Detections</span>
-                    <div class="pretty p-smooth p-default p-round">
+                    <div class="pretty p-default p-round">
                         <input type="checkbox" />
                         <div class="state">
                             <label></label>
@@ -489,7 +511,7 @@
                 <div>
                     <div>
                         <span>Tuterial Mode</span>
-                        <div class="pretty p-smooth p-default p-round mr-0">
+                        <div class="pretty p-default p-round mr-0">
                             <input type="checkbox" />
                             <div class="state">
                                 <label></label>
@@ -562,7 +584,7 @@
                 <div>
                     <div>
                         <span>Set search as default</span>
-                        <div class="pretty p-smooth p-default p-round">
+                        <div class="pretty p-default p-round">
                             <input type="checkbox" />
                             <div class="state">
                                 <label></label>
@@ -596,7 +618,7 @@
                     </div>
                     <div>
                         <span>Snap to image</span>
-                        <div class="pretty p-smooth p-default p-round">
+                        <div class="pretty p-default p-round">
                             <input type="checkbox" checked />
                             <div class="state">
                                 <label></label>
@@ -609,7 +631,7 @@
                     <div>
                         <div>
                             <div>
-                                <div class="pretty p-smooth p-default p-round">
+                                <div class="pretty p-default p-round">
                                     <input type="checkbox" checked />
                                     <div class="state">
                                         <label></label>
@@ -619,7 +641,7 @@
                             </div>
                             <div>
                                 <span>Change Color</span>
-                                <div class="pretty p-smooth p-default p-round">
+                                <div class="pretty p-default p-round">
                                     <input type="checkbox" checked />
                                     <div class="state  p-danger-o">
                                         <label></label>
@@ -629,7 +651,7 @@
                         </div>
                         <div>
                             <div>
-                                <div class="pretty p-smooth p-default p-round">
+                                <div class="pretty p-default p-round">
                                     <input type="checkbox" checked />
                                     <div class="state">
                                         <label></label>
@@ -639,7 +661,7 @@
                             </div>
                             <div>
                                 <span>Change Color</span>
-                                <div class="pretty p-smooth p-default p-round">
+                                <div class="pretty p-default p-round">
                                     <input type="checkbox" checked />
                                     <div class="state p-success-o">
                                         <label></label>
@@ -649,7 +671,7 @@
                         </div>
                         <div>
                             <div>
-                                <div class="pretty p-smooth p-default p-round">
+                                <div class="pretty p-default p-round">
                                     <input type="checkbox" />
                                     <div class="state">
                                         <label></label>
@@ -659,7 +681,7 @@
                             </div>
                             <div>
                                 <span>Change Color</span>
-                                <div class="pretty p-smooth p-default p-round">
+                                <div class="pretty p-default p-round">
                                     <input type="checkbox" />
                                     <div class="state">
                                         <label></label>
@@ -669,7 +691,7 @@
                         </div>
                         <div>
                             <div>
-                                <div class="pretty p-smooth p-default p-round">
+                                <div class="pretty p-default p-round">
                                     <input type="checkbox" />
                                     <div class="state">
                                         <label></label>
@@ -679,7 +701,7 @@
                             </div>
                             <div>
                                 <span>Change Color</span>
-                                <div class="pretty p-smooth p-default p-round">
+                                <div class="pretty p-default p-round">
                                     <input type="checkbox" />
                                     <div class="state">
                                         <label></label>
@@ -689,7 +711,7 @@
                         </div>
                         <div>
                             <div>
-                                <div class="pretty p-smooth p-default p-round">
+                                <div class="pretty p-default p-round">
                                     <input type="checkbox" checked />
                                     <div class="state">
                                         <label></label>
@@ -699,7 +721,7 @@
                             </div>
                             <div>
                                 <span>Change Color</span>
-                                <div class="pretty p-smooth p-default p-round">
+                                <div class="pretty p-default p-round">
                                     <input type="checkbox" checked />
                                     <div class="state p-info-o">
                                         <label></label>
@@ -709,7 +731,7 @@
                         </div>
                         <div>
                             <div>
-                                <div class="pretty p-smooth p-default p-round">
+                                <div class="pretty p-default p-round">
                                     <input type="checkbox" />
                                     <div class="state">
                                         <label></label>
@@ -719,7 +741,7 @@
                             </div>
                             <div>
                                 <span>Change Color</span>
-                                <div class="pretty p-smooth p-default p-round">
+                                <div class="pretty p-default p-round">
                                     <input type="checkbox" />
                                     <div class="state">
                                         <label></label>
@@ -729,7 +751,7 @@
                         </div>
                         <div>
                             <div>
-                                <div class="pretty p-smooth p-default p-round">
+                                <div class="pretty p-default p-round">
                                     <input type="checkbox" />
                                     <div class="state">
                                         <label></label>
@@ -739,7 +761,7 @@
                             </div>
                             <div>
                                 <span>Change Color</span>
-                                <div class="pretty p-smooth p-default p-round">
+                                <div class="pretty p-default p-round">
                                     <input type="checkbox" />
                                     <div class="state">
                                         <label></label>
@@ -749,7 +771,7 @@
                         </div>
                         <div>
                             <div>
-                                <div class="pretty p-smooth p-default p-round">
+                                <div class="pretty p-default p-round">
                                     <input type="checkbox" />
                                     <div class="state">
                                         <label></label>
@@ -759,7 +781,7 @@
                             </div>
                             <div>
                                 <span>Change Color</span>
-                                <div class="pretty p-smooth p-default p-round">
+                                <div class="pretty p-default p-round">
                                     <input type="checkbox" />
                                     <div class="state">
                                         <label></label>
@@ -769,7 +791,7 @@
                         </div>
                         <div>
                             <div>
-                                <div class="pretty p-smooth p-default p-round">
+                                <div class="pretty p-default p-round">
                                     <input type="checkbox" checked />
                                     <div class="state">
                                         <label></label>
@@ -779,7 +801,7 @@
                             </div>
                             <div>
                                 <span>Change Color</span>
-                                <div class="pretty p-smooth p-default p-round">
+                                <div class="pretty p-default p-round">
                                     <input type="checkbox" checked />
                                     <div class="state p-warning-o">
                                         <label></label>
@@ -1057,6 +1079,7 @@
     <script src="js/img-prev-next.js "></script>
     <script src="js/help-center-box.js "></script>
     <script src="js/vertical-slider.js "></script>
+    <script src="js/pretty-checkbox.js "></script>
     <script src="js/date-range-picker.js "></script>
     <script src="js/date-range-slider.js "></script>
     <script src="js/horizontal-slider.js "></script>

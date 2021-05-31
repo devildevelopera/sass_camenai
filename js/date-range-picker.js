@@ -20,6 +20,10 @@ $(() => {
     var start_year = 2000;
     var end_year = 2098;
 
+    // default start/end time
+    var start_time = '00:00';
+    var end_time = '00:00';
+
     // is this single datepicker
     var single_datepicker = 0;
 
@@ -239,6 +243,19 @@ $(() => {
             generate_days();
         });
 
+        // update days when month or year is changed
+        $body.on('change', '.time-picker-select', (e) => {
+            if (user_selected_dates.length === 1) {
+                start_time = $('.time-picker-select.hour').val() + ':' + $('.time-picker-select.minute').val();
+                end_time = $('.time-picker-select.hour').val() + ':' + $('.time-picker-select.minute').val();
+            } else if (user_selected_dates.length > 1) {
+                end_time = $('.time-picker-select.hour').val() + ':' + $('.time-picker-select.minute').val();
+            } else {
+                start_time = '00:00';
+                end_time = '00:00';
+            }
+        });
+
     };
 
     // change months on button click
@@ -339,7 +356,7 @@ $(() => {
     // insert/update date only if appy-date button was clicked
     $body.on('click', '.andp-datepicker-container.open .apply-date', () => {
         if (user_selected_dates.length >= 2) {
-            params.setRange(user_selected_dates[0], user_selected_dates[user_selected_dates.length - 1]);
+            params.setRange(user_selected_dates[0] + ' ' + start_time, user_selected_dates[user_selected_dates.length - 1] + ' ' + end_time);
         } else {
             params.setRange(null, null);
         }
@@ -393,8 +410,8 @@ $(() => {
             }
             template += '<div class="andp-info" style="display:none"><i class="mdi mdi-information text-primary"></i> Press <strong>' + control_key + '</strong> or <strong>Shift</strong> key for multiple selection </div>';
         }
-        template += '<select class="time-picker-select start" name="time-picker-first-input" value="00"></select>:';
-        template += '<select class="time-picker-select end" name="time-picker-last-input" value="00"></select>';
+        template += '<select class="time-picker-select hour" name="time-picker-first-input" value="00"></select>:';
+        template += '<select class="time-picker-select minute" name="time-picker-last-input" value="00"></select>';
         template += '<div class="andp-action-btns">';
 
         if (!single_datepicker) {
@@ -440,18 +457,18 @@ $(() => {
             $year_select.append(append_html);
         }
 
-        $time_picker_first_select = $sel_calendar.find('.time-picker-select.start');
+        $time_picker_first_select = $sel_calendar.find('.time-picker-select.hour');
         for (i = 0; i <= 23; i++) {
             value = i.toString().length === 1 ? '0' + i : i;
-            append_html = '<option value="' + i + '"';
+            append_html = '<option value="' + value + '"';
             append_html += '>' + value + '</option>';
             $time_picker_first_select.append(append_html);
         }
 
-        $time_picker_last_select = $sel_calendar.find('.time-picker-select.end');
+        $time_picker_last_select = $sel_calendar.find('.time-picker-select.minute');
         for (i = 0; i <= 59; i++) {
             value = i.toString().length === 1 ? '0' + i : i;
-            append_html = '<option value="' + i + '"';
+            append_html = '<option value="' + value + '"';
             append_html += '>' + value + '</option>';
             $time_picker_last_select.append(append_html);
         }
