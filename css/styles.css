@@ -5558,12 +5558,14 @@ to layouts.
   padding: 0 20px;
   height: 676.3px;
   overflow-y: auto;
+  font-weight: 300;
   background-color: #fff;
 }
 
 .cnt .cnt-map #help-center-box-draggable > div:first-child {
   padding: 10px 0;
   font-size: 18px;
+  font-weight: 400;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -5694,12 +5696,14 @@ to layouts.
   padding: 0 20px;
   height: 676.3px;
   overflow-y: auto;
+  font-weight: 300;
   background-color: #fff;
 }
 
 .cnt .cnt-map #setting-box-draggable > div:first-child {
   padding: 10px 0;
   font-size: 18px;
+  font-weight: 400;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -6128,6 +6132,7 @@ to layouts.
   height: 38px;
   width: 152px;
   bottom: 30px;
+  font-weight: 300;
   overflow: hidden;
   position: absolute;
   border-radius: 4px;
@@ -6152,7 +6157,6 @@ to layouts.
   height: 38px;
   padding: 0 10px;
   font-size: 17px;
-  font-weight: 300;
   cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -6180,7 +6184,7 @@ to layouts.
 }
 
 .cnt .cnt-map #add-bookmark-expanded .card-body .change-folder h2 {
-  font-weight: 400;
+  font-weight: 300;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -6242,6 +6246,7 @@ to layouts.
 .cnt .cnt-map #add-bookmark-expanded .card-body input,
 .cnt .cnt-map #add-bookmark-expanded .card-body select {
   margin: 0 10px;
+  font-weight: 300;
   padding-left: 5px;
   margin-bottom: 5px;
   width: calc(100% - 20px);
@@ -6307,6 +6312,7 @@ to layouts.
   display: -ms-grid;
   display: grid;
   font-size: 17px;
+  font-weight: 300;
   z-index: 1;
   position: absolute;
   border-radius: 4px;
