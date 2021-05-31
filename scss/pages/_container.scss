@@ -664,6 +664,7 @@
             height: 426px;
             display: grid;
             @include mapControlBox;
+            border-radius: 5px;
             border-top-right-radius: 0;
             border-bottom-right-radius: 0;
             grid-template-rows: 46px 46px 144px 144px 46px;

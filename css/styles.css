@@ -6004,6 +6004,7 @@ to layouts.
   background-color: #fff;
   -webkit-box-shadow: 0 0 4px gray;
           box-shadow: 0 0 4px gray;
+  border-radius: 5px;
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
   -ms-grid-rows: 46px 46px 144px 144px 46px;
