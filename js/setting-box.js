@@ -6,7 +6,7 @@ $(() => {
         }
     });
 
-    $("#setting-green-btn").on('click', () => {
+    $(".hdr-menu ul li:nth-child(2) img").on('click', () => {
         if ($('#setting-box-draggable').is(":visible")) {
             $("#setting-box-draggable").hide(100);
         } else {

@@ -5274,7 +5274,7 @@ to layouts.
   /* setting-box-draggable */
   /* report issue modal open icon */
   /* report issue modal */
-  /* green close icon */
+  /* right green btn */
   /* bright contrast control */
   /* view type control */
   /* on off control control */
@@ -5972,7 +5972,7 @@ to layouts.
   background-color: #4d4d4d;
 }
 
-.cnt .cnt-map #setting-green-btn {
+.cnt .cnt-map #right-green-btn {
   right: 0;
   top: 48px;
   cursor: pointer;
