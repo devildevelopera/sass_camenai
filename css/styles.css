@@ -4254,7 +4254,7 @@ label {
 .accordion .card h2 {
   cursor: pointer;
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 34px;
   background: url("../imgs/1x/arrow-down.png") no-repeat calc(100% - 8px) center;
   background-size: 15px;
@@ -4477,6 +4477,8 @@ label {
 
 #date-range-control .date-range-select {
   width: 91px;
+  font-size: 15px;
+  font-weight: 300;
   margin-right: 7px;
   position: relative;
 }
@@ -4609,6 +4611,8 @@ label {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  font-size: 14px;
+  font-weight: 300;
   margin: 2px 95px 2px;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -4625,7 +4629,6 @@ label {
 
 #date-range-control .date-range-slider #date-range-value div:nth-child(2) {
   width: 84px;
-  height: 100%;
 }
 
 #date-range-control .date-range-slider #date-range-value div:not(:nth-child(2)) {
@@ -5068,10 +5071,6 @@ to layouts.
           justify-content: center;
 }
 
-.cnt .cnt-settings ul li .menu-title {
-  font-weight: 500;
-}
-
 .cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording .card .card-head#headingImgRecording {
   padding-right: 22px;
 }
@@ -5176,6 +5175,10 @@ to layouts.
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+}
+
+.cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording .card ul li #accordionImgRecordingImageFilter .card .image-filter-item > div:first-child span, .cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording .card ul li #accordionImgRecordingDetections .card .image-filter-item > div:first-child span {
+  font-weight: 300;
 }
 
 .cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording .card ul li #accordionImgRecordingImageFilter .card .image-filter-item > div:last-child, .cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording .card ul li #accordionImgRecordingDetections .card .image-filter-item > div:last-child {
@@ -5331,6 +5334,7 @@ to layouts.
 }
 
 .cnt .cnt-map #poi-draggable .card-header {
+  font-size: 15px;
   padding-right: 25px;
   padding: 4px;
   color: #fff;
@@ -5361,6 +5365,7 @@ to layouts.
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  font-weight: 300;
 }
 
 .cnt .cnt-map #poi-draggable .card-body .card-body li div {
@@ -5379,6 +5384,7 @@ to layouts.
 }
 
 .cnt .cnt-map #poi-delete-draggable .card-header {
+  font-size: 15px;
   text-align: center;
   padding: 4px;
   color: #fff;
@@ -5433,6 +5439,7 @@ to layouts.
 }
 
 .cnt .cnt-map #bookmarks-draggable .card-header {
+  font-size: 15px;
   padding-right: 25px;
   padding: 4px;
   color: #fff;
@@ -5516,6 +5523,7 @@ to layouts.
 .cnt .cnt-map #bookmarks-draggable .card-body ul {
   height: 160px;
   font-size: 12px;
+  font-weight: 300;
   overflow-y: auto;
 }
 
@@ -6066,6 +6074,10 @@ to layouts.
   margin-right: 5px;
 }
 
+.cnt .cnt-map #view-type-control div label {
+  font-weight: 300;
+}
+
 .cnt .cnt-map #on-off-control {
   left: 200px;
   width: 75px;
@@ -6073,7 +6085,7 @@ to layouts.
   height: 38px;
   display: -ms-grid;
   display: grid;
-  font-size: 15px;
+  font-size: 14px;
   z-index: 1;
   position: absolute;
   border-radius: 4px;
@@ -6140,6 +6152,7 @@ to layouts.
   height: 38px;
   padding: 0 10px;
   font-size: 17px;
+  font-weight: 300;
   cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;

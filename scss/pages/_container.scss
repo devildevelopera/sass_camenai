@@ -16,7 +16,6 @@
         width: 325px;
         overflow-y: scroll;
         overflow-x: hidden;
-        // padding-right: 30px;
         border: solidBlackBorder();
         height: calc(100vh - 100px);
         @include maxLGContent {
@@ -54,9 +53,6 @@
                     margin-right: 2.5px;
                     @include displayFlexRow;
                     justify-content: center;
-                }
-                .menu-title {
-                    font-weight: 500;
                 }
                 &.accordionImgRecording {
                     #accordionImgRecording .card {
@@ -108,6 +104,9 @@
                                             justify-content: space-between;
                                             &>div:first-child {
                                                 @include displayFlexRow;
+                                                span {
+                                                    font-weight: 300;
+                                                }
                                             }
                                             &>div:last-child {
                                                 display: flex;
@@ -222,6 +221,7 @@
             width: 160px;
             .card {
                 &-header {
+                    font-size: 15px;
                     padding-right: 25px;
                     @include cardHeaderStyle;
                     @include textOverflowEllipsis;
@@ -237,6 +237,7 @@
                     .card-body {
                         li {
                             display: flex;
+                            font-weight: 300;
                             div {
                                 width: 20px;
                             }
@@ -254,6 +255,7 @@
             .card {
                 height: 100%;
                 &-header {
+                    font-size: 15px;
                     text-align: center;
                     @include cardHeaderStyle;
                     padding-left: 5px;
@@ -287,6 +289,7 @@
             .card {
                 text-align: left;
                 &-header {
+                    font-size: 15px;
                     padding-right: 25px;
                     @include cardHeaderStyle;
                 }
@@ -334,6 +337,7 @@
                     ul {
                         height: 160px;
                         font-size: 12px;
+                        font-weight: 300;
                         overflow-y: auto;
                         li {
                             padding: 5px 10px;
@@ -700,6 +704,9 @@
                     cursor: pointer;
                     margin-right: 5px;
                 }
+                label {
+                    font-weight: 300;
+                }
             }
         }
         /* on off control control */
@@ -709,7 +716,7 @@
             bottom: 30px;
             height: 38px;
             display: grid;
-            font-size: 15px;
+            font-size: 14px;
             @include mapControlBox;
             grid-template-columns: 37.5px auto;
             div {
@@ -747,6 +754,7 @@
                     height: 38px;
                     padding: 0 10px;
                     font-size: 17px;
+                    font-weight: 300;
                     cursor: pointer;
                     @include displayFlexRow;
                     background-color: $white;
