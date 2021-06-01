@@ -52,8 +52,6 @@ $(() => {
             os = 'mac';
         }
 
-        console.log($(this));
-
         // give calendar a unique id
         $(this).each(function() {
 
@@ -603,10 +601,6 @@ $(() => {
         var ar_index = user_selected_dates.indexOf(selected_date); // check if selected_date already exists in user_selected_date
         var $sel_calendar = $('.andp-datepicker-container[data-cal_id="' + cal_id + '"]');
         var $this = $sel_calendar.find('.day[data-date="' + selected_date + '"]');
-
-        console.log(cal_id);
-        console.log($sel_calendar);
-        console.log($this);
 
         if (soft_select) {
             $this.addClass('soft-select');
