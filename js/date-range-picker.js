@@ -147,6 +147,7 @@ $(() => {
 
             // initiate calendar ui
             init(this);
+            console.log('OK')
 
             if (single_datepicker) {
 
@@ -389,7 +390,6 @@ $(() => {
             $days_container = $sel_calendar.find('.andp-days-numbers');
             $sel_calendar.addClass('open').show();
 
-            fix_calendar_alignment();
             return;
         }
 
@@ -478,36 +478,6 @@ $(() => {
         generate_days();
 
         $('.andp-datepicker-container[data-cal_id="' + cal_id + '"]').addClass('open');
-
-        fix_calendar_alignment();
-
-    }
-
-    var fix_calendar_alignment = function() {
-
-        // fix calendar layout and position in dom
-        var elem_pos = $selector.offset();
-        var elem_height = $selector.outerHeight();
-
-        var document_width = $(window).width();
-        var selector_width = $selector.outerWidth();
-        var calendar_width = $('.andp-datepicker-container').outerWidth();
-        if (elem_pos) {
-            if (calendar_width + elem_pos.left + 10 > document_width) {
-                var right_offset = document_width - (elem_pos.left + selector_width);
-                $('.andp-datepicker-container[data-cal_id="' + cal_id + '"]').css({
-                    'top': elem_pos.top + elem_height,
-                    'right': right_offset,
-                    'left': 'inherit'
-                });
-            } else {
-                $('.andp-datepicker-container[data-cal_id="' + cal_id + '"]').css({
-                    'top': elem_pos.top + elem_height,
-                    'left': elem_pos.left,
-                    'right': 'inherit'
-                });
-            }
-        }
 
     }
 
