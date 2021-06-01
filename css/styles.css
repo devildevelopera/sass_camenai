@@ -4777,8 +4777,7 @@ label {
 }
 
 .andp-datepicker-container .andp-body .andp-days-numbers .andp-column div.soft-select {
-  background: #dedede;
-  border-color: #dedede;
+  border: 1px solid gray;
 }
 
 .andp-datepicker-container .andp-body .andp-days-numbers .andp-column .old-dates {

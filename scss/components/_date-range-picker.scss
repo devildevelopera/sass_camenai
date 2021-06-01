@@ -86,8 +86,7 @@
                         border-color: lighten($black, 80%) !important;
                     }
                     &.soft-select {
-                        background: #dedede;
-                        border-color: #dedede;
+                        border: 1px solid lighten($black, 50%);
                     }
                 }
                 .old-dates {
