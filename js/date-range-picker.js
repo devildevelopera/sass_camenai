@@ -45,12 +45,14 @@ $(() => {
     var sel_input;
     var params;
 
-    $.fn.dateRangePicker = (_params) => {
+    $.fn.dateRangePicker = function(_params) {
         params = _params;
         // detect OS
         if (navigator.platform.toUpperCase().indexOf('MAC') >= 0) {
             os = 'mac';
         }
+
+        console.log($(this));
 
         // give calendar a unique id
         $(this).each(function() {
@@ -124,7 +126,7 @@ $(() => {
 
 
         // when user clicks in input / selector field
-        $(() => {
+        $(document).ready(function() {
 
             // update globally.
             sel_input = this;
@@ -239,12 +241,12 @@ $(() => {
 
 
         // update days when month or year is changed
-        $body.on('change', '.andp-month-select, .andp-year-select', () => {
+        $body.on('change', '.andp-month-select, .andp-year-select', function() {
             generate_days();
         });
 
         // update days when month or year is changed
-        $body.on('change', '.time-picker-select', (e) => {
+        $body.on('change', '.time-picker-select', function(e) {
             if (user_selected_dates.length === 1) {
                 start_time = $('.time-picker-select.hour').val() + ':' + $('.time-picker-select.minute').val();
                 end_time = $('.time-picker-select.hour').val() + ':' + $('.time-picker-select.minute').val();
@@ -259,7 +261,7 @@ $(() => {
     };
 
     // change months on button click
-    $body.on('click', '.andp-datepicker-container.open .andp-change-months', (event) => {
+    $body.on('click', '.andp-datepicker-container.open .andp-change-months', function(event) {
         // show next month
         selected_month = parseInt($month_select.val());
         selected_year = parseInt($year_select.val());
@@ -354,7 +356,7 @@ $(() => {
 
 
     // insert/update date only if appy-date button was clicked
-    $body.on('click', '.andp-datepicker-container.open .apply-date', () => {
+    $body.on('click', '.andp-datepicker-container.open .apply-date', function() {
         if (user_selected_dates.length >= 2) {
             params.setRange(user_selected_dates[0] + ' ' + start_time, user_selected_dates[user_selected_dates.length - 1] + ' ' + end_time);
         } else {
@@ -363,7 +365,7 @@ $(() => {
     })
 
 
-    var format_date_yyyy_mm_dd = (date) => {
+    var format_date_yyyy_mm_dd = function(date) {
         let date_ar = date.split('-');
         let new_date = date_ar[0] + '-';
         new_date += (date_ar[1].length == 1) ? '0' + date_ar[1] : date_ar[1];
@@ -374,7 +376,7 @@ $(() => {
 
     }
 
-    var init = (this_sel) => {
+    var init = function(this_sel) {
 
         // close other instance of calendar
         $('.andp-datepicker-container').removeClass('open').hide();
@@ -481,7 +483,7 @@ $(() => {
 
     }
 
-    var fix_calendar_alignment = () => {
+    var fix_calendar_alignment = function() {
 
         // fix calendar layout and position in dom
         var elem_pos = $selector.offset();
@@ -509,7 +511,7 @@ $(() => {
 
     }
 
-    var generate_days = () => {
+    var generate_days = function() {
 
         month = $month_select.val();
         year = $year_select.val();
@@ -579,7 +581,7 @@ $(() => {
         $days_container.append(append_html);
     }
 
-    var get_days_difference = (date_1, date_2) => {
+    var get_days_difference = function(date_1, date_2) {
 
         date_1 = date_1.split('-');
         date_2 = date_2.split('-');
@@ -589,7 +591,7 @@ $(() => {
         return Math.abs(diff);
     }
 
-    var find_older_date = (date_1, date_2) => {
+    var find_older_date = function(date_1, date_2) {
         date_1 = date_1.split('-');
         date_2 = date_2.split('-');
 
@@ -603,7 +605,7 @@ $(() => {
         }
     }
 
-    var get_next_day = (date_1) => {
+    var get_next_day = function(date_1) {
         date_1 = date_1.split('-');
 
         year = parseInt(date_1[0]);
@@ -625,7 +627,7 @@ $(() => {
         return year + '-' + month + '-' + day;
     }
 
-    var select_date = (selected_date, soft_select = false) => {
+    var select_date = function(selected_date, soft_select = false) {
 
         selected_date = format_date_yyyy_mm_dd(selected_date);
 
@@ -656,7 +658,7 @@ $(() => {
         }
     }
 
-    var generate_hidden_input_fields = (value) => {
+    var generate_hidden_input_fields = function(value) {
         $form.append('<input class="andp-hidden-dates" type="hidden" data-cal_id="' + cal_id + '" name="' + input_field_name + '[]" value="' + value + '">');
     };
 
