@@ -27,7 +27,6 @@
             text-align: end;
             margin-right: 30px;
             padding-bottom: 8px;
-            border-bottom: solidBlackBorder();
         }
         ul {
             .setting-item-hr {
@@ -43,9 +42,7 @@
                 &.download-data {
                     height: 35px;
                     display: flex;
-                    margin-right: 30px;
                     align-items: center;
-                    border-bottom: solidBlackBorder();
                 }
                 .menu-icon {
                     width: 30px;
@@ -112,7 +109,7 @@
                                                 display: flex;
                                                 align-items: center;
                                                 .pretty {
-                                                    margin-right: 19px;
+                                                    margin-right: 18px;
                                                 }
                                             }
                                         }

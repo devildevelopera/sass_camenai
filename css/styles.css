@@ -4226,26 +4226,29 @@ label {
   }
 }
 
+/* webkit browsers */
 .fancyscroll::-webkit-scrollbar {
   width: 5px;
 }
 
-/* Track */
 .fancyscroll::-webkit-scrollbar-track {
   border-radius: 2.5px;
   -webkit-box-shadow: inset 0 0 2.5px gray;
           box-shadow: inset 0 0 2.5px gray;
 }
 
-/* Handle */
 .fancyscroll::-webkit-scrollbar-thumb {
   border-radius: 2.5px;
   background: #cccccc;
 }
 
-/* Handle on hover */
 .fancyscroll::-webkit-scrollbar-thumb:hover {
   background: #b3b3b3;
+}
+
+/* firefox */
+.fancyscroll {
+  scrollbar-width: thin;
 }
 
 .accordion .card {
@@ -4809,8 +4812,9 @@ label {
   width: 121px;
   height: 29px;
   padding: 0 5px;
-  text-indent: 55px;
+  text-align: center;
   font-size: 12.47px;
+  text-align-last: center;
   -webkit-appearance: none;
   background-color: #f2f2f2;
 }
@@ -5027,7 +5031,6 @@ to layouts.
   text-align: end;
   margin-right: 30px;
   padding-bottom: 8px;
-  border-bottom: 1px solid #cccccc;
 }
 
 .cnt .cnt-settings ul .setting-item-hr {
@@ -5046,11 +5049,9 @@ to layouts.
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-right: 30px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border-bottom: 1px solid #cccccc;
 }
 
 .cnt .cnt-settings ul li .menu-icon {
@@ -5192,7 +5193,7 @@ to layouts.
 }
 
 .cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording .card ul li #accordionImgRecordingImageFilter .card .image-filter-item > div:last-child .pretty, .cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording .card ul li #accordionImgRecordingDetections .card .image-filter-item > div:last-child .pretty {
-  margin-right: 19px;
+  margin-right: 18px;
 }
 
 .cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording .card ul li #accordionImgRecordingImageFilter .card #accordionImgRecordingImageFilterInput .card, .cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording .card ul li #accordionImgRecordingDetections .card #accordionImgRecordingImageFilterInput .card {
