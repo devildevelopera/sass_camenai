@@ -4776,18 +4776,18 @@ label {
   border-color: #cccccc !important;
 }
 
-.andp-datepicker-container .andp-body .andp-days-numbers .andp-column div .andp-column div.soft-select {
+.andp-datepicker-container .andp-body .andp-days-numbers .andp-column div.soft-select {
   background: #dedede;
   border-color: #dedede;
 }
 
-.andp-datepicker-container .andp-body .andp-days-numbers .andp-column div .andp-info {
-  font-size: 12px;
-  margin-top: 9px;
-}
-
 .andp-datepicker-container .andp-body .andp-days-numbers .andp-column .old-dates {
   color: #d2d2d2;
+}
+
+.andp-datepicker-container .andp-body .andp-info {
+  font-size: 12px;
+  margin-top: 9px;
 }
 
 .andp-datepicker-container .andp-body .andp-action-btns {

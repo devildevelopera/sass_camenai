@@ -85,19 +85,19 @@
                         background: lighten($black, 80%) !important;
                         border-color: lighten($black, 80%) !important;
                     }
-                    .andp-column div.soft-select {
+                    &.soft-select {
                         background: #dedede;
                         border-color: #dedede;
-                    }
-                    .andp-info {
-                        font-size: 12px;
-                        margin-top: 9px;
                     }
                 }
                 .old-dates {
                     color: #d2d2d2;
                 }
             }
+        }
+        .andp-info {
+            font-size: 12px;
+            margin-top: 9px;
         }
         .andp-action-btns {
             text-align: center;
