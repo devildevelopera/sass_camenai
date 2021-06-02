@@ -119,7 +119,63 @@
                                                     .card {
                                                         padding-right: 0;
                                                         .card-body {
+                                                            font-size: 12px;
+                                                            font-weight: 300;
+                                                            line-height: normal;
                                                             padding-left: 10px;
+                                                            >div {
+                                                                &:first-child {
+                                                                    height: 24.5px;
+                                                                    display: grid;
+                                                                    grid-template-columns: 50% 50%;
+                                                                    border-bottom: solidBlackBorder(70%);
+                                                                    &>div {
+                                                                        &:first-child {
+                                                                            @include displayFlexRow;
+                                                                            background: lighten($black, 90%);
+                                                                            border-right: solidBlackBorder(70%);
+                                                                            &>div {
+                                                                                &:first-child {
+                                                                                    width: 24.5px;
+                                                                                    @include displayFlexRow;
+                                                                                    justify-content: center;
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                        &:last-child {
+                                                                            position: relative;
+                                                                            img {
+                                                                                top: 5px;
+                                                                                left: 5px;
+                                                                                position: absolute;
+                                                                            }
+                                                                            input {
+                                                                                width: 100%;
+                                                                                height: 100%;
+                                                                                border: none;
+                                                                                padding-left: 23px;
+                                                                                background: lighten($black, 90%);
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                                &:last-child {
+                                                                    background: lighten($black, 95%);
+                                                                    &>div {
+                                                                        height: 24.5px;
+                                                                        @include displayFlexRow;
+                                                                        justify-content: space-between;
+                                                                        span {
+                                                                            padding-left: 8px;
+                                                                        }
+                                                                        &>div {
+                                                                            width: 24.5px;
+                                                                            @include displayFlexRow;
+                                                                            justify-content: center;
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
                                                         }
                                                     }
                                                 }

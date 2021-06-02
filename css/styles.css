@@ -2323,7 +2323,111 @@ to layouts.
 }
 
 .cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording .card .card-body ul li #accordionImgRecordingImageFilter .card #accordionImgRecordingImageFilterInput .card .card-body, .cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording .card .card-body ul li #accordionImgRecordingDetections .card #accordionImgRecordingImageFilterInput .card .card-body {
+  font-size: 12px;
+  font-weight: 300;
+  line-height: normal;
   padding-left: 10px;
+}
+
+.cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording .card .card-body ul li #accordionImgRecordingImageFilter .card #accordionImgRecordingImageFilterInput .card .card-body > div:first-child, .cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording .card .card-body ul li #accordionImgRecordingDetections .card #accordionImgRecordingImageFilterInput .card .card-body > div:first-child {
+  height: 24.5px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 50% 50%;
+      grid-template-columns: 50% 50%;
+  border-bottom: 1px solid #b3b3b3;
+}
+
+.cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording .card .card-body ul li #accordionImgRecordingImageFilter .card #accordionImgRecordingImageFilterInput .card .card-body > div:first-child > div:first-child, .cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording .card .card-body ul li #accordionImgRecordingDetections .card #accordionImgRecordingImageFilterInput .card .card-body > div:first-child > div:first-child {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  background: #e6e6e6;
+  border-right: 1px solid #b3b3b3;
+}
+
+.cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording .card .card-body ul li #accordionImgRecordingImageFilter .card #accordionImgRecordingImageFilterInput .card .card-body > div:first-child > div:first-child > div:first-child, .cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording .card .card-body ul li #accordionImgRecordingDetections .card #accordionImgRecordingImageFilterInput .card .card-body > div:first-child > div:first-child > div:first-child {
+  width: 24.5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording .card .card-body ul li #accordionImgRecordingImageFilter .card #accordionImgRecordingImageFilterInput .card .card-body > div:first-child > div:last-child, .cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording .card .card-body ul li #accordionImgRecordingDetections .card #accordionImgRecordingImageFilterInput .card .card-body > div:first-child > div:last-child {
+  position: relative;
+}
+
+.cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording .card .card-body ul li #accordionImgRecordingImageFilter .card #accordionImgRecordingImageFilterInput .card .card-body > div:first-child > div:last-child img, .cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording .card .card-body ul li #accordionImgRecordingDetections .card #accordionImgRecordingImageFilterInput .card .card-body > div:first-child > div:last-child img {
+  top: 5px;
+  left: 5px;
+  position: absolute;
+}
+
+.cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording .card .card-body ul li #accordionImgRecordingImageFilter .card #accordionImgRecordingImageFilterInput .card .card-body > div:first-child > div:last-child input, .cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording .card .card-body ul li #accordionImgRecordingDetections .card #accordionImgRecordingImageFilterInput .card .card-body > div:first-child > div:last-child input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  padding-left: 23px;
+  background: #e6e6e6;
+}
+
+.cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording .card .card-body ul li #accordionImgRecordingImageFilter .card #accordionImgRecordingImageFilterInput .card .card-body > div:last-child, .cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording .card .card-body ul li #accordionImgRecordingDetections .card #accordionImgRecordingImageFilterInput .card .card-body > div:last-child {
+  background: #f2f2f2;
+}
+
+.cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording .card .card-body ul li #accordionImgRecordingImageFilter .card #accordionImgRecordingImageFilterInput .card .card-body > div:last-child > div, .cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording .card .card-body ul li #accordionImgRecordingDetections .card #accordionImgRecordingImageFilterInput .card .card-body > div:last-child > div {
+  height: 24.5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording .card .card-body ul li #accordionImgRecordingImageFilter .card #accordionImgRecordingImageFilterInput .card .card-body > div:last-child > div span, .cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording .card .card-body ul li #accordionImgRecordingDetections .card #accordionImgRecordingImageFilterInput .card .card-body > div:last-child > div span {
+  padding-left: 8px;
+}
+
+.cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording .card .card-body ul li #accordionImgRecordingImageFilter .card #accordionImgRecordingImageFilterInput .card .card-body > div:last-child > div > div, .cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording .card .card-body ul li #accordionImgRecordingDetections .card #accordionImgRecordingImageFilterInput .card .card-body > div:last-child > div > div {
+  width: 24.5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording #collapseImgRecording {
