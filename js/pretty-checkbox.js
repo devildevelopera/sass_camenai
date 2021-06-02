@@ -3,10 +3,12 @@ $(() => {
     setTimeout(() => {
         $(`.image-quality-horizontal-slider .slider.slider-horizontal .slider-handle.min-slider-handle.round`).show();
         $(`.image-quality-horizontal-slider .slider.slider-horizontal .slider-track`).css('background-image', 'url("imgs/SVG/vertical-line.svg"), url("imgs/SVG/vertical-line.svg"), url("imgs/SVG/vertical-line.svg"), url("imgs/SVG/vertical-line.svg"), url("imgs/SVG/vertical-line.svg"), url("imgs/SVG/vertical-line.svg"), url("imgs/SVG/vertical-line.svg"), url("imgs/SVG/vertical-line.svg"), url("imgs/SVG/vertical-line.svg"), url("imgs/SVG/vertical-line.svg"), url("imgs/SVG/vertical-line.svg")');
+        $(`.image-quality-horizontal-slider .slider.slider-horizontal .slider-track`).addClass('selected');
         $(`.image-quality-horizontal-slider .slider.slider-horizontal .tooltip`).show();
 
         $(`.gps-accuracy-horizontal-slider .slider.slider-horizontal .slider-handle.min-slider-handle.round`).show();
         $(`.gps-accuracy-horizontal-slider .slider.slider-horizontal .slider-track`).css('background-image', 'url("imgs/SVG/vertical-line.svg"), url("imgs/SVG/vertical-line.svg"), url("imgs/SVG/vertical-line.svg"), url("imgs/SVG/vertical-line.svg"), url("imgs/SVG/vertical-line.svg"), url("imgs/SVG/vertical-line.svg"), url("imgs/SVG/vertical-line.svg"), url("imgs/SVG/vertical-line.svg"), url("imgs/SVG/vertical-line.svg"), url("imgs/SVG/vertical-line.svg"), url("imgs/SVG/vertical-line.svg")');
+        $(`.gps-accuracy-horizontal-slider .slider.slider-horizontal .slider-track`).addClass('selected');
         $(`.gps-accuracy-horizontal-slider .slider.slider-horizontal .tooltip`).show();
     }, 500);
 
@@ -20,5 +22,6 @@ $(() => {
             $(`.${e.target.name}-horizontal-slider .slider.slider-horizontal .slider-track`).css('background-image', 'url("imgs/SVG/vertical-line.svg"), url("imgs/SVG/vertical-line.svg"), url("imgs/SVG/vertical-line.svg"), url("imgs/SVG/vertical-line.svg"), url("imgs/SVG/vertical-line.svg"), url("imgs/SVG/vertical-line.svg"), url("imgs/SVG/vertical-line.svg"), url("imgs/SVG/vertical-line.svg"), url("imgs/SVG/vertical-line.svg"), url("imgs/SVG/vertical-line.svg"), url("imgs/SVG/vertical-line.svg")');
             $(`.${e.target.name}-horizontal-slider .slider.slider-horizontal .tooltip`).show();
         }
+        $(`.${e.target.name}-horizontal-slider .slider.slider-horizontal .slider-track`).toggleClass('selected');
     });
 });

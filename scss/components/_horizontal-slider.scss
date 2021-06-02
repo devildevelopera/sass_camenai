@@ -1,5 +1,5 @@
 .slider.slider-horizontal {
-    width: 80px !important;
+    width: 73px !important;
     &:hover {
         .tooltip {
             opacity: 1;
@@ -11,10 +11,10 @@
     .slider-track {
         box-shadow: none;
         margin-left: -10px;
-        top: 15% !important;
-        height: 15px !important;
+        top: 10% !important;
+        height: 16px !important;
         margin-top: 0 !important;
-        background-size: 9px 5px;
+        background-size: 9px 6px;
         background-position-y: 5px;
         width: calc(100% + 10px) !important;
         background-position-x: 0, 10%, 20%, 30%, 40%, 50%, 60%, 70%, 80%, 90%, 100%, 110%;
@@ -22,12 +22,15 @@
         background-repeat: no-repeat !important;
         &:after {
             right: -3px;
-            width: 97px;
+            width: 90px;
             content: '_';
-            height: 15px;
+            height: 16px;
             color: $white;
             position: absolute;
             border-radius: 7.5px;
+            border: solidBlackBorder(90%);
+        }
+        &.selected:after {
             border: solidBlackBorder(80%);
         }
         .slider-selection {
@@ -77,9 +80,9 @@
     }
     .slider-handle {
         display: none;
-        top: 6px !important;
-        width: 9px !important;
-        height: 9px !important;
+        top: 5px !important;
+        width: 10px !important;
+        height: 10px !important;
         background-image: none !important;
         background-color: lighten($black, 40%) !important;
     }

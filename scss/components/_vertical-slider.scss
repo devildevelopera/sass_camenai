@@ -8,7 +8,8 @@ $image_position: 0;
 
 .slider.slider-vertical {
     margin-top: 18px;
-    height: 80px !important;
+    width: 17px !important;
+    height: 73px !important;
     &:hover {
         .tooltip {
             opacity: 1;
@@ -17,8 +18,8 @@ $image_position: 0;
     .slider-track {
         box-shadow: none;
         margin-top: -10px;
-        left: 15% !important;
-        width: 15px !important;
+        left: 10% !important;
+        width: 16px !important;
         background-size: 5px 9px;
         background-position-x: 5px;
         border-radius: 7.5px !important;
@@ -28,9 +29,9 @@ $image_position: 0;
         background-repeat: no-repeat !important;
         &:after {
             bottom: -3px;
-            height: 97px;
+            height: 90px;
             content: '|';
-            width: 15px;
+            width: 16px;
             color: $white;
             position: absolute;
             border-radius: 7.5px;
@@ -72,9 +73,9 @@ $image_position: 0;
         }
     }
     .slider-handle {
-        left: 6px !important;
-        width: 9px !important;
-        height: 9px !important;
+        left: 4px !important;
+        width: 10px !important;
+        height: 10px !important;
         background-image: none !important;
         background-color: $bright-contrast-color !important;
     }

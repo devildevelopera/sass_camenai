@@ -1,0 +1,9 @@
+/* pretty checkbox style custom */
+
+.pretty.p-default input:not(:checked)~.state label:after {
+    background-color: lighten($black, 90%) !important;
+}
+
+.pretty.p-default input:not(:checked)~.state label:before {
+    border-color: lighten($black, 70%) !important;
+}

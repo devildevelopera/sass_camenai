@@ -31,7 +31,7 @@
         ul {
             .setting-item-hr {
                 margin: 0;
-                width: 272px;
+                width: calc(100% - 30px);
                 border-top: solidBlackBorder();
             }
             li {
@@ -52,84 +52,88 @@
                     justify-content: center;
                 }
                 &.accordionImgRecording {
-                    #accordionImgRecording .card {
-                        .card-head {
-                            &#headingImgRecording {
-                                padding-right: 22px;
-                            }
-                            h2 {
-                                @include displayFlexRow;
-                            }
-                        }
-                        ul {
-                            margin-left: 15px;
-                            border-left: solidBlackBorder();
-                            li {
-                                padding-left: 8px;
-                                background-color: transparent;
-                                #accordionImgRecordingTimeRange {
-                                    .card {
-                                        padding-right: 22px;
-                                        h2 {
-                                            @include displayFlexRow;
-                                        }
-                                        .card-body {
-                                            height: 355px;
-                                            padding-left: 10px;
-                                        }
-                                    }
+                    #accordionImgRecording {
+                        .card {
+                            .card-head {
+                                &#headingImgRecording {
+                                    padding-right: 22px;
                                 }
-                                #accordionImgRecordingImageFilter {
-                                    .card {
-                                        padding-right: 22px;
-                                        h2 {
-                                            @include displayFlexRow;
-                                        }
-                                        .quality,
-                                        .confidence {
-                                            height: 8px;
-                                            text-align: end;
-                                            margin-right: 8px;
-                                            img {
-                                                margin-top: -20px;
-                                            }
-                                        }
-                                        .image-filter-item {
-                                            display: flex;
-                                            align-items: center;
-                                            margin: 3px 3px 3px 0;
-                                            justify-content: space-between;
-                                            &>div:first-child {
-                                                @include displayFlexRow;
-                                                span {
-                                                    font-weight: 300;
-                                                }
-                                            }
-                                            &>div:last-child {
-                                                display: flex;
-                                                align-items: center;
-                                                .pretty {
-                                                    margin-right: 18px;
-                                                }
-                                            }
-                                        }
-                                        #accordionImgRecordingImageFilterInput {
+                                h2 {
+                                    @include displayFlexRow;
+                                }
+                            }
+                            .card-body {
+                                ul {
+                                    margin-left: 15px;
+                                    border-left: solidBlackBorder();
+                                    li {
+                                        padding-left: 8px;
+                                        background-color: transparent;
+                                        #accordionImgRecordingTimeRange {
                                             .card {
-                                                padding-right: 0;
+                                                padding-right: 22px;
+                                                h2 {
+                                                    @include displayFlexRow;
+                                                }
                                                 .card-body {
+                                                    height: 355px;
                                                     padding-left: 10px;
                                                 }
                                             }
                                         }
+                                        #accordionImgRecordingImageFilter {
+                                            .card {
+                                                padding-right: 22px;
+                                                h2 {
+                                                    @include displayFlexRow;
+                                                }
+                                                .quality,
+                                                .confidence {
+                                                    height: 8px;
+                                                    text-align: end;
+                                                    margin-right: 8px;
+                                                    img {
+                                                        margin-top: -20px;
+                                                    }
+                                                }
+                                                .image-filter-item {
+                                                    display: flex;
+                                                    align-items: center;
+                                                    margin: 3px 3px 3px 0;
+                                                    justify-content: space-between;
+                                                    &>div:first-child {
+                                                        @include displayFlexRow;
+                                                        span {
+                                                            font-weight: 300;
+                                                        }
+                                                    }
+                                                    &>div:last-child {
+                                                        display: flex;
+                                                        align-items: center;
+                                                        .pretty {
+                                                            margin-right: 18px;
+                                                        }
+                                                    }
+                                                }
+                                                #accordionImgRecordingImageFilterInput {
+                                                    .card {
+                                                        padding-right: 0;
+                                                        .card-body {
+                                                            padding-left: 10px;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        #accordionImgRecordingDetections {
+                                            @extend #accordionImgRecordingImageFilter
+                                        }
                                     }
-                                }
-                                #accordionImgRecordingDetections {
-                                    .card .card-head {
-                                        margin-bottom: 5px;
-                                    }
-                                    @extend #accordionImgRecordingImageFilter
                                 }
                             }
+                        }
+                        #collapseImgRecording {
+                            margin-bottom: 8px;
                         }
                     }
                 }
