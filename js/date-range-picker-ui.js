@@ -1,6 +1,8 @@
 var _setRange = (start, end) => {
     if (start && end) {
         $(".date-range-picker-input").val(start + ' to ' + end);
+    } else {
+        $(".date-range-picker-input").val('');
     }
 }
 

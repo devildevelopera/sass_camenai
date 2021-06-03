@@ -1,0 +1,96 @@
+/* help-center-box-draggable */
+
+#help-center-box-draggable {
+    right: 0;
+    top: 100px;
+    width: 390px;
+    z-index: 1001;
+    padding: 0 20px;
+    height: 676.3px;
+    overflow-y: auto;
+    font-weight: 300;
+    background-color: $white;
+    >div {
+        &:first-child {
+            padding: 10px 0;
+            font-size: 18px;
+            font-weight: 400;
+            @include displayFlexRow;
+            color: lighten($black, 20%);
+            justify-content: space-between;
+            border-bottom: solidBlackBorder();
+            div:last-child img {
+                cursor: pointer;
+            }
+        }
+        &:nth-child(2) {
+            padding: 10px 0;
+            border-bottom: solidBlackBorder();
+            >div {
+                &:first-child {
+                    margin-bottom: 5px;
+                    @include displayFlexRow;
+                    color: lighten($black, 20%);
+                    justify-content: space-between;
+                }
+                &:last-child {
+                    font-size: 12px;
+                    color: lighten($black, 50%);
+                }
+            }
+        }
+        &:nth-child(3) {
+            padding: 10px 0;
+            border-bottom: solidBlackBorder();
+            >div {
+                &:first-child {
+                    margin-bottom: 5px;
+                    @include displayFlexRow;
+                    color: lighten($black, 20%);
+                    justify-content: space-between;
+                    button {
+                        color: $white;
+                        display: flex;
+                        width: 47.10px;
+                        height: 20.53px;
+                        font-size: 14px;
+                        line-height: 17px !important;
+                        align-items: center;
+                        border-radius: 2.5px;
+                        justify-content: center;
+                        background-color: lighten($black, 40%);
+                        &:active {
+                            background-color: $basic-black-color;
+                        }
+                    }
+                }
+                &:last-child {
+                    font-size: 12px;
+                    color: lighten($black, 50%);
+                }
+            }
+        }
+        &:last-child {
+            padding: 10px 0;
+            >div {
+                &:first-child {
+                    margin-bottom: 5px;
+                    color: lighten($black, 20%);
+                }
+                &:last-child {
+                    div {
+                        font-size: 12px;
+                        margin-bottom: 10px;
+                        span {
+                            color: lighten($black, 20%);
+                        }
+                        >div {
+                            padding-left: 16px;
+                            color: lighten($black, 50%);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

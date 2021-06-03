@@ -250,6 +250,7 @@ $(() => {
                 end_time = $('.time-picker-select.hour').val() + ':' + $('.time-picker-select.minute').val();
             } else if (user_selected_dates.length > 1) {
                 end_time = $('.time-picker-select.hour').val() + ':' + $('.time-picker-select.minute').val();
+                params.setRange(user_selected_dates[0] + ' ' + start_time, user_selected_dates[user_selected_dates.length - 1] + ' ' + end_time);
             } else {
                 start_time = '00:00';
                 end_time = '00:00';
@@ -413,9 +414,9 @@ $(() => {
         template += '<select class="time-picker-select minute" name="time-picker-last-input" value="00"></select>';
         template += '<div class="andp-action-btns">';
 
-        if (!single_datepicker) {
-            template += '<button type="button" class="apply-date" data-cal_id="' + cal_id + '">Apply</button>';
-        }
+        // if (!single_datepicker) {
+        //     template += '<button type="button" class="apply-date" data-cal_id="' + cal_id + '">Apply</button>';
+        // }
         template += '</div>';
         template += '</div>';
         template += '</div>';
@@ -611,6 +612,11 @@ $(() => {
                 // add selected date into user_selected_dates array
                 user_selected_dates.push(selected_date);
 
+                if (user_selected_dates.length >= 2) {
+                    params.setRange(user_selected_dates[0] + ' ' + start_time, user_selected_dates[user_selected_dates.length - 1] + ' ' + end_time);
+                } else {
+                    params.setRange(null, null);
+                }
                 // mark this day as selected
                 $this.addClass('selected');
             } else {

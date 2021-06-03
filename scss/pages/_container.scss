@@ -31,7 +31,7 @@
         ul {
             .setting-item-hr {
                 margin: 0;
-                width: calc(100% - 30px);
+                width: calc(100% - 25px);
                 border-top: solidBlackBorder();
             }
             li {
@@ -76,7 +76,7 @@
                                                     @include displayFlexRow;
                                                 }
                                                 .card-body {
-                                                    height: 355px;
+                                                    height: 310px;
                                                     padding-left: 10px;
                                                 }
                                             }
@@ -115,7 +115,7 @@
                                                         }
                                                     }
                                                 }
-                                                #accordionImgRecordingImageFilterInput {
+                                                #accordionImgRecordingImageFilterRecorders {
                                                     .card {
                                                         padding-right: 0;
                                                         .card-body {
@@ -180,6 +180,11 @@
                                                     }
                                                 }
                                             }
+                                        }
+                                        .apply-filters {
+                                            margin-right: 22px;
+                                            @include displayFlexRow;
+                                            background: lighten($black, 80%);
                                         }
                                         #accordionImgRecordingDetections {
                                             @extend #accordionImgRecordingImageFilter
@@ -415,216 +420,6 @@
             left: calc(50% - 265px);
             @include maxXSContent {
                 left: calc(50% - 170px);
-            }
-        }
-        /* help-center-box-draggable */
-        #help-center-box-draggable {
-            top: 20px;
-            right: 120px;
-            width: 390px;
-            padding: 0 20px;
-            height: 676.3px;
-            overflow-y: auto;
-            font-weight: 300;
-            background-color: $white;
-            >div {
-                &:first-child {
-                    padding: 10px 0;
-                    font-size: 18px;
-                    font-weight: 400;
-                    @include displayFlexRow;
-                    color: lighten($black, 20%);
-                    justify-content: space-between;
-                    border-bottom: solidBlackBorder();
-                    div:last-child img {
-                        cursor: pointer;
-                    }
-                }
-                &:nth-child(2) {
-                    padding: 10px 0;
-                    border-bottom: solidBlackBorder();
-                    >div {
-                        &:first-child {
-                            margin-bottom: 5px;
-                            @include displayFlexRow;
-                            color: lighten($black, 20%);
-                            justify-content: space-between;
-                        }
-                        &:last-child {
-                            font-size: 12px;
-                            color: lighten($black, 50%);
-                        }
-                    }
-                }
-                &:nth-child(3) {
-                    padding: 10px 0;
-                    border-bottom: solidBlackBorder();
-                    >div {
-                        &:first-child {
-                            margin-bottom: 5px;
-                            @include displayFlexRow;
-                            color: lighten($black, 20%);
-                            justify-content: space-between;
-                            button {
-                                color: $white;
-                                display: flex;
-                                width: 47.10px;
-                                height: 20.53px;
-                                font-size: 14px;
-                                line-height: 17px !important;
-                                align-items: center;
-                                border-radius: 2.5px;
-                                justify-content: center;
-                                background-color: lighten($black, 40%);
-                                &:active {
-                                    background-color: $basic-black-color;
-                                }
-                            }
-                        }
-                        &:last-child {
-                            font-size: 12px;
-                            color: lighten($black, 50%);
-                        }
-                    }
-                }
-                &:last-child {
-                    padding: 10px 0;
-                    >div {
-                        &:first-child {
-                            margin-bottom: 5px;
-                            color: lighten($black, 20%);
-                        }
-                        &:last-child {
-                            div {
-                                font-size: 12px;
-                                margin-bottom: 10px;
-                                span {
-                                    color: lighten($black, 20%);
-                                }
-                                >div {
-                                    padding-left: 16px;
-                                    color: lighten($black, 50%);
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-        /* setting-box-draggable */
-        #setting-box-draggable {
-            top: 48px;
-            right: 66px;
-            width: 390px;
-            padding: 0 20px;
-            height: 676.3px;
-            overflow-y: auto;
-            font-weight: 300;
-            background-color: $white;
-            >div {
-                &:first-child {
-                    padding: 10px 0;
-                    font-size: 18px;
-                    font-weight: 400;
-                    @include displayFlexRow;
-                    color: lighten($black, 20%);
-                    justify-content: space-between;
-                    border-bottom: solidBlackBorder();
-                    div:last-child img {
-                        cursor: pointer;
-                    }
-                }
-                &:nth-child(2) {
-                    padding: 15px 0;
-                    border-bottom: solidBlackBorder();
-                    &>div {
-                        font-size: 14px;
-                        @include displayFlexRow;
-                        color: lighten($black, 20%);
-                        justify-content: space-between;
-                        &:not(:last-child) {
-                            margin-bottom: 15px;
-                        }
-                        &:nth-child(2),
-                        &:nth-child(3),
-                        &:nth-child(4) {
-                            &>div {
-                                display: grid;
-                                grid-template-columns: 20px 28.1px 20px;
-                                &>div {
-                                    height: 20.5px;
-                                    display: flex;
-                                    align-items: center;
-                                    justify-content: center;
-                                    &:nth-child(2) {
-                                        border: solidBlackBorder();
-                                    }
-                                    &:not(:nth-child(2)) {
-                                        cursor: pointer;
-                                    }
-                                }
-                            }
-                        }
-                        &:first-child,
-                        &:last-child {
-                            &>div {
-                                margin-right: 26px;
-                            }
-                        }
-                    }
-                }
-                &:nth-child(3) {
-                    padding: 10px 0;
-                    border-bottom: solidBlackBorder();
-                    >div {
-                        &:first-child {
-                            margin-bottom: 15px;
-                            color: lighten($black, 20%);
-                        }
-                        &:last-child {
-                            &>div {
-                                font-size: 14px;
-                                @include displayFlexRow;
-                                color: lighten($black, 20%);
-                                justify-content: space-between;
-                                &:not(:last-child) {
-                                    margin-bottom: 15px;
-                                }
-                                &>div {
-                                    @include displayFlexRow;
-                                    &:last-child {
-                                        span {
-                                            font-size: 10px;
-                                            color: lighten($black, 60%);
-                                        }
-                                    }
-                                    &>div {
-                                        &:first-child {
-                                            margin-right: 12px;
-                                        }
-                                        &:last-child {
-                                            margin-left: 12px;
-                                            margin-right: 26px;
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-                &:last-child {
-                    button {
-                        width: 128px;
-                        height: 33px;
-                        color: $white;
-                        margin-top: 15px;
-                        border-radius: 4px;
-                        background-color: lighten($black, 40%);
-                        &:active {
-                            background-color: $basic-black-color;
-                        }
-                    }
-                }
             }
         }
         /* report issue modal open icon */

@@ -1240,6 +1240,343 @@ label {
   background-color: #cccccc;
 }
 
+/* setting-box-draggable */
+#setting-box-draggable {
+  right: 0;
+  top: 100px;
+  width: 390px;
+  z-index: 1001;
+  padding: 0 20px;
+  height: 676.3px;
+  overflow-y: auto;
+  font-weight: 300;
+  background-color: #fff;
+}
+
+#setting-box-draggable > div:first-child {
+  padding: 10px 0;
+  font-size: 18px;
+  font-weight: 400;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  color: #333333;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-bottom: 1px solid #cccccc;
+}
+
+#setting-box-draggable > div:first-child div:last-child img {
+  cursor: pointer;
+}
+
+#setting-box-draggable > div:nth-child(2) {
+  padding: 15px 0;
+  border-bottom: 1px solid #cccccc;
+}
+
+#setting-box-draggable > div:nth-child(2) > div {
+  font-size: 14px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  color: #333333;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#setting-box-draggable > div:nth-child(2) > div:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+#setting-box-draggable > div:nth-child(2) > div:nth-child(2) > div, #setting-box-draggable > div:nth-child(2) > div:nth-child(3) > div, #setting-box-draggable > div:nth-child(2) > div:nth-child(4) > div {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 20px 28.1px 20px;
+      grid-template-columns: 20px 28.1px 20px;
+}
+
+#setting-box-draggable > div:nth-child(2) > div:nth-child(2) > div > div, #setting-box-draggable > div:nth-child(2) > div:nth-child(3) > div > div, #setting-box-draggable > div:nth-child(2) > div:nth-child(4) > div > div {
+  height: 20.5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#setting-box-draggable > div:nth-child(2) > div:nth-child(2) > div > div:nth-child(2), #setting-box-draggable > div:nth-child(2) > div:nth-child(3) > div > div:nth-child(2), #setting-box-draggable > div:nth-child(2) > div:nth-child(4) > div > div:nth-child(2) {
+  border: 1px solid #cccccc;
+}
+
+#setting-box-draggable > div:nth-child(2) > div:nth-child(2) > div > div:not(:nth-child(2)), #setting-box-draggable > div:nth-child(2) > div:nth-child(3) > div > div:not(:nth-child(2)), #setting-box-draggable > div:nth-child(2) > div:nth-child(4) > div > div:not(:nth-child(2)) {
+  cursor: pointer;
+}
+
+#setting-box-draggable > div:nth-child(2) > div:nth-child(2) > div {
+  position: relative;
+}
+
+#setting-box-draggable > div:nth-child(2) > div:nth-child(2) > div span {
+  left: -60px;
+  position: absolute;
+}
+
+#setting-box-draggable > div:nth-child(2) > div:nth-child(2) > div > div:nth-child(2) {
+  border: none;
+}
+
+#setting-box-draggable > div:nth-child(2) > div:nth-child(2) > div > div:nth-child(3) {
+  border: 1px solid #cccccc;
+}
+
+#setting-box-draggable > div:nth-child(2) > div:first-child > div, #setting-box-draggable > div:nth-child(2) > div:last-child > div {
+  margin-right: 26px;
+}
+
+#setting-box-draggable > div:nth-child(3) {
+  padding: 10px 0;
+  border-bottom: 1px solid #cccccc;
+}
+
+#setting-box-draggable > div:nth-child(3) > div:first-child {
+  margin-bottom: 15px;
+  color: #333333;
+}
+
+#setting-box-draggable > div:nth-child(3) > div:last-child > div {
+  font-size: 14px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  color: #333333;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#setting-box-draggable > div:nth-child(3) > div:last-child > div:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+#setting-box-draggable > div:nth-child(3) > div:last-child > div > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+#setting-box-draggable > div:nth-child(3) > div:last-child > div > div:last-child span {
+  font-size: 10px;
+  color: #999999;
+}
+
+#setting-box-draggable > div:nth-child(3) > div:last-child > div > div > div:first-child {
+  margin-right: 12px;
+}
+
+#setting-box-draggable > div:nth-child(3) > div:last-child > div > div > div:last-child {
+  margin-left: 12px;
+  margin-right: 26px;
+}
+
+#setting-box-draggable > div:last-child button {
+  width: 128px;
+  height: 33px;
+  color: #fff;
+  margin-top: 15px;
+  border-radius: 4px;
+  background-color: #666666;
+}
+
+#setting-box-draggable > div:last-child button:active {
+  background-color: #4d4d4d;
+}
+
+#modal-overlay {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  z-index: 1000;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* help-center-box-draggable */
+#help-center-box-draggable {
+  right: 0;
+  top: 100px;
+  width: 390px;
+  z-index: 1001;
+  padding: 0 20px;
+  height: 676.3px;
+  overflow-y: auto;
+  font-weight: 300;
+  background-color: #fff;
+}
+
+#help-center-box-draggable > div:first-child {
+  padding: 10px 0;
+  font-size: 18px;
+  font-weight: 400;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  color: #333333;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-bottom: 1px solid #cccccc;
+}
+
+#help-center-box-draggable > div:first-child div:last-child img {
+  cursor: pointer;
+}
+
+#help-center-box-draggable > div:nth-child(2) {
+  padding: 10px 0;
+  border-bottom: 1px solid #cccccc;
+}
+
+#help-center-box-draggable > div:nth-child(2) > div:first-child {
+  margin-bottom: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  color: #333333;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#help-center-box-draggable > div:nth-child(2) > div:last-child {
+  font-size: 12px;
+  color: gray;
+}
+
+#help-center-box-draggable > div:nth-child(3) {
+  padding: 10px 0;
+  border-bottom: 1px solid #cccccc;
+}
+
+#help-center-box-draggable > div:nth-child(3) > div:first-child {
+  margin-bottom: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  color: #333333;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#help-center-box-draggable > div:nth-child(3) > div:first-child button {
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 47.10px;
+  height: 20.53px;
+  font-size: 14px;
+  line-height: 17px !important;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 2.5px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #666666;
+}
+
+#help-center-box-draggable > div:nth-child(3) > div:first-child button:active {
+  background-color: #4d4d4d;
+}
+
+#help-center-box-draggable > div:nth-child(3) > div:last-child {
+  font-size: 12px;
+  color: gray;
+}
+
+#help-center-box-draggable > div:last-child {
+  padding: 10px 0;
+}
+
+#help-center-box-draggable > div:last-child > div:first-child {
+  margin-bottom: 5px;
+  color: #333333;
+}
+
+#help-center-box-draggable > div:last-child > div:last-child div {
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+#help-center-box-draggable > div:last-child > div:last-child div span {
+  color: #333333;
+}
+
+#help-center-box-draggable > div:last-child > div:last-child div > div {
+  padding-left: 16px;
+  color: gray;
+}
+
 /* pretty checkbox style custom */
 .pretty.p-default input:not(:checked) ~ .state label:after {
   background-color: #e6e6e6 !important;
@@ -2157,7 +2494,7 @@ to layouts.
 
 .cnt .cnt-settings ul .setting-item-hr {
   margin: 0;
-  width: calc(100% - 30px);
+  width: calc(100% - 25px);
   border-top: 1px solid #cccccc;
 }
 
@@ -2240,7 +2577,7 @@ to layouts.
 }
 
 .cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording .card .card-body ul li #accordionImgRecordingTimeRange .card .card-body {
-  height: 355px;
+  height: 310px;
   padding-left: 10px;
 }
 
@@ -2318,18 +2655,18 @@ to layouts.
   margin-right: 18px;
 }
 
-.cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording .card .card-body ul li #accordionImgRecordingImageFilter .card #accordionImgRecordingImageFilterInput .card, .cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording .card .card-body ul li #accordionImgRecordingDetections .card #accordionImgRecordingImageFilterInput .card {
+.cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording .card .card-body ul li #accordionImgRecordingImageFilter .card #accordionImgRecordingImageFilterRecorders .card, .cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording .card .card-body ul li #accordionImgRecordingDetections .card #accordionImgRecordingImageFilterRecorders .card {
   padding-right: 0;
 }
 
-.cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording .card .card-body ul li #accordionImgRecordingImageFilter .card #accordionImgRecordingImageFilterInput .card .card-body, .cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording .card .card-body ul li #accordionImgRecordingDetections .card #accordionImgRecordingImageFilterInput .card .card-body {
+.cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording .card .card-body ul li #accordionImgRecordingImageFilter .card #accordionImgRecordingImageFilterRecorders .card .card-body, .cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording .card .card-body ul li #accordionImgRecordingDetections .card #accordionImgRecordingImageFilterRecorders .card .card-body {
   font-size: 12px;
   font-weight: 300;
   line-height: normal;
   padding-left: 10px;
 }
 
-.cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording .card .card-body ul li #accordionImgRecordingImageFilter .card #accordionImgRecordingImageFilterInput .card .card-body > div:first-child, .cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording .card .card-body ul li #accordionImgRecordingDetections .card #accordionImgRecordingImageFilterInput .card .card-body > div:first-child {
+.cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording .card .card-body ul li #accordionImgRecordingImageFilter .card #accordionImgRecordingImageFilterRecorders .card .card-body > div:first-child, .cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording .card .card-body ul li #accordionImgRecordingDetections .card #accordionImgRecordingImageFilterRecorders .card .card-body > div:first-child {
   height: 24.5px;
   display: -ms-grid;
   display: grid;
@@ -2338,7 +2675,7 @@ to layouts.
   border-bottom: 1px solid #b3b3b3;
 }
 
-.cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording .card .card-body ul li #accordionImgRecordingImageFilter .card #accordionImgRecordingImageFilterInput .card .card-body > div:first-child > div:first-child, .cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording .card .card-body ul li #accordionImgRecordingDetections .card #accordionImgRecordingImageFilterInput .card .card-body > div:first-child > div:first-child {
+.cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording .card .card-body ul li #accordionImgRecordingImageFilter .card #accordionImgRecordingImageFilterRecorders .card .card-body > div:first-child > div:first-child, .cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording .card .card-body ul li #accordionImgRecordingDetections .card #accordionImgRecordingImageFilterRecorders .card .card-body > div:first-child > div:first-child {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2353,7 +2690,7 @@ to layouts.
   border-right: 1px solid #b3b3b3;
 }
 
-.cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording .card .card-body ul li #accordionImgRecordingImageFilter .card #accordionImgRecordingImageFilterInput .card .card-body > div:first-child > div:first-child > div:first-child, .cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording .card .card-body ul li #accordionImgRecordingDetections .card #accordionImgRecordingImageFilterInput .card .card-body > div:first-child > div:first-child > div:first-child {
+.cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording .card .card-body ul li #accordionImgRecordingImageFilter .card #accordionImgRecordingImageFilterRecorders .card .card-body > div:first-child > div:first-child > div:first-child, .cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording .card .card-body ul li #accordionImgRecordingDetections .card #accordionImgRecordingImageFilterRecorders .card .card-body > div:first-child > div:first-child > div:first-child {
   width: 24.5px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2370,17 +2707,17 @@ to layouts.
           justify-content: center;
 }
 
-.cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording .card .card-body ul li #accordionImgRecordingImageFilter .card #accordionImgRecordingImageFilterInput .card .card-body > div:first-child > div:last-child, .cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording .card .card-body ul li #accordionImgRecordingDetections .card #accordionImgRecordingImageFilterInput .card .card-body > div:first-child > div:last-child {
+.cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording .card .card-body ul li #accordionImgRecordingImageFilter .card #accordionImgRecordingImageFilterRecorders .card .card-body > div:first-child > div:last-child, .cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording .card .card-body ul li #accordionImgRecordingDetections .card #accordionImgRecordingImageFilterRecorders .card .card-body > div:first-child > div:last-child {
   position: relative;
 }
 
-.cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording .card .card-body ul li #accordionImgRecordingImageFilter .card #accordionImgRecordingImageFilterInput .card .card-body > div:first-child > div:last-child img, .cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording .card .card-body ul li #accordionImgRecordingDetections .card #accordionImgRecordingImageFilterInput .card .card-body > div:first-child > div:last-child img {
+.cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording .card .card-body ul li #accordionImgRecordingImageFilter .card #accordionImgRecordingImageFilterRecorders .card .card-body > div:first-child > div:last-child img, .cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording .card .card-body ul li #accordionImgRecordingDetections .card #accordionImgRecordingImageFilterRecorders .card .card-body > div:first-child > div:last-child img {
   top: 5px;
   left: 5px;
   position: absolute;
 }
 
-.cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording .card .card-body ul li #accordionImgRecordingImageFilter .card #accordionImgRecordingImageFilterInput .card .card-body > div:first-child > div:last-child input, .cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording .card .card-body ul li #accordionImgRecordingDetections .card #accordionImgRecordingImageFilterInput .card .card-body > div:first-child > div:last-child input {
+.cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording .card .card-body ul li #accordionImgRecordingImageFilter .card #accordionImgRecordingImageFilterRecorders .card .card-body > div:first-child > div:last-child input, .cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording .card .card-body ul li #accordionImgRecordingDetections .card #accordionImgRecordingImageFilterRecorders .card .card-body > div:first-child > div:last-child input {
   width: 100%;
   height: 100%;
   border: none;
@@ -2388,11 +2725,11 @@ to layouts.
   background: #e6e6e6;
 }
 
-.cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording .card .card-body ul li #accordionImgRecordingImageFilter .card #accordionImgRecordingImageFilterInput .card .card-body > div:last-child, .cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording .card .card-body ul li #accordionImgRecordingDetections .card #accordionImgRecordingImageFilterInput .card .card-body > div:last-child {
+.cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording .card .card-body ul li #accordionImgRecordingImageFilter .card #accordionImgRecordingImageFilterRecorders .card .card-body > div:last-child, .cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording .card .card-body ul li #accordionImgRecordingDetections .card #accordionImgRecordingImageFilterRecorders .card .card-body > div:last-child {
   background: #f2f2f2;
 }
 
-.cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording .card .card-body ul li #accordionImgRecordingImageFilter .card #accordionImgRecordingImageFilterInput .card .card-body > div:last-child > div, .cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording .card .card-body ul li #accordionImgRecordingDetections .card #accordionImgRecordingImageFilterInput .card .card-body > div:last-child > div {
+.cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording .card .card-body ul li #accordionImgRecordingImageFilter .card #accordionImgRecordingImageFilterRecorders .card .card-body > div:last-child > div, .cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording .card .card-body ul li #accordionImgRecordingDetections .card #accordionImgRecordingImageFilterRecorders .card .card-body > div:last-child > div {
   height: 24.5px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2409,11 +2746,11 @@ to layouts.
           justify-content: space-between;
 }
 
-.cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording .card .card-body ul li #accordionImgRecordingImageFilter .card #accordionImgRecordingImageFilterInput .card .card-body > div:last-child > div span, .cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording .card .card-body ul li #accordionImgRecordingDetections .card #accordionImgRecordingImageFilterInput .card .card-body > div:last-child > div span {
+.cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording .card .card-body ul li #accordionImgRecordingImageFilter .card #accordionImgRecordingImageFilterRecorders .card .card-body > div:last-child > div span, .cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording .card .card-body ul li #accordionImgRecordingDetections .card #accordionImgRecordingImageFilterRecorders .card .card-body > div:last-child > div span {
   padding-left: 8px;
 }
 
-.cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording .card .card-body ul li #accordionImgRecordingImageFilter .card #accordionImgRecordingImageFilterInput .card .card-body > div:last-child > div > div, .cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording .card .card-body ul li #accordionImgRecordingDetections .card #accordionImgRecordingImageFilterInput .card .card-body > div:last-child > div > div {
+.cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording .card .card-body ul li #accordionImgRecordingImageFilter .card #accordionImgRecordingImageFilterRecorders .card .card-body > div:last-child > div > div, .cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording .card .card-body ul li #accordionImgRecordingDetections .card #accordionImgRecordingImageFilterRecorders .card .card-body > div:last-child > div > div {
   width: 24.5px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2428,6 +2765,21 @@ to layouts.
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording .card .card-body ul li .apply-filters {
+  margin-right: 22px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  background: #cccccc;
 }
 
 .cnt .cnt-settings ul li.accordionImgRecording #accordionImgRecording #collapseImgRecording {
@@ -2498,8 +2850,6 @@ to layouts.
   /* POI delete modal */
   /* bookmarks modal */
   /* date-range-control */
-  /* help-center-box-draggable */
-  /* setting-box-draggable */
   /* report issue modal open icon */
   /* report issue modal */
   /* right green btn */
@@ -2777,311 +3127,6 @@ to layouts.
   .cnt .cnt-map #date-range-control {
     left: calc(50% - 170px);
   }
-}
-
-.cnt .cnt-map #help-center-box-draggable {
-  top: 20px;
-  right: 120px;
-  width: 390px;
-  padding: 0 20px;
-  height: 676.3px;
-  overflow-y: auto;
-  font-weight: 300;
-  background-color: #fff;
-}
-
-.cnt .cnt-map #help-center-box-draggable > div:first-child {
-  padding: 10px 0;
-  font-size: 18px;
-  font-weight: 400;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  color: #333333;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  border-bottom: 1px solid #cccccc;
-}
-
-.cnt .cnt-map #help-center-box-draggable > div:first-child div:last-child img {
-  cursor: pointer;
-}
-
-.cnt .cnt-map #help-center-box-draggable > div:nth-child(2) {
-  padding: 10px 0;
-  border-bottom: 1px solid #cccccc;
-}
-
-.cnt .cnt-map #help-center-box-draggable > div:nth-child(2) > div:first-child {
-  margin-bottom: 5px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  color: #333333;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.cnt .cnt-map #help-center-box-draggable > div:nth-child(2) > div:last-child {
-  font-size: 12px;
-  color: gray;
-}
-
-.cnt .cnt-map #help-center-box-draggable > div:nth-child(3) {
-  padding: 10px 0;
-  border-bottom: 1px solid #cccccc;
-}
-
-.cnt .cnt-map #help-center-box-draggable > div:nth-child(3) > div:first-child {
-  margin-bottom: 5px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  color: #333333;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.cnt .cnt-map #help-center-box-draggable > div:nth-child(3) > div:first-child button {
-  color: #fff;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 47.10px;
-  height: 20.53px;
-  font-size: 14px;
-  line-height: 17px !important;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  border-radius: 2.5px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  background-color: #666666;
-}
-
-.cnt .cnt-map #help-center-box-draggable > div:nth-child(3) > div:first-child button:active {
-  background-color: #4d4d4d;
-}
-
-.cnt .cnt-map #help-center-box-draggable > div:nth-child(3) > div:last-child {
-  font-size: 12px;
-  color: gray;
-}
-
-.cnt .cnt-map #help-center-box-draggable > div:last-child {
-  padding: 10px 0;
-}
-
-.cnt .cnt-map #help-center-box-draggable > div:last-child > div:first-child {
-  margin-bottom: 5px;
-  color: #333333;
-}
-
-.cnt .cnt-map #help-center-box-draggable > div:last-child > div:last-child div {
-  font-size: 12px;
-  margin-bottom: 10px;
-}
-
-.cnt .cnt-map #help-center-box-draggable > div:last-child > div:last-child div span {
-  color: #333333;
-}
-
-.cnt .cnt-map #help-center-box-draggable > div:last-child > div:last-child div > div {
-  padding-left: 16px;
-  color: gray;
-}
-
-.cnt .cnt-map #setting-box-draggable {
-  top: 48px;
-  right: 66px;
-  width: 390px;
-  padding: 0 20px;
-  height: 676.3px;
-  overflow-y: auto;
-  font-weight: 300;
-  background-color: #fff;
-}
-
-.cnt .cnt-map #setting-box-draggable > div:first-child {
-  padding: 10px 0;
-  font-size: 18px;
-  font-weight: 400;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  color: #333333;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  border-bottom: 1px solid #cccccc;
-}
-
-.cnt .cnt-map #setting-box-draggable > div:first-child div:last-child img {
-  cursor: pointer;
-}
-
-.cnt .cnt-map #setting-box-draggable > div:nth-child(2) {
-  padding: 15px 0;
-  border-bottom: 1px solid #cccccc;
-}
-
-.cnt .cnt-map #setting-box-draggable > div:nth-child(2) > div {
-  font-size: 14px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  color: #333333;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.cnt .cnt-map #setting-box-draggable > div:nth-child(2) > div:not(:last-child) {
-  margin-bottom: 15px;
-}
-
-.cnt .cnt-map #setting-box-draggable > div:nth-child(2) > div:nth-child(2) > div, .cnt .cnt-map #setting-box-draggable > div:nth-child(2) > div:nth-child(3) > div, .cnt .cnt-map #setting-box-draggable > div:nth-child(2) > div:nth-child(4) > div {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 20px 28.1px 20px;
-      grid-template-columns: 20px 28.1px 20px;
-}
-
-.cnt .cnt-map #setting-box-draggable > div:nth-child(2) > div:nth-child(2) > div > div, .cnt .cnt-map #setting-box-draggable > div:nth-child(2) > div:nth-child(3) > div > div, .cnt .cnt-map #setting-box-draggable > div:nth-child(2) > div:nth-child(4) > div > div {
-  height: 20.5px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.cnt .cnt-map #setting-box-draggable > div:nth-child(2) > div:nth-child(2) > div > div:nth-child(2), .cnt .cnt-map #setting-box-draggable > div:nth-child(2) > div:nth-child(3) > div > div:nth-child(2), .cnt .cnt-map #setting-box-draggable > div:nth-child(2) > div:nth-child(4) > div > div:nth-child(2) {
-  border: 1px solid #cccccc;
-}
-
-.cnt .cnt-map #setting-box-draggable > div:nth-child(2) > div:nth-child(2) > div > div:not(:nth-child(2)), .cnt .cnt-map #setting-box-draggable > div:nth-child(2) > div:nth-child(3) > div > div:not(:nth-child(2)), .cnt .cnt-map #setting-box-draggable > div:nth-child(2) > div:nth-child(4) > div > div:not(:nth-child(2)) {
-  cursor: pointer;
-}
-
-.cnt .cnt-map #setting-box-draggable > div:nth-child(2) > div:first-child > div, .cnt .cnt-map #setting-box-draggable > div:nth-child(2) > div:last-child > div {
-  margin-right: 26px;
-}
-
-.cnt .cnt-map #setting-box-draggable > div:nth-child(3) {
-  padding: 10px 0;
-  border-bottom: 1px solid #cccccc;
-}
-
-.cnt .cnt-map #setting-box-draggable > div:nth-child(3) > div:first-child {
-  margin-bottom: 15px;
-  color: #333333;
-}
-
-.cnt .cnt-map #setting-box-draggable > div:nth-child(3) > div:last-child > div {
-  font-size: 14px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  color: #333333;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.cnt .cnt-map #setting-box-draggable > div:nth-child(3) > div:last-child > div:not(:last-child) {
-  margin-bottom: 15px;
-}
-
-.cnt .cnt-map #setting-box-draggable > div:nth-child(3) > div:last-child > div > div {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-}
-
-.cnt .cnt-map #setting-box-draggable > div:nth-child(3) > div:last-child > div > div:last-child span {
-  font-size: 10px;
-  color: #999999;
-}
-
-.cnt .cnt-map #setting-box-draggable > div:nth-child(3) > div:last-child > div > div > div:first-child {
-  margin-right: 12px;
-}
-
-.cnt .cnt-map #setting-box-draggable > div:nth-child(3) > div:last-child > div > div > div:last-child {
-  margin-left: 12px;
-  margin-right: 26px;
-}
-
-.cnt .cnt-map #setting-box-draggable > div:last-child button {
-  width: 128px;
-  height: 33px;
-  color: #fff;
-  margin-top: 15px;
-  border-radius: 4px;
-  background-color: #666666;
-}
-
-.cnt .cnt-map #setting-box-draggable > div:last-child button:active {
-  background-color: #4d4d4d;
 }
 
 .cnt .cnt-map #report-issue-btn {

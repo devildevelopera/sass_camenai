@@ -90,15 +90,16 @@ var _customerSelect = function() {
                 break;
             case 'Week':
                 step_num = 5;
-                $("#date-range-value span").html('01');
+                // $("#date-range-value span").html('01');
                 break;
             case 'Month':
                 step_num = 12;
-                $("#date-range-value span").html('01');
+                // $("#date-range-value span").html('01');
                 break;
             default:
                 break;
         }
+
         var valMap = [];
         for (var i = 0; i < step_num; i++) {
             valMap.push(i);
@@ -120,13 +121,13 @@ var _customerSelect = function() {
                         if (input_val.toString().length === 1) {
                             input_val = '0' + input_val;
                         }
-                        $("#date-range-value span").html(input_val);
+                        // $("#date-range-value span").html(input_val);
                     } else if (type === 'Month') {
                         var input_val = valMap[ui.value] + 1;
                         if (input_val.toString().length === 1) {
                             input_val = '0' + input_val;
                         }
-                        $("#date-range-value span").html(input_val);
+                        // $("#date-range-value span").html(input_val);
                     }
                 }
             })
