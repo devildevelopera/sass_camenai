@@ -7,14 +7,12 @@ to a reusable component.
 
 /* Import Component files */
 
-@import "button";
-@import "modal";
-@import "label";
-@import "radio";
-@import "scrollbar";
 @import "accordion";
+@import "drag-modal";
+@import "fancyscroll";
 @import "settings-box";
 @import "modal-overlay";
+@import "view-type-radio";
 @import "help-center-box";
 @import "pretty-checkbox";
 @import "vertical-slider";
