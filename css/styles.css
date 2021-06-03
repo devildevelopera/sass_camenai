@@ -1073,6 +1073,10 @@ button:focus {
   border: none !important;
 }
 
+label {
+  margin-bottom: 0 !important;
+}
+
 /* Header Styles */
 h1,
 h2,
@@ -1100,10 +1104,6 @@ Files inside this folder should contain all styles relating
 to a reusable component.
 */
 /* Import Component files */
-label {
-  margin-bottom: 0 !important;
-}
-
 .radio-item label {
   font-size: 17px;
 }
