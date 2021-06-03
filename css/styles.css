@@ -1100,18 +1100,6 @@ Files inside this folder should contain all styles relating
 to a reusable component.
 */
 /* Import Component files */
-button {
-  line-height: 25px !important;
-}
-
-.drag-modal {
-  z-index: 2;
-  cursor: move;
-  display: none;
-  position: absolute;
-  border-radius: 4px;
-}
-
 label {
   margin-bottom: 0 !important;
 }
@@ -1235,6 +1223,14 @@ label {
 
 .accordion .card-body ul li:hover {
   background-color: #cccccc;
+}
+
+.drag-modal {
+  z-index: 2;
+  cursor: move;
+  display: none;
+  position: absolute;
+  border-radius: 4px;
 }
 
 /* setting-box-draggable */
