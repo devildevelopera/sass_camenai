@@ -15,7 +15,7 @@
 }
 
 .fancyscroll::-webkit-scrollbar-thumb:hover {
-    background: $light-black-color;
+    background: lighten($black, 70%);
 }
 
 

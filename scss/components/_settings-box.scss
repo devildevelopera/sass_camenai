@@ -127,7 +127,7 @@
                 border-radius: 4px;
                 background-color: lighten($black, 40%);
                 &:active {
-                    background-color: $basic-black-color;
+                    background-color: lighten($black, 30%);
                 }
             }
         }

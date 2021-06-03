@@ -108,7 +108,7 @@
                 width: calc(100% - 20px);
                 background-color: lighten($black, 50%);
                 &:active {
-                    background-color: $basic-black-color;
+                    background-color: lighten($black, 30%);
                 }
             }
         }

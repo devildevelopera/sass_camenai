@@ -11,8 +11,8 @@ body {
     user-select: none;
     font-weight: normal;
     box-sizing: border-box;
+    color: lighten($black, 30%) !important;
     font-family: 'Roboto', sans-serif !important;
-    color: $basic-black-color !important;
     * {
         box-sizing: inherit;
     }
