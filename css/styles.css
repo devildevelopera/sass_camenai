@@ -995,9 +995,6 @@ helpers or functions. They have no direct output.
 /* Import Abstracts files */
 /* Import Fonts files */
 /* Mixins */
-/* Fonts */
-/* Font Sizing */
-/*Colors*/
 /* #000000 = 100% black
 #333333 = 80% black =   lighten($black, 20%);
 #4D4D4D = 70% black =   lighten($black, 30%);
@@ -1037,7 +1034,7 @@ body {
   font-weight: normal;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: "Roboto", sans-serif !important;
+  font-family: 'Roboto', sans-serif !important;
   color: #4d4d4d !important;
 }
 
