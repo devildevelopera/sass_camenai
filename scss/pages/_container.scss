@@ -333,7 +333,7 @@
                         width: 74.5px;
                         font-size: 16px;
                         &:first-child {
-                            background-color: $basic-black-color;
+                            background-color: lighten($black, 30%);
                         }
                         &:last-child {
                             background-color: lighten($black, 50%);
@@ -489,7 +489,7 @@
                         margin-top: 13px;
                         background-color: lighten($black, 50%);
                         &:active {
-                            background-color: $basic-black-color;
+                            background-color: lighten($black, 30%);
                         }
                     }
                 }
@@ -686,7 +686,7 @@
                         width: calc(100% - 20px);
                         background-color: lighten($black, 50%);
                         &:active {
-                            background-color: $basic-black-color;
+                            background-color: lighten($black, 30%);
                         }
                     }
                 }
