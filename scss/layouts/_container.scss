@@ -783,42 +783,53 @@
             @include mapControlBox;
             justify-content: center;
         }
-        /* blue-button-control */
-        #blue-button-control {
+        /* image-imfo-box */
+        #image-info-box {
             right: 20px;
-            width: 30px;
-            height: 30px;
             bottom: 130px;
-            @include mapControlBox;
-            background-color: #006CBC;
-            img {
-                padding: 5px;
-                cursor: pointer;
-            }
-        }
-        /* blue-box-draggable */
-        #blue-box-draggable {
-            height: 0;
-            right: 90px;
-            width: 268px;
-            bottom: 130px;
-            display: grid;
             overflow: hidden;
-            transition: height 0.2s;
-            background-color: $white;
-            grid-template-columns: 239px 29px;
+            @include mapControlBox;
+            @include displayFlexRow;
             &>div {
+                &:first-child {
+                    transition: width 0.2s;
+                    width: 0;
+                }
                 &:last-child {
-                    padding: 5px;
-                    display: flex;
-                    align-items: center;
-                    flex-direction: column;
+                    width: 30px;
+                    height: 30px;
+                    position: relative;
                     background-color: #006CBC;
                     border-top-right-radius: 4px;
-                    justify-content: space-between;
                     border-bottom-right-radius: 4px;
                     img {
                         cursor: pointer;
+                        position: absolute;
+                        &:first-child {
+                            top: 6px;
+                            right: 9px;
+                            display: none;
+                        }
+                        &:last-child {
+                            right: 6px;
+                            bottom: 5px;
+                        }
+                    }
+                }
+            }
+            &.opened {
+                height: 123.57px;
+                &>div {
+                    &:first-child {
+                        width: 238px;
+                    }
+                    &:last-child {
+                        height: 100%;
+                        img {
+                            &:first-child {
+                                display: flex;
+                            }
+                        }
                     }
                 }
             }

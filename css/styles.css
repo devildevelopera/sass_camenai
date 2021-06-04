@@ -1707,7 +1707,7 @@ to a reusable component.
 }
 
 .slider.slider-horizontal .slider-track.selected:after {
-  border: 1px solid #cccccc;
+  border: 1px solid #b3b3b3;
 }
 
 .slider.slider-horizontal .slider-track .slider-selection {
@@ -1765,7 +1765,7 @@ to a reusable component.
   width: 10px !important;
   height: 10px !important;
   background-image: none !important;
-  background-color: #666666 !important;
+  background-color: #999999 !important;
 }
 
 #date-range-control .date-range-select {
@@ -2416,13 +2416,6 @@ to layouts.
   border-right: 1px solid #f1f1f1;
 }
 
-/* Pages */
-/*
-This file is used to contain all pages imports.
-Files inside this folder should contain all styles relating
-to layouts.
-*/
-/* Import Pages files */
 /* container */
 .cnt {
   display: -webkit-box;
@@ -2844,8 +2837,7 @@ to layouts.
   /* back-forward control */
   /* street-dimension control */
   /* total-recodings-control */
-  /* blue-button-control */
-  /* blue-box-draggable */
+  /* image-imfo-box */
   /* zoom control */
   /* map section*/
 }
@@ -3707,62 +3699,75 @@ to layouts.
           justify-content: center;
 }
 
-.cnt .cnt-map #blue-button-control {
+.cnt .cnt-map #image-info-box {
   right: 20px;
-  width: 30px;
-  height: 30px;
   bottom: 130px;
+  overflow: hidden;
   z-index: 1;
   position: absolute;
   border-radius: 4px;
   background-color: #fff;
   -webkit-box-shadow: 0 0 4px gray;
           box-shadow: 0 0 4px gray;
-  background-color: #006CBC;
-}
-
-.cnt .cnt-map #blue-button-control img {
-  padding: 5px;
-  cursor: pointer;
-}
-
-.cnt .cnt-map #blue-box-draggable {
-  height: 0;
-  right: 90px;
-  width: 268px;
-  bottom: 130px;
-  display: -ms-grid;
-  display: grid;
-  overflow: hidden;
-  -webkit-transition: height 0.2s;
-  transition: height 0.2s;
-  background-color: #fff;
-  -ms-grid-columns: 239px 29px;
-      grid-template-columns: 239px 29px;
-}
-
-.cnt .cnt-map #blue-box-draggable > div:last-child {
-  padding: 5px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.cnt .cnt-map #image-info-box > div:first-child {
+  -webkit-transition: width 0.2s;
+  transition: width 0.2s;
+  width: 0;
+}
+
+.cnt .cnt-map #image-info-box > div:last-child {
+  width: 30px;
+  height: 30px;
+  position: relative;
   background-color: #006CBC;
   border-top-right-radius: 4px;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   border-bottom-right-radius: 4px;
 }
 
-.cnt .cnt-map #blue-box-draggable > div:last-child img {
+.cnt .cnt-map #image-info-box > div:last-child img {
   cursor: pointer;
+  position: absolute;
+}
+
+.cnt .cnt-map #image-info-box > div:last-child img:first-child {
+  top: 6px;
+  right: 9px;
+  display: none;
+}
+
+.cnt .cnt-map #image-info-box > div:last-child img:last-child {
+  right: 6px;
+  bottom: 5px;
+}
+
+.cnt .cnt-map #image-info-box.opened {
+  height: 123.57px;
+}
+
+.cnt .cnt-map #image-info-box.opened > div:first-child {
+  width: 238px;
+}
+
+.cnt .cnt-map #image-info-box.opened > div:last-child {
+  height: 100%;
+}
+
+.cnt .cnt-map #image-info-box.opened > div:last-child img:first-child {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .cnt .cnt-map #zoom-control {

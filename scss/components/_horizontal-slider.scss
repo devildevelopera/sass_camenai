@@ -31,7 +31,7 @@
             border: solidBlackBorder(90%);
         }
         &.selected:after {
-            border: solidBlackBorder(80%);
+            border: solidBlackBorder(70%);
         }
         .slider-selection {
             border-radius: 0 !important;
@@ -84,6 +84,6 @@
         width: 10px !important;
         height: 10px !important;
         background-image: none !important;
-        background-color: lighten($black, 40%) !important;
+        background-color: lighten($black, 60%) !important;
     }
 }
