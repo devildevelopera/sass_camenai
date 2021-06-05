@@ -2536,7 +2536,7 @@ to layouts.
   padding-right: 24px;
 }
 
-.cnt .cnt-settings > ul > li.accordionImgRecording #accordionImgRecording .card .card-body > ul > li #accordionImgRecordingImageFilter .card h2, .cnt .cnt-settings > ul > li.accordionImgRecording #accordionImgRecording .card .card-body > ul > li #accordionImgRecordingDetections .card h2 {
+.cnt .cnt-settings > ul > li.accordionImgRecording #accordionImgRecording .card .card-body > ul > li #accordionImgRecordingImageFilter .card .card-head h2, .cnt .cnt-settings > ul > li.accordionImgRecording #accordionImgRecording .card .card-body > ul > li #accordionImgRecordingDetections .card .card-head h2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2549,21 +2549,25 @@ to layouts.
           flex-direction: row;
 }
 
-.cnt .cnt-settings > ul > li.accordionImgRecording #accordionImgRecording .card .card-body > ul > li #accordionImgRecordingImageFilter .card .quality, .cnt .cnt-settings > ul > li.accordionImgRecording #accordionImgRecording .card .card-body > ul > li #accordionImgRecordingDetections .card .quality,
-.cnt .cnt-settings > ul > li.accordionImgRecording #accordionImgRecording .card .card-body > ul > li #accordionImgRecordingImageFilter .card .confidence,
-.cnt .cnt-settings > ul > li.accordionImgRecording #accordionImgRecording .card .card-body > ul > li #accordionImgRecordingDetections .card .confidence {
+.cnt .cnt-settings > ul > li.accordionImgRecording #accordionImgRecording .card .card-body > ul > li #accordionImgRecordingImageFilter .card .card-body, .cnt .cnt-settings > ul > li.accordionImgRecording #accordionImgRecording .card .card-body > ul > li #accordionImgRecordingDetections .card .card-body {
+  padding-right: 6px;
+}
+
+.cnt .cnt-settings > ul > li.accordionImgRecording #accordionImgRecording .card .card-body > ul > li #accordionImgRecordingImageFilter .card .card-body .quality, .cnt .cnt-settings > ul > li.accordionImgRecording #accordionImgRecording .card .card-body > ul > li #accordionImgRecordingDetections .card .card-body .quality,
+.cnt .cnt-settings > ul > li.accordionImgRecording #accordionImgRecording .card .card-body > ul > li #accordionImgRecordingImageFilter .card .card-body .confidence,
+.cnt .cnt-settings > ul > li.accordionImgRecording #accordionImgRecording .card .card-body > ul > li #accordionImgRecordingDetections .card .card-body .confidence {
   height: 8px;
   text-align: end;
   margin-right: 8px;
 }
 
-.cnt .cnt-settings > ul > li.accordionImgRecording #accordionImgRecording .card .card-body > ul > li #accordionImgRecordingImageFilter .card .quality img, .cnt .cnt-settings > ul > li.accordionImgRecording #accordionImgRecording .card .card-body > ul > li #accordionImgRecordingDetections .card .quality img,
-.cnt .cnt-settings > ul > li.accordionImgRecording #accordionImgRecording .card .card-body > ul > li #accordionImgRecordingImageFilter .card .confidence img,
-.cnt .cnt-settings > ul > li.accordionImgRecording #accordionImgRecording .card .card-body > ul > li #accordionImgRecordingDetections .card .confidence img {
+.cnt .cnt-settings > ul > li.accordionImgRecording #accordionImgRecording .card .card-body > ul > li #accordionImgRecordingImageFilter .card .card-body .quality img, .cnt .cnt-settings > ul > li.accordionImgRecording #accordionImgRecording .card .card-body > ul > li #accordionImgRecordingDetections .card .card-body .quality img,
+.cnt .cnt-settings > ul > li.accordionImgRecording #accordionImgRecording .card .card-body > ul > li #accordionImgRecordingImageFilter .card .card-body .confidence img,
+.cnt .cnt-settings > ul > li.accordionImgRecording #accordionImgRecording .card .card-body > ul > li #accordionImgRecordingDetections .card .card-body .confidence img {
   margin-top: -20px;
 }
 
-.cnt .cnt-settings > ul > li.accordionImgRecording #accordionImgRecording .card .card-body > ul > li #accordionImgRecordingImageFilter .card .image-filter-item, .cnt .cnt-settings > ul > li.accordionImgRecording #accordionImgRecording .card .card-body > ul > li #accordionImgRecordingDetections .card .image-filter-item {
+.cnt .cnt-settings > ul > li.accordionImgRecording #accordionImgRecording .card .card-body > ul > li #accordionImgRecordingImageFilter .card .card-body .image-filter-item, .cnt .cnt-settings > ul > li.accordionImgRecording #accordionImgRecording .card .card-body > ul > li #accordionImgRecordingDetections .card .card-body .image-filter-item {
   height: 36px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2576,7 +2580,7 @@ to layouts.
           justify-content: space-between;
 }
 
-.cnt .cnt-settings > ul > li.accordionImgRecording #accordionImgRecording .card .card-body > ul > li #accordionImgRecordingImageFilter .card .image-filter-item > div:first-child, .cnt .cnt-settings > ul > li.accordionImgRecording #accordionImgRecording .card .card-body > ul > li #accordionImgRecordingDetections .card .image-filter-item > div:first-child {
+.cnt .cnt-settings > ul > li.accordionImgRecording #accordionImgRecording .card .card-body > ul > li #accordionImgRecordingImageFilter .card .card-body .image-filter-item > div:first-child, .cnt .cnt-settings > ul > li.accordionImgRecording #accordionImgRecording .card .card-body > ul > li #accordionImgRecordingDetections .card .card-body .image-filter-item > div:first-child {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2589,11 +2593,11 @@ to layouts.
           flex-direction: row;
 }
 
-.cnt .cnt-settings > ul > li.accordionImgRecording #accordionImgRecording .card .card-body > ul > li #accordionImgRecordingImageFilter .card .image-filter-item > div:first-child span, .cnt .cnt-settings > ul > li.accordionImgRecording #accordionImgRecording .card .card-body > ul > li #accordionImgRecordingDetections .card .image-filter-item > div:first-child span {
+.cnt .cnt-settings > ul > li.accordionImgRecording #accordionImgRecording .card .card-body > ul > li #accordionImgRecordingImageFilter .card .card-body .image-filter-item > div:first-child span, .cnt .cnt-settings > ul > li.accordionImgRecording #accordionImgRecording .card .card-body > ul > li #accordionImgRecordingDetections .card .card-body .image-filter-item > div:first-child span {
   font-weight: 300;
 }
 
-.cnt .cnt-settings > ul > li.accordionImgRecording #accordionImgRecording .card .card-body > ul > li #accordionImgRecordingImageFilter .card .image-filter-item > div:last-child, .cnt .cnt-settings > ul > li.accordionImgRecording #accordionImgRecording .card .card-body > ul > li #accordionImgRecordingDetections .card .image-filter-item > div:last-child {
+.cnt .cnt-settings > ul > li.accordionImgRecording #accordionImgRecording .card .card-body > ul > li #accordionImgRecordingImageFilter .card .card-body .image-filter-item > div:last-child, .cnt .cnt-settings > ul > li.accordionImgRecording #accordionImgRecording .card .card-body > ul > li #accordionImgRecordingDetections .card .card-body .image-filter-item > div:last-child {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2602,7 +2606,7 @@ to layouts.
           align-items: center;
 }
 
-.cnt .cnt-settings > ul > li.accordionImgRecording #accordionImgRecording .card .card-body > ul > li #accordionImgRecordingImageFilter .card .image-filter-item > div:last-child .pretty, .cnt .cnt-settings > ul > li.accordionImgRecording #accordionImgRecording .card .card-body > ul > li #accordionImgRecordingDetections .card .image-filter-item > div:last-child .pretty {
+.cnt .cnt-settings > ul > li.accordionImgRecording #accordionImgRecording .card .card-body > ul > li #accordionImgRecordingImageFilter .card .card-body .image-filter-item > div:last-child .pretty, .cnt .cnt-settings > ul > li.accordionImgRecording #accordionImgRecording .card .card-body > ul > li #accordionImgRecordingDetections .card .card-body .image-filter-item > div:last-child .pretty {
   margin-right: 18px;
 }
 
