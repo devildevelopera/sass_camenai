@@ -1,20 +1,21 @@
 .date-range-picker-input {
     border: none;
-    width: 246px;
-    height: 29px;
+    width: 247px;
+    height: 26.2px;
     text-indent: 5px;
     font-size: 12.47px;
     background-color: lighten($black, 95%);
 }
 
 .andp-datepicker-container {
-    width: 246px;
+    width: 247px;
     z-index: 1000;
     overflow: hidden;
     position: absolute;
     background: lighten($black, 95%);
     .andp-header {
         display: grid;
+        height: 26.2px;
         grid-template-columns: 26.2px 96.8px 96.8px 26.2px;
         background-color: lighten($black, 90%);
         button {
@@ -54,24 +55,30 @@
     }
     .andp-body {
         border-top: 0;
-        .andp-days-names div {
-            width: 35px;
-            float: left;
-            font-weight: bold;
-            text-align: center;
-            font-size: 10.45px;
-            color: lighten($black, 50%);
+        .andp-days-names {
+            display: flex;
+            height: 21.7px;
+            align-items: center;
+            margin-bottom: 2.4px;
+            border-bottom: solidBlackBorder();
+            div {
+                width: 35.2px;
+                float: left;
+                font-weight: bold;
+                text-align: center;
+                font-size: 10.45px;
+                color: lighten($black, 50%);
+            }
         }
         .andp-days-numbers {
             display: table;
             border-collapse: collapse;
-            border-top: solidBlackBorder();
             border-bottom: solidBlackBorder();
             .andp-column {
                 display: table-row;
                 div {
                     width: 35px;
-                    height: 28px;
+                    height: 29px;
                     font-size: 11.25px;
                     text-align: center;
                     display: table-cell;
@@ -98,20 +105,20 @@
             font-size: 12px;
             margin-top: 9px;
         }
-        .andp-action-btns {
-            text-align: center;
-            border-top: solidBlackBorder();
-            button {
-                margin: 10px;
-                color: $white;
-                border-radius: 2.5px;
-                width: calc(100% - 20px);
-                background-color: lighten($black, 50%);
-                &:active {
-                    background-color: lighten($black, 30%);
-                }
-            }
-        }
+        // .andp-action-btns {
+        //     text-align: center;
+        //     border-top: solidBlackBorder();
+        //     button {
+        //         margin: 10px;
+        //         color: $white;
+        //         border-radius: 2.5px;
+        //         width: calc(100% - 20px);
+        //         background-color: lighten($black, 50%);
+        //         &:active {
+        //             background-color: lighten($black, 30%);
+        //         }
+        //     }
+        // }
     }
 }
 

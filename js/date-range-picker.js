@@ -412,7 +412,7 @@ $(() => {
         }
         template += '<select class="time-picker-select hour" name="time-picker-first-input" value="00"></select>:';
         template += '<select class="time-picker-select minute" name="time-picker-last-input" value="00"></select>';
-        template += '<div class="andp-action-btns">';
+        // template += '<div class="andp-action-btns">';
 
         // if (!single_datepicker) {
         //     template += '<button type="button" class="apply-date" data-cal_id="' + cal_id + '">Apply</button>';

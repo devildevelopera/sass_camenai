@@ -5,22 +5,18 @@
             cursor: pointer;
             font-size: 14px;
             font-weight: 400;
-            line-height: 34px;
+            line-height: 36px;
             background: url("../imgs/1x/arrow-down.png") no-repeat calc(100% - 8px) center;
-            background-size: 15px;
             &.collapsed {
                 background-image: url("../imgs/1x/arrow-right.png");
-                background-size: 9px;
             }
         }
         &-body {
             padding: 0;
-            ul {
-                li {
+            &>ul {
+                &>li {
                     cursor: pointer;
                     font-size: 14px;
-                    padding-left: 10px;
-                    line-height: 30px;
                     border-bottom: none !important;
                     &:hover {
                         background-color: lighten($black, 80%);
