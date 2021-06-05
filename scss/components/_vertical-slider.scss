@@ -19,9 +19,9 @@
         background-image: url("../imgs/SVG/horizontal-line.svg"), url("../imgs/SVG/horizontal-line.svg"), url("../imgs/SVG/horizontal-line.svg"), url("../imgs/SVG/horizontal-line.svg"), url("../imgs/SVG/horizontal-line.svg"), url("../imgs/SVG/horizontal-line.svg"), url("../imgs/SVG/horizontal-line.svg"), url("../imgs/SVG/horizontal-line.svg"), url("../imgs/SVG/horizontal-line.svg"), url("../imgs/SVG/horizontal-line.svg") !important;
         background-repeat: no-repeat !important;
         &:after {
-            bottom: -4px;
-            height: 91px;
-            content: '|';
+            bottom: -3px;
+            height: 89.4px;
+            content: '';
             width: 16px;
             color: $white;
             position: absolute;

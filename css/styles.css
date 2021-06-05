@@ -1523,9 +1523,9 @@ to a reusable component.
 }
 
 .slider.slider-vertical .slider-track:after {
-  bottom: -4px;
-  height: 91px;
-  content: '|';
+  bottom: -3px;
+  height: 89.4px;
+  content: '';
   width: 16px;
   color: #fff;
   position: absolute;
@@ -1674,22 +1674,21 @@ to a reusable component.
 .slider.slider-horizontal .slider-track {
   -webkit-box-shadow: none;
           box-shadow: none;
-  margin-left: -10px;
   top: 10% !important;
   height: 16px !important;
   margin-top: 0 !important;
   background-size: 9px 6px;
   background-position-y: 5px;
   width: calc(100% + 10px) !important;
-  background-position-x: 0, 10%, 20%, 30%, 40%, 50%, 60%, 70%, 80%, 90%, 100%, 110%;
-  background-image: url("../imgs/SVG/vertical-line-hidden.svg"), url("../imgs/SVG/vertical-line-hidden.svg"), url("../imgs/SVG/vertical-line-hidden.svg"), url("../imgs/SVG/vertical-line-hidden.svg"), url("../imgs/SVG/vertical-line-hidden.svg"), url("../imgs/SVG/vertical-line-hidden.svg"), url("../imgs/SVG/vertical-line-hidden.svg"), url("../imgs/SVG/vertical-line-hidden.svg"), url("../imgs/SVG/vertical-line-hidden.svg"), url("../imgs/SVG/vertical-line-hidden.svg"), url("../imgs/SVG/vertical-line-hidden.svg");
+  background-position-x: 0, 11.1111%, 22.2222%, 33.3333%, 44.4444%, 55.5555%, 66.6666%, 77.7777%, 88.8888%, 99.9999%;
+  background-image: url("../imgs/SVG/vertical-line-hidden.svg"), url("../imgs/SVG/vertical-line-hidden.svg"), url("../imgs/SVG/vertical-line-hidden.svg"), url("../imgs/SVG/vertical-line-hidden.svg"), url("../imgs/SVG/vertical-line-hidden.svg"), url("../imgs/SVG/vertical-line-hidden.svg"), url("../imgs/SVG/vertical-line-hidden.svg"), url("../imgs/SVG/vertical-line-hidden.svg"), url("../imgs/SVG/vertical-line-hidden.svg"), url("../imgs/SVG/vertical-line-hidden.svg");
   background-repeat: no-repeat !important;
 }
 
 .slider.slider-horizontal .slider-track:after {
   right: -3px;
-  width: 90px;
-  content: '_';
+  width: 89.4px;
+  content: '';
   height: 16px;
   color: #fff;
   position: absolute;
@@ -1755,6 +1754,7 @@ to a reusable component.
   top: 5px !important;
   width: 10px !important;
   height: 10px !important;
+  margin-left: 0 !important;
   background-image: none !important;
   background-color: #999999 !important;
 }
@@ -2549,22 +2549,12 @@ to layouts.
           flex-direction: row;
 }
 
-.cnt .cnt-settings > ul > li.accordionImgRecording #accordionImgRecording .card .card-body > ul > li #accordionImgRecordingImageFilter .card .card-body, .cnt .cnt-settings > ul > li.accordionImgRecording #accordionImgRecording .card .card-body > ul > li #accordionImgRecordingDetections .card .card-body {
-  padding-right: 6px;
-}
-
 .cnt .cnt-settings > ul > li.accordionImgRecording #accordionImgRecording .card .card-body > ul > li #accordionImgRecordingImageFilter .card .card-body .quality, .cnt .cnt-settings > ul > li.accordionImgRecording #accordionImgRecording .card .card-body > ul > li #accordionImgRecordingDetections .card .card-body .quality,
 .cnt .cnt-settings > ul > li.accordionImgRecording #accordionImgRecording .card .card-body > ul > li #accordionImgRecordingImageFilter .card .card-body .confidence,
 .cnt .cnt-settings > ul > li.accordionImgRecording #accordionImgRecording .card .card-body > ul > li #accordionImgRecordingDetections .card .card-body .confidence {
-  height: 8px;
+  height: 12px;
   text-align: end;
-  margin-right: 8px;
-}
-
-.cnt .cnt-settings > ul > li.accordionImgRecording #accordionImgRecording .card .card-body > ul > li #accordionImgRecordingImageFilter .card .card-body .quality img, .cnt .cnt-settings > ul > li.accordionImgRecording #accordionImgRecording .card .card-body > ul > li #accordionImgRecordingDetections .card .card-body .quality img,
-.cnt .cnt-settings > ul > li.accordionImgRecording #accordionImgRecording .card .card-body > ul > li #accordionImgRecordingImageFilter .card .card-body .confidence img,
-.cnt .cnt-settings > ul > li.accordionImgRecording #accordionImgRecording .card .card-body > ul > li #accordionImgRecordingDetections .card .card-body .confidence img {
-  margin-top: -20px;
+  margin-right: 12px;
 }
 
 .cnt .cnt-settings > ul > li.accordionImgRecording #accordionImgRecording .card .card-body > ul > li #accordionImgRecordingImageFilter .card .card-body .image-filter-item, .cnt .cnt-settings > ul > li.accordionImgRecording #accordionImgRecording .card .card-body > ul > li #accordionImgRecordingDetections .card .card-body .image-filter-item {
@@ -2601,13 +2591,14 @@ to layouts.
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-right: 20px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
 .cnt .cnt-settings > ul > li.accordionImgRecording #accordionImgRecording .card .card-body > ul > li #accordionImgRecordingImageFilter .card .card-body .image-filter-item > div:last-child .pretty, .cnt .cnt-settings > ul > li.accordionImgRecording #accordionImgRecording .card .card-body > ul > li #accordionImgRecordingDetections .card .card-body .image-filter-item > div:last-child .pretty {
-  margin-right: 18px;
+  margin-right: 10px;
 }
 
 .cnt .cnt-settings > ul > li.accordionImgRecording #accordionImgRecording .card .card-body > ul > li #accordionImgRecordingImageFilter .card #accordionImgRecordingImageFilterRecorders .card, .cnt .cnt-settings > ul > li.accordionImgRecording #accordionImgRecording .card .card-body > ul > li #accordionImgRecordingDetections .card #accordionImgRecordingImageFilterRecorders .card {
@@ -3471,7 +3462,9 @@ to layouts.
 }
 
 .cnt .cnt-map #add-bookmark-expanded .card-body .change-folder ul li {
+  line-height: 25px;
   text-align: start;
+  padding-left: 10px;
   padding-right: 5px;
 }
 

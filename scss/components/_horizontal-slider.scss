@@ -10,20 +10,19 @@
     }
     .slider-track {
         box-shadow: none;
-        margin-left: -10px;
         top: 10% !important;
         height: 16px !important;
         margin-top: 0 !important;
         background-size: 9px 6px;
         background-position-y: 5px;
         width: calc(100% + 10px) !important;
-        background-position-x: 0, 10%, 20%, 30%, 40%, 50%, 60%, 70%, 80%, 90%, 100%, 110%;
-        background-image: url("../imgs/SVG/vertical-line-hidden.svg"), url("../imgs/SVG/vertical-line-hidden.svg"), url("../imgs/SVG/vertical-line-hidden.svg"), url("../imgs/SVG/vertical-line-hidden.svg"), url("../imgs/SVG/vertical-line-hidden.svg"), url("../imgs/SVG/vertical-line-hidden.svg"), url("../imgs/SVG/vertical-line-hidden.svg"), url("../imgs/SVG/vertical-line-hidden.svg"), url("../imgs/SVG/vertical-line-hidden.svg"), url("../imgs/SVG/vertical-line-hidden.svg"), url("../imgs/SVG/vertical-line-hidden.svg");
+        background-position-x: 0, 11.1111%, 22.2222%, 33.3333%, 44.4444%, 55.5555%, 66.6666%, 77.7777%, 88.8888%, 99.9999%;
+        background-image: url("../imgs/SVG/vertical-line-hidden.svg"), url("../imgs/SVG/vertical-line-hidden.svg"), url("../imgs/SVG/vertical-line-hidden.svg"), url("../imgs/SVG/vertical-line-hidden.svg"), url("../imgs/SVG/vertical-line-hidden.svg"), url("../imgs/SVG/vertical-line-hidden.svg"), url("../imgs/SVG/vertical-line-hidden.svg"), url("../imgs/SVG/vertical-line-hidden.svg"), url("../imgs/SVG/vertical-line-hidden.svg"), url("../imgs/SVG/vertical-line-hidden.svg");
         background-repeat: no-repeat !important;
         &:after {
             right: -3px;
-            width: 90px;
-            content: '_';
+            width: 89.4px;
+            content: '';
             height: 16px;
             color: $white;
             position: absolute;
@@ -83,6 +82,7 @@
         top: 5px !important;
         width: 10px !important;
         height: 10px !important;
+        margin-left: 0 !important;
         background-image: none !important;
         background-color: lighten($black, 60%) !important;
     }
