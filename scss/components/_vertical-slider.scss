@@ -1,13 +1,5 @@
-// $image_count: 10;
-// $image_url: url("../imgs/SVG/horizontal-line.svg");
-// $image_position: 0;
-// @for $i from 1 through ($image_count+1) {
-//     $image_url: #{$image_url+', '+$image_url};
-//     $image_position: #{ $image_position+', '+($i * (100% /$image_count )) };
-// }
-
 .slider.slider-vertical {
-    margin-top: 18px;
+    margin-top: 10px;
     width: 17px !important;
     height: 73px !important;
     &:hover {
@@ -17,19 +9,18 @@
     }
     .slider-track {
         box-shadow: none;
-        margin-top: -10px;
         left: 10% !important;
         width: 16px !important;
         background-size: 5px 9px;
         background-position-x: 5px;
         border-radius: 7.5px !important;
         height: calc(100% + 10px) !important;
-        background-position-y: 0, 10%, 20%, 30%, 40%, 50%, 60%, 70%, 80%, 90%, 100%, 110%;
-        background-image: url("../imgs/SVG/horizontal-line.svg"), url("../imgs/SVG/horizontal-line.svg"), url("../imgs/SVG/horizontal-line.svg"), url("../imgs/SVG/horizontal-line.svg"), url("../imgs/SVG/horizontal-line.svg"), url("../imgs/SVG/horizontal-line.svg"), url("../imgs/SVG/horizontal-line.svg"), url("../imgs/SVG/horizontal-line.svg"), url("../imgs/SVG/horizontal-line.svg"), url("../imgs/SVG/horizontal-line.svg"), url("../imgs/SVG/horizontal-line.svg") !important;
+        background-position-y: 0, 11.1111%, 22.2222%, 33.3333%, 44.4444%, 55.5555%, 66.6666%, 77.7777%, 88.8888%, 99.9999%;
+        background-image: url("../imgs/SVG/horizontal-line.svg"), url("../imgs/SVG/horizontal-line.svg"), url("../imgs/SVG/horizontal-line.svg"), url("../imgs/SVG/horizontal-line.svg"), url("../imgs/SVG/horizontal-line.svg"), url("../imgs/SVG/horizontal-line.svg"), url("../imgs/SVG/horizontal-line.svg"), url("../imgs/SVG/horizontal-line.svg"), url("../imgs/SVG/horizontal-line.svg"), url("../imgs/SVG/horizontal-line.svg") !important;
         background-repeat: no-repeat !important;
         &:after {
-            bottom: -3px;
-            height: 90px;
+            bottom: -4px;
+            height: 91px;
             content: '|';
             width: 16px;
             color: $white;
@@ -76,6 +67,7 @@
         left: 4px !important;
         width: 10px !important;
         height: 10px !important;
+        margin-top: 0 !important;
         background-image: none !important;
         background-color: $bright-contrast-color !important;
     }
