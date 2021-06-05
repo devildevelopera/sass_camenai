@@ -1,10 +1,10 @@
-$image_count: 10;
-$image_url: url("../imgs/SVG/horizontal-line.svg");
-$image_position: 0;
-@for $i from 1 through ($image_count+1) {
-    $image_url: #{$image_url+', '+$image_url};
-    $image_position: #{ $image_position+', '+($i * (100% /$image_count )) };
-}
+// $image_count: 10;
+// $image_url: url("../imgs/SVG/horizontal-line.svg");
+// $image_position: 0;
+// @for $i from 1 through ($image_count+1) {
+//     $image_url: #{$image_url+', '+$image_url};
+//     $image_position: #{ $image_position+', '+($i * (100% /$image_count )) };
+// }
 
 .slider.slider-vertical {
     margin-top: 18px;
@@ -24,8 +24,8 @@ $image_position: 0;
         background-position-x: 5px;
         border-radius: 7.5px !important;
         height: calc(100% + 10px) !important;
-        background-position-y: $image_position;
-        background-image: $image_url !important;
+        background-position-y: 0, 10%, 20%, 30%, 40%, 50%, 60%, 70%, 80%, 90%, 100%, 110%;
+        background-image: url("../imgs/SVG/horizontal-line.svg"), url("../imgs/SVG/horizontal-line.svg"), url("../imgs/SVG/horizontal-line.svg"), url("../imgs/SVG/horizontal-line.svg"), url("../imgs/SVG/horizontal-line.svg"), url("../imgs/SVG/horizontal-line.svg"), url("../imgs/SVG/horizontal-line.svg"), url("../imgs/SVG/horizontal-line.svg"), url("../imgs/SVG/horizontal-line.svg"), url("../imgs/SVG/horizontal-line.svg"), url("../imgs/SVG/horizontal-line.svg") !important;
         background-repeat: no-repeat !important;
         &:after {
             bottom: -3px;
