@@ -2069,7 +2069,6 @@ to a reusable component.
 
 .andp-datepicker-container .andp-body .andp-days-numbers .andp-column div.selected {
   background: #cccccc !important;
-  border-color: #cccccc !important;
 }
 
 .andp-datepicker-container .andp-body .andp-days-numbers .andp-column div.soft-select {
@@ -2219,7 +2218,6 @@ to a reusable component.
 
 .andp-datepicker-container .andp-body .andp-days-numbers .andp-column div.selected {
   background: #cccccc !important;
-  border-color: #cccccc !important;
 }
 
 .andp-datepicker-container .andp-body .andp-days-numbers .andp-column div.soft-select {

@@ -91,7 +91,6 @@
                     }
                     &.selected {
                         background: lighten($black, 80%) !important;
-                        border-color: lighten($black, 80%) !important;
                     }
                     &.soft-select {
                         border: 1px solid lighten($black, 50%);
