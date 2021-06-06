@@ -2759,17 +2759,24 @@ to layouts.
   margin-bottom: 8px;
 }
 
+.cnt .cnt-settings > ul > li.accordionPOI #accordionPOI .card .card-body ul li {
+  margin-left: 9px;
+  line-height: 25px;
+  padding-left: 17px;
+  border-left: 1px solid #cccccc;
+}
+
 .cnt .cnt-settings > ul > li.accordionPOI #accordionPOI .card .card-body ul li:first-child {
   background-color: transparent;
 }
 
 .cnt .cnt-settings > ul > li.accordionPOI #accordionPOI .card .card-body ul li .search-POI {
+  padding: 8px 0;
   position: relative;
-  margin: 8px 8px 8px 0;
 }
 
 .cnt .cnt-settings > ul > li.accordionPOI #accordionPOI .card .card-body ul li .search-POI img {
-  top: 10px;
+  top: 16px;
   right: 7px;
   padding: 0;
   position: absolute;
@@ -2889,6 +2896,8 @@ to layouts.
   display: -ms-flexbox;
   display: flex;
   font-weight: 300;
+  line-height: 30px;
+  padding-left: 10px;
 }
 
 .cnt .cnt-map #poi-draggable .card-body .card-body li div {

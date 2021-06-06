@@ -214,14 +214,18 @@
                             margin-bottom: 8px;
                             ul {
                                 li {
+                                    margin-left: 9px;
+                                    line-height: 25px;
+                                    padding-left: 17px;
+                                    border-left: solidBlackBorder();
                                     &:first-child {
                                         background-color: transparent;
                                     }
                                     .search-POI {
+                                        padding: 8px 0;
                                         position: relative;
-                                        margin: 8px 8px 8px 0;
                                         img {
-                                            top: 10px;
+                                            top: 16px;
                                             right: 7px;
                                             padding: 0;
                                             position: absolute;
@@ -303,6 +307,8 @@
                         li {
                             display: flex;
                             font-weight: 300;
+                            line-height: 30px;
+                            padding-left: 10px;
                             div {
                                 width: 20px;
                             }
