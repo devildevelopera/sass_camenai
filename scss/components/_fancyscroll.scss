@@ -1,7 +1,7 @@
 /* webkit browsers */
 
 .fancyscroll::-webkit-scrollbar {
-    width: 11px;
+    width: 8px;
 }
 
 .fancyscroll::-webkit-scrollbar-track {
@@ -9,12 +9,17 @@
 }
 
 .fancyscroll::-webkit-scrollbar-thumb {
-    border-radius: 5px;
+    border-radius: 4px;
     background: lighten($black, 80%);
-    border-left: 2px solid lighten($black, 95%);
-    border-right: 2px solid lighten($black, 95%);
 }
 
 .fancyscroll::-webkit-scrollbar-thumb:hover {
     background: lighten($black, 70%);
+}
+
+
+/* firefox */
+
+.fancyscroll {
+    scrollbar-width: thin;
 }
