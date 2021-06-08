@@ -2718,6 +2718,7 @@ to layouts.
 .cnt .cnt-settings > ul > li.accordionImgRecording #accordionImgRecording .card .card-body > ul .apply-filters {
   height: 36px;
   margin-left: 9px;
+  padding-left: 17px;
   margin-right: 33px;
   display: -webkit-box;
   display: -ms-flexbox;

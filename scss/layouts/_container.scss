@@ -188,6 +188,7 @@
                                     .apply-filters {
                                         height: 36px;
                                         margin-left: 9px;
+                                        padding-left: 17px;
                                         margin-right: 33px;
                                         @include displayFlexRow;
                                         background: lighten($black, 80%);
