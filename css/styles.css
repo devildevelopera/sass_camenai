@@ -1718,7 +1718,7 @@ to a reusable component.
 .slider.slider-horizontal .tooltip.tooltip-main.top {
   pointer-events: none;
   margin-top: -27px !important;
-  margin-left: -6px;
+  margin-left: 4px;
 }
 
 .slider.slider-horizontal .tooltip.tooltip-main.top .tooltip-inner {
