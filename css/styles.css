@@ -1507,7 +1507,7 @@ to a reusable component.
   height: 73px !important;
 }
 
-.slider.slider-vertical:hover .tooltip {
+.slider.slider-vertical .tooltip {
   opacity: 1;
 }
 
@@ -1550,7 +1550,7 @@ to a reusable component.
 
 .slider.slider-vertical .tooltip.tooltip-main.right {
   width: 105px;
-  padding-bottom: 5px;
+  margin-top: 5px;
   left: -125px !important;
 }
 
@@ -1565,7 +1565,7 @@ to a reusable component.
   width: 0;
   height: 0;
   right: -5px;
-  margin-top: -7.5px;
+  margin-top: -5px;
   position: absolute;
   border-style: solid;
   border-color: transparent;

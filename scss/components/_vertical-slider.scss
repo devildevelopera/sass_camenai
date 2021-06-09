@@ -2,11 +2,11 @@
     margin-top: 10px;
     width: 17px !important;
     height: 73px !important;
-    &:hover {
-        .tooltip {
-            opacity: 1;
-        }
+    // &:hover {
+    .tooltip {
+        opacity: 1;
     }
+    // }
     .slider-track {
         box-shadow: none;
         left: 10% !important;
@@ -42,7 +42,7 @@
     }
     .tooltip.tooltip-main.right {
         width: 105px;
-        padding-bottom: 5px;
+        margin-top: 5px;
         left: -125px !important;
         .tooltip-inner {
             color: $black;
@@ -54,7 +54,7 @@
             width: 0;
             height: 0;
             right: -5px;
-            margin-top: -7.5px;
+            margin-top: -5px;
             position: absolute;
             border-style: solid;
             border-color: transparent;
