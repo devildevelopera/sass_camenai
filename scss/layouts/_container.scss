@@ -812,131 +812,121 @@
         /* image-imfo-box */
         #image-info-box {
             right: 20px;
+            width: 30px;
+            height: 30px;
             bottom: 130px;
-            overflow: hidden;
             @include mapControlBox;
             @include displayFlexRow;
-            &>div {
-                &:first-child {
-                    transition: width 0.2s;
-                    width: 0;
-                }
-                &:last-child {
-                    width: 30px;
-                    height: 30px;
-                    position: relative;
-                    background-color: #006CBC;
-                    border-top-right-radius: 4px;
-                    border-bottom-right-radius: 4px;
-                    img {
-                        cursor: pointer;
-                        position: absolute;
-                        &:first-child {
-                            top: 6px;
-                            right: 9px;
-                            display: none;
-                        }
-                        &:last-child {
-                            right: 6px;
-                            bottom: 5px;
-                        }
-                    }
-                }
+            background-color: #006CBC;
+            &>ul {
+                display: none;
+                padding: 10px;
+                margin-right: 30px;
+                background-color: $white;
+                border-top-left-radius: 4px;
+                border-bottom-left-radius: 4px;
+            }
+            .box-close-icon {
+                top: 6px;
+                right: 9px;
+                display: none;
+                cursor: pointer;
+                position: absolute;
+            }
+            .box-info-icon {
+                right: 6px;
+                bottom: 5px;
+                cursor: pointer;
+                position: absolute;
             }
             &.opened {
-                height: 123.57px;
-                &>div {
-                    &:first-child {
-                        width: 238px;
-                    }
-                    &:last-child {
-                        height: 100%;
-                        img {
-                            &:first-child {
-                                display: flex;
-                            }
-                        }
-                    }
+                width: auto;
+                height: auto;
+                &>ul {
+                    display: block;
+                }
+                .box-close-icon {
+                    display: flex;
                 }
             }
         }
-        /* zoom control */
-        #zoom-control {
-            right: 20px;
-            width: 30px;
-            height: 90px;
-            bottom: 30px;
-            display: grid;
-            @include mapControlBox;
-            grid-template-rows: 30px 30px 30px;
-            div {
-                display: flex;
-                cursor: pointer;
-                align-items: center;
-                justify-content: center;
-                border-bottom: solidBlackBorder();
-                &:hover {
-                    background-color: lighten($black, 80%);
-                }
-                &:last-child {
-                    border-bottom: none;
-                }
+    }
+    /* zoom control */
+    #zoom-control {
+        right: 20px;
+        width: 30px;
+        height: 90px;
+        bottom: 30px;
+        display: grid;
+        @include mapControlBox;
+        grid-template-rows: 30px 30px 30px;
+        div {
+            display: flex;
+            cursor: pointer;
+            align-items: center;
+            justify-content: center;
+            border-bottom: solidBlackBorder();
+            &:hover {
+                background-color: lighten($black, 80%);
+            }
+            &:last-child {
+                border-bottom: none;
             }
         }
-        /* map section*/
-        #map-section {
-            height: 100%;
-            .img-sec {
-                height: 74%;
-                position: relative;
-                background-size: cover;
-                background-position: center;
-                background-image: url("../imgs/street.jpg");
-                .img-direc-control {
-                    bottom: 20px;
-                    width: 150px;
-                    position: absolute;
-                    text-align: center;
-                    left: calc(50% - 75px);
-                    img {
-                        cursor: pointer;
-                    }
-                    div {
-                        display: flex;
-                        flex-direction: row;
-                        justify-content: space-between;
-                    }
-                }
-                .img-prev-next {
-                    right: 30px;
-                    bottom: 20px;
-                    width: 200px;
-                    display: grid;
-                    position: absolute;
-                    grid-template-columns: 45px 45px 45px 70px;
-                    img {
-                        margin: auto;
-                        height: 27.6px;
-                        cursor: pointer;
-                    }
-                }
-            }
-            .bdr-sec {
-                height: 5px;
-                position: relative;
-                border: 2px solid lighten($black, 50%);
+    }
+    /* map section*/
+    #map-section {
+        height: 100%;
+        .img-sec {
+            height: 74%;
+            position: relative;
+            background-size: cover;
+            background-position: center;
+            background-image: url("../imgs/street.jpg");
+            .img-direc-control {
+                bottom: 20px;
+                width: 150px;
+                position: absolute;
+                text-align: center;
+                left: calc(50% - 75px);
                 img {
-                    top: -6px;
-                    z-index: 1;
-                    cursor: grab;
-                    cursor: s-resize;
-                    position: absolute;
-                    left: calc(50% - 18.5px);
+                    cursor: pointer;
+                }
+                div {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
                 }
             }
-            .map-sec {
-                height: calc(26% - 5px);
+            .img-prev-next {
+                right: 30px;
+                bottom: 20px;
+                width: 200px;
+                display: grid;
+                position: absolute;
+                grid-template-columns: 45px 45px 45px 70px;
+                img {
+                    margin: auto;
+                    height: 27.6px;
+                    cursor: pointer;
+                }
             }
+        }
+        .bdr-sec {
+            height: 5px;
+            position: relative;
+            border: 2px solid lighten($black, 50%);
+            img {
+                top: -6px;
+                z-index: 1;
+                cursor: grab;
+                cursor: s-resize;
+                position: absolute;
+                left: calc(50% - 18.5px);
+            }
+        }
+        .map-sec {
+            height: calc(26% - 5px);
         }
     }
 }

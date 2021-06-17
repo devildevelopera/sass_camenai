@@ -2412,6 +2412,8 @@ to layouts.
   height: calc(100vh - 100px);
   /* side menu */
   /* map-section */
+  /* zoom control */
+  /* map section*/
 }
 
 @media only screen and (max-width: 768px) {
@@ -2819,8 +2821,6 @@ to layouts.
   /* street-dimension control */
   /* total-recodings-control */
   /* image-imfo-box */
-  /* zoom control */
-  /* map section*/
 }
 
 .cnt .cnt-map #mobile-setting-bar {
@@ -3716,8 +3716,9 @@ to layouts.
 
 .cnt .cnt-map #image-info-box {
   right: 20px;
+  width: 30px;
+  height: 30px;
   bottom: 130px;
-  overflow: hidden;
   z-index: 1;
   position: absolute;
   border-radius: 4px;
@@ -3734,58 +3735,49 @@ to layouts.
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-}
-
-.cnt .cnt-map #image-info-box > div:first-child {
-  -webkit-transition: width 0.2s;
-  transition: width 0.2s;
-  width: 0;
-}
-
-.cnt .cnt-map #image-info-box > div:last-child {
-  width: 30px;
-  height: 30px;
-  position: relative;
   background-color: #006CBC;
-  border-top-right-radius: 4px;
-  border-bottom-right-radius: 4px;
 }
 
-.cnt .cnt-map #image-info-box > div:last-child img {
+.cnt .cnt-map #image-info-box > ul {
+  display: none;
+  padding: 10px;
+  margin-right: 30px;
+  background-color: #fff;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+.cnt .cnt-map #image-info-box .box-close-icon {
+  top: 6px;
+  right: 9px;
+  display: none;
   cursor: pointer;
   position: absolute;
 }
 
-.cnt .cnt-map #image-info-box > div:last-child img:first-child {
-  top: 6px;
-  right: 9px;
-  display: none;
-}
-
-.cnt .cnt-map #image-info-box > div:last-child img:last-child {
+.cnt .cnt-map #image-info-box .box-info-icon {
   right: 6px;
   bottom: 5px;
+  cursor: pointer;
+  position: absolute;
 }
 
 .cnt .cnt-map #image-info-box.opened {
-  height: 123.57px;
+  width: auto;
+  height: auto;
 }
 
-.cnt .cnt-map #image-info-box.opened > div:first-child {
-  width: 238px;
+.cnt .cnt-map #image-info-box.opened > ul {
+  display: block;
 }
 
-.cnt .cnt-map #image-info-box.opened > div:last-child {
-  height: 100%;
-}
-
-.cnt .cnt-map #image-info-box.opened > div:last-child img:first-child {
+.cnt .cnt-map #image-info-box.opened .box-close-icon {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.cnt .cnt-map #zoom-control {
+.cnt #zoom-control {
   right: 20px;
   width: 30px;
   height: 90px;
@@ -3802,7 +3794,7 @@ to layouts.
       grid-template-rows: 30px 30px 30px;
 }
 
-.cnt .cnt-map #zoom-control div {
+.cnt #zoom-control div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3816,19 +3808,19 @@ to layouts.
   border-bottom: 1px solid #cccccc;
 }
 
-.cnt .cnt-map #zoom-control div:hover {
+.cnt #zoom-control div:hover {
   background-color: #cccccc;
 }
 
-.cnt .cnt-map #zoom-control div:last-child {
+.cnt #zoom-control div:last-child {
   border-bottom: none;
 }
 
-.cnt .cnt-map #map-section {
+.cnt #map-section {
   height: 100%;
 }
 
-.cnt .cnt-map #map-section .img-sec {
+.cnt #map-section .img-sec {
   height: 74%;
   position: relative;
   background-size: cover;
@@ -3836,7 +3828,7 @@ to layouts.
   background-image: url("../imgs/street.jpg");
 }
 
-.cnt .cnt-map #map-section .img-sec .img-direc-control {
+.cnt #map-section .img-sec .img-direc-control {
   bottom: 20px;
   width: 150px;
   position: absolute;
@@ -3844,11 +3836,11 @@ to layouts.
   left: calc(50% - 75px);
 }
 
-.cnt .cnt-map #map-section .img-sec .img-direc-control img {
+.cnt #map-section .img-sec .img-direc-control img {
   cursor: pointer;
 }
 
-.cnt .cnt-map #map-section .img-sec .img-direc-control div {
+.cnt #map-section .img-sec .img-direc-control div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3861,7 +3853,7 @@ to layouts.
           justify-content: space-between;
 }
 
-.cnt .cnt-map #map-section .img-sec .img-prev-next {
+.cnt #map-section .img-sec .img-prev-next {
   right: 30px;
   bottom: 20px;
   width: 200px;
@@ -3872,19 +3864,19 @@ to layouts.
       grid-template-columns: 45px 45px 45px 70px;
 }
 
-.cnt .cnt-map #map-section .img-sec .img-prev-next img {
+.cnt #map-section .img-sec .img-prev-next img {
   margin: auto;
   height: 27.6px;
   cursor: pointer;
 }
 
-.cnt .cnt-map #map-section .bdr-sec {
+.cnt #map-section .bdr-sec {
   height: 5px;
   position: relative;
   border: 2px solid gray;
 }
 
-.cnt .cnt-map #map-section .bdr-sec img {
+.cnt #map-section .bdr-sec img {
   top: -6px;
   z-index: 1;
   cursor: -webkit-grab;
@@ -3894,7 +3886,7 @@ to layouts.
   left: calc(50% - 18.5px);
 }
 
-.cnt .cnt-map #map-section .map-sec {
+.cnt #map-section .map-sec {
   height: calc(26% - 5px);
 }
 /*# sourceMappingURL=styles.css.map */
